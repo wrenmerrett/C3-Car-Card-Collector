@@ -1,7 +1,7 @@
 export const button = document.querySelector('[data-collect-card]');
 import { playerGarage } from "/js/playerGarage.js";
 var money = 10;
-const rarities = ["F", "E", "D", "C", "B", "A", "S"];
+export const rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
@@ -20,11 +20,12 @@ function carPicker() {
             // Work with your JSON data here
             var chosenCar = data[Math.floor(Math.random() * data.length)];
             var carImage = chosenCar.carID + ".png";
-            document.getElementById('newestCard').innerText = carImage;
+            document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID - 1;
             console.log(garageAdd);
             if (playerGarage.includes(garageAdd)) {
                 money += (chosenCar.rarity * chosenCar.rq);
+                document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             } else { playerGarage.unshift(garageAdd); }
             console.log(playerGarage);
         })

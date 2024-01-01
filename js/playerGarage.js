@@ -3,31 +3,35 @@
 const garageButton = document.getElementById('garageDrop');
 
 export const playerGarage = [0, 1, 2, 3, 4];
+const tabs = document.querySelectorAll('.tab');
+const cards = document.querySelectorAll('.card');
 import { playerHand } from "/js/playerHand.js";
+import { rarities } from "/js/app.js";
+
+tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
 
 var garageList = [];
 var options;
+var common = rarites[0];
+var uncommon = rarities[1];
+var rare = rarities[2];
+var superRare = rarities[3];
+var ultraRare = rarities[4];
+var epic = rarities[5];
+var legendary = rarities[6];
 
-export function openRarity(evt, rarityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
+function handleTabClick(event) {
+    const target = event.target;
+    const id = target.id;
 
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-} 
+    cards.forEach(card => {
+        if (card.dataset.rarity !== id) {
+            card.style.display = 'none';
+        } else {
+            card.style.display = 'block';
+        }
+    });
+}
 
 export function carSwapper() {
     fetch('/js/data.json')
@@ -59,3 +63,4 @@ export function carSwapper() {
         }
     )
 };
+
