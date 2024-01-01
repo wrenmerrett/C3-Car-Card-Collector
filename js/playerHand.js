@@ -1,0 +1,59 @@
+'use strict';
+
+import { button } from "/js/app.js";
+
+export const playerHand = [0, 1, 2, 3, 4];
+var handAccel1;
+var handAccel2;
+var handAccel3;
+var handAccel4;
+var handAccel5;
+var buttonCooldown;
+
+function getHandCards(car1, car2, car3, car4, car5) {
+    fetch('/js/data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Work with your JSON data here
+            var handCar1 = data[car1];
+            var handImage1 = handCar1.carID + ".png";
+            handImage1.src = '<img src="assets/cards/${handImage2}"'
+            var handBox1 = document.getElementById('hand1');
+            handBox1.append(handImage1);
+            var handAccel1 = handCar1.zeroToSixty;
+
+            var handCar2 = data[car2];
+            var handImage2 = handCar2.carID + ".png";
+            document.getElementById('hand2').innerText = `<img src="assets/cards/${handImage2}" id="imageBox"/>`
+            var handAccel2 = handCar2.zeroToSixty;
+
+            var handCar3 = data[car3];
+            var handImage3 = handCar3.carID + ".png";
+            document.getElementById('hand3').innerText = `<img src="assets/cards/${handImage3}" id="imageBox"/>`
+            var handAccel3 = handCar3.zeroToSixty;
+
+            var handCar4 = data[car4];
+            var handImage4 = handCar4.carID + ".png";
+            document.getElementById('hand4').innerText = `<img src="assets/cards/${handImage4}" id="imageBox"/>`
+            var handAccel4 = handCar4.zeroToSixty;
+
+            var handCar5 = data[car5];
+            var handImage5 = handCar5.carID + ".png";
+            document.getElementById('hand5').innerText = `<img src="assets/cards/${handImage5}" id="imageBox"/>`
+            var handAccel5 = handCar5.zeroToSixty;
+
+            var buttonCooldown = (handAccel1 + handAccel2 + handAccel3 + handAccel4 + handAccel5);
+            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + (buttonCooldown)/1000 + " seconds";
+            button.addEventListener('click', () => {
+                setTimeout(function() {
+                    button.disabled = false;
+                }, buttonCooldown);
+            });
+
+        })
+        .catch(error => {
+            console.log('Error fetching data:', error);
+        });
+}
+
+window.addEventListener('load', getHandCards(...playerHand));

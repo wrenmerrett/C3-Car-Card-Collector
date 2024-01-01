@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>C3: CAR CARD COLLECTOR</title>
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/playerHand.js"></script>
+    <script type="module" src="./js/playerGarage.js"></script>
+</head>
+<body>
+
+    <button class="tablink" onclick="openPage('Home', this, 'darkslategrey')"id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('Collection', this, 'dodgerblue')">Collection</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'goldenrod')">Contact</button>
+    <button class="tablink" onclick="openPage('About', this, 'darkolivegreen')">About</button>
+
+    <div id="Home" class="tabcontent">
+        <h1 style="position:absolute"">
+            C3
+        </h1>
+        <b style="margin-top:100px,">CAR CARD COLLECTOR</b>
+        <b>
+            <div>
+                <div class="central-elements">
+                    <h2 id="cashDisplay"></h2>
+                    <h2>YOUR HAND</h2>
+                    <table class="cardTable">
+                        <tr>
+                            <td><div id="hand1"</td>
+                            <td><div id="hand2"</td>
+                            <td><div id="hand3"</td>
+                            <td><div id="hand4"</td>
+                            <td><div id="hand5"</td>
+                        </tr>
+                    </table>
+
+                    <div id="handAttributes"></div>
+                    <button id="collectButton" data-collect-card>
+                        COLLECT
+                    </button>
+                    <br />
+                    <div id="handAttributes"></div>
+                    <div id="cardDisplay">
+                        <br />
+                        NEWEST CARD
+                        <img id="newestCard" />
+                    </div>
+                </div>
+        </b>
+        <script type="module" src="/js/app.js"></script>
+        <script type="module" src="/js/playerHand.js"></script>
+        <script type="module" src="/js/playerGarage.js"></script>
+    </div>
+    </div>
+
+    <div id="Collection" class="tabcontent">
+        <h3>Collection</h3>
+        <div class="tab">
+            <button id="common" class="tablinks" onclick="openRarity(event, 'Common')">Common</button>
+            <button id="uncommon" class="tablinks" onclick="openRarity(event, 'Uncommon')">Uncommon</button>
+            <button id="rare" class="tablinks" onclick="openRarity(event, 'Rare')">Rare</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="London" class="tabcontent">
+            <h3 id="common">Common</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <h3 id="uncommon">Uncommon</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <h3 id="rare">Rare</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>

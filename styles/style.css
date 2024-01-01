@@ -1,0 +1,122 @@
+text {
+    font-family:Roboto;
+}
+
+#Home {
+    background-color: darkslategrey;
+}
+
+#Collection {
+    background-color: dodgerblue;
+}
+
+#Contact {
+    background-color: goldenrod;
+}
+
+#About {
+    background-color: darkolivegreen;
+}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+    .tablink:hover {
+        background-color: #777;
+    }
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 75px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 65px;
+    position:absolute;
+    top:0;
+    padding: 5px;
+}
+
+.central-elements {
+    text-align: center;
+    position:center;
+}
+
+#cashDisplay {
+    color: greenyellow;
+}
+
+img {
+    width: 95%;
+}
+
+table {
+    position:center;
+}
+
+#common {
+    background-color: slategrey;
+}
+
+#uncommon {
+    background-color: green;
+}
+
+#rare {
+    background-color: deepskyblue;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    margin-top: 100px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
