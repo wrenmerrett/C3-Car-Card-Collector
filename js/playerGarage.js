@@ -1,6 +1,6 @@
 'use strict';
 
-export const playerGarage = [1, 2, 3, 4, 5];
+export var playerGarage = [1, 2, 3, 4, 5];
 import { button } from "./app.js";
 import { playerHand, getHandCards } from "/js/playerHand.js";
 const tabs = document.querySelectorAll('.tab');
@@ -18,6 +18,7 @@ fetch('./js/data.json')
 tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
 
 function handleTabClick(event) {
+    document.getElementById('fullhandbox').innerText = "";
     const target = event.target;
     const id = target.id;
     var carRarity = rarities.indexOf(id) + 1;

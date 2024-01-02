@@ -19,7 +19,29 @@ function carPicker() {
         .then(data => {
             // Work with your JSON data here
             data = data.cars
-            var chosenCar = data[Math.floor(Math.random() * data.length)];
+            var gacha = Math.floor(Math.random() * 100) + 1;
+            if (gacha < 19) {
+                var carSelection = data.filter(data => data.rarity === 1);
+            } else
+            if (gacha < 37) {
+                var carSelection = data.filter(data => data.rarity === 2);
+            } else
+            if (gacha < 55) {
+                var carSelection = data.filter(data => data.rarity === 3);
+            } else
+            if (gacha < 73) {
+                var carSelection = data.filter(data => data.rarity === 4);
+            } else
+            if (gacha < 88) {
+                var carSelection = data.filter(data => data.rarity === 5);
+            } else
+            if (gacha < 98) {
+                var carSelection = data.filter(data => data.rarity === 6);
+            } else {
+                var carSelection = data.filter(data => data.rarity === 7);
+                                }
+            console.log(gacha);
+            var chosenCar = carSelection[Math.floor(Math.random() * carSelection.length)];
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
