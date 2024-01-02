@@ -10,8 +10,8 @@ var inHand;
 const rarities = ['common', 'uncommon', 'rare', 'superRare', 'ultraRare', 'epic', 'legendary']
 
 fetch('./js/data.json')
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
         cards = data.cars;
     })
 
