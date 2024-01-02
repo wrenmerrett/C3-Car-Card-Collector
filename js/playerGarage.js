@@ -25,16 +25,18 @@ function handleTabClick(event) {
     document.getElementById('garageGrid').innerText = "";
     document.getElementById('unownedGrid').innerText = "";
 
-    cards.forEach(cards => {
-        if (cards.rarity == carRarity) {
-            if (playerGarage.includes(cards.carID)) {
+    var rarityCars = cards.filter(cards => cards.rarity == carRarity); {
+        console.log(rarityCars);
+            var garageCars = 
                 var gridContainer = document.getElementById('garageGrid');
                 const garageCard = document.createElement('div');
                 var img = document.createElement('img');
-                img.src = "/assets/cards/" + cards.imageID;
-                img.id = cards.carID;
+                img.src = "/assets/cards/" + rarityCars.imageID;
+                img.id = rarityCars.carID;
                 garageCard.appendChild(img);
-                var carIndex = cards.carID - 1;
+                console.log(rarityCars.carID);
+                var carIndex = rarityCars.carID - 1;
+                console.log(carIndex);
                 if (playerHand.includes(carIndex)) {
                     var inHand = document.createElement('button');
                     inHand.className = "btn";
@@ -44,19 +46,16 @@ function handleTabClick(event) {
                         delete playerHand[inHand.id];
                         console.log(playerHand);
                         inHand.remove();
-                    });
-                    garageCard.appendChild(inHand);
-                }
-                gridContainer.append(garageCard);
+                });
+                garageCard.appendChild(inHand);
+            }
+            gridContainer.append(garageCard);
             } else {
                 var collectionAdd = document.getElementById('unownedGrid');
                 const unownedimg = document.createElement('img');
                 unownedimg.src = "/assets/cards/" + cards.imageID;
                 collectionAdd.append(unownedimg);
             }
-        } else {
-        }
-    });
 
     garageGrid.addEventListener("click", (e) => { // e = event object
         if (e.target.tagName === 'IMG') {
@@ -73,27 +72,27 @@ function handleTabClick(event) {
     })
 };
 
-function addToHand(newHandCard) {
-    if (playerHand.includes(undefined)) {
-        var inHand = document.createElement('button');
-        inHand.className = "btn";
-        inHand.innerHTML = "IN HAND";
-        inHand.id = newHandCard - 1;
-        var handAddedCar = Number(inHand.id);
-        inHand.onclick = (function () {
-            delete playerHand[this.id];
-            $(this).remove();
-        });
-        var enteringHand = document.getElementById(newHandCard);
-        enteringHand.innerText += inHand;
-        for (let i = 0; i < playerHand.length; i++) {
-            if (playerHand[i] === undefined) {
-                playerHand[i] = handAddedCar; // Replace undefined with 0 or any desired value
-                break;
+    function addToHand(newHandCard) {
+        if (playerHand.includes(undefined)) {
+            var inHand = document.createElement('button');
+            inHand.className = "btn";
+            inHand.innerHTML = "IN HAND";
+            inHand.id = newHandCard - 1;
+            var handAddedCar = Number(inHand.id);
+            inHand.onclick = (function () {
+                delete playerHand[this.id];
+                $(this).remove();
+            });
+            var enteringHand = document.getElementById(newHandCard);
+            enteringHand.innerText += inHand;
+            for (let i = 0; i < playerHand.length; i++) {
+                if (playerHand[i] === undefined) {
+                    playerHand[i] = handAddedCar; // Replace undefined with 0 or any desired value
+                    break;
+                }
             }
+        } else {
+            document.getElementById('fullhandbox').innerText = "Your hand is full!";
         }
-        getHandCards(...playerHand)
-    } else {
-        document.getElementById('fullhandbox').innerText = "Your hand is full!";
     }
 };
