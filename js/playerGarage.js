@@ -2,8 +2,9 @@
 
 export var playerGarage = [1, 2, 3, 4, 5];
 import { button } from "./app.js";
-import { playerHand, getHandCards } from "/js/playerHand.js";
+import { playerHand, getHandCards, handUpdater, handAdder } from "/js/playerHand.js";
 const tabs = document.querySelectorAll('.tab');
+var handSize = playerHand.length;
 var cards;
 var newHandCard;
 var inHand;
@@ -41,8 +42,7 @@ function handleTabClick(event) {
                     inHand.innerHTML = "IN HAND";
                     inHand.id = carIndex;
                     inHand.addEventListener('click', () => {
-                        delete playerHand[inHand.id];
-                        console.log(playerHand);
+                        handUpdater(carIndex);
                         inHand.remove();
                     });
                     garageCard.appendChild(inHand);
@@ -74,25 +74,23 @@ function handleTabClick(event) {
 };
 
 function addToHand(newHandCard) {
-    if (playerHand.includes(undefined)) {
+    if (handSize < 6) {
         var inHand = document.createElement('button');
+        var gridContainer = document.getElementById('garageGrid');
         inHand.className = "btn";
         inHand.innerHTML = "IN HAND";
         inHand.id = newHandCard - 1;
-        var handAddedCar = Number(inHand.id);
-        inHand.onclick = (function () {
-            delete playerHand[this.id];
+        console.log(inHand.id);
+        var updater = inHand.id;
+        inHand.onclick = () => {
+            handUpdater(updater);
             $(this).remove();
-        });
+        };
         var enteringHand = document.getElementById(newHandCard);
-        enteringHand.innerText += inHand;
-        for (let i = 0; i < playerHand.length; i++) {
-            if (playerHand[i] === undefined) {
-                playerHand[i] = handAddedCar; // Replace undefined with 0 or any desired value
-                break;
-            }
-        }
-        getHandCards(...playerHand)
+        enteringHand.appendChild(inHand);
+        gridContainer.append(enteringHand);
+        handAdder(updater);
+        getHandCards(...playerHand);
     } else {
         document.getElementById('fullhandbox').innerText = "Your hand is full!";
     }

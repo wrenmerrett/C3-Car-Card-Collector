@@ -3,7 +3,7 @@
 import { button } from "/js/app.js";
 import { playerGarage } from "/js/playerGarage.js";
 
-export var playerHand = [0, 1, 2, 3, 4];
+export let playerHand = [0, 1, 2, 3, 4];
 var handAccel1;
 var handAccel2;
 var handAccel3;
@@ -19,6 +19,7 @@ export function getHandCards(car1, car2, car3, car4, car5) {
         .then(data => {
             // Work with your JSON data here
             data = data.cars
+            if (playerHand.length === 5) {
             var handCar1 = data[car1];
             var handImage1 = handCar1.imageID;
             document.getElementById('hand1').innerHTML = `<img src="./assets/cards/${handImage1}" id="imageBox"/>`
@@ -44,16 +45,25 @@ export function getHandCards(car1, car2, car3, car4, car5) {
             document.getElementById('hand5').innerHTML = `<img src="./assets/cards/${handImage5}" id="imageBox"/>`
             var handAccel5 = handCar5.zeroToSixty;
 
-            var buttonCooldown = (handAccel1 + handAccel2 + handAccel3 + handAccel4 + handAccel5)*225;
-            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + (buttonCooldown)/1000 + " seconds";
+            let buttonCooldown = (handAccel1 + handAccel2 + handAccel3 + handAccel4 + handAccel5);
+            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + (buttonCooldown) / 1000 + " seconds";
             button.addEventListener('click', () => {
-                setTimeout(function() {
+                setTimeout(function () {
                     button.disabled = false;
                 }, buttonCooldown);
             });
-
+        }
         })
         .catch(error => {
             console.log('Error fetching data:', error);
         });
 }
+
+export function handUpdater(indexNo) {
+        playerHand = playerHand.filter(item => item !== indexNo);
+        console.log(playerHand);
+};
+
+export function handAdder(indexNo) {
+    playerHand.push(indexNo);
+};
