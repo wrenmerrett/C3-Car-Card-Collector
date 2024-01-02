@@ -6,7 +6,8 @@
     <script type="module" src="./js/app.js"></script>
     <script type="module" src="./js/playerHand.js"></script>
     <script type="module" src="./js/playerGarage.js"></script>
-</head >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
             <body>
 
                 <button class="tablink" onclick="openPage('Home', this, 'darkslategrey')" id="defaultOpen">Home</button>
@@ -44,38 +45,32 @@
                             <div id="newestCard" style="position:center"></div>
                         </div>
                 </b>
-                <script type="module" src="/js/app.js"></script>
+    <script type="module" src="/js/app.js"></script>
     <script type="module" src="/js/playerHand.js"></script>
     <script type="module" src="/js/playerGarage.js"></script>
-    </div>
+                </div>
 
                 <div id="Collection" class="tabcontent">
                     <h3>Collection</h3>
-                    <div class="tab">
-                        <button id="common">Common</button>
-                        <button id="uncommon">Uncommon</button>
-                        <button id="rare">Rare</button>
+                    <div id="fullhandbox">
                     </div>
+                    <div>
+                        <button id="common" class="tab">Common</button>
+                        <button id="uncommon" class="tab">Uncommon</button>
+                        <button id="rare" class="tab">Rare</button>
+                        <button id="superRare" class="tab">Super Rare</button>
+                        <button id="ultraRare" class="tab">Ultra Rare</button>
+                        <button id="epic" class="tab">Epic</button>
+                        <button id="legendary" class="tab">Legendary</button>
+                        <h4>Owned</h4>
+                        <div class="gridContainer" id="garageGrid">
+                        </div>
+                        <h4>Unowned</h4>
+                        <div class="gridContainer" id="unownedGrid">
 
-                    <div class="card" data-rarity="common"></div>
-                    <div class="card" data-rarity="uncommon"></div>
-                    <div class="card" data-rarity="rare"></div>
-
-                    <!-- Tab content -->
-                    <div id="common" class="garagecontent">
-                        <h3 id="common">Common</h3>
-                        <div id="garage"></div>
+                        </div>
                     </div>
-
-                    <div id="uncommon" class="garagecontent">
-                        <h3 id="uncommon">Uncommon</h3>
-                        <p>Paris is the capital of France.</p>
-                    </div>
-
-                    <div id="rare" class="garagecontent">
-                        <h3 id="rare">Rare</h3>
-                        <p>Tokyo is the capital of Japan.</p>
-                    </div>
+                </div>
                 </div>
 
     <div id="Contact" class="tabcontent">
@@ -94,7 +89,7 @@
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
-        }
+            }
         tablinks = document.getElementsByClassName("tablink");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].style.backgroundColor = "";

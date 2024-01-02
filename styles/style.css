@@ -18,6 +18,10 @@ text {
     background-color: darkolivegreen;
 }
 
+.cardTable {
+    
+}
+
 #newestCard {
     margin-left: auto;
     margin-right: auto;
@@ -53,7 +57,8 @@ body, html {
     color: white;
     display: none;
     padding: 100px 20px;
-    height: 100%;
+    min-height: 110%;
+    height:auto;
 }
 
 h1 {
@@ -67,6 +72,13 @@ h3 {
     position:absolute;
     top:0;
     padding: 5px;
+}
+
+h4 {
+    font-size:45px;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom:0px;
 }
 
 .central-elements {
@@ -104,6 +116,26 @@ table {
     background-color: deepskyblue;
 }
 
+#superRare {
+    background-color: yellow;
+}
+
+#ultraRare {
+    background-color: red;
+}
+
+#epic {
+    background-color: darkmagenta;
+}
+
+#legendary {
+    background-color: gold;
+}
+
+.garagecontent {
+    display:none;
+}
+
 /* Style the buttons that are used to open the tab content */
 .tab button {
     float: left;
@@ -131,4 +163,58 @@ table {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+#garageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(100%/5, max(100%/5))));
+    margin-top: 20px;
+    row-gap: 10px;
+}
+
+.tab {
+    font-size: 22px;
+    text-align: center;
+    color: black;
+    font-weight:bold;
+    width: 12%;
+    margin: 2px;
+    margin-block: 5px;
+    padding: 5px;
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 8px;
+    border-width: 0;
+    line-height: 20px;
+    list-style: none;
+}
+
+#unownedGrid {
+    filter: grayscale();
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(100%/5, max(100%/5))));
+    margin-top: 20px;
+    row-gap: 10px;
+}
+
+.btn {
+    position: relative;
+    margin-left: -300px;
+    margin-top: 22px;
+    background-color: orangered;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#fullhandbox {
+    color:red;
 }

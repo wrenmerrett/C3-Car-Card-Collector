@@ -22,7 +22,7 @@ function carPicker() {
             var chosenCar = data[Math.floor(Math.random() * data.length)];
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
-            var garageAdd = chosenCar.carID - 1;
+            var garageAdd = chosenCar.carID;
             console.log(garageAdd);
             if (playerGarage.includes(garageAdd)) {
                 money += (chosenCar.rarity * chosenCar.rq);
