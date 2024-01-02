@@ -15,12 +15,11 @@
                 <button class="tablink" onclick="openPage('Stats', this, 'darkolivegreen')">Stats</button>
 
                 <div id="Home" class="tabcontent">
-                    <h1 style="position:absolute" ">
+                    <h1 style="position:absolute">
                     C3
                 </h1>
                 <b style="margin-top:100px,">CAR CARD COLLECTOR</b>
                 <b>
-                    <div>
                         <div class="central-elements">
                             <h2 id="cashDisplay"></h2>
                             <h2>YOUR HAND</h2>
@@ -53,9 +52,9 @@
                 <div id="Collection" class="tabcontent">
                     <h3>Collection</h3>
                     <div class="tab">
-                        <button id="common" class="tablinks">Common</button>
-                        <button id="uncommon" class="tablinks">Uncommon</button>
-                        <button id="rare" class="tablinks" >Rare</button>
+                        <button id="common">Common</button>
+                        <button id="uncommon">Uncommon</button>
+                        <button id="rare">Rare</button>
                     </div>
 
                     <div class="card" data-rarity="common"></div>
@@ -63,17 +62,17 @@
                     <div class="card" data-rarity="rare"></div>
 
                     <!-- Tab content -->
-                    <div id="London" class="tabcontent">
+                    <div id="common" class="garagecontent">
                         <h3 id="common">Common</h3>
-                        <p>London is the capital city of England.</p>
+                        <div id="garage"></div>
                     </div>
 
-                    <div id="Paris" class="tabcontent">
+                    <div id="uncommon" class="garagecontent">
                         <h3 id="uncommon">Uncommon</h3>
                         <p>Paris is the capital of France.</p>
                     </div>
 
-                    <div id="Tokyo" class="tabcontent">
+                    <div id="rare" class="garagecontent">
                         <h3 id="rare">Rare</h3>
                         <p>Tokyo is the capital of Japan.</p>
                     </div>

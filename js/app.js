@@ -18,8 +18,9 @@ function carPicker() {
         .then(response => response.json())
         .then(data => {
             // Work with your JSON data here
+            data = data.cars
             var chosenCar = data[Math.floor(Math.random() * data.length)];
-            var carImage = chosenCar.carID + ".png";
+            var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID - 1;
             console.log(garageAdd);

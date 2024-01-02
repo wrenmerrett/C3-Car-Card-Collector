@@ -4,63 +4,30 @@ const garageButton = document.getElementById('garageDrop');
 
 export const playerGarage = [0, 1, 2, 3, 4];
 const tabs = document.querySelectorAll('.tab');
-const cards = document.querySelectorAll('.card');
-import { playerHand } from "/js/playerHand.js";
-import { rarities } from "/js/app.js";
+var cards;
+const rarities = ['common', 'uncommon', 'rare', 'superRare', 'ultraRare', 'epic', 'legendary']
+
+fetch('./js/data.json')
+    .then(response => response.json())
+    .then(data => {
+        cards = data.cars;
+    })
 
 tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
-
-var garageList = [];
-var options;
-var common = rarities[0];
-var uncommon = rarities[1];
-var rare = rarities[2];
-var superRare = rarities[3];
-var ultraRare = rarities[4];
-var epic = rarities[5];
-var legendary = rarities[6];
 
 function handleTabClick(event) {
     const target = event.target;
     const id = target.id;
+    var carRarity = rarities.indexOf(id) + 1;
 
-    cards.forEach(card => {
-        if (card.dataset.rarity !== id) {
-            card.style.display = 'none';
+    cards.forEach(cards => {
+        if (cards.rarity == carRarity) {
+            if (playerGarage.includes(cards.carID)) {
+                var garageImage = cards.imageID;
+                document.getElementById('garage').innerHTML = `<img src="assets/cards/${garageImage}" id="imageBox"/>`
+            }
         } else {
-            card.style.display = 'block';
+            console.log("peeman")
         }
     });
 }
-
-export function carSwapper() {
-    fetch('/js/data.json')
-        .then(response => response.json())
-        .then(data => {
-            const selectableCars = playerGarage.filter(val => !playerHand.includes(val));
-            for (var i = 0; i < selectableCars.length; i++) {
-                var checkNumber = selectableCars[i];
-                namePull(checkNumber);
-            }
-            function namePull(c) {
-                var table = "";
-
-                for (var c in data) {
-                    table += "<tr>";
-                    table += "<td>"
-                        + data[c].carID + "</td>"
-                        + "<td>" + data[c].rq + "</td>"
-                        + "<td>" + data[c].year + "</td>";
-                    + "<td>" + data[c].make + "</td>";
-                    +"<td>" + data[c].model + "</td>";
-                    table += "</tr>";
-                }
-                document.getElementById("result").innerText = table;
-                const checker = num;
-                garageList.unshift("RQ"+(data[checker].rq) + " " +(data[checker].year) + " " + (data[checker].make) + " " + (data[checker].model));
-            };
-            
-        }
-    )
-};
-
