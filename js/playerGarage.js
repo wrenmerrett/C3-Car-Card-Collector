@@ -12,7 +12,7 @@ tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
 
 var garageList = [];
 var options;
-var common = rarites[0];
+var common = rarities[0];
 var uncommon = rarities[1];
 var rare = rarities[2];
 var superRare = rarities[3];

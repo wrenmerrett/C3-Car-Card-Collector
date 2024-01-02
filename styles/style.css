@@ -78,6 +78,12 @@ h3 {
     color: greenyellow;
 }
 
+#collectButton {
+    font-size: 40px;
+    padding: 5px;
+    background-color: gold;
+}
+
 img {
     width: 95%;
 }

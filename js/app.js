@@ -1,7 +1,7 @@
 export const button = document.querySelector('[data-collect-card]');
 import { playerGarage } from "/js/playerGarage.js";
 var money = 10;
-export const rarities = ["F", "E", "D", "C", "B", "A", "S"];
+export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
