@@ -203,7 +203,7 @@ table {
 .btn {
     position: relative;
     margin-left: -300px;
-    margin-top: 22px;
+    bottom: 5px;
     background-color: orangered;
     color: white;
     font-size: 16px;
@@ -217,4 +217,6 @@ table {
 
 #fullhandbox {
     color:red;
+    font-weight:bold;
+    font-size:22px;
 }

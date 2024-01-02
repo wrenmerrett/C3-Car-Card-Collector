@@ -2,7 +2,7 @@
 
 export const playerGarage = [1, 2, 3, 4, 5];
 import { button } from "./app.js";
-import { playerHand } from "/js/playerHand.js";
+import { playerHand, getHandCards } from "/js/playerHand.js";
 const tabs = document.querySelectorAll('.tab');
 var cards;
 var newHandCard;
@@ -16,14 +16,6 @@ fetch('./js/data.json')
     })
 
 tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
-
-garageGrid.addEventListener("click", function (e) { // e = event object
-    const clickedCard = e.target;
-    console.log(clickedCard);
-    console.log("it works!");
-    addToHand(clickedCard);
-        // do stuff with `clickedVideoContainer`
-});
 
 function handleTabClick(event) {
     const target = event.target;
@@ -48,7 +40,8 @@ function handleTabClick(event) {
                     inHand.innerHTML = "IN HAND";
                     inHand.id = carIndex;
                     inHand.addEventListener('click', () => {
-                        delete playerHand[this.id];
+                        delete playerHand[inHand.id];
+                        console.log(playerHand);
                         inHand.remove();
                     });
                     garageCard.appendChild(inHand);
@@ -64,20 +57,42 @@ function handleTabClick(event) {
         }
     });
 
-} function addToHand(newHandCard) {
-    if (playerHand.length < 5) {
-        console.log("it REALLY works");
+    garageGrid.addEventListener("click", (e) => { // e = event object
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.tagName);
+            const selection = e.target;
+            const clickedCard = selection.id;
+            const handCheck = clickedCard - 1;
+            if (playerHand.includes(handCheck)) {
+                document.getElementById('fullhandbox').innerText = "Car already in hand!";
+                return;
+            }
+            addToHand(clickedCard);
+        }
+    })
+};
+
+function addToHand(newHandCard) {
+    if (playerHand.includes(undefined)) {
         var inHand = document.createElement('button');
         inHand.className = "btn";
         inHand.innerHTML = "IN HAND";
-        inHand.id = carIndex;
+        inHand.id = newHandCard - 1;
+        var handAddedCar = Number(inHand.id);
         inHand.onclick = (function () {
             delete playerHand[this.id];
             $(this).remove();
         });
-        newHandCard.appendChild(inHand);
-        playerHand.push[this.id];
+        var enteringHand = document.getElementById(newHandCard);
+        enteringHand.innerText += inHand;
+        for (let i = 0; i < playerHand.length; i++) {
+            if (playerHand[i] === undefined) {
+                playerHand[i] = handAddedCar; // Replace undefined with 0 or any desired value
+                break;
+            }
+        }
+        getHandCards(...playerHand)
     } else {
-
+        document.getElementById('fullhandbox').innerText = "Your hand is full!";
     }
-}
+};

@@ -10,9 +10,9 @@ var handAccel4;
 var handAccel5;
 var buttonCooldown;
 
-window.addEventListener('load', getHandCards(...playerHand));
+window.addEventListener('click', getHandCards(...playerHand));
 
-function getHandCards(car1, car2, car3, car4, car5) {
+export function getHandCards(car1, car2, car3, car4, car5) {
     fetch('/js/data.json')
         .then(response => response.json())
         .then(data => {
