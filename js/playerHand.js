@@ -60,7 +60,8 @@ export function getHandCards(car1, car2, car3, car4, car5) {
 }
 
 export function handUpdater(indexNo) {
-        playerHand = playerHand.filter(item => item !== indexNo);
+    playerHand = playerHand.filter(item => item !== indexNo);
+    console.log(playerHand.length);
         console.log(playerHand);
 };
 
