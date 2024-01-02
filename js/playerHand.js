@@ -44,7 +44,7 @@ export function getHandCards(car1, car2, car3, car4, car5) {
             document.getElementById('hand5').innerHTML = `<img src="./assets/cards/${handImage5}" id="imageBox"/>`
             var handAccel5 = handCar5.zeroToSixty;
 
-            var buttonCooldown = (handAccel1 + handAccel2 + handAccel3 + handAccel4 + handAccel5);
+            var buttonCooldown = (handAccel1 + handAccel2 + handAccel3 + handAccel4 + handAccel5)*225;
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + (buttonCooldown)/1000 + " seconds";
             button.addEventListener('click', () => {
                 setTimeout(function() {
