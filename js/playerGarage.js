@@ -1,6 +1,6 @@
 'use strict';
 
-export var playerGarage = [1, 2, 3, 4, 5];
+export var playerGarage = [1, 2, 3, 4, 5, 72, 70, 71, 75, 36, 33];
 import { button } from "./app.js";
 import { playerHand, getHandCards, handUpdater, handAdder } from "/js/playerHand.js";
 const tabs = document.querySelectorAll('.tab');
@@ -38,6 +38,7 @@ function handleTabClick(event) {
     var carRarity = rarities.indexOf(id) + 1;
     document.getElementById('garageGrid').innerText = "";
     document.getElementById('unownedGrid').innerText = "";
+    document.getElementById('eliteGrid').innerText = "";
 
     cards.forEach(cards => {
         if (cards.rarity == carRarity) {
@@ -53,6 +54,12 @@ function handleTabClick(event) {
                     garageCard.appendChild(handButton(img.id, carIndex));
                 }
                 gridContainer.append(garageCard);
+            } else if (cards.elite === "yes")
+            {
+                var eliteAdd = document.getElementById('eliteGrid');
+                const eliteimg = document.createElement('img');
+                eliteimg.src = "/assets/cards/" + cards.imageID;
+                eliteAdd.append(eliteimg);
             } else {
                 var collectionAdd = document.getElementById('unownedGrid');
                 const unownedimg = document.createElement('img');
