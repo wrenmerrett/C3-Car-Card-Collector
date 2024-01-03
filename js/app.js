@@ -1,14 +1,39 @@
 export const button = document.querySelector('[data-collect-card]');
 import { playerGarage } from "/js/playerGarage.js";
-var money = 10;
+import { playerHand } from "/js/playerHand.js";
+let money = 10;
+let buttonCooldown = 0;
+let moneyBonus = 0;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
 
 button.addEventListener('click', () => {
-    carPicker();
     button.disabled = true;
+    fetch('/js/data.json')
+        .then(response => response.json())
+        .then(data => {
+            data = data.cars;
+            let buttonVar = 0;
+            let moneyVar = 0;
+            playerHand.forEach(bonusCalcs);
+            function bonusCalcs(id) {
+                let car = (data[id]);
+                buttonVar += (car.zeroToSixty);
+                moneyVar += (car.handling);
+            }
+            moneyBonus = ((moneyVar - 275)/100) + 1;
+            console.log(moneyBonus);
+            buttonCooldown = buttonVar * 250;
+            console.log(buttonCooldown);
+            carPicker();
+            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds"
+            document.getElementById('earningsBonus').innerHTML = "Earnings Bonux: x" + moneyBonus;
+            setTimeout(function () {
+                button.disabled = false;
+            }, buttonCooldown);
+        })
 });
 
 // Read file asynchronously
@@ -18,8 +43,17 @@ function carPicker() {
         .then(response => response.json())
         .then(data => {
             // Work with your JSON data here
-            data = data.cars
-            var gacha = Math.floor(Math.random() * 100) + 1;
+            data = data.cars;
+            let gachaLuck = 0;
+            playerHand.forEach(luckAdder);
+            function luckAdder(id) {
+                let car = (data[id]);
+                gachaLuck += (car.topSpeed);
+            };
+            let gachaMod = (1 + (gachaLuck - 410)) / 300;
+            document.getElementById('luckFactor').innerHTML = "Luck Factor: " + gachaMod;
+            let basegacha = Math.floor(Math.random() * 100) + 1;
+            let gacha = basegacha * gachaMod;
             if (gacha < 19) {
                 var carSelection = data.filter(data => data.rarity === 1);
             } else
@@ -40,17 +74,17 @@ function carPicker() {
             } else {
                 var carSelection = data.filter(data => data.rarity === 7);
                                 }
-            console.log(gacha);
             var chosenCar = carSelection[Math.floor(Math.random() * carSelection.length)];
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
-            console.log(garageAdd);
+            money += Math.round(moneyBonus * 2);
+            console.log(moneyBonus * 2);
+            document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             if (playerGarage.includes(garageAdd)) {
-                money += (chosenCar.rarity * chosenCar.rq);
+                money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
                 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             } else { playerGarage.unshift(garageAdd); }
-            console.log(playerGarage);
         })
         .catch(error => {
             console.log('Error fetching data:', error);
