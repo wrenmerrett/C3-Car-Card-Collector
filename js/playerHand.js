@@ -4,12 +4,6 @@ import { button } from "/js/app.js";
 import { playerGarage } from "/js/playerGarage.js";
 
 export let playerHand = [0, 1, 2, 3, 4];
-var handAccel1;
-var handAccel2;
-var handAccel3;
-var handAccel4;
-var handAccel5;
-var buttonCooldown;
 
 window.addEventListener('click', getHandCards(...playerHand));
 
@@ -46,12 +40,6 @@ export function getHandCards(car1, car2, car3, car4, car5) {
             var handAccel5 = handCar5.zeroToSixty;
 
             let buttonCooldown = (handAccel1 + handAccel2 + handAccel3 + handAccel4 + handAccel5);
-            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + (buttonCooldown) / 1000 + " seconds";
-            button.addEventListener('click', () => {
-                setTimeout(function () {
-                    button.disabled = false;
-                }, buttonCooldown);
-            });
         }
         })
         .catch(error => {
@@ -59,12 +47,36 @@ export function getHandCards(car1, car2, car3, car4, car5) {
         });
 }
 
-export function handUpdater(indexNo) {
-    playerHand = playerHand.filter(item => item !== indexNo);
-    console.log(playerHand.length);
-        console.log(playerHand);
-};
+function test(...playerHand) {
+    fetch('/js/data.json')
+        .then(response => response.json())
+        .then(data => { // Work with your JSON data here
+            data = data.cars
+            if (playerHand.length === 5) {
+                var handCar = data[playerHand];
+                var handAccel = handCar.zeroToSixty;
+                var handAdd = document.getElementById('handDisplay');
+                const handImage = document.createElement('img');
+                unownedimg.src = "/assets/cards/" + playerHand.imageID;
+                handAdd.append(handImage);
+                buttonCooldown += handAccel;
+            }
+        });
 
-export function handAdder(indexNo) {
-    playerHand.push(indexNo);
-};
+    document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + (buttonCooldown) / 1000 + " seconds";
+    button.addEventListener('click', () => {
+        setTimeout(function () {
+            button.disabled = false;
+        }, buttonCooldown);
+    });
+
+    export function handUpdater(indexNo) {
+        playerHand = playerHand.filter(item => item !== indexNo);
+        console.log(playerHand.length);
+        console.log(playerHand);
+    }
+
+    export function handAdder(indexNo) {
+        playerHand.push(indexNo);
+    }
+}
