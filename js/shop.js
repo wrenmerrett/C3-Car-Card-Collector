@@ -28,7 +28,7 @@ function buyButton(id, price) {
     console.log(buybtn.id);
     buybtn.classList.add('buybtn'); // Use classList to add a class
     buybtn.innerHTML = "BUY: $" + price;
-    buybtn.addEventListener('click', buyCar(buybtn.id, buybtn.innerText));
+    buybtn.onclick = (buyCar(buybtn.id, buybtn.innerText));
     return buybtn;
 };
 

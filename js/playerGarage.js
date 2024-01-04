@@ -1,6 +1,6 @@
 'use strict';
 
-export var playerGarage = [1, 2, 3, 4, 5, 72, 70, 71, 75, 36, 33];
+export var playerGarage = [1, 2, 3, 4, 5, 72, 70, 71, 75, 36, 33, 73, 74];
 import { button } from "./app.js";
 import { playerHand, getHandCards, handUpdater, handAdder } from "/js/playerHand.js";
 const tabs = document.querySelectorAll('.tab');
