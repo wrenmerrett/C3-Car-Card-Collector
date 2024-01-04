@@ -4,6 +4,7 @@ import { playerHand, handLoader, getHandCards } from "./playerHand.js";
 export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
+export let restockCost = 0;
 let storedGarage;
 let storedHand;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
@@ -14,6 +15,7 @@ document.getElementById('saveButton').addEventListener('click', () => {
     localStorage.setItem("garage", JSON.stringify(playerGarage));
     localStorage.setItem('hand', JSON.stringify(playerHand));
     localStorage.setItem('cashBalance', JSON.stringify(money));
+    localStorage.setItem('restockTracker', JSON.stringify(restockCost));
 })
 
 document.getElementById('loadButton').addEventListener('click', () => {
@@ -23,6 +25,7 @@ document.getElementById('loadButton').addEventListener('click', () => {
     handLoader(storedHand);
     getHandCards(...playerHand);
     money = JSON.parse(localStorage.getItem('cashBalance'));
+    restockCost = JSON.parse(localStorage.getItem('restockTracker'));
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
 })
 
@@ -47,7 +50,7 @@ button.addEventListener('click', () => {
                     moneyVar += ((car.handling) * 0.40);
                 }
             }
-            moneyBonus = ((moneyVar - 275)/100) + 1;
+            moneyBonus = ((moneyVar - 265)/100) + 1;
             buttonCooldown = buttonVar * 400;
             carPicker();
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds"
@@ -61,6 +64,11 @@ button.addEventListener('click', () => {
 export function moneyChanger(transaction) {
     money -= transaction;
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+}
+
+export function restockUp() {
+    moneyChanger(restockCost);
+    restockCost += 250;
 }
 
 // Read file asynchronously
@@ -100,22 +108,22 @@ function carPicker() {
             document.getElementById('luckFactor').innerHTML = "Luck Factor: " + gachaMod;
             let basegacha = Math.floor(Math.random() * 100) + 1;
             let gacha = basegacha * gachaMod;
-            if (gacha < 19) {
+            if (gacha < 20) {
                 var carSelection = data.filter(data => data.rarity === 1);
             } else
-            if (gacha < 37) {
+            if (gacha < 40) {
                 var carSelection = data.filter(data => data.rarity === 2);
             } else
-            if (gacha < 57) {
+            if (gacha < 60) {
                 var carSelection = data.filter(data => data.rarity === 3);
             } else
-            if (gacha < 75) {
+            if (gacha < 80) {
                 var carSelection = data.filter(data => data.rarity === 4);
             } else
-            if (gacha < 90) {
+            if (gacha < 105) {
                 var carSelection = data.filter(data => data.rarity === 5);
             } else
-            if (gacha < 105) {
+            if (gacha < 130) {
                 var carSelection = data.filter(data => data.rarity === 6);
             } else {
                 var carSelection = data.filter(data => data.rarity === 7);
@@ -154,8 +162,8 @@ function carPicker() {
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
-            money += Math.round(moneyBonus * 2);
-            money += (Math.floor((Math.random() * (gachaLuck/5)) * gambleValue));
+            money += Math.round(moneyBonus * 20);
+            money += (Math.floor((Math.random() * (gachaLuck/4.5)) * gambleValue));
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             if (playerGarage.includes(garageAdd)) {
                 money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);

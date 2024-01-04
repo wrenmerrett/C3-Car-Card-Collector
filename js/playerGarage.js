@@ -91,7 +91,6 @@ function handleTabClick(event) {
 
 function addToHand(newHandCard) {
     if (handSize >= 5) {
-        console.log(handSize);
         document.getElementById('fullhandbox').innerText = "Your hand is full!";
     } else {
         let inHand = newHandCard - 1;
