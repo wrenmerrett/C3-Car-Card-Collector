@@ -1,7 +1,7 @@
 export const button = document.querySelector('[data-collect-card]');
 import { playerGarage } from "/js/playerGarage.js";
 import { playerHand } from "/js/playerHand.js";
-let money = 10;
+export let money = 1000;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
@@ -42,6 +42,11 @@ button.addEventListener('click', () => {
         })
 });
 
+export function moneyChanger(transaction) {
+    money -= transaction;
+    document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+}
+
 // Read file asynchronously
 function carPicker() {
     // Assuming data.json contains your JSON data
@@ -51,15 +56,25 @@ function carPicker() {
             // Work with your JSON data here
             data = data.cars;
             let gachaLuck = 0;
+            let makeTracker = [];
+            let yearTracker = [];
+            let countryTracker = [];
+            let driveTracker = [];
+            let tyreTracker = [];
             playerHand.forEach(luckAdder);
             function luckAdder(id) {
                 let car = (data[id]);
+                makeTracker.push(car.make);
+                let yearFilter = Math.floor(car.year / 10);
+                yearTracker.push(yearFilter);
+                countryTracker.push(car.country);
+                driveTracker.push(car.drive);
+                tyreTracker.push(car.tyres);
                 gachaLuck += (car.topSpeed);
                 if (car.perk == "Lucky") {
                     gachaLuck += ((car.topSpeed)*0.25);
                 }
             };
-            console.log(gachaLuck);
             data = data.filter(c => c.elite !== "yes");
             let gachaMod = (1 + (gachaLuck - 410)) / 300;
             document.getElementById('luckFactor').innerHTML = "Luck Factor: " + gachaMod;
@@ -85,6 +100,16 @@ function carPicker() {
             } else {
                 var carSelection = data.filter(data => data.rarity === 7);
                                 }
+            var makeCounts = makeTracker.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+            console.log(makeCounts);
+            var yearCounts = yearTracker.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+            console.log(yearCounts);
+            var countryCounts = countryTracker.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+            console.log(countryCounts);
+            var driveCounts = driveTracker.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+            console.log(driveCounts);
+            var tyreCounts = tyreTracker.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+            console.log(tyreCounts);
             var chosenCar = carSelection[Math.floor(Math.random() * carSelection.length)];
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`

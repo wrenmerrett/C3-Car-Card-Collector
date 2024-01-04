@@ -207,8 +207,16 @@ table {
     grid-template-columns: repeat(auto-fit, minmax(0, min(90%/3, max(90%/3))));
     position: relative;
     height: 50%;
-    margin-top: 20px;
-    row-gap: 10px;
+    margin-top: 15px;
+    row-gap: 8px;
+}
+
+#shopGrid img {
+    width: 85%;
+}
+
+#shopGrid button {
+    bottom: 10px;
 }
 
 .shopHeader {
@@ -238,6 +246,19 @@ table {
     position: relative;
     background-color: orangered;
     color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor:default;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.buybtn {
+    position: relative;
+    background-color: greenyellow;
+    color: black;
     font-size: 16px;
     padding: 5px 10px;
     border: none;
@@ -302,4 +323,11 @@ table {
 .button-3:active {
     background-color: #298e46;
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.synergyTracker {
+    display: grid;
+    position:absolute;
+    bottom: 250px;
+    left: 50px;
 }
