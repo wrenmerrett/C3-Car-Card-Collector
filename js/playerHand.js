@@ -1,14 +1,14 @@
 'use strict';
 
-import { button } from "/js/app.js";
-import { playerGarage } from "/js/playerGarage.js";
+import { button } from "./app.js";
+import { playerGarage } from "./playerGarage.js";
 
-export let playerHand = [0, 1, 2, 3, 4];
+export let playerHand = [3, 75, 41, 46, 17];
 
 window.addEventListener('click', getHandCards(...playerHand));
 
 export function getHandCards(car1, car2, car3, car4, car5) {
-    fetch('/js/data.json')
+    fetch('./js/data.json')
         .then(response => response.json())
         .then(data => {
             // Work with your JSON data here
@@ -45,10 +45,12 @@ export function getHandCards(car1, car2, car3, car4, car5) {
 
 export function handUpdater(indexNo) {
     playerHand = playerHand.filter(item => item !== indexNo);
-    console.log(playerHand.length);
-        console.log(playerHand);
 };
 
 export function handAdder(indexNo) {
     playerHand.push(indexNo);
 };
+
+export function handLoader(hand) {
+    playerHand = hand;
+}

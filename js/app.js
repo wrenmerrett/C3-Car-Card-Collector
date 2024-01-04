@@ -1,17 +1,34 @@
 export const button = document.querySelector('[data-collect-card]');
-import { playerGarage } from "/js/playerGarage.js";
-import { playerHand } from "/js/playerHand.js";
-export let money = 1000;
+import { playerGarage, loadGarage } from "./playerGarage.js";
+import { playerHand, handLoader, getHandCards } from "./playerHand.js";
+export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
+let storedGarage;
+let storedHand;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+document.getElementById('saveButton').addEventListener('click', () => {
+    localStorage.setItem("garage", JSON.stringify(playerGarage));
+    localStorage.setItem('hand', JSON.stringify(playerHand));
+    localStorage.setItem('cashBalance', JSON.stringify(money));
+})
+
+document.getElementById('loadButton').addEventListener('click', () => {
+    storedGarage = JSON.parse(localStorage.getItem("garage"));
+    loadGarage(storedGarage);
+    storedHand = JSON.parse(localStorage.getItem('hand'));
+    handLoader(storedHand);
+    getHandCards(...playerHand);
+    money = JSON.parse(localStorage.getItem('cashBalance'));
+    document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+})
 
 button.addEventListener('click', () => {
     button.disabled = true;
-    fetch('/js/data.json')
+    fetch('./js/data.json')
         .then(response => response.json())
         .then(data => {
             data = data.cars;
@@ -31,7 +48,7 @@ button.addEventListener('click', () => {
                 }
             }
             moneyBonus = ((moneyVar - 275)/100) + 1;
-            buttonCooldown = buttonVar;
+            buttonCooldown = buttonVar * 400;
             carPicker();
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds"
             document.getElementById('earningsBonus').innerHTML = "Earnings Bonux: x" + moneyBonus;
@@ -49,7 +66,7 @@ export function moneyChanger(transaction) {
 // Read file asynchronously
 function carPicker() {
     // Assuming data.json contains your JSON data
-    fetch('/js/data.json')
+    fetch('./js/data.json')
         .then(response => response.json())
         .then(data => {
             // Work with your JSON data here
@@ -123,7 +140,9 @@ function carPicker() {
                 let synergyContainer = document.getElementById('synergyRender');
                 const synergyTile = document.createElement('div');
                 synergyTile.class = 'synergyGrid';
-                synergyTile.innerText = synergy;
+                if (Number.isInteger(synergy) == true) {
+                    synergyTile.innerText = synergy + "0s";
+                } else {synergyTile.innerText = synergy;}
                 synergyContainer.append(synergyTile);
                 let focus = Math.random();
                 const filteredItems = carSelection.filter(item => `${item.make} ${item.year} ${item.country} ${item.drive} ${item.tyres}`.includes(synergy));

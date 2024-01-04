@@ -2,6 +2,10 @@ text {
     font-family:Roboto;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 #Home {
     background-color: darkslategrey;
 }
@@ -333,4 +337,16 @@ img {
     margin-left: 15%;
     width: 10%;
     position: relative;
+}
+
+.uiButton {
+    background-color: greenyellow;
+    color: black;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }

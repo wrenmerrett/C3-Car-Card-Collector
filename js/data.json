@@ -14,7 +14,7 @@
    "handling": 65,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -31,7 +31,7 @@
    "handling": 53,
    "drive": "RWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -48,7 +48,7 @@
    "handling": 64,
    "drive": "RWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -65,7 +65,7 @@
    "handling": 60,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -82,7 +82,7 @@
    "handling": 70,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -99,7 +99,7 @@
    "handling": 52,
    "drive": "RWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -116,7 +116,7 @@
    "handling": 62,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -133,7 +133,7 @@
    "handling": 62,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -150,7 +150,7 @@
    "handling": 63,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -167,7 +167,7 @@
    "handling": 65,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -184,7 +184,7 @@
    "handling": 70,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -201,7 +201,7 @@
    "handling": 68,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -218,7 +218,7 @@
    "handling": 71,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -235,7 +235,7 @@
    "handling": 71,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -252,7 +252,7 @@
    "handling": 71,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -269,7 +269,7 @@
    "handling": 69,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -286,7 +286,7 @@
    "handling": 72,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -303,7 +303,7 @@
    "handling": 63,
    "drive": "4WD",
    "tyres": "All-Surface",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -320,7 +320,7 @@
    "handling": 66,
    "drive": "4WD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -337,7 +337,7 @@
    "handling": 72,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -354,7 +354,7 @@
    "handling": 74,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -371,7 +371,7 @@
    "handling": 77,
    "drive": "RWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -388,7 +388,7 @@
    "handling": 65,
    "drive": "4WD",
    "tyres": "All-Surface",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -405,7 +405,7 @@
    "handling": 79,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -422,7 +422,7 @@
    "handling": 79,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -439,7 +439,7 @@
    "handling": 82,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -456,7 +456,7 @@
    "handling": 77,
    "drive": "RWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -473,7 +473,7 @@
    "handling": 88,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -490,7 +490,7 @@
    "handling": 86,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -507,7 +507,7 @@
    "handling": 90,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -524,7 +524,7 @@
    "handling": 81,
    "drive": "4WD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -541,7 +541,7 @@
    "handling": 88,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -575,7 +575,7 @@
    "handling": 95,
    "drive": "RWD",
    "tyres": "Slick",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -592,7 +592,7 @@
    "handling": 93,
    "drive": "4WD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -626,7 +626,7 @@
    "handling": 78,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -643,7 +643,7 @@
    "handling": 64,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -660,7 +660,7 @@
    "handling": 61,
    "drive": "4WD",
    "tyres": "All-Surface",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -677,7 +677,7 @@
    "handling": 71,
    "drive": "FWD",
    "tyres": "All-Surface",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -694,7 +694,7 @@
    "handling": 61,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -711,7 +711,7 @@
    "handling": 73,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -728,7 +728,7 @@
    "handling": 67,
    "drive": "4WD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -745,7 +745,7 @@
    "handling": 72,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -762,7 +762,7 @@
    "handling": 66,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -779,7 +779,7 @@
    "handling": 75,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -796,7 +796,7 @@
    "handling": 71,
    "drive": "RWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -813,7 +813,7 @@
    "handling": 78,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -830,7 +830,7 @@
    "handling": 69,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -847,7 +847,7 @@
    "handling": 71,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -864,7 +864,7 @@
    "handling": 71,
    "drive": "FWD",
    "tyres": "Standard",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -881,7 +881,7 @@
    "handling": 77,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -898,7 +898,7 @@
    "handling": 79,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -915,7 +915,7 @@
    "handling": 75,
    "drive": "4WD",
    "tyres": "All-Surface",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -932,7 +932,7 @@
    "handling": 79,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -949,7 +949,7 @@
    "handling": 85,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -966,7 +966,7 @@
    "handling": 80,
    "drive": "RWD",
    "tyres": "Slick",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -983,7 +983,7 @@
    "handling": 76,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1000,7 +1000,7 @@
    "handling": 85,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1017,7 +1017,7 @@
    "handling": 78,
    "drive": "4WD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1034,7 +1034,7 @@
    "handling": 82,
    "drive": "FWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1051,7 +1051,7 @@
    "handling": 83,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1068,7 +1068,7 @@
    "handling": 84,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1085,7 +1085,7 @@
    "handling": 85,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1102,7 +1102,7 @@
    "handling": 82,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1119,7 +1119,7 @@
    "handling": 82,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1136,7 +1136,7 @@
    "handling": 83,
    "drive": "4WD",
    "tyres": "Off-Road",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1153,7 +1153,7 @@
    "handling": 90,
    "drive": "RWD",
    "tyres": "Slick",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1170,7 +1170,7 @@
    "handling": 91,
    "drive": "RWD",
    "tyres": "Performance",
-   "elite": null,
+   "elite": "",
    "perk": ""
  },
  {
@@ -1274,6 +1274,601 @@
    "tyres": "Performance",
    "elite": "yes",
    "perk": "Quick Charge"
+ },
+ {
+   "carID": 76,
+   "imageID": "76.png",
+   "make": "Oldsmobile",
+   "model": "Cutlass Supreme Hardtop Coupe 403 V8 Turbo",
+   "year": 1977,
+   "country": "US",
+   "rarity": 1,
+   "rq": 14,
+   "topSpeed": 121,
+   "zeroToSixty": 10,
+   "handling": 64,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 77,
+   "imageID": "77.png",
+   "make": "Mini",
+   "model": "Cooper S Convertible",
+   "year": 2010,
+   "country": "DE",
+   "rarity": 3,
+   "rq": 37,
+   "topSpeed": 140,
+   "zeroToSixty": 7.3,
+   "handling": 76,
+   "drive": "FWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 78,
+   "imageID": "78.png",
+   "make": "Jaguar",
+   "model": "XKSS",
+   "year": 1957,
+   "country": "GB",
+   "rarity": 4,
+   "rq": 42,
+   "topSpeed": 150,
+   "zeroToSixty": 5.1,
+   "handling": 73,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 79,
+   "imageID": "79.png",
+   "make": "GWM",
+   "model": "Tank 300 Ultra",
+   "year": 2023,
+   "country": "CN",
+   "rarity": 5,
+   "rq": 50,
+   "topSpeed": 105,
+   "zeroToSixty": 7.9,
+   "handling": 71,
+   "drive": "4WD",
+   "tyres": "All-Surface",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 80,
+   "imageID": "80.png",
+   "make": "BMW",
+   "model": "M3 GTS (E92)",
+   "year": 2010,
+   "country": "DE",
+   "rarity": 6,
+   "rq": 73,
+   "topSpeed": 190,
+   "zeroToSixty": 4,
+   "handling": 89,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 81,
+   "imageID": "81.png",
+   "make": "Aston Martin",
+   "model": "V12 Vantage S",
+   "year": 2014,
+   "country": "GB",
+   "rarity": 6,
+   "rq": 75,
+   "topSpeed": 205,
+   "zeroToSixty": 3.9,
+   "handling": 88,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 82,
+   "imageID": "82.png",
+   "make": "Dodge",
+   "model": "SRT Viper",
+   "year": 2013,
+   "country": "US",
+   "rarity": 7,
+   "rq": 80,
+   "topSpeed": 206,
+   "zeroToSixty": 3.5,
+   "handling": 90,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 83,
+   "imageID": "83.png",
+   "make": "Pagani",
+   "model": "Zonda F",
+   "year": 2005,
+   "country": "IT",
+   "rarity": 7,
+   "rq": 82,
+   "topSpeed": 214,
+   "zeroToSixty": 3.6,
+   "handling": 90,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 84,
+   "imageID": "84.png",
+   "make": "McLaren",
+   "model": "12C",
+   "year": 2011,
+   "country": "GB",
+   "rarity": 7,
+   "rq": 85,
+   "topSpeed": 205,
+   "zeroToSixty": 3,
+   "handling": 89,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 85,
+   "imageID": "85.png",
+   "make": "Kia",
+   "model": "EV6 GT",
+   "year": 2023,
+   "country": "KR",
+   "rarity": 7,
+   "rq": 87,
+   "topSpeed": 161,
+   "zeroToSixty": 3.2,
+   "handling": 84,
+   "drive": "4WD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 86,
+   "imageID": "86.png",
+   "make": "Lamborghini",
+   "model": "Gallardo LP560-4",
+   "year": 2008,
+   "country": "IT",
+   "rarity": 7,
+   "rq": 88,
+   "topSpeed": 202,
+   "zeroToSixty": 3.5,
+   "handling": 88,
+   "drive": "4WD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 87,
+   "imageID": "87.png",
+   "make": "Chevrolet",
+   "model": "Spin LTZ",
+   "year": 2018,
+   "country": "BR",
+   "rarity": 2,
+   "rq": 20,
+   "topSpeed": 107,
+   "zeroToSixty": 10.6,
+   "handling": 69,
+   "drive": "FWD",
+   "tyres": "Standard",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 88,
+   "imageID": "88.png",
+   "make": "Hyundai",
+   "model": "HB20 1.6",
+   "year": 2019,
+   "country": "BR",
+   "rarity": 2,
+   "rq": 24,
+   "topSpeed": 116,
+   "zeroToSixty": 10.5,
+   "handling": 73,
+   "drive": "FWD",
+   "tyres": "Standard",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 89,
+   "imageID": "89.png",
+   "make": "Sbarro",
+   "model": "Windhound",
+   "year": 1978,
+   "country": "CH",
+   "rarity": 3,
+   "rq": 35,
+   "topSpeed": 99,
+   "zeroToSixty": 14.3,
+   "handling": 59,
+   "drive": "4WD",
+   "tyres": "Off-Road",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 90,
+   "imageID": "90.png",
+   "make": "Sbarro",
+   "model": "Super Eight",
+   "year": 1984,
+   "country": "CH",
+   "rarity": 4,
+   "rq": 47,
+   "topSpeed": 137,
+   "zeroToSixty": 5,
+   "handling": 76,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 91,
+   "imageID": "91.png",
+   "make": "Alfa Romeo",
+   "model": "Diva",
+   "year": 2006,
+   "country": "CH",
+   "rarity": 5,
+   "rq": 54,
+   "topSpeed": 170,
+   "zeroToSixty": 5,
+   "handling": 83,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 92,
+   "imageID": "92.png",
+   "make": "Sbarro",
+   "model": "Alcador GTB",
+   "year": 2008,
+   "country": "CH",
+   "rarity": 6,
+   "rq": 69,
+   "topSpeed": 193,
+   "zeroToSixty": 4,
+   "handling": 84,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 93,
+   "imageID": "93.png",
+   "make": "Dodge",
+   "model": "Challenger R/T Scat Pack",
+   "year": 2019,
+   "country": "US",
+   "rarity": 5,
+   "rq": 59,
+   "topSpeed": 182,
+   "zeroToSixty": 4.3,
+   "handling": 80,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 94,
+   "imageID": "94.png",
+   "make": "Lotus",
+   "model": "Elite Super 95",
+   "year": 1962,
+   "country": "GB",
+   "rarity": 2,
+   "rq": 21,
+   "topSpeed": 115,
+   "zeroToSixty": 9.4,
+   "handling": 74,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 95,
+   "imageID": "95.png",
+   "make": "Lotus",
+   "model": "Federal Europa S2",
+   "year": 1968,
+   "country": "GB",
+   "rarity": 2,
+   "rq": 21,
+   "topSpeed": 116,
+   "zeroToSixty": 9.6,
+   "handling": 75,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 96,
+   "imageID": "96.png",
+   "make": "Ford",
+   "model": "Focus Active",
+   "year": 2018,
+   "country": "GB",
+   "rarity": 3,
+   "rq": 34,
+   "topSpeed": 122,
+   "zeroToSixty": 10.3,
+   "handling": 74,
+   "drive": "FWD",
+   "tyres": "All-Surface",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 97,
+   "imageID": "97.png",
+   "make": "Ford",
+   "model": "Fiesta ST",
+   "year": 2005,
+   "country": "GB",
+   "rarity": 3,
+   "rq": 37,
+   "topSpeed": 129,
+   "zeroToSixty": 7.9,
+   "handling": 80,
+   "drive": "FWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 98,
+   "imageID": "98.png",
+   "make": "Ford",
+   "model": "Puma ST",
+   "year": 2020,
+   "country": "GB",
+   "rarity": 4,
+   "rq": 46,
+   "topSpeed": 137,
+   "zeroToSixty": 6.7,
+   "handling": 82,
+   "drive": "FWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 99,
+   "imageID": "99.png",
+   "make": "Lotus",
+   "model": "Esprit Sport 300",
+   "year": 1993,
+   "country": "GB",
+   "rarity": 5,
+   "rq": 54,
+   "topSpeed": 163,
+   "zeroToSixty": 5.2,
+   "handling": 84,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 100,
+   "imageID": "100.png",
+   "make": "Caterham",
+   "model": "Seven 620S",
+   "year": 2016,
+   "country": "GB",
+   "rarity": 6,
+   "rq": 75,
+   "topSpeed": 145,
+   "zeroToSixty": 3.5,
+   "handling": 89,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 101,
+   "imageID": "101.png",
+   "make": "Aston Martin",
+   "model": "DBX",
+   "year": 2021,
+   "country": "GB",
+   "rarity": 7,
+   "rq": 87,
+   "topSpeed": 181,
+   "zeroToSixty": 4.3,
+   "handling": 83,
+   "drive": "4WD",
+   "tyres": "All-Surface",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 102,
+   "imageID": "102.png",
+   "make": "Holden",
+   "model": "Colorado Z71 Xtreme",
+   "year": 2018,
+   "country": "AU",
+   "rarity": 6,
+   "rq": 66,
+   "topSpeed": 100,
+   "zeroToSixty": 7.1,
+   "handling": 75,
+   "drive": "4WD",
+   "tyres": "Off-Road",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 103,
+   "imageID": "103.png",
+   "make": "Volkswagen",
+   "model": "ID Space Vizzion Concept",
+   "year": 2019,
+   "country": "DE",
+   "rarity": 6,
+   "rq": 73,
+   "topSpeed": 100,
+   "zeroToSixty": 5,
+   "handling": 77,
+   "drive": "4WD",
+   "tyres": "Standard",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 104,
+   "imageID": "104.png",
+   "make": "Audi",
+   "model": "Q2 40 TFSI quattro S line",
+   "year": 2020,
+   "country": "DE",
+   "rarity": 6,
+   "rq": 66,
+   "topSpeed": 141,
+   "zeroToSixty": 6.5,
+   "handling": 75,
+   "drive": "4WD",
+   "tyres": "All-Surface",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 105,
+   "imageID": "105.png",
+   "make": "Polestar",
+   "model": "2",
+   "year": 2023,
+   "country": "SE",
+   "rarity": 6,
+   "rq": 78,
+   "topSpeed": 127,
+   "zeroToSixty": 4.7,
+   "handling": 77,
+   "drive": "4WD",
+   "tyres": "Standard",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 106,
+   "imageID": "106.png",
+   "make": "Alpine",
+   "model": "A110 GT4",
+   "year": 2018,
+   "country": "FR",
+   "rarity": 6,
+   "rq": 78,
+   "topSpeed": 176,
+   "zeroToSixty": 4.1,
+   "handling": 95,
+   "drive": "RWD",
+   "tyres": "Slick",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 107,
+   "imageID": "107.png",
+   "make": "Nissan",
+   "model": "Cima 450X Four (F50)",
+   "year": 2003,
+   "country": "JP",
+   "rarity": 5,
+   "rq": 59,
+   "topSpeed": 152,
+   "zeroToSixty": 7.1,
+   "handling": 73,
+   "drive": "4WD",
+   "tyres": "Standard",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 108,
+   "imageID": "108.png",
+   "make": "Genesis",
+   "model": "G70 2.0T AWD Shooting Brake",
+   "year": 2021,
+   "country": "KR",
+   "rarity": 5,
+   "rq": 63,
+   "topSpeed": 146,
+   "zeroToSixty": 6.9,
+   "handling": 78,
+   "drive": "4WD",
+   "tyres": "Standard",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 109,
+   "imageID": "109.png",
+   "make": "Kia",
+   "model": "ceed TCR",
+   "year": 2017,
+   "country": "KR",
+   "rarity": 5,
+   "rq": 63,
+   "topSpeed": 140,
+   "zeroToSixty": 5.7,
+   "handling": 91,
+   "drive": "FWD",
+   "tyres": "Slick",
+   "elite": "",
+   "perk": ""
+ },
+ {
+   "carID": 110,
+   "imageID": "110.png",
+   "make": "Volkswagen",
+   "model": "ID.4 AWD",
+   "year": 2022,
+   "country": "DE",
+   "rarity": 5,
+   "rq": 64,
+   "topSpeed": 112,
+   "zeroToSixty": 5.4,
+   "handling": 73,
+   "drive": "4WD",
+   "tyres": "Standard",
+   "elite": "",
+   "perk": ""
  }
 ]
 }

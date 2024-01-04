@@ -1,8 +1,8 @@
 'use strict';
 
-export var playerGarage = [1, 2, 3, 4, 5, 72, 70, 71, 75, 36, 33, 73, 74];
+export var playerGarage = [4, 76, 42, 47, 18];
 import { button } from "./app.js";
-import { playerHand, getHandCards, handUpdater, handAdder } from "/js/playerHand.js";
+import { playerHand, getHandCards, handUpdater, handAdder } from "./playerHand.js";
 const tabs = document.querySelectorAll('.tab');
 let handSize = playerHand.length;
 var cards;
@@ -31,6 +31,10 @@ function handButton(id,updater) {
     return handbtn;
 };
 
+export function loadGarage(garage) {
+    playerGarage = garage;
+};
+
 function handleTabClick(event) {
     document.getElementById('fullhandbox').innerText = "";
     const target = event.target;
@@ -46,7 +50,7 @@ function handleTabClick(event) {
                 var gridContainer = document.getElementById('garageGrid');
                 const garageCard = document.createElement('div');
                 var img = document.createElement('img');
-                img.src = "/assets/cards/" + cards.imageID;
+                img.src = "./assets/cards/" + cards.imageID;
                 img.id = parseInt(cards.carID);
                 garageCard.appendChild(img);
                 var carIndex = cards.carID - 1;
@@ -58,12 +62,12 @@ function handleTabClick(event) {
             {
                 var eliteAdd = document.getElementById('eliteGrid');
                 const eliteimg = document.createElement('img');
-                eliteimg.src = "/assets/cards/" + cards.imageID;
+                eliteimg.src = "./assets/cards/" + cards.imageID;
                 eliteAdd.append(eliteimg);
             } else {
                 var collectionAdd = document.getElementById('unownedGrid');
                 const unownedimg = document.createElement('img');
-                unownedimg.src = "/assets/cards/" + cards.imageID;
+                unownedimg.src = "./assets/cards/" + cards.imageID;
                 collectionAdd.append(unownedimg);
             }
         } else {
