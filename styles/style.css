@@ -60,6 +60,7 @@ body, html {
     padding: 20px 20px;
     margin:auto;
     font-size: 17px;
+    width: 175px;
 }
 
     .tablink:hover {
@@ -86,8 +87,7 @@ h3 {
     border-radius: 12px;
     text-align: left;
     font-size: 65px;
-    position:absolute;
-    top: 20px;
+    position:relative;
     padding: 5px;
 }
 
@@ -173,7 +173,6 @@ img {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    margin-top: 100px;
 }
 
 /* Change background color of buttons on hover */
@@ -203,7 +202,6 @@ img {
     margin-block: 5px;
     padding: 5px;
     position: relative;
-    top: 100px;
     cursor: pointer;
     display: inline-block;
     background-color: rgba(51, 51, 51, 0.05);
@@ -429,4 +427,8 @@ img {
     background-color: #282b2b;
     border-radius: 8px;
     padding: 8px;
+  }
+
+  .rarityButtons {
+    display: flex;
   }
