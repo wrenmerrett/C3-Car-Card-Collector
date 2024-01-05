@@ -69,7 +69,7 @@ function buyCar(id,pricetag) {
 function populateShop() {
     fetch('./js/data.json')
         .then((response) => response.json())
-        .then((data) => {
+        .then((data => {
             let cars = data.cars;
             cars = cars.filter(c => c.elite !== "yes");
             const inStock = [];
@@ -102,16 +102,16 @@ function populateShop() {
             if (shopgacha < 30) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 2);
             } else
-            if (shopgacha < 50) {
+            if (shopgacha < 45) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 3);
             } else
-            if (shopgacha < 75) {
+            if (shopgacha < 65) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 4);
             } else
-            if (shopgacha < 90) {
+            if (shopgacha < 82) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 5);
             } else
-            if (shopgacha < 96) {
+            if (shopgacha < 94) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 6);
             } else {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 7);

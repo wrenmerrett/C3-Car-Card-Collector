@@ -1,7 +1,7 @@
 export const button = document.querySelector('[data-collect-card]');
 import { playerGarage, loadGarage } from "./playerGarage.js";
 import { playerHand, handLoader, getHandCards } from "./playerHand.js";
-export let money = 100000;
+export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 export let restockCost = 0;
@@ -79,6 +79,7 @@ function carPicker() {
         .then(data => {
             // Work with your JSON data here
             data = data.cars;
+            document.getElementById('newTicker').innerText = "";
             let gachaLuck = 0;
             let gambleValue = 0;
             let makeTracker = [];
@@ -168,7 +169,9 @@ function carPicker() {
             if (playerGarage.includes(garageAdd)) {
                 money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
                 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
-            } else { playerGarage.unshift(garageAdd); }
+            } else { playerGarage.unshift(garageAdd);
+            document.getElementById('newTicker').innerText = "NEW!";
+            }
         })
         .catch(error => {
             console.log('Error fetching data:', error);

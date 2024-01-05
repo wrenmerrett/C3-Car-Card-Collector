@@ -15,6 +15,7 @@ fetch('./js/data.json')
     .then((response) => response.json())
     .then((data) => {
         cards = data.cars;
+        console.log(cards);
     })
 
 tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
@@ -44,17 +45,66 @@ export function loadGarage(garage) {
     playerGarage = garage;
 };
 
+let makeList = [];
+let countryList = [];
+let decadeList = [];
+let filterArray = [];
+let filteredMake = [];
+let filteredCountry = [];
+let filteredDecade = [];
+let filteredDrive = [];
+let filteredTyres = [];
+let rarityMemory;
+
+document.getElementById('filterButton').addEventListener('click', () => {
+    fetch('./js/data.json')
+    .then((response) => response.json())
+    .then((data) => {
+        cards = data.cars;
+    })
+    let filteredCards = [];
+    if (filteredMake.length > 0) {
+        cards = cards.filter(obj => obj.make == filteredMake);
+    }
+    if (filteredCountry.length > 0) {
+        cards = cards.filter(obj => obj.country == filteredCountry);
+    }
+    if (filteredDecade.length > 0) {
+        console.log(filteredDecade);
+        let decadeCheck = parseInt(filteredDecade);
+        cards = cards.filter(obj => obj.year >= decadeCheck && obj.year < decadeCheck +10 );
+    }
+    if (filteredDrive.length > 0) {
+        cards = cards.filter(obj => obj.drive == filteredDrive);
+    }
+    if (filteredTyres.length > 0) {
+        cards = cards.filter(obj => obj.tyres == filteredTyres);
+    }
+    console.log(cards);
+    console.log(rarityMemory);
+    handleTabClick(rarityMemory);
+    filteredMake = [];
+    filteredCountry = [];
+    filteredDecade = [];
+    filteredDrive = [];
+    filteredTyres = [];
+})
+
 function handleTabClick(event) {
+    rarityMemory = event;
     document.getElementById('fullhandbox').innerText = "";
     const target = event.target;
     const id = target.id;
-    var carRarity = rarities.indexOf(id) + 1;
+    let carRarity = rarities.indexOf(id) + 1;
     document.getElementById('garageGrid').innerText = "";
     document.getElementById('unownedGrid').innerText = "";
     document.getElementById('eliteGrid').innerText = "";
-
     cards.forEach(cards => {
         if (cards.rarity == carRarity) {
+            makeList.push(cards.make);
+            countryList.push(cards.country);
+            let yearFilter = Math.floor(cards.year / 10)*10;
+            decadeList.push(yearFilter);
             if (playerGarage.includes(cards.carID)) {
                 var gridContainer = document.getElementById('garageGrid');
                 const garageCard = document.createElement('div');
@@ -87,6 +137,121 @@ function handleTabClick(event) {
         } else {
         }
     });
+
+    let uniqueMakes = [...new Set(makeList)]
+    uniqueMakes.sort();
+
+    var select = document.getElementById("makeSelect");
+    document.getElementById('makeSelect').innerText = '';
+    var options = uniqueMakes;
+    var firstElement = document.createElement("option")
+    firstElement.textContent = "N/A";
+    firstElement.value = "N/A";
+    select.appendChild(firstElement);
+    for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+    }
+
+    let uniqueCountries = [...new Set(countryList)]
+    uniqueCountries.sort();
+
+    var select = document.getElementById("countrySelect");
+    document.getElementById('countrySelect').innerText = '';
+    var options = uniqueCountries;
+    var firstElement = document.createElement("option")
+    firstElement.textContent = "N/A";
+    firstElement.value = "N/A";
+    select.appendChild(firstElement);
+    for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+    }
+
+    let uniqueDecades = [...new Set(decadeList)]
+    uniqueDecades.sort();
+
+    var select = document.getElementById("decadeSelect");
+    document.getElementById('decadeSelect').innerText = '';
+    var options = uniqueDecades;
+    var firstElement = document.createElement("option")
+    firstElement.textContent = "N/A";
+    firstElement.value = "N/A";
+    select.appendChild(firstElement);
+    for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+    }
+
+    let uniqueDrives = ['FWD','RWD','4WD'];
+
+    var select = document.getElementById("driveSelect");
+    document.getElementById('driveSelect').innerText = '';
+    var options = uniqueDrives;
+    var firstElement = document.createElement("option")
+    firstElement.textContent = "N/A";
+    firstElement.value = "N/A";
+    select.appendChild(firstElement);
+    for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+    }
+
+    let uniqueTyres = ['Standard','Performance','All-Surface','Off-Road','Slick'];
+
+    var select = document.getElementById("tyreSelect");
+    document.getElementById('tyreSelect').innerText = '';
+    var options = uniqueTyres;
+    var firstElement = document.createElement("option")
+    firstElement.textContent = "N/A";
+    firstElement.value = "N/A";
+    select.appendChild(firstElement);
+    for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+    };
+
+    document.getElementById('makeSelect').addEventListener('click', () => {
+        let selectList1 = document.getElementById('makeSelect');
+        filteredMake = selectList1.value;
+        console.log(filteredMake);
+    });
+
+    document.getElementById('countrySelect').addEventListener('click', () => {
+        let selectList2 = document.getElementById('countrySelect');
+        filteredCountry = selectList2.value;
+    });
+
+    document.getElementById('decadeSelect').addEventListener('click', () => {
+        let selectList3 = document.getElementById('decadeSelect');
+        filteredDecade = selectList3.value;
+    });
+
+    document.getElementById('driveSelect').addEventListener('click', () => {
+        let selectList4 = document.getElementById('driveSelect');
+        filteredDrive = selectList4.value;
+    });
+    
+    document.getElementById('tyreSelect').addEventListener('click', () => {
+        let selectList5 = document.getElementById('tyreSelect');
+        filteredTyres = selectList5.value;
+    });
+
 
     garageGrid.addEventListener("click", (e) => { // e = event object
         if (e.target.tagName === 'IMG') {
