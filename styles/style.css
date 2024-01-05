@@ -8,14 +8,17 @@ body {
 
 #Home {
     background-color: darkslategrey;
+    background-image: url("./mainBG.jpg");
 }
 
 #Collection {
     background-color: dodgerblue;
+    background-image: url("./collectionBG.jpg");
 }
 
 #Shop {
     background-color: goldenrod;
+    background-image: url("./shopBG.jpg");
 }
 
 #Stats {
@@ -57,7 +60,6 @@ body, html {
     padding: 20px 20px;
     margin:auto;
     font-size: 17px;
-    width: 200px;
 }
 
     .tablink:hover {
@@ -80,6 +82,9 @@ h1 {
 
 h3 {
     text-align: center;
+    background-color: #282b2b;
+    border-radius: 12px;
+    text-align: left;
     font-size: 65px;
     position:absolute;
     top: 20px;
@@ -91,6 +96,8 @@ h4 {
     position: relative;
     margin-top: 100px;
     margin-bottom:0px;
+    background-color: #282b2b;
+    border-radius: 12px;
 }
 
 #synergyZone {
