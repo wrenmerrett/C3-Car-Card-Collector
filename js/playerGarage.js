@@ -68,6 +68,7 @@ document.getElementById('filterButton').addEventListener('click', () => {
         cards = cards.filter(obj => obj.country == filteredCountry);
     }
     if (filteredDecade.length > 0) {
+        console.log(filteredDecade);
         let decadeCheck = parseInt(filteredDecade);
         cards = cards.filter(obj => obj.year >= decadeCheck && obj.year < decadeCheck +10 );
     }
@@ -77,6 +78,8 @@ document.getElementById('filterButton').addEventListener('click', () => {
     if (filteredTyres.length > 0) {
         cards = cards.filter(obj => obj.tyres == filteredTyres);
     }
+    console.log(cards);
+    console.log(rarityMemory);
     handleTabClick(rarityMemory);
     filteredMake = [];
     filteredCountry = [];
@@ -144,6 +147,7 @@ function handleTabClick(event) {
     el.textContent = opt;
     el.value = opt;
     select.appendChild(el);
+    console.log(select);
     }
 
     let uniqueCountries = [...new Set(countryList)]
