@@ -78,6 +78,7 @@ function carPicker() {
         .then(response => response.json())
         .then(data => {
             // Work with your JSON data here
+            document.getElementById('newCardPopup').innerText = "";
             data = data.cars;
             let gachaLuck = 0;
             let gambleValue = 0;
@@ -168,7 +169,8 @@ function carPicker() {
             if (playerGarage.includes(garageAdd)) {
                 money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
                 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
-            } else { playerGarage.unshift(garageAdd); }
+            } else { playerGarage.unshift(garageAdd);
+            document.getElementById('newCardPopup').innerText = "NEW!";}
         })
         .catch(error => {
             console.log('Error fetching data:', error);

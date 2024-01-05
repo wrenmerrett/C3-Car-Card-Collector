@@ -6,9 +6,15 @@ body {
     overflow-y: scroll;
 }
 
+#logo {
+    width:10%;
+}
+
 #Home {
     background-color: darkslategrey;
     background-image: url("./mainBG.jpg");
+    color: #2b2b30;
+    font-size: 24px;
 }
 
 #Collection {
@@ -373,8 +379,8 @@ img {
 .uiButton {
     background-color: greenyellow;
     color: black;
-    font-size: 16px;
-    padding: 5px 10px;
+    font-size: 25px;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -431,4 +437,9 @@ img {
 
   .rarityButtons {
     display: flex;
+  }
+
+  #newCardPopup {
+    color: red;
+    font-weight: bolder;
   }
