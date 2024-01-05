@@ -1,7 +1,7 @@
 export const button = document.querySelector('[data-collect-card]');
 import { playerGarage, loadGarage } from "./playerGarage.js";
 import { playerHand, handLoader, getHandCards } from "./playerHand.js";
-export let money = 100000;
+export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 export let restockCost = 0;

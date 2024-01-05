@@ -68,7 +68,6 @@ document.getElementById('filterButton').addEventListener('click', () => {
         cards = cards.filter(obj => obj.country == filteredCountry);
     }
     if (filteredDecade.length > 0) {
-        console.log(filteredDecade);
         let decadeCheck = parseInt(filteredDecade);
         cards = cards.filter(obj => obj.year >= decadeCheck && obj.year < decadeCheck +10 );
     }
@@ -78,8 +77,6 @@ document.getElementById('filterButton').addEventListener('click', () => {
     if (filteredTyres.length > 0) {
         cards = cards.filter(obj => obj.tyres == filteredTyres);
     }
-    console.log(cards);
-    console.log(rarityMemory);
     handleTabClick(rarityMemory);
     filteredMake = [];
     filteredCountry = [];
@@ -89,16 +86,20 @@ document.getElementById('filterButton').addEventListener('click', () => {
 })
 
 function handleTabClick(event) {
+    rarityMemory = event;
     document.getElementById('fullhandbox').innerText = "";
     const target = event.target;
     const id = target.id;
-    var carRarity = rarities.indexOf(id) + 1;
+    let carRarity = rarities.indexOf(id) + 1;
     document.getElementById('garageGrid').innerText = "";
     document.getElementById('unownedGrid').innerText = "";
     document.getElementById('eliteGrid').innerText = "";
-
     cards.forEach(cards => {
         if (cards.rarity == carRarity) {
+            makeList.push(cards.make);
+            countryList.push(cards.country);
+            let yearFilter = Math.floor(cards.year / 10)*10;
+            decadeList.push(yearFilter);
             if (playerGarage.includes(cards.carID)) {
                 var gridContainer = document.getElementById('garageGrid');
                 const garageCard = document.createElement('div');
@@ -147,7 +148,6 @@ function handleTabClick(event) {
     el.textContent = opt;
     el.value = opt;
     select.appendChild(el);
-    console.log(select);
     }
 
     let uniqueCountries = [...new Set(countryList)]
