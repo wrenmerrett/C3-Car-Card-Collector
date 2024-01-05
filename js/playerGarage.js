@@ -43,8 +43,6 @@ export function loadGarage(garage) {
     playerGarage = garage;
 };
 
-<<<<<<< Updated upstream
-=======
 let makeList = [];
 let countryList = [];
 let decadeList = [];
@@ -87,7 +85,6 @@ document.getElementById('filterButton').addEventListener('click', () => {
     filteredTyres = [];
 })
 
->>>>>>> Stashed changes
 function handleTabClick(event) {
     document.getElementById('fullhandbox').innerText = "";
     const target = event.target;
@@ -131,8 +128,6 @@ function handleTabClick(event) {
         }
     });
 
-<<<<<<< Updated upstream
-=======
     let uniqueMakes = [...new Set(makeList)]
     uniqueMakes.sort();
 
@@ -247,7 +242,6 @@ function handleTabClick(event) {
     });
 
 
->>>>>>> Stashed changes
     garageGrid.addEventListener("click", (e) => { // e = event object
         if (e.target.tagName === 'IMG') {
             handSize = playerHand.length;

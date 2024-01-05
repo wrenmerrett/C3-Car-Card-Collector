@@ -108,11 +108,7 @@ function populateShop() {
             if (shopgacha < 75) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 4);
             } else
-<<<<<<< Updated upstream
-            if (shopgacha < 90) {
-=======
             if (shopgacha < 85) {
->>>>>>> Stashed changes
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 5);
             } else
             if (shopgacha < 96) {

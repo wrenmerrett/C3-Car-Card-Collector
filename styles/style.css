@@ -48,8 +48,6 @@ body, html {
     width: 25%;
 }
 
-<<<<<<< Updated upstream
-=======
 .garageFilter {
     background-color: #555;
     color: white;
@@ -62,7 +60,6 @@ body, html {
     width: 200px;
 }
 
->>>>>>> Stashed changes
     .tablink:hover {
         background-color: #777;
     }
@@ -312,10 +309,7 @@ img {
 
 .button-3 {
     appearance: none;
-<<<<<<< Updated upstream
-=======
     height: 50%;
->>>>>>> Stashed changes
     background-color: #2ea44f;
     border: 1px solid rgba(27, 31, 35, .15);
     border-radius: 6px;
@@ -417,8 +411,6 @@ img {
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-<<<<<<< Updated upstream
-=======
   }
 
   #filters {
@@ -430,5 +422,4 @@ img {
     background-color: #282b2b;
     border-radius: 8px;
     padding: 8px;
->>>>>>> Stashed changes
   }
