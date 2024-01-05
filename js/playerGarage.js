@@ -31,6 +31,15 @@ function handButton(id,updater) {
     return handbtn;
 };
 
+function eliteTag(id, perk) {
+    let eliteMarker = document.createElement('button');
+    console.log(eliteMarker);
+    eliteMarker.id = id;
+    eliteMarker.classList.add('btn'); // Use classList to add a class
+    eliteMarker.innerHTML = "ELITE - " + perk;
+    return eliteMarker;
+}
+
 export function loadGarage(garage) {
     playerGarage = garage;
 };
@@ -54,6 +63,11 @@ function handleTabClick(event) {
                 img.id = parseInt(cards.carID);
                 garageCard.appendChild(img);
                 var carIndex = cards.carID - 1;
+                if (cards.elite === "yes") {
+                    console.log("leet");
+                    let perk = cards.perk;
+                    garageCard.appendChild(eliteTag(img.id,perk));
+                }
                 if (playerHand.includes(carIndex)) {
                     garageCard.appendChild(handButton(img.id, carIndex));
                 }

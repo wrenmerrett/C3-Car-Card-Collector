@@ -94,8 +94,29 @@ function populateShop() {
                     shopContainer.append(shopCard);
             }
             let elites = data.cars;
-            const eliteCars = elites.filter(c => c.elite == "yes")
-            let eliteShopCar = eliteCars[Math.floor(Math.random() * eliteCars.length)];
+            const eliteCars = elites.filter(c => c.elite == "yes");
+            let shopgacha = Math.floor(Math.random() * 100) + 1;
+            if (shopgacha < 15) {
+                var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 1);
+            } else
+            if (shopgacha < 30) {
+                var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 2);
+            } else
+            if (shopgacha < 50) {
+                var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 3);
+            } else
+            if (shopgacha < 75) {
+                var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 4);
+            } else
+            if (shopgacha < 90) {
+                var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 5);
+            } else
+            if (shopgacha < 96) {
+                var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 6);
+            } else {
+                var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 7);
+                        }
+            let eliteShopCar = eliteSelect[Math.floor(Math.random() * eliteSelect.length)];
             var shopContainer = document.getElementById('shopGrid');
             var eliteShopCard = document.createElement('div');
             eliteShopCard.id = eliteShopCar.carID;
