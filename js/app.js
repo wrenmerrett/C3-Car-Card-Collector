@@ -36,22 +36,41 @@ button.addEventListener('click', () => {
         .then(data => {
             data = data.cars;
             let buttonVar = 0;
+            let slipstreamBonus = 400;
             let moneyVar = 0;
+            let buttonZero = 0;
             document.getElementById('synergyRender').innerHTML = "";
             playerHand.forEach(bonusCalcs);
             function bonusCalcs(id) {
                 let car = (data[id]);
                 buttonVar += (car.zeroToSixty);
                 if (car.perk == "Quick Charge") {
-                    buttonVar -= ((car.zeroToSixty) * 0.55);
+                    buttonVar -= ((car.zeroToSixty) * 0.6);
+                }
+                if (car.perk == "Slipstream") {
+                    slipstreamBonus -= (95/car.zeroToSixty);
+                }
+                if (car.perk == "Double Tap") {
+                    let refreshChance = Math.random();
+                    refreshChance = refreshChance * 1+(car.topSpeed/1000)
+                    if (refreshChance > 0.93) {
+                        buttonZero += 1;
+                    }
                 }
                 moneyVar += (car.handling);
                 if (car.perk == "High Roller") {
                     moneyVar += ((car.handling) * 0.40);
                 }
+                if (car.perk == "Refresher") {
+                    restockCost -= 10;
+                    document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
+                }
             }
             moneyBonus = Math.round((((moneyVar - 265)/100) + 1)*100)/100;
-            buttonCooldown = Math.round((buttonVar * 400)*100)/100;
+            buttonCooldown = Math.round((buttonVar * slipstreamBonus))*100/100;
+            if (buttonZero > 0) {
+                buttonCooldown = 1;
+            }
             carPicker();
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds"
             document.getElementById('earningsBonus').innerHTML = "Earnings Bonus: x" + moneyBonus;
@@ -68,7 +87,7 @@ export function moneyChanger(transaction) {
 
 export function restockUp() {
     moneyChanger(restockCost);
-    restockCost += 200;
+    restockCost += 150;
 }
 
 // Read file asynchronously

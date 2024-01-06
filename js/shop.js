@@ -87,7 +87,7 @@ function populateShop() {
                         let ownedtag = ownedButton(buttonID);
                         shopCard.appendChild(ownedtag);
                     } else {
-                        let price = (shopCar.rarity * shopCar.rq)*(2^(shopCar.rarity)+10)
+                        let price = (shopCar.rarity * shopCar.rq)*(2^(shopCar.rarity)+9)
                         let pricetag = buyButton(shopCar.carID, price)
                         shopCard.appendChild(pricetag);
                     }
@@ -128,7 +128,7 @@ function populateShop() {
                 let ownedtag = ownedButton(buttonID);
                 eliteShopCard.appendChild(ownedtag);
             } else {
-                let price = ((eliteShopCar.rarity * eliteShopCar.rq)*200);
+                let price = ((eliteShopCar.rarity * eliteShopCar.rq)*180);
                 let pricetag = eliteButton(eliteShopCar.carID, price, eliteShopCar.perk)
                 eliteShopCard.appendChild(pricetag);
             }
