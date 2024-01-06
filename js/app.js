@@ -1,13 +1,19 @@
 export const button = document.querySelector('[data-collect-card]');
 import { playerGarage, loadGarage } from "./playerGarage.js";
-import { playerHand, handLoader, getHandCards } from "./playerHand.js";
+import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
+let gachaLuck = 0;
 export let restockCost = 0;
 export let shopStorage;
 let storedGarage;
 let storedHand;
+let rqLimit = 500;
+let heatLevel = 0;
+let synergies;
+var heatData;
+let synswitch = false;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -37,21 +43,25 @@ document.getElementById('loadButton').addEventListener('click', () => {
     restockCost = JSON.parse(localStorage.getItem('restockTracker'));
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
     shopStorage = JSON.parse(localStorage.getItem('shopCars'));
-    console.log(shopStorage);
     restoreShop(shopStorage);
     document.getElementById('saveWarning').innerText = "Game loaded."
 })
 
 button.addEventListener('click', () => {
+    document.getElementById('RQLimiter').innerText = "";
+    if (rqLimit < totalRQ) {
+        document.getElementById('RQLimiter').innerText = "Hand too strong. Reduce RQ by " + (totalRQ - rqLimit);
+        return;
+    }
     button.disabled = true;
     document.getElementById('saveWarning').innerText = ""
     fetch('./js/data.json')
         .then(response => response.json())
         .then(data => {
             data = data.cars;
-            let buttonVar = 0;
+            let buttonVar = 0 - (heatLevel * 3); 
             let slipstreamBonus = 400;
-            let moneyVar = 0;
+            let moneyVar = 0 + (heatLevel *22);
             let buttonZero = 0;
             document.getElementById('synergyRender').innerHTML = "";
             playerHand.forEach(bonusCalcs);
@@ -62,7 +72,7 @@ button.addEventListener('click', () => {
                     buttonVar -= ((car.zeroToSixty) * 0.6);
                 }
                 if (car.perk == "Slipstream") {
-                    slipstreamBonus -= (95/car.zeroToSixty);
+                    slipstreamBonus -= (90/car.zeroToSixty);
                 }
                 if (car.perk == "Double Tap") {
                     let refreshChance = Math.random();
@@ -111,7 +121,6 @@ function restoreShop(shopData) {
     function restorePurchase(btn) {
         let str = btn.innerText;
         let price = str.replace(/\D/g, "");
-        console.log(price);
         btn.addEventListener('click', () => {
             buyCar(btn.id, price);
         });
@@ -133,6 +142,58 @@ function buyCar(id,pricetag) {
 
 }
 
+document.getElementById('synergySwitch').addEventListener('click', () => {
+    const synergyOn = document.getElementById('synergySwitch').checked;
+    if (synergyOn === true) {
+        synswitch = true;
+    } else {
+        synswitch = false;
+    }
+        
+})
+
+document.getElementById('heatSwitch').addEventListener('click', () => {
+    const heatOn = document.getElementById('heatSwitch').checked;
+    if (heatOn === true) {
+        fetch('./js/data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Work with your JSON data here
+            document.getElementById('newCardPopup').innerText = "";
+            heatData = data.cars;
+            let elites = heatData.filter(heatData => heatData.elite === "yes")
+            let maxHeat = 0;
+            var select = document.getElementById("heatSelector");
+            document.getElementById('heatSelector').innerText = '';
+            for (const key in elites) {
+                if(playerGarage.includes(elites[key].carID)) {
+                    if (maxHeat < 10)  {
+                        maxHeat += 1;
+                        var opt = maxHeat;
+                        var el = document.createElement("option");
+                        el.textContent = opt;
+                        el.value = opt;
+                        select.appendChild(el);
+                    }
+                }
+            }
+            document.getElementById('heatSelector').addEventListener('click', () => {
+                let selectList1 = document.getElementById('heatSelector');
+                heatLevel = selectList1.value;
+                heatApply(heatLevel);
+                function heatApply(heat) {
+                    rqLimit = 500 - (heat*40);
+                    document.getElementById('heatText').innerText = "RQ Limit: " + rqLimit;
+                }
+            });
+        })
+    } else {
+        document.getElementById('heatText').innerHTMl = "";
+        heatLevel = 0;
+        rqLimit = 500;
+    };
+})
+
 // Read file asynchronously
 function carPicker() {
     // Assuming data.json contains your JSON data
@@ -142,7 +203,7 @@ function carPicker() {
             // Work with your JSON data here
             document.getElementById('newCardPopup').innerText = "";
             data = data.cars;
-            let gachaLuck = 0;
+            gachaLuck = 0 + (heatLevel*62);
             let gambleValue = 0;
             let makeTracker = [];
             let yearTracker = [];
@@ -192,7 +253,7 @@ function carPicker() {
                 var carSelection = data.filter(data => data.rarity === 7);
                                 }
 
-            let synergies = [];
+            synergies = [];
             let makeSorted = makeTracker.sort();
             let yearSorted = yearTracker.sort();
             let countrySorted = countryTracker.sort();
@@ -206,8 +267,9 @@ function carPicker() {
                     synergies.push(sorted[index]);
                 }
             };
-            synergies.forEach(synergyBonus);
-            function synergyBonus(synergy) {
+            if (synswitch === true) {
+                synergies.forEach(synergyBonus);
+                function synergyBonus(synergy) {
                 let synergyContainer = document.getElementById('synergyRender');
                 const synergyTile = document.createElement('div');
                 synergyTile.class = 'synergyGrid';
@@ -221,6 +283,8 @@ function carPicker() {
                     carSelection = filteredItems;
                 }
                     }
+            }
+            
             var chosenCar = carSelection[Math.floor(Math.random() * carSelection.length)];
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`

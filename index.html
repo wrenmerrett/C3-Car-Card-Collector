@@ -25,6 +25,16 @@
                 <b>
                         <div class="central-elements">
                             <h2 id="cashDisplay"></h2>
+                            <div id="heatMeter">
+                                <h2 id="heatMeter">HEAT</h2>
+                                <div id="heatText"></div>
+                                <label class="switch">
+                                    <input id="heatSwitch" type="checkbox">
+                                    <span class="slider round"></span>
+                                  </label>
+                                <select id="heatSelector">
+                                </select>
+                            </div>
                             <h2>YOUR HAND</h2>
                             <table class="cardTable">
                                 <tr>
@@ -35,14 +45,17 @@
                                     <td><div id="hand5"</td>
                                 </tr>
                             </table>
-                            <div id="synergyZone">ACTIVE SYNERGY ROLLS
-                                
+                            <div id="synergyZone">ACTIVATE SYNERGIES
+                                <label class="switch">
+                                    <input id="synergySwitch" type="checkbox">
+                                    <span class="slider round"></span>
+                                  </label>
                                 <div id="synergyRender"></div>
                             </div>
                             <button id="collectButton" data-collect-card>
                                 COLLECT
                             </button>
-                            <br />
+                            <div id="RQLimiter"></div>
                             <div id="handAttributes"></div>
                             <div id="luckFactor"></div>
                             <div id="earningsBonus"></div>
@@ -94,7 +107,7 @@
                             </select>
                         </div>
                             <div><button id="filterButton" class="button-3">Filter</button></div>
-                            
+                            <div id="handRQ"></div>
                         </div>
                         <h4>Owned</h4>
                         <div id="fullhandbox">

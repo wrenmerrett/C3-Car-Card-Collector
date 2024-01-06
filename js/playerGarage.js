@@ -2,7 +2,7 @@
 
 export var playerGarage = [4, 76, 42, 47, 18];
 import { button } from "./app.js";
-import { playerHand, getHandCards, handUpdater, handAdder } from "./playerHand.js";
+import { playerHand, getHandCards, handUpdater, handAdder, totalRQ } from "./playerHand.js";
 const tabs = document.querySelectorAll('.tab');
 let handSize = playerHand.length;
 var cards;
@@ -87,6 +87,7 @@ document.getElementById('filterButton').addEventListener('click', () => {
 
 function handleTabClick(event) {
     rarityMemory = event;
+    document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
     document.getElementById('fullhandbox').innerText = "";
     const target = event.target;
     const id = target.id;
@@ -271,5 +272,6 @@ function addToHand(newHandCard) {
         enteringHand.appendChild(newButton);
         handAdder(inHand);
         getHandCards(...playerHand);
+        document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
     }
 };
