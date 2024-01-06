@@ -5,6 +5,7 @@ export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 export let restockCost = 0;
+export let shopStorage;
 let storedGarage;
 let storedHand;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
@@ -12,10 +13,18 @@ export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 
 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
 document.getElementById('saveButton').addEventListener('click', () => {
+    let shop = document.getElementById('shopGrid');
+    shopStorage = shop.innerHTML;
+    if (shopStorage.length === 0) {
+        document.getElementById('saveWarning').innerText = "No saveable data detected. Aborting."
+        return;
+    };
     localStorage.setItem("garage", JSON.stringify(playerGarage));
     localStorage.setItem('hand', JSON.stringify(playerHand));
     localStorage.setItem('cashBalance', JSON.stringify(money));
     localStorage.setItem('restockTracker', JSON.stringify(restockCost));
+    localStorage.setItem('shopCars', JSON.stringify(shopStorage));
+    document.getElementById('saveWarning').innerText = "Game saved."
 })
 
 document.getElementById('loadButton').addEventListener('click', () => {
@@ -27,10 +36,15 @@ document.getElementById('loadButton').addEventListener('click', () => {
     money = JSON.parse(localStorage.getItem('cashBalance'));
     restockCost = JSON.parse(localStorage.getItem('restockTracker'));
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+    shopStorage = JSON.parse(localStorage.getItem('shopCars'));
+    console.log(shopStorage);
+    restoreShop(shopStorage);
+    document.getElementById('saveWarning').innerText = "Game loaded."
 })
 
 button.addEventListener('click', () => {
     button.disabled = true;
+    document.getElementById('saveWarning').innerText = ""
     fetch('./js/data.json')
         .then(response => response.json())
         .then(data => {
@@ -88,6 +102,35 @@ export function moneyChanger(transaction) {
 export function restockUp() {
     moneyChanger(restockCost);
     restockCost += 150;
+}
+
+function restoreShop(shopData) {
+    document.getElementById('shopGrid').innerHTML = shopData;
+    let buttons = document.querySelectorAll('.buybtn');
+    buttons.forEach(restorePurchase);
+    function restorePurchase(btn) {
+        let str = btn.innerText;
+        let price = str.replace(/\D/g, "");
+        console.log(price);
+        btn.addEventListener('click', () => {
+            buyCar(btn.id, price);
+        });
+    };
+}
+
+function buyCar(id,pricetag) {
+    let buttonID = document.getElementById(id);
+    let purchaseCost = pricetag;
+    let newCar = id * 1;
+    if (purchaseCost <= money) {
+        document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
+        moneyChanger(purchaseCost);
+        playerGarage.push(newCar);
+        buttonID.remove();
+    } else {
+        document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
+    }
+
 }
 
 // Read file asynchronously

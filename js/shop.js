@@ -3,9 +3,7 @@
 import { playerGarage } from "./playerGarage.js";
 import { money, restockCost, moneyChanger, restockUp } from "./app.js";
 
-const rarities = ['common', 'uncommon', 'rare', 'superRare', 'ultraRare', 'epic', 'legendary']
-let cards;
-let perkInfo;
+export let shopContainer;
 
 let restockButton = document.getElementById('restocker');
 document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
@@ -76,7 +74,7 @@ function populateShop() {
                 for (let rarity = 1; rarity < 6; rarity++) {
                     const selected = cars.filter(c => c.rarity === rarity);
                     let shopCar = selected[Math.floor(Math.random() * selected.length)];
-                    var shopContainer = document.getElementById('shopGrid');
+                    shopContainer = document.getElementById('shopGrid');
                     var shopCard = document.createElement('div');
                     shopCard.id = shopCar.carID;
                     const shopImg = document.createElement('img');
@@ -117,7 +115,7 @@ function populateShop() {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 7);
                         }
             let eliteShopCar = eliteSelect[Math.floor(Math.random() * eliteSelect.length)];
-            var shopContainer = document.getElementById('shopGrid');
+            shopContainer = document.getElementById('shopGrid');
             var eliteShopCard = document.createElement('div');
             eliteShopCard.id = eliteShopCar.carID;
             const eliteImg = document.createElement('img');
