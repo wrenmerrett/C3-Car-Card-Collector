@@ -69,7 +69,7 @@ button.addEventListener('click', () => {
                 let car = (data[id]);
                 buttonVar += (car.zeroToSixty);
                 if (car.perk == "Quick Charge") {
-                    buttonVar -= ((car.zeroToSixty) * 0.6);
+                    buttonVar -= ((car.zeroToSixty) * 0.45);
                 }
                 if (car.perk == "Slipstream") {
                     slipstreamBonus -= (105/car.zeroToSixty);
