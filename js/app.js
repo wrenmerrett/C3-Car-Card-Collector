@@ -37,7 +37,11 @@ document.getElementById('saveButton').addEventListener('click', () => {
 
 document.getElementById('loadButton').addEventListener('click', () => {
     storedGarage = JSON.parse(localStorage.getItem("garage"));
-    storedPrestige = JSON.parse(localStorage.getItem("prestigeGarage"));
+    if (playerPrestigeGarage. length > 0) {
+        storedPrestige = JSON.parse(localStorage.getItem("prestigeGarage"));
+    } else {
+        storedPrestige = [];
+    }
     loadGarage(storedGarage,storedPrestige);
     storedHand = JSON.parse(localStorage.getItem('hand'));
     handLoader(storedHand);
