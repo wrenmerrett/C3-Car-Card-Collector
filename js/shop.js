@@ -1,7 +1,7 @@
 'use strict';
 
 import { playerGarage } from "./playerGarage.js";
-import { money, restockCost, moneyChanger, restockUp } from "./app.js";
+import { money, restockCost, moneyChanger, restockUp, restockDown } from "./app.js";
 
 export let shopContainer;
 
@@ -56,6 +56,9 @@ function buyCar(id,pricetag) {
     if (purchaseCost <= money) {
         document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
         moneyChanger(purchaseCost);
+        let reimburse = Math.round((purchaseCost * 0.075));
+        restockDown(reimburse);
+        document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerGarage.push(newCar);
         buttonID.remove();
     } else {

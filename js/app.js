@@ -114,6 +114,11 @@ export function restockUp() {
     restockCost += 150;
 }
 
+export function restockDown(cashback) {
+    restockCost -= cashback;
+    console.log(restockCost);
+}
+
 function restoreShop(shopData) {
     document.getElementById('shopGrid').innerHTML = shopData;
     let buttons = document.querySelectorAll('.buybtn, .elitebtn');
