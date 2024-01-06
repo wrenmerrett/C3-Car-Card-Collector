@@ -72,7 +72,7 @@ button.addEventListener('click', () => {
                     buttonVar -= ((car.zeroToSixty) * 0.6);
                 }
                 if (car.perk == "Slipstream") {
-                    slipstreamBonus -= (90/car.zeroToSixty);
+                    slipstreamBonus -= (105/car.zeroToSixty);
                 }
                 if (car.perk == "Double Tap") {
                     let refreshChance = Math.random();
@@ -116,7 +116,7 @@ export function restockUp() {
 
 function restoreShop(shopData) {
     document.getElementById('shopGrid').innerHTML = shopData;
-    let buttons = document.querySelectorAll('.buybtn');
+    let buttons = document.querySelectorAll('.buybtn, .elitebtn');
     buttons.forEach(restorePurchase);
     function restorePurchase(btn) {
         let str = btn.innerText;
