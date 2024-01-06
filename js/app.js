@@ -37,11 +37,7 @@ document.getElementById('saveButton').addEventListener('click', () => {
 
 document.getElementById('loadButton').addEventListener('click', () => {
     storedGarage = JSON.parse(localStorage.getItem("garage"));
-    if (playerPrestigeGarage. length > 0) {
-        storedPrestige = JSON.parse(localStorage.getItem("prestigeGarage"));
-    } else {
-        storedPrestige = [];
-    }
+    storedPrestige = JSON.parse(localStorage.getItem("prestigeGarage"));
     loadGarage(storedGarage,storedPrestige);
     storedHand = JSON.parse(localStorage.getItem('hand'));
     handLoader(storedHand);
@@ -130,7 +126,8 @@ export function restockDown(cashback) {
 
 function restoreShop(shopData) {
     document.getElementById('shopGrid').innerHTML = shopData;
-    let buttons = document.querySelectorAll('.buybtn, .elitebtn, .prestigebtn');
+    let buttons = document.querySelectorAll('.buybtn, .elitebtn');
+    let prestiges = document.querySelectorAll('.pbtn');
     buttons.forEach(restorePurchase);
     function restorePurchase(btn) {
         let str = btn.innerText;
@@ -139,6 +136,14 @@ function restoreShop(shopData) {
             buyCar(btn.id, price);
         });
     };
+    prestiges.forEach(restorePrestige);
+    function restorePrestige(btn) {
+        let str = btn.innerText;
+        let price = str.replace(/\D/g, "");
+        btn.addEventListener('click', () => {
+            prestigeCar(btn.id, price);
+        });
+    }
 }
 
 function buyCar(id,pricetag) {
@@ -149,6 +154,25 @@ function buyCar(id,pricetag) {
         document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
         moneyChanger(purchaseCost);
         playerGarage.push(newCar);
+        buttonID.remove();
+    } else {
+        document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
+    }
+
+}
+
+function prestigeCar(id,pricetag) {
+    let buttonID = document.getElementById(id);
+    let purchaseCost = pricetag;
+    let prestigedCar = id * 1;
+    if (purchaseCost <= money) {
+        document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
+        moneyChanger(purchaseCost);
+        let reimburse = Math.round((purchaseCost * 0.075));
+        restockDown(reimburse);
+        document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
+        playerPrestigeGarage.push(prestigedCar);
+        console.log(playerPrestigeGarage);
         buttonID.remove();
     } else {
         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
