@@ -127,7 +127,7 @@ export function restockDown(cashback) {
 function restoreShop(shopData) {
     document.getElementById('shopGrid').innerHTML = shopData;
     let buttons = document.querySelectorAll('.buybtn, .elitebtn');
-    let prestiges = document.querySelectorAll('.pbtn');
+    let prestiges = document.querySelectorAll('.prestigebtn');
     buttons.forEach(restorePurchase);
     function restorePurchase(btn) {
         let str = btn.innerText;
@@ -136,6 +136,7 @@ function restoreShop(shopData) {
             buyCar(btn.id, price);
         });
     };
+
     prestiges.forEach(restorePrestige);
     function restorePrestige(btn) {
         let str = btn.innerText;
@@ -143,7 +144,7 @@ function restoreShop(shopData) {
         btn.addEventListener('click', () => {
             prestigeCar(btn.id, price);
         });
-    }
+    };
 }
 
 function buyCar(id,pricetag) {
