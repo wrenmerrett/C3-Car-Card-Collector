@@ -116,7 +116,9 @@ export function restockUp() {
 
 export function restockDown(cashback) {
     restockCost -= cashback;
-    console.log(restockCost);
+    if (restockCost < 0) {
+        restockCost = 0;
+    };
 }
 
 function restoreShop(shopData) {
