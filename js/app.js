@@ -1,5 +1,5 @@
 export const button = document.querySelector('[data-collect-card]');
-import { playerGarage, loadGarage } from "./playerGarage.js";
+import { playerGarage, loadGarage, playerPrestigeGarage } from "./playerGarage.js";
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 export let money = 100;
 let buttonCooldown = 0;
@@ -8,6 +8,7 @@ let gachaLuck = 0;
 export let restockCost = 0;
 export let shopStorage;
 let storedGarage;
+let storedPrestige;
 let storedHand;
 let rqLimit = 500;
 let heatLevel = 0;
@@ -26,6 +27,7 @@ document.getElementById('saveButton').addEventListener('click', () => {
         return;
     };
     localStorage.setItem("garage", JSON.stringify(playerGarage));
+    localStorage.setItem("prestigeGarage", JSON.stringify(playerPrestigeGarage));
     localStorage.setItem('hand', JSON.stringify(playerHand));
     localStorage.setItem('cashBalance', JSON.stringify(money));
     localStorage.setItem('restockTracker', JSON.stringify(restockCost));
@@ -35,7 +37,8 @@ document.getElementById('saveButton').addEventListener('click', () => {
 
 document.getElementById('loadButton').addEventListener('click', () => {
     storedGarage = JSON.parse(localStorage.getItem("garage"));
-    loadGarage(storedGarage);
+    storedPrestige = JSON.parse(localStorage.getItem("prestigeGarage"));
+    loadGarage(storedGarage,storedPrestige);
     storedHand = JSON.parse(localStorage.getItem('hand'));
     handLoader(storedHand);
     getHandCards(...playerHand);
@@ -123,7 +126,7 @@ export function restockDown(cashback) {
 
 function restoreShop(shopData) {
     document.getElementById('shopGrid').innerHTML = shopData;
-    let buttons = document.querySelectorAll('.buybtn, .elitebtn');
+    let buttons = document.querySelectorAll('.buybtn, .elitebtn, .prestigebtn');
     buttons.forEach(restorePurchase);
     function restorePurchase(btn) {
         let str = btn.innerText;
@@ -296,7 +299,7 @@ function carPicker() {
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
-            money += Math.round(moneyBonus * 30);
+            money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
             money += (Math.floor((Math.random() * (gachaLuck/2)) * gambleValue));
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             if (playerGarage.includes(garageAdd)) {

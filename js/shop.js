@@ -1,6 +1,6 @@
 'use strict';
 
-import { playerGarage } from "./playerGarage.js";
+import { playerGarage, playerPrestigeGarage } from "./playerGarage.js";
 import { money, restockCost, moneyChanger, restockUp, restockDown } from "./app.js";
 
 export let shopContainer;
@@ -26,6 +26,17 @@ function ownedButton(id) {
     ownedbtn.innerHTML = "OWNED";
     return ownedbtn;
 };
+
+function prestigeButton(id, price) {
+    let pbtn = document.createElement('button');
+    pbtn.id = id;
+    pbtn.classList.add('prestigebtn'); // Use classList to add a class
+    pbtn.innerHTML = "PRESTIGE: $" + price;
+    pbtn.addEventListener('click', () => {
+        prestigeCar(pbtn.id, price);
+    });
+    return pbtn;
+}
 
 function buyButton(id, price) {
     let buybtn = document.createElement('button');
@@ -67,6 +78,25 @@ function buyCar(id,pricetag) {
 
 }
 
+function prestigeCar(id,pricetag) {
+    let buttonID = document.getElementById(id);
+    let purchaseCost = pricetag;
+    let prestigedCar = id * 1;
+    if (purchaseCost <= money) {
+        document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
+        moneyChanger(purchaseCost);
+        let reimburse = Math.round((purchaseCost * 0.075));
+        restockDown(reimburse);
+        document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
+        playerPrestigeGarage.push(prestigedCar);
+        console.log(playerPrestigeGarage);
+        buttonID.remove();
+    } else {
+        document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
+    }
+
+}
+
 function populateShop() {
     fetch('./js/data.json')
         .then((response) => response.json())
@@ -83,12 +113,17 @@ function populateShop() {
                     const shopImg = document.createElement('img');
                     shopImg.src = "./assets/cards/" + shopCar.imageID;
                     shopCard.appendChild(shopImg);
-                    if (playerGarage.includes(shopCar.carID)) {
+                    let price = (shopCar.rarity * shopCar.rq)*(2^(shopCar.rarity)+9)
+                    if (playerPrestigeGarage.includes(shopCar.carID)) {
                         let buttonID = shopCar.carID;
-                        let ownedtag = ownedButton(buttonID);
-                        shopCard.appendChild(ownedtag);
+                        let ownedTag = ownedButton(buttonID);
+                        shopCard.appendChild(ownedTag);
+                    }
+                    else if (playerGarage.includes(shopCar.carID)) {
+                        let buttonID = shopCar.carID;
+                        let prestigeTag = prestigeButton(buttonID,price);
+                        shopCard.appendChild(prestigeTag);
                     } else {
-                        let price = (shopCar.rarity * shopCar.rq)*(2^(shopCar.rarity)+9)
                         let pricetag = buyButton(shopCar.carID, price)
                         shopCard.appendChild(pricetag);
                     }
@@ -124,12 +159,18 @@ function populateShop() {
             const eliteImg = document.createElement('img');
             eliteImg.src = "./assets/cards/" + eliteShopCar.imageID;
             eliteShopCard.append(eliteImg);
-            if (playerGarage.includes(eliteShopCar.carID)) {
+            let price = ((eliteShopCar.rarity * eliteShopCar.rq)*180);
+            if (playerPrestigeGarage.includes(eliteShopCar.carID)) {
                 let buttonID = eliteShopCar.carID;
-                let ownedtag = ownedButton(buttonID);
-                eliteShopCard.appendChild(ownedtag);
+                let ownedTag = ownedButton(buttonID);
+                eliteShopCard.appendChild(ownedTag);
+            }
+            else if (playerGarage.includes(eliteShopCar.carID)) {
+                let buttonID = eliteShopCar.carID;
+                let prestigeTag = prestigeButton(buttonID, price);
+                eliteShopCard.appendChild(prestigeTag);
             } else {
-                let price = ((eliteShopCar.rarity * eliteShopCar.rq)*180);
+                
                 let pricetag = eliteButton(eliteShopCar.carID, price, eliteShopCar.perk)
                 eliteShopCard.appendChild(pricetag);
             }

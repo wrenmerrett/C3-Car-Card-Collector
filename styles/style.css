@@ -299,6 +299,19 @@ img {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.prestigebtn {
+    position: relative;
+    background-color: goldenrod;
+    color: black;
+    font-size: 16px;
+    padding: 5px 10px;
+    border:silver;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 .elitebtn {
     position: relative;
     background-color: aquamarine;
@@ -544,4 +557,8 @@ h2 {
     padding-top: 15px;
     font-weight: bold;
     font-size: 25px;
+  }
+
+  .border {
+    border: 6px ridge gold;
   }

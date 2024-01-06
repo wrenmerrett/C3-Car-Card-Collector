@@ -1,6 +1,7 @@
 'use strict';
 
 export var playerGarage = [4, 76, 42, 47, 18];
+export var playerPrestigeGarage = [];
 import { button } from "./app.js";
 import { playerHand, getHandCards, handUpdater, handAdder, totalRQ } from "./playerHand.js";
 const tabs = document.querySelectorAll('.tab');
@@ -39,8 +40,9 @@ function eliteTag(id, perk) {
     return eliteMarker;
 }
 
-export function loadGarage(garage) {
+export function loadGarage(garage, prestige) {
     playerGarage = garage;
+    playerPrestigeGarage = prestige;
 };
 
 let makeList = [];
@@ -108,6 +110,7 @@ function handleTabClick(event) {
                 img.src = "./assets/cards/" + cards.imageID;
                 img.id = parseInt(cards.carID);
                 garageCard.appendChild(img);
+                
                 var carIndex = cards.carID - 1;
                 if (cards.elite === "yes") {
                     let perk = cards.perk;
@@ -117,6 +120,10 @@ function handleTabClick(event) {
                     garageCard.appendChild(handButton(img.id, carIndex));
                 }
                 gridContainer.append(garageCard);
+                if (playerPrestigeGarage.includes(cards.carID)) {
+                    console.log("gold!");
+                    document.getElementById(cards.carID).classList.add('border');
+                };
             } else if (cards.elite === "yes")
             {
                 var eliteAdd = document.getElementById('eliteGrid');
