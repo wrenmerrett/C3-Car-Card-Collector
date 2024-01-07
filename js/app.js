@@ -77,6 +77,7 @@ button.addEventListener('click', () => {
             let slipstreamBonus = 400;
             let moneyVar = 0 + (heatLevel *22);
             let buttonZero = 0;
+            let gambleValue = 0;
             document.getElementById('synergyRender').innerHTML = "";
             let makeTracker = [];
             let yearTracker = [];
@@ -327,7 +328,6 @@ function carPicker() {
             data = data.cars;
             let prestigeDupe = false;
             let dupePrestigeChance = 0.1;
-            let gambleValue = 0;
 
             data = data.filter(c => c.elite !== "yes");
 
