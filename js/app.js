@@ -43,7 +43,6 @@ document.getElementById('saveButton').addEventListener('click', () => {
 
 document.getElementById('loadButton').addEventListener('click', () => {
     storedGarage = JSON.parse(localStorage.getItem("garage"));
-    console.log(storedGarage);
     storedPrestige = JSON.parse(localStorage.getItem("prestigeGarage"));
     loadGarage(storedGarage,storedPrestige);
     storedHand = JSON.parse(localStorage.getItem('hand'));
@@ -78,7 +77,7 @@ button.addEventListener('click', () => {
             let slipstreamBonus = 400;
             let moneyVar = 0 + (heatLevel *22);
             let buttonZero = 0;
-            let gambleValue = 0;
+            gambleValue = 0;
             document.getElementById('synergyRender').innerHTML = "";
             let makeTracker = [];
             let yearTracker = [];
@@ -126,7 +125,6 @@ button.addEventListener('click', () => {
                 driveTracker.push(car.drive);
                 tyreTracker.push(car.tyres);
                 gachaLuck += (car.topSpeed);
-                console.log(gachaLuck);
                 if (car.perk == "Lucky") {
                     gachaLuck += ((car.topSpeed)*0.25);
                 }
@@ -156,19 +154,16 @@ button.addEventListener('click', () => {
                     moneyVar = moneyVar * 1.05^(standardBonus);
                     buttonVar = buttonVar * 0.85^(standardBonus);
                     gachaLuck = gachaLuck * 1.05^(standardBonus);
-                    console.log("Standard Boost");
                 }
                 if (synergy == 'All-Surface' && allsurfBonus > 0) {
                     moneyVar = moneyVar * 1.07^(allsurfBonus);
                     buttonVar = buttonVar * 0.75^(allsurfBonus);
                     gachaLuck = gachaLuck * 1.07^(allsurfBonus);
-                    console.log("All-Surface Boost");
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
                     moneyVar = moneyVar * 1.09^(allsurfBonus);
                     buttonVar = buttonVar * 0.65^(allsurfBonus);
                     gachaLuck = gachaLuck * 1.09^(allsurfBonus);
-                    console.log("Off-Road Boost");
                 }
             }
 
@@ -181,7 +176,6 @@ button.addEventListener('click', () => {
             }
             gachaMod = Math.round(((1 + (gachaLuck - 410)) / 300)*100)/100;
             gachaStable = gachaMod;
-            console.log(gachaStable);
             carPicker();
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds"
             document.getElementById('earningsBonus').innerHTML = "Earnings Bonus: x" + moneyBonus;
@@ -257,7 +251,6 @@ function prestigeCar(id,pricetag) {
         restockDown(reimburse);
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerPrestigeGarage.push(prestigedCar);
-        console.log(playerPrestigeGarage);
         buttonID.remove();
     } else {
         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
@@ -324,7 +317,6 @@ function carPicker() {
         .then(response => response.json())
         .then(data => {
             // Work with your JSON data here
-            console.log(gachaStable);
             document.getElementById('newCardPopup').innerText = "";
             data = data.cars;
             let prestigeDupe = false;
@@ -380,15 +372,14 @@ function carPicker() {
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
-            console.log(moneyBonus);
             money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
-            money += (Math.floor((Math.random() * (gachaLuck/2)) * gambleValue));
+            money += (Math.floor((Math.random() * (gachaStable/2)) * (gambleValue)));
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             if (playerGarage.includes(garageAdd)) {
                 money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
                 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
                 let prestigeRoll = Math.random();
-                dupePrestigeChance = 0.1 * gachaMod;
+                dupePrestigeChance = 0.1 * gachaStable;
                 if (playerPrestigeGarage.includes(garageAdd)) {
                     money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
                 }
