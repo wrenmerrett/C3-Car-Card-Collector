@@ -5,6 +5,8 @@ export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 let gachaLuck = 0;
+let gachaMod = 0;
+let gachaStable;
 export let restockCost = 0;
 export let shopStorage;
 let storedGarage;
@@ -15,6 +17,9 @@ let heatLevel = 0;
 let synergies;
 var heatData;
 let synswitch = false;
+let standardBonus = 0;
+let allsurfBonus = 0;
+let offroadBonus = 0;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -63,11 +68,21 @@ button.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
             data = data.cars;
+            standardBonus = 0;
+            allsurfBonus = 0;
+            offroadBonus = 0;
+            let gachaMod = 0;
+            let gachaLuck = 0 + (heatLevel*62);
             let buttonVar = 0 - (heatLevel * 2.5); 
             let slipstreamBonus = 400;
             let moneyVar = 0 + (heatLevel *22);
             let buttonZero = 0;
             document.getElementById('synergyRender').innerHTML = "";
+            let makeTracker = [];
+            let yearTracker = [];
+            let countryTracker = [];
+            let driveTracker = [];
+            let tyreTracker = [];
             playerHand.forEach(bonusCalcs);
             function bonusCalcs(id) {
                 let car = (data[id]);
@@ -93,12 +108,78 @@ button.addEventListener('click', () => {
                     restockCost -= 10;
                     document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
                 }
+                if (car.perk == "Standard Bearer") {
+                    standardBonus += 1;
+                }
+                if (car.perk == "All-Star") {
+                    allsurfBonus += 1;
+                }
+                if (car.perk == "Off The Chain") {
+                    offroadBonus += 1;
+                }
+                makeTracker.push(car.make);
+                let yearFilter = Math.floor(car.year / 10);
+                yearTracker.push(yearFilter);
+                countryTracker.push(car.country);
+                driveTracker.push(car.drive);
+                tyreTracker.push(car.tyres);
+                gachaLuck += (car.topSpeed);
+                console.log(gachaLuck);
+                if (car.perk == "Lucky") {
+                    gachaLuck += ((car.topSpeed)*0.25);
+                }
+                if (car.perk == "Gambler") {
+                    gambleValue += 1;
+                }
             }
+
+            synergies = [];
+            let makeSorted = makeTracker.sort();
+            let yearSorted = yearTracker.sort();
+            let countrySorted = countryTracker.sort();
+            let driveSorted = driveTracker.sort();
+            let tyreSorted = tyreTracker.sort()
+            let sorted = makeSorted.concat(yearSorted,countrySorted,driveSorted,tyreSorted)
+            
+
+            for (let index in sorted) {
+                if (sorted[index] === sorted[index - 2]) {
+                    synergies.push(sorted[index]);
+                }
+            };
+
+            synergies.forEach(synergyPerks);
+            function synergyPerks(synergy) {
+                if (synergy == 'Standard' && standardBonus > 0) {
+                    moneyVar = moneyVar * 1.05^(standardBonus);
+                    buttonVar = buttonVar * 0.85^(standardBonus);
+                    gachaLuck = gachaLuck * 1.05^(standardBonus);
+                    console.log("Standard Boost");
+                }
+                if (synergy == 'All-Surface' && allsurfBonus > 0) {
+                    moneyVar = moneyVar * 1.07^(allsurfBonus);
+                    buttonVar = buttonVar * 0.75^(allsurfBonus);
+                    gachaLuck = gachaLuck * 1.07^(allsurfBonus);
+                    console.log("All-Surface Boost");
+                }
+                if (synergy == 'Off-Road' && offroadBonus > 0) {
+                    moneyVar = moneyVar * 1.09^(allsurfBonus);
+                    buttonVar = buttonVar * 0.65^(allsurfBonus);
+                    gachaLuck = gachaLuck * 1.09^(allsurfBonus);
+                    console.log("Off-Road Boost");
+                }
+            }
+
+            
+
             moneyBonus = Math.round((((moneyVar - 265)/100) + 1)*100)/100;
             buttonCooldown = Math.round((buttonVar * slipstreamBonus))*100/100;
             if (buttonZero > 0) {
                 buttonCooldown = 1;
             }
+            gachaMod = Math.round(((1 + (gachaLuck - 410)) / 300)*100)/100;
+            gachaStable = gachaMod;
+            console.log(gachaStable);
             carPicker();
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds"
             document.getElementById('earningsBonus').innerHTML = "Earnings Bonus: x" + moneyBonus;
@@ -241,39 +322,18 @@ function carPicker() {
         .then(response => response.json())
         .then(data => {
             // Work with your JSON data here
+            console.log(gachaStable);
             document.getElementById('newCardPopup').innerText = "";
             data = data.cars;
-            gachaLuck = 0 + (heatLevel*62);
             let prestigeDupe = false;
             let dupePrestigeChance = 0.1;
             let gambleValue = 0;
-            let makeTracker = [];
-            let yearTracker = [];
-            let countryTracker = [];
-            let driveTracker = [];
-            let tyreTracker = [];
-            playerHand.forEach(bonusAdder);
-            function bonusAdder(id) {
-                let car = (data[id]);
-                makeTracker.push(car.make);
-                let yearFilter = Math.floor(car.year / 10);
-                yearTracker.push(yearFilter);
-                countryTracker.push(car.country);
-                driveTracker.push(car.drive);
-                tyreTracker.push(car.tyres);
-                gachaLuck += (car.topSpeed);
-                if (car.perk == "Lucky") {
-                    gachaLuck += ((car.topSpeed)*0.25);
-                }
-                if (car.perk == "Gambler") {
-                    gambleValue += 1;
-                }
-            };
+
             data = data.filter(c => c.elite !== "yes");
-            let gachaMod = Math.round(((1 + (gachaLuck - 410)) / 300)*100)/100;
-            document.getElementById('luckFactor').innerHTML = "Luck Factor: " + gachaMod;
+
+            document.getElementById('luckFactor').innerHTML = "Luck Factor: " + gachaStable;
             let basegacha = Math.floor(Math.random() * 100) + 1;
-            let gacha = basegacha * gachaMod;
+            let gacha = basegacha * gachaStable;
             if (gacha < 25) {
                 var carSelection = data.filter(data => data.rarity === 1);
             } else
@@ -297,20 +357,6 @@ function carPicker() {
                 prestigeDupe = true;
                                 }
 
-            synergies = [];
-            let makeSorted = makeTracker.sort();
-            let yearSorted = yearTracker.sort();
-            let countrySorted = countryTracker.sort();
-            let driveSorted = driveTracker.sort();
-            let tyreSorted = tyreTracker.sort()
-            let sorted = makeSorted.concat(yearSorted,countrySorted,driveSorted,tyreSorted)
-            
-
-            for (let index in sorted) {
-                if (sorted[index] === sorted[index - 2]) {
-                    synergies.push(sorted[index]);
-                }
-            };
             if (synswitch === true) {
                 synergies.forEach(synergyBonus);
                 function synergyBonus(synergy) {
@@ -333,6 +379,7 @@ function carPicker() {
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
+            console.log(moneyBonus);
             money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
             money += (Math.floor((Math.random() * (gachaLuck/2)) * gambleValue));
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;

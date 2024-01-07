@@ -67,7 +67,7 @@ function buyCar(id,pricetag) {
     if (purchaseCost <= money) {
         document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
         moneyChanger(purchaseCost);
-        let reimburse = Math.round((purchaseCost * 0.075));
+        let reimburse = Math.round((purchaseCost * 0.05));
         restockDown(reimburse);
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerGarage.push(newCar);
@@ -85,7 +85,7 @@ function prestigeCar(id,pricetag) {
     if (purchaseCost <= money) {
         document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
         moneyChanger(purchaseCost);
-        let reimburse = Math.round((purchaseCost * 0.075));
+        let reimburse = Math.round((purchaseCost * 0.05));
         restockDown(reimburse);
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerPrestigeGarage.push(prestigedCar);
