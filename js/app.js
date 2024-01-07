@@ -6,6 +6,7 @@ let buttonCooldown = 0;
 let moneyBonus = 0;
 let gachaLuck = 0;
 let gachaMod = 0;
+let gambleValue = 0;
 let gachaStable;
 export let restockCost = 0;
 export let shopStorage;
