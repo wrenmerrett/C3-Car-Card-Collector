@@ -63,6 +63,8 @@ document.getElementById('filterButton').addEventListener('click', () => {
     .then((data) => {
         cards = data.cars;
     })
+    cards = cards.sort(
+        (p1, p2) => (p1.rq < p2.rq) ? 1 : (p1.rq > p2.rq) ? -1 : 0)
     let filteredCards = [];
     if (filteredMake.length > 0) {
         cards = cards.filter(obj => obj.make == filteredMake);
@@ -98,6 +100,9 @@ function handleTabClick(event) {
     document.getElementById('garageGrid').innerText = "";
     document.getElementById('unownedGrid').innerText = "";
     document.getElementById('eliteGrid').innerText = "";
+    cards = cards.sort(
+        (p1, p2) => (p1.rq < p2.rq) ? 1 : (p1.rq > p2.rq) ? -1 : 0)
+        console.log(cards);
     cards.forEach(cards => {
         if (cards.rarity == carRarity) {
             makeList.push(cards.make);
