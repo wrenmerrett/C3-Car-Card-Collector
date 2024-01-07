@@ -37,6 +37,7 @@ document.getElementById('saveButton').addEventListener('click', () => {
 
 document.getElementById('loadButton').addEventListener('click', () => {
     storedGarage = JSON.parse(localStorage.getItem("garage"));
+    console.log(storedGarage);
     storedPrestige = JSON.parse(localStorage.getItem("prestigeGarage"));
     loadGarage(storedGarage,storedPrestige);
     storedHand = JSON.parse(localStorage.getItem('hand'));
@@ -243,6 +244,8 @@ function carPicker() {
             document.getElementById('newCardPopup').innerText = "";
             data = data.cars;
             gachaLuck = 0 + (heatLevel*62);
+            let prestigeDupe = false;
+            let dupePrestigeChance = 0.1;
             let gambleValue = 0;
             let makeTracker = [];
             let yearTracker = [];
@@ -288,8 +291,10 @@ function carPicker() {
             } else
             if (gacha < 190) {
                 var carSelection = data.filter(data => data.rarity === 6);
+                prestigeDupe = true;
             } else {
                 var carSelection = data.filter(data => data.rarity === 7);
+                prestigeDupe = true;
                                 }
 
             synergies = [];
@@ -334,6 +339,16 @@ function carPicker() {
             if (playerGarage.includes(garageAdd)) {
                 money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
                 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+                let prestigeRoll = Math.random();
+                dupePrestigeChance = 0.1 * gachaMod;
+                if (playerPrestigeGarage.includes(garageAdd)) {
+                    money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
+                }
+                else if (prestigeRoll < dupePrestigeChance && prestigeDupe === true) {
+                    playerPrestigeGarage.push(garageAdd);
+                    document.getElementById('newCardPopup').innerText = "PRESTIGE DUPE!";
+                } 
+
             } else { playerGarage.unshift(garageAdd);
             document.getElementById('newCardPopup').innerText = "NEW!";}
         })

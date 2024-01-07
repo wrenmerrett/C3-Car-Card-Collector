@@ -43,7 +43,7 @@ function eliteTag(id, perk) {
 export function loadGarage(garage, prestige) {
     playerGarage = garage;
     playerPrestigeGarage = prestige;
-    console.log(playerPrestigeGarage);
+    console.log(playerGarage);
 };
 
 let makeList = [];
