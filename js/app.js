@@ -48,7 +48,7 @@ document.getElementById('loadButton').addEventListener('click', () => {
     storedHand = JSON.parse(localStorage.getItem('hand'));
     handLoader(storedHand);
     getHandCards(...playerHand);
-    collectionHanDisplay();
+    collectionHandDisplay();
     money = JSON.parse(localStorage.getItem('cashBalance'));
     restockCost = JSON.parse(localStorage.getItem('restockTracker'));
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
