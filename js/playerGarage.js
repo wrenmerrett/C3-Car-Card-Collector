@@ -44,7 +44,7 @@ export function collectionHandDisplay() {
         if (handPlus[0].elite === "yes") {
             let perk = handPlus[0].perk;
             console.log(perk);
-            handCard.appendChild(eliteTag(img.idperk));
+            handCard.appendChild(eliteTag(img.id,perk));
         }
         gridContainer.append(handCard);
         if (playerPrestigeGarage.includes(handPlus[0].carID)) {
