@@ -21,6 +21,7 @@ let synswitch = false;
 let standardBonus = 0;
 let allsurfBonus = 0;
 let offroadBonus = 0;
+let awdBonus = 0;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -72,6 +73,7 @@ button.addEventListener('click', () => {
             standardBonus = 0;
             allsurfBonus = 0;
             offroadBonus = 0;
+            awdBonus = 0;
             let gachaMod = 0;
             let gachaLuck = 0 + (heatLevel*62);
             let buttonVar = 0 - (heatLevel * 2.5); 
@@ -119,6 +121,9 @@ button.addEventListener('click', () => {
                 if (car.perk == "Off The Chain") {
                     offroadBonus += 1;
                 }
+                if (car.perk == "Action Traction") {
+                    awdBonus += 1;
+                }
                 makeTracker.push(car.make);
                 let yearFilter = Math.floor(car.year / 10);
                 yearTracker.push(yearFilter);
@@ -162,9 +167,14 @@ button.addEventListener('click', () => {
                     gachaLuck = gachaLuck * 1.07^(allsurfBonus);
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
-                    moneyVar = moneyVar * 1.09^(allsurfBonus);
-                    buttonVar = buttonVar * 0.65^(allsurfBonus);
-                    gachaLuck = gachaLuck * 1.09^(allsurfBonus);
+                    moneyVar = moneyVar * 1.09^(offroadBonus);
+                    buttonVar = buttonVar * 0.65^(offroadBonus);
+                    gachaLuck = gachaLuck * 1.09^(offroadBonus);
+                }
+                if (synergy == '4WD' && awdBonus > 0) {
+                    moneyVar = moneyVar * 1.04^(awdBonus);
+                    buttonVar = buttonVar * 0.9^(awdBonus);
+                    gachaLuck = gachaLuck * 1.04^(awdBonus);
                 }
             }
 
