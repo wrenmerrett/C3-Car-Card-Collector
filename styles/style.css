@@ -191,6 +191,14 @@ img {
     background-color: #ccc;
 }
 
+#handGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(100%/5, max(100%/5))));
+    margin-top: 20px;
+    row-gap: 10px;
+    grid-auto-flow:row dense;
+}
+
 #garageGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, min(100%/5, max(100%/5))));

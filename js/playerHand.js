@@ -1,7 +1,7 @@
 'use strict';
 
 import { button } from "./app.js";
-import { playerGarage, playerPrestigeGarage } from "./playerGarage.js";
+import { playerGarage, playerPrestigeGarage, collectionHandUpdater } from "./playerGarage.js";
 
 export let playerHand = [3, 75, 41, 46, 17];
 export let totalRQ = 0;
@@ -67,10 +67,12 @@ export function getHandCards(car1, car2, car3, car4, car5) {
 
 export function handUpdater(indexNo) {
     playerHand = playerHand.filter(item => item !== indexNo);
+    console.log(playerHand);
 };
 
 export function handAdder(indexNo) {
     playerHand.push(indexNo);
+    collectionHandUpdater(indexNo);
 };
 
 export function handLoader(hand) {

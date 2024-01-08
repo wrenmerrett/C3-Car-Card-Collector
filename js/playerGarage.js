@@ -1,6 +1,6 @@
 'use strict';
 
-export var playerGarage = [4, 76, 42, 47, 18];
+export var playerGarage = [4, 76, 42, 47, 18, 506];
 export var playerPrestigeGarage = [];
 import { button } from "./app.js";
 import { playerHand, getHandCards, handUpdater, handAdder, totalRQ } from "./playerHand.js";
@@ -12,25 +12,77 @@ var inHand;
 
 const rarities = ['common', 'uncommon', 'rare', 'superRare', 'ultraRare', 'epic', 'legendary']
 
-fetch('./js/data.json')
+tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
+window.onload = collectionHandDisplay;
+console.log(cards);
+
+function collectionHandDisplay() {
+    fetch('./js/data.json')
     .then((response) => response.json())
     .then((data) => {
         cards = data.cars;
+        document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
+    cards.forEach(cards => {
+        if (playerHand.includes((cards.carID)-1)) {
+            var gridContainer = document.getElementById('handGrid');
+        const handCard = document.createElement('div');
+        var img = document.createElement('img');
+        img.src = "./assets/cards/" + cards.imageID;
+        img.id = parseInt(cards.carID);
+        let updater = img.id - 1;
+        img.onclick = (event) => {
+            handUpdater(updater); // Call handUpdater function if needed
+            event.target.parentNode.remove(); // Use event.target to reference the clicked button
+        };
+        handCard.appendChild(img);
+        
+        if (cards.elite === "yes") {
+            let perk = cards.perk;
+            console.log(perk);
+            handCard.appendChild(eliteTag(img.id,perk));
+        }
+        gridContainer.append(handCard);
+        if (playerPrestigeGarage.includes(cards.carID)) {
+            console.log("gold!");
+            document.getElementById(cards.carID).classList.add('border');
+        };
+        }
     })
+    })
+    
+    
+}
 
-tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
+// console.log("peenor");
 
-function handButton(id,updater) {
-    let handbtn = document.createElement('button');
-    handbtn.id = id;
-    handbtn.classList.add('btn'); // Use classList to add a class
-    handbtn.innerHTML = "IN HAND";
-    handbtn.onclick = (event) => {
+export function collectionHandUpdater(indexNo) {
+    let idtest = parseInt(indexNo + 1);
+    console.log(idtest);
+    let addedCard = cards.filter(cards => cards.carID === idtest);
+    console.log(addedCard);
+    var gridContainer = document.getElementById('handGrid');
+    const handCard = document.createElement('div');
+    var img = document.createElement('img');
+    img.src = "./assets/cards/" + addedCard[0].imageID;
+    img.id = parseInt(addedCard[0].carID);
+    let updater = img.id;
+    img.onclick = (event) => {
         handUpdater(updater); // Call handUpdater function if needed
-        event.target.remove(); // Use event.target to reference the clicked button
+        event.target.parentNode.remove(); // Use event.target to reference the clicked button
     };
-    return handbtn;
-};
+    handCard.appendChild(img);
+    
+    if (addedCard[0].elite === "yes") {
+        let perk = addedCard[0].perk;
+        console.log(perk);
+        handCard.appendChild(eliteTag(img.id,perk));
+    }
+    gridContainer.append(handCard);
+    if (playerPrestigeGarage.includes(addedCard[0].carID)) {
+        console.log("gold!");
+        document.getElementById(addedCard[0].carID).classList.add('border');
+}}
+
 
 function eliteTag(id, perk) {
     let eliteMarker = document.createElement('button');
@@ -91,6 +143,11 @@ document.getElementById('filterButton').addEventListener('click', () => {
 })
 
 function handleTabClick(event) {
+    fetch('./js/data.json')
+    .then((response) => response.json())
+    .then((data) => {
+        cards = data.cars;
+    })
     rarityMemory = event;
     document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
     document.getElementById('fullhandbox').innerText = "";
@@ -100,6 +157,9 @@ function handleTabClick(event) {
     document.getElementById('garageGrid').innerText = "";
     document.getElementById('unownedGrid').innerText = "";
     document.getElementById('eliteGrid').innerText = "";
+    cards = cards.sort(
+        (p1, p2) => (p1.make > p2.make) ? 1 : (p1.make < p2.make) ? -1 : 0)
+        console.log(cards);
     cards = cards.sort(
         (p1, p2) => (p1.rq < p2.rq) ? 1 : (p1.rq > p2.rq) ? -1 : 0)
         console.log(cards);
@@ -115,15 +175,13 @@ function handleTabClick(event) {
                 var img = document.createElement('img');
                 img.src = "./assets/cards/" + cards.imageID;
                 img.id = parseInt(cards.carID);
+                let updater = parseInt(img.id);
                 garageCard.appendChild(img);
                 
                 var carIndex = cards.carID - 1;
                 if (cards.elite === "yes") {
                     let perk = cards.perk;
                     garageCard.appendChild(eliteTag(img.id,perk));
-                }
-                if (playerHand.includes(carIndex)) {
-                    garageCard.appendChild(handButton(img.id, carIndex));
                 }
                 gridContainer.append(garageCard);
                 if (playerPrestigeGarage.includes(cards.carID)) {
@@ -264,12 +322,13 @@ function handleTabClick(event) {
         if (e.target.tagName === 'IMG') {
             handSize = playerHand.length;
             const selection = e.target;
-            const clickedCard = selection.id;
+            const clickedCard = parseInt(selection.id);
             const handCheck = clickedCard - 1;
             if (playerHand.includes(handCheck)) {
                 document.getElementById('fullhandbox').innerText = "Car already in hand!";
                 return;
             }
+            console.log(clickedCard);
             addToHand(clickedCard);
         }
     })
@@ -280,11 +339,10 @@ function addToHand(newHandCard) {
         document.getElementById('fullhandbox').innerText = "Your hand is full!";
     } else {
         let inHand = newHandCard - 1;
-        let newButton = handButton(newHandCard, inHand);
-        let enteringHand = document.getElementById(newHandCard);
-        enteringHand.appendChild(newButton);
         handAdder(inHand);
         getHandCards(...playerHand);
         document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
     }
 };
+
+console.log("pnesiei");

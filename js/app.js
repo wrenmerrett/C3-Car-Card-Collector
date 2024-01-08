@@ -327,22 +327,22 @@ function carPicker() {
             document.getElementById('luckFactor').innerHTML = "Luck Factor: " + gachaStable;
             let basegacha = Math.floor(Math.random() * 100) + 1;
             let gacha = basegacha * gachaStable;
-            if (gacha < 25) {
+            if (gacha < 28) {
                 var carSelection = data.filter(data => data.rarity === 1);
             } else
-            if (gacha < 50) {
+            if (gacha < 55) {
                 var carSelection = data.filter(data => data.rarity === 2);
             } else
-            if (gacha < 80) {
+            if (gacha < 88) {
                 var carSelection = data.filter(data => data.rarity === 3);
             } else
-            if (gacha < 105) {
+            if (gacha < 115) {
                 var carSelection = data.filter(data => data.rarity === 4);
             } else
-            if (gacha < 145) {
+            if (gacha < 155) {
                 var carSelection = data.filter(data => data.rarity === 5);
             } else
-            if (gacha < 190) {
+            if (gacha < 200) {
                 var carSelection = data.filter(data => data.rarity === 6);
                 prestigeDupe = true;
             } else {
