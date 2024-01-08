@@ -17,19 +17,22 @@ window.onload = collectionHandDisplay;
 console.log(cards);
 
 export function collectionHandDisplay() {
-    document.getElementById('handGrid').innerHTML = ("");
+    document.getElementById('handGrid').innerHTML = ("")
     fetch('./js/data.json')
     .then((response) => response.json())
     .then((data) => {
         cards = data.cars;
         document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
-    cards.forEach(cards => {
-        if (playerHand.includes((cards.carID)-1)) {
-            var gridContainer = document.getElementById('handGrid');
+    playerHand.forEach((index) => {
+        console.log(index);
+        let carIndex = index + 1;
+        let handPlus = cards.filter(cards => cards.carID === carIndex);
+        console.log(handPlus);
+        var gridContainer = document.getElementById('handGrid');
         const handCard = document.createElement('div');
         var img = document.createElement('img');
-        img.src = "./assets/cards/" + cards.imageID;
-        img.id = parseInt(cards.carID);
+        img.src = "./assets/cards/" + handPlus[0].imageID;
+        img.id = parseInt(handPlus[0].carID);
         let updater = img.id - 1;
         img.onclick = (event) => {
             handUpdater(updater); // Call handUpdater function if needed
@@ -37,18 +40,18 @@ export function collectionHandDisplay() {
         };
         handCard.appendChild(img);
         
-        if (cards.elite === "yes") {
-            let perk = cards.perk;
+        if (handPlus.elite === "yes") {
+            let perk = handPlus[0].perk;
             console.log(perk);
             handCard.appendChild(eliteTag(img.id,perk));
         }
         gridContainer.append(handCard);
-        if (playerPrestigeGarage.includes(cards.carID)) {
+        if (playerPrestigeGarage.includes(handPlus[0].carID)) {
             console.log("gold!");
-            document.getElementById(cards.carID).classList.add('border');
+            document.getElementById(handPlus[0].carID).classList.add('border');
         };
-        }
-    })
+        })
+        
     })
     
     

@@ -1,6 +1,6 @@
 'use strict';
 
-import { playerGarage, playerPrestigeGarage } from "./playerGarage.js";
+import { playerGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 import { money, restockCost, moneyChanger, restockUp, restockDown } from "./app.js";
 
 export let shopContainer;
