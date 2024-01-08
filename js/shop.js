@@ -67,7 +67,7 @@ function buyCar(id,pricetag) {
     if (purchaseCost <= money) {
         document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
         moneyChanger(purchaseCost);
-        let reimburse = Math.round((purchaseCost * 0.05));
+        let reimburse = Math.round((purchaseCost * 0.03));
         restockDown(reimburse);
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerGarage.push(newCar);
@@ -85,7 +85,7 @@ function prestigeCar(id,pricetag) {
     if (purchaseCost <= money) {
         document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
         moneyChanger(purchaseCost);
-        let reimburse = Math.round((purchaseCost * 0.05));
+        let reimburse = Math.round((purchaseCost * 0.03));
         restockDown(reimburse);
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerPrestigeGarage.push(prestigedCar);
@@ -114,7 +114,7 @@ function populateShop() {
                     const shopImg = document.createElement('img');
                     shopImg.src = "./assets/cards/" + shopCar.imageID;
                     shopCard.appendChild(shopImg);
-                    let price = (shopCar.rarity * shopCar.rq)*(2^(shopCar.rarity)+9)
+                    let price = (shopCar.rarity * shopCar.rq)*(3^(shopCar.rarity)+18)
                     if (playerPrestigeGarage.includes(shopCar.carID)) {
                         let buttonID = shopCar.carID;
                         let ownedTag = ownedButton(buttonID);
@@ -160,7 +160,7 @@ function populateShop() {
             const eliteImg = document.createElement('img');
             eliteImg.src = "./assets/cards/" + eliteShopCar.imageID;
             eliteShopCard.append(eliteImg);
-            let price = ((eliteShopCar.rarity * eliteShopCar.rq)*180);
+            let price = ((eliteShopCar.rarity * eliteShopCar.rq)*270);
             if (playerPrestigeGarage.includes(eliteShopCar.carID)) {
                 let buttonID = eliteShopCar.carID;
                 let ownedTag = ownedButton(buttonID);

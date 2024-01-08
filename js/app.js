@@ -374,7 +374,7 @@ function carPicker() {
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
             money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
-            money += (Math.floor((Math.random() * (gachaStable/2)) * (gambleValue)));
+            money += Math.floor(Math.random() * 500 * (gachaStable) * (gambleValue));
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             if (playerGarage.includes(garageAdd)) {
                 money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
