@@ -90,6 +90,7 @@ function prestigeCar(id,pricetag) {
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerPrestigeGarage.push(prestigedCar);
         console.log(playerPrestigeGarage);
+        collectionHandDisplay();
         buttonID.remove();
     } else {
         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
