@@ -39,11 +39,12 @@ export function collectionHandDisplay() {
             event.target.parentNode.remove(); // Use event.target to reference the clicked button
         };
         handCard.appendChild(img);
+        console.log(handPlus);
         
-        if (handPlus.elite === "yes") {
+        if (handPlus[0].elite === "yes") {
             let perk = handPlus[0].perk;
             console.log(perk);
-            handCard.appendChild(eliteTag(img.id,perk));
+            handCard.appendChild(eliteTag(img.idperk));
         }
         gridContainer.append(handCard);
         if (playerPrestigeGarage.includes(handPlus[0].carID)) {
@@ -75,6 +76,7 @@ export function collectionHandUpdater(indexNo) {
         event.target.parentNode.remove(); // Use event.target to reference the clicked button
     };
     handCard.appendChild(img);
+    console.log(addedCard[0].elite);
     
     if (addedCard[0].elite === "yes") {
         let perk = addedCard[0].perk;
