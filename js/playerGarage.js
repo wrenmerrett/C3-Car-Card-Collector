@@ -1,6 +1,6 @@
 'use strict';
 
-export var playerGarage = [4, 76, 42, 47, 18, 506];
+export var playerGarage = [4, 76, 42, 47, 18];
 export var playerPrestigeGarage = [];
 import { button } from "./app.js";
 import { playerHand, getHandCards, handUpdater, handAdder, totalRQ } from "./playerHand.js";
