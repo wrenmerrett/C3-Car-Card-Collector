@@ -16,7 +16,8 @@ tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
 window.onload = collectionHandDisplay;
 console.log(cards);
 
-function collectionHandDisplay() {
+export function collectionHandDisplay() {
+    document.getElementById('handGrid').innerHTML = ("");
     fetch('./js/data.json')
     .then((response) => response.json())
     .then((data) => {
