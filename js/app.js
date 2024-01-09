@@ -89,7 +89,6 @@ let quickChargeValue = quickChargeData.baseVal + (quickChargeData.increment * (q
 
 let highRollerData = eliteLevels[2]
 let highRollerValue = highRollerData.baseVal + (highRollerData.increment * (highRollerData.level-1));
-console.log(highRollerValue);
 
 let gamblerData = eliteLevels[3]
 let gamblerValue = gamblerData.baseVal + (gamblerData.increment * (gamblerData.level-1));
@@ -159,10 +158,12 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
                 if (car.perk == "Slipstream") {
                     slipstreamBonus -= (slipstreamValue/car.zeroToSixty);
                 }
+                console.log(doubleTapValue);
                 if (car.perk == "Double Tap") {
                     let refreshChance = Math.random();
                     refreshChance = refreshChance * 1+(car.topSpeed/1000)
-                    if (refreshChance > (100-doubleTapValue)) {
+                    console.log(doubleTapValue);
+                    if (refreshChance > (1-doubleTapValue)) {
                         buttonZero += 1;
                     }
                 }
@@ -200,11 +201,8 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
                 driveTracker.push(car.drive);
                 tyreTracker.push(car.tyres);
                 gachaLuck += (car.topSpeed);
-                console.log(gachaLuck);
                 if (car.perk == "Lucky") {
-                    console.log("peeman");
                     gachaLuck += ((car.topSpeed)*luckyValue);
-                    console.log(gachaLuck);
                 }
                 if (car.perk == "Gambler") {
                     gambleValue += gamblerValue;
@@ -480,8 +478,6 @@ function carPicker() {
             var garageAdd = chosenCar.carID;
             money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
             money += Math.floor(Math.random() * 500 * (gachaStable) * (gambleValue));
-            console.log(playerGarage);
-            console.log(mechanicValue);
             for (let r = 0; r < eliteCount; r++) {
                 let toolGachaBase = Math.random();
                 let toolGachaMod = toolGachaBase * mechanicValue;
