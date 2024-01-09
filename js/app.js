@@ -23,10 +23,11 @@ let synergies;
 var heatData;
 let mechanicValue = 0;
 let synswitch = false;
-let standardBonus = 0;
-let allsurfBonus = 0;
-let offroadBonus = 0;
-let awdBonus = 0;
+let standardBonus = 1;
+let allsurfBonus = 1;
+let offroadBonus = 1;
+let awdBonus = 1;
+let fwdBonus = 1;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -132,7 +133,8 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
             awdBonus = 0;
             let gachaMod = 0;
             let gachaLuck = 0 + (heatLevel*62);
-            let buttonVar = 0 - (heatLevel * 2.5); 
+            let buttonVar = 0 - (heatLevel * 3); 
+            console.log(buttonVar);
             let slipstreamBonus = 400;
             let moneyVar = 0 + (heatLevel *22);
             let buttonZero = 0;
@@ -143,6 +145,7 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
             let countryTracker = [];
             let driveTracker = [];
             let tyreTracker = [];
+            console.log(buttonVar);
             playerHand.forEach(bonusCalcs);
             function bonusCalcs(id) {
                 let car = (data[id]);
@@ -152,6 +155,7 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
                 }
                 console.log(car.perk);
                 buttonVar += (car.zeroToSixty);
+
                 if (car.perk == "Quick Charge") {
                     buttonVar -= ((car.zeroToSixty) * quickChargeValue);
                 }
@@ -208,6 +212,8 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
                     gambleValue += gamblerValue;
                 }
             }
+            console.log(standardBonus);
+            console.log(buttonVar);
 
             synergies = [];
             let makeSorted = makeTracker.sort();
@@ -224,36 +230,38 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
                 }
             };
 
+            let buttonBoost = 0;
+
             synergies.forEach(synergyPerks);
             function synergyPerks(synergy) {
                 if (synergy == 'Standard' && standardBonus > 0) {
                     moneyVar = moneyVar * 1.04^(standardBonus);
-                    buttonVar = buttonVar * 0.88^(standardBonus);
+                    buttonBoost = buttonBoost + 1.08*(standardBonus);
                     gachaLuck = gachaLuck * 1.04^(standardBonus);
                 }
                 if (synergy == 'All-Surface' && allsurfBonus > 0) {
                     moneyVar = moneyVar * 1.07^(allsurfBonus);
-                    buttonVar = buttonVar * 0.75^(allsurfBonus);
+                    buttonBoost = buttonBoost + 1.14*(allsurfBonus);
                     gachaLuck = gachaLuck * 1.07^(allsurfBonus);
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
                     moneyVar = moneyVar * 1.08^(offroadBonus);
-                    buttonVar = buttonVar * 0.7^(offroadBonus);
+                    buttonBoost = buttonBoost + 1.16*(offroadBonus);
                     gachaLuck = gachaLuck * 1.08^(offroadBonus);
                 }
                 if (synergy == '4WD' && awdBonus > 0) {
                     moneyVar = moneyVar * 1.04^(awdBonus);
-                    buttonVar = buttonVar * 0.9^(awdBonus);
+                    buttonBoost = buttonBoost + 1.08*(awdBonus);
                     gachaLuck = gachaLuck * 1.04^(awdBonus);
                 }
                 if (synergy == 'FWD' && fwdBonus > 0) {
-                    moneyVar = moneyVar * 1.03^(awdBonus);
-                    buttonVar = buttonVar * 0.95^(awdBonus);
-                    gachaLuck = gachaLuck * 1.03^(awdBonus);
+                    moneyVar = moneyVar * 1.03^(fwdBonus);
+                    buttonBoost = buttonBoost + 1.06*(fwdBonus);
+                    gachaLuck = gachaLuck * 1.03^(fwdBonus);
                 }
             }
 
-            
+            buttonVar -= buttonBoost;
 
             moneyBonus = Math.round((((moneyVar - 265)/100) + 1)*100)/100;
             buttonCooldown = Math.round((buttonVar * slipstreamBonus))*100/100;

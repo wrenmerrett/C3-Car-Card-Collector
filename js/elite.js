@@ -64,36 +64,36 @@ export const eliteLevels = [
         "perkID": 8,
         "name": "Standard Bearer",
         "level": 1,
-        "baseVal": 1.5,
-        "increment": 0.15
+        "baseVal": 1.1,
+        "increment": 0.05
     },
     {
         "perkID": 9,
         "name": "All-Star",
         "level": 1,
-        "baseVal": 1.5,
-        "increment": 0.15
+        "baseVal": 1.1,
+        "increment": 0.05
     },
     {
         "perkID": 10,
         "name": "Off The Chain",
         "level": 1,
-        "baseVal": 1.5,
-        "increment": 0.15
+        "baseVal": 0.1,
+        "increment": 0.05
     },
     {
         "perkID": 11,
         "name": "Action Traction",
         "level": 1,
-        "baseVal": 1.5,
-        "increment": 0.15
+        "baseVal": 0.1,
+        "increment": 0.05
     },
     {
         "perkID": 12,
         "name": "Front Line",
         "level": 1,
-        "baseVal": 1.5,
-        "increment": 0.15
+        "baseVal": 0.1,
+        "increment": 0.05
     },
     {
         "perkID": 13,
