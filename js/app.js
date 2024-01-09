@@ -21,6 +21,7 @@ let rqLimit = 500;
 let heatLevel = 0;
 let synergies;
 var heatData;
+let mechanicValue = 0;
 let synswitch = false;
 let standardBonus = 0;
 let allsurfBonus = 0;
@@ -73,14 +74,22 @@ document.getElementById('loadButton').addEventListener('click', () => {
     document.getElementById('saveWarning').innerText = "Game loaded."
 })
 
+button.addEventListener('click', () => {
+    document.getElementById('RQLimiter').innerText = "";
+    if (rqLimit < totalRQ) {
+        document.getElementById('RQLimiter').innerText = "Hand too strong. Reduce RQ by " + (totalRQ - rqLimit);
+        return;
+    }
+
 let luckyData = eliteLevels[0]
-let luckyValue = luckyData.baseVal + (luckyData.increment * (luckyData.level-1));
+let luckyValue = luckyData.baseVal + (luckyData.increment * ((luckyData.level)-1));
 
 let quickChargeData = eliteLevels[1]
 let quickChargeValue = quickChargeData.baseVal + (quickChargeData.increment * (quickChargeData.level-1));
 
 let highRollerData = eliteLevels[2]
 let highRollerValue = highRollerData.baseVal + (highRollerData.increment * (highRollerData.level-1));
+console.log(highRollerValue);
 
 let gamblerData = eliteLevels[3]
 let gamblerValue = gamblerData.baseVal + (gamblerData.increment * (gamblerData.level-1));
@@ -110,14 +119,8 @@ let frontLineData = eliteLevels[11]
 let frontLineValue = frontLineData.baseVal + (frontLineData.increment * (frontLineData.level-1));
 
 let mechanicData = eliteLevels[12]
-let mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.level-1));
+mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.level-1));
 
-button.addEventListener('click', () => {
-    document.getElementById('RQLimiter').innerText = "";
-    if (rqLimit < totalRQ) {
-        document.getElementById('RQLimiter').innerText = "Hand too strong. Reduce RQ by " + (totalRQ - rqLimit);
-        return;
-    }
     button.disabled = true;
     document.getElementById('saveWarning').innerText = ""
     fetch('./js/data.json')
@@ -166,6 +169,7 @@ button.addEventListener('click', () => {
                 moneyVar += (car.handling);
                 if (car.perk == "High Roller") {
                     moneyVar += ((car.handling) * highRollerValue);
+                    console.log(moneyVar);
                 }
                 if (car.perk == "Refresher") {
                     restockCost -= refresherValue;
@@ -196,8 +200,11 @@ button.addEventListener('click', () => {
                 driveTracker.push(car.drive);
                 tyreTracker.push(car.tyres);
                 gachaLuck += (car.topSpeed);
+                console.log(gachaLuck);
                 if (car.perk == "Lucky") {
+                    console.log("peeman");
                     gachaLuck += ((car.topSpeed)*luckyValue);
+                    console.log(gachaLuck);
                 }
                 if (car.perk == "Gambler") {
                     gambleValue += gamblerValue;
@@ -415,11 +422,9 @@ function carPicker() {
 
             let eliteList = data.filter(data => data.elite === "yes")
             let eliteCount = 0;
-            console.log(eliteList);
             for (const key in eliteList) {
                 if(playerGarage.includes(eliteList[key].carID)) {
                     eliteCount += 1;
-                    console.log(eliteCount);
                 }
             };
 
@@ -476,11 +481,10 @@ function carPicker() {
             money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
             money += Math.floor(Math.random() * 500 * (gachaStable) * (gambleValue));
             console.log(playerGarage);
-            
+            console.log(mechanicValue);
             for (let r = 0; r < eliteCount; r++) {
                 let toolGachaBase = Math.random();
                 let toolGachaMod = toolGachaBase * mechanicValue;
-                console.log(toolGachaMod);
                 if (toolGachaMod > 0.95) {
                     toolAdder(1);
                     document.getElementById('eliteDisplay').innerText = "Elite Tools: " + eliteTools;

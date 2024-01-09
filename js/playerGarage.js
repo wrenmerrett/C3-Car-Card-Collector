@@ -95,7 +95,7 @@ export function collectionHandUpdater(indexNo) {
         handCard.appendChild(KitTag(img.id,perk,rarity));
     }
     else {
-        handCard.appendChild(craftTag(img.id,handCard.rarity));
+        handCard.appendChild(craftTag(img.id,newCard.rarity));
     }
     console.log("does this work");
     gridContainer.append(handCard);

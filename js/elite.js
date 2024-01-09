@@ -1,6 +1,6 @@
 'use strict';
 
-export let eliteTools = 100000000;
+export let eliteTools = 0;
 let maxPerkLevel = 5;
 import { money, moneyChanger } from './app.js';
 
@@ -15,22 +15,22 @@ export const eliteLevels = [
         "perkID": 1,
         "name": "Lucky",
         "level": 1,
-        "baseVal": 0.15,
-        "increment": 0.05
+        "baseVal": 0.2,
+        "increment": 0.06
     },
     {
         "perkID": 2,
         "name": "Quick Charge",
         "level": 1,
         "baseVal": 0.35,
-        "increment": 0.05
+        "increment": 0.06
     },
     {
         "perkID": 3,
         "name": "High Roller",
         "level": 1,
         "baseVal": 0.3,
-        "increment": 0.05
+        "increment": 0.06
     },
     {
         "perkID": 4,
@@ -58,42 +58,42 @@ export const eliteLevels = [
         "name": "Slipstream",
         "level": 1,
         "baseVal": 100,
-        "increment": 5
+        "increment": 10
     },
     {
         "perkID": 8,
         "name": "Standard Bearer",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.05
+        "increment": 0.1
     },
     {
         "perkID": 9,
         "name": "All-Star",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.05
+        "increment": 0.1
     },
     {
         "perkID": 10,
         "name": "Off The Chain",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.05
+        "increment": 0.1
     },
     {
         "perkID": 11,
         "name": "Action Traction",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.05
+        "increment": 0.1
     },
     {
         "perkID": 12,
         "name": "Front Line",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.05
+        "increment": 0.1
     },
     {
         "perkID": 13,
@@ -128,19 +128,23 @@ export function populateText() {
     })
 };
 
+
 function handleLevelUp(event) {
     let perkToLevel = event.target.id;
     let perkdiv = document.getElementById(perkToLevel);
     console.log(perkToLevel);
     const perkUp = eliteLevels.find(e => e.name == perkToLevel);
+    const index = eliteLevels.findIndex(e => e.name == perkToLevel);
+    console.log(index);
     let perkLev = perkUp.level;
     if (perkLev * 750 > eliteTools) {
         document.getElementById('NotEnoughTools').style.display = "inline-block";
         return;
     }
     eliteTools -= perkLev *750;
-    perkLev += 1;
-    perkUp.level = perkLev;
+    eliteLevels[index].level += 1;
+    perkLev = eliteLevels[index].level;
+    console.log(eliteLevels[index])
     console.log(perkLev);
     document.getElementById('NotEnoughTools').style.display = "none";
     let base = perkUp.baseVal;
