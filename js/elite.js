@@ -1,6 +1,6 @@
 'use strict';
 
-export let eliteTools = 10000000000000;
+export let eliteTools = 0;
 let maxPerkLevel = 5;
 import { money, moneyChanger } from './app.js';
 

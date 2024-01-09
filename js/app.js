@@ -2,7 +2,7 @@ export const button = document.querySelector('[data-collect-card]');
 import { playerGarage, loadGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
-export let money = 10000000000;
+export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 let gachaLuck = 0;
@@ -96,7 +96,7 @@ button.addEventListener('click', () => {
             awdBonus = 0;
             let gachaMod = 0;
             let gachaLuck = 0 + (heatLevel*62);
-            let buttonVar = 0 - (heatLevel * 3); 
+            let buttonVar = 0 - (heatLevel * 2.5); 
             console.log(buttonVar);
             let slipstreamBonus = 400;
             let moneyVar = 0 + (heatLevel *22);
@@ -249,8 +249,8 @@ button.addEventListener('click', () => {
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
                     moneyVar = moneyVar + 1.10^(offroadBonus);
-                    buttonBoost = buttonBoost + 1.06*(offroadBonus);
-                    gachaLuck = gachaLuck + 1.08^(offroadBonus);
+                    buttonBoost = buttonBoost + 1.10*(offroadBonus);
+                    gachaLuck = gachaLuck + 1.10^(offroadBonus);
                 }
                 if (synergy == '4WD' && awdBonus > 0) {
                     moneyVar = moneyVar + 1.04^(awdBonus);
