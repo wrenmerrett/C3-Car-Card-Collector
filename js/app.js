@@ -144,6 +144,11 @@ button.addEventListener('click', () => {
             playerHand.forEach(bonusCalcs);
             function bonusCalcs(id) {
                 let car = (data[id]);
+                if (equippedKits.find(e => e.carID === car.carID)) {
+                    let perkIndex = equippedKits.find(e => e.carID === car.carID)
+                    car.perk = perkIndex.perk;
+                }
+                console.log(car.perk);
                 buttonVar += (car.zeroToSixty);
                 if (car.perk == "Quick Charge") {
                     buttonVar -= ((car.zeroToSixty) * quickChargeValue);
@@ -476,7 +481,7 @@ function carPicker() {
                 let toolGachaBase = Math.random();
                 let toolGachaMod = toolGachaBase * mechanicValue;
                 console.log(toolGachaMod);
-                if (toolGachaMod > 0.925) {
+                if (toolGachaMod > 0.95) {
                     toolAdder(1);
                     document.getElementById('eliteDisplay').innerText = "Elite Tools: " + eliteTools;
                 } 

@@ -117,7 +117,7 @@ function craftTag(id, rarity) {
     let craftButton = document.createElement('button');
     craftButton.id = id;
     let cashPrice = rarity * 25000;
-    let toolPrice = rarity * 100;
+    let toolPrice = rarity * 250;
     craftButton.classList.add('craftbtn'); // Use classList to add a class
     craftButton.innerHTML = "Craft Elite Kit - $" + cashPrice + ", " + toolPrice + " Elite Tools";
     craftButton.addEventListener('click', () => {

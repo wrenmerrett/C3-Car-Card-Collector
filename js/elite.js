@@ -1,6 +1,6 @@
 'use strict';
 
-export let eliteTools = 0;
+export let eliteTools = 100000000;
 let maxPerkLevel = 5;
 import { money, moneyChanger } from './app.js';
 
@@ -121,7 +121,7 @@ export function populateText() {
             perkdiv.querySelector(".levelButton").disabled = true;
             perkdiv.querySelector(".perkLevel").innerHTML = "Level MAX";
         } else {
-            perkdiv.querySelector(".perkLevel").innerHTML = "Level " + perkLev + " > " + (perkLev+1) + " - " + (((perkLev)*400)) + " Elite Tools required";
+            perkdiv.querySelector(".perkLevel").innerHTML = "Level " + perkLev + " > " + (perkLev+1) + " - " + (((perkLev)*750)) + " Elite Tools required";
         perkdiv.querySelector(".perkBonus").innerHTML = "Bonus: " + Math.round((base + (inc *( perkLev -1)))*100)/100 + " > " + Math.round((base + (inc * perkLev))*100)/100;
         }
         
@@ -133,12 +133,15 @@ function handleLevelUp(event) {
     let perkdiv = document.getElementById(perkToLevel);
     console.log(perkToLevel);
     const perkUp = eliteLevels.find(e => e.name == perkToLevel);
-    perkUp.level += 1;
     let perkLev = perkUp.level;
-    if (perkLev * 400 > eliteTools) {
+    if (perkLev * 750 > eliteTools) {
         document.getElementById('NotEnoughTools').style.display = "inline-block";
         return;
     }
+    eliteTools -= perkLev *750;
+    perkLev += 1;
+    perkUp.level = perkLev;
+    console.log(perkLev);
     document.getElementById('NotEnoughTools').style.display = "none";
     let base = perkUp.baseVal;
     let inc = perkUp.increment;
@@ -148,8 +151,10 @@ function handleLevelUp(event) {
         perkdiv.querySelector(".perkLevel").innerHTML = "Level MAX";
         perkdiv.querySelector(".perkBonus").innerHTML = "Bonus: " + Math.round((base + (inc *( perkLev -1)))*100)/100;
     } else {
-        perkdiv.querySelector(".perkLevel").innerHTML = "Level " + perkLev + " > " + (perkLev+1) + " - " + (((perkLev)*400)) + " Elite Tools required";;
+        perkdiv.querySelector(".perkLevel").innerHTML = "Level " + perkLev + " > " + (perkLev+1) + " - " + (((perkLev)*750)) + " Elite Tools required";;
     perkdiv.querySelector(".perkBonus").innerHTML = "Bonus: " + Math.round((base + (inc *( perkLev -1)))*100)/100 + " > " + Math.round((base + (inc * perkLev))*100)/100;
+    document.getElementById('toolsDisplay').innerHTML = "Elite Tools: " + eliteTools;
+    document.getElementById('eliteDisplay').innerHTML = "Elite Tools: " + eliteTools;
     }
 };
 
