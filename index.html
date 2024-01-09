@@ -14,7 +14,7 @@
                 <button class="tablink" onclick="openPage('Home', this, 'darkslategrey')" id="defaultOpen">Play</button>
                 <button class="tablink" onclick="openPage('Collection', this, 'dodgerblue')">Collection</button>
                 <button class="tablink" onclick="openPage('Shop', this, 'goldenrod')">Dealership</button>
-                <button class="tablink" onclick="openPage('Stats', this, 'darkolivegreen')">Adventures</button>
+                <button class="tablink" onclick="openPage('Stats', this, 'purple')">Elite</button>
 
                 <div id="Home" class="tabcontent">
                     <img id="logo" src="./styles/C3LOGO.png">
@@ -25,6 +25,7 @@
                 <b>
                         <div class="central-elements">
                             <h2 id="cashDisplay"></h2>
+                            <h2 id="eliteDisplay"></h2>
                             <div id="heatMeter">
                                 <h2 id="heatMeter">HEAT</h2>
                                 <div id="heatText"></div>
@@ -70,7 +71,23 @@
                 <div id="Collection" class="tabcontent">
                     <h3>Collection</h3>
 
+                    <div class="craftingMenu" id="kitCrafter">
+                        <span class="interface" id="kitMenu">
+                            
+                            <h5>ELITE KIT CRAFTING</h5>
+                            <div id="insufficientText"></div>
+                            <div id="partsCounter"></div>
+                            <select id="perkSelect">
+                                <option></option>
+                            </select>
+                            <div id="confirmText"></div>
+                        </span>
+                    </div>
+
                     <h4>Current Hand - click to remove</h4>
+
+                    
+
                     <div class="gridContainer" id="handGrid"></div>
                     
                     <div>
@@ -127,7 +144,9 @@
 
                 <div id="Shop" class="tabcontent">
                     <h3>Dealership</h3>
+                    
                     <h4 class="shopHeader">Welcome to the Dealership! Open for business!</h4>
+                    <h2 id="dealerCashDisplay"></h2>
                     <b id="restockPrice"></b>
                     <button id="restocker" class="button-3">RESTOCK</button>
                     <b id="brokeMessage"></b>
@@ -137,8 +156,106 @@
                 
 
     <div id="Stats" class="tabcontent">
-        <h3>Adventures</h3>
-        <p>Coming soon!</p>
+        <h3>Elite</h3>
+        
+        <h4>Welcome to the Elite Lab. Use Elite Tools to upgrade your Perks.</h4>
+        <div id="toolsDisplay">
+
+        </div>
+        <div id="NotEnoughTools">Insufficient Elite Tools...</div>
+        <div id="perkList">
+            <div id="Lucky">
+                <h4>Lucky - increases Top Speed luck bonus</h4>
+                <button id="Lucky" class="levelButton">LEVEL UP</button>
+                <div id="LuckyLevel" class="perkLevel"></div>
+                <div id="LuckyBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Quick Charge">
+                <h4>Quick Charge - reduces 0-60 cooldown impact</h4>
+                <button id="Quick Charge" class="levelButton">LEVEL UP</button>
+                <div id="QuickChargeLevel" class="perkLevel"></div>
+                <div id="QuickChargeBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="High Roller">
+                <h4>High Roller - increases Handling earnings bonus</h4>
+                <button id="High Roller" class="levelButton">LEVEL UP</button>
+                <div id="HighRollerLevel" class="perkLevel"></div>
+                <div id="HighRollerBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Gambler">
+                <h4>Gambler - earn a random amount of cash every collect</h4>
+                <button id="Gambler" class="levelButton">LEVEL UP</button>
+                <div id="GamblerLevel" class="perkLevel"></div>
+                <div id="GamblerBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Double Tap">
+                <h4>Double Tap - chance to instantly refresh Collect button</h4>
+                <button id="Double Tap" class="levelButton">LEVEL UP</button>
+                <div id="DoubleTapLevel" class="perkLevel"></div>
+                <div id="DoubleTapBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Refresher">
+                <h4>Refresher - reduce Dealership refresh cost every collect</h4>
+                <button id="Refresher" class="levelButton">LEVEL UP</button>
+                <div id="RefresherLevel" class="perkLevel"></div>
+                <div id="RefresherBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Slipstream">
+                <h4>Slipstream - improve cooldown scaling across all cars</h4>
+                <button id="Slipstream" class="levelButton">LEVEL UP</button>
+                <div id="SlipstreamLevel" class="perkLevel"></div>
+                <div id="SlipstreamBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Standard Bearer">
+                <h4>Standard Bearer - boost all stats with 3+ Standard tyres</h4>
+                <button id="Standard Bearer" class="levelButton">LEVEL UP</button>
+                <div id="StandardBearerLevel" class="perkLevel"></div>
+                <div id="StandardBearerBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="All-Star">
+                <h4>All-Star - boost all stats with 3+ All-Surface tyres</h4>
+                <button id="All-Star" class="levelButton">LEVEL UP</button>
+                <div id="AllStarLevel" class="perkLevel"></div>
+                <div id="AllStarBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Off The Chain">
+                <h4>Off The Chain - boost all stats with 3+ Off-Road tyres</h4>
+                <button id="Off The Chain" class="levelButton">LEVEL UP</button>
+                <div id="OffTheChainLevel" class="perkLevel"></div>
+                <div id="OffTheChainBonus" class="perkBonus"></div>
+            </div>
+            
+            <div id="Action Traction">
+                <h4>Action Traction - boost all stats with 3+ 4WD</h4>
+                <button id="Action Traction" class="levelButton">LEVEL UP</button>
+                <div id="ActionTractionLevel" class="perkLevel"></div>
+                <div id="ActionTractionBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Front Line">
+                <h4>Front Line - boost all stats with 3+ FWD</h4>
+                <button id="Front Line" class="levelButton">LEVEL UP</button>
+                <div id="FrontLineLevel" class="perkLevel"></div>
+                <div id="FrontLineBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="Mechanic">
+                <h4>Mechanic - increases chance of collecting Elite Tools</h4>
+                <button id="Mechanic" class="levelButton">LEVEL UP</button>
+                <div id="MechanicLevel" class="perkLevel"></div>
+                <div id="MechanicBonus" class="perkBonus"></div>
+            </div>
+        </div>
+        
     </div>
 
     <script>

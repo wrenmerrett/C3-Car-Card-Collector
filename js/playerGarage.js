@@ -4,17 +4,15 @@ export var playerGarage = [4, 76, 42, 47, 18];
 export var playerPrestigeGarage = [];
 import { button } from "./app.js";
 import { playerHand, getHandCards, handUpdater, handAdder, totalRQ } from "./playerHand.js";
+import { craftKit, equippedKits } from "./elite.js";
 const tabs = document.querySelectorAll('.tab');
 let handSize = playerHand.length;
 var cards;
-var newHandCard;
-var inHand;
 
 const rarities = ['common', 'uncommon', 'rare', 'superRare', 'ultraRare', 'epic', 'legendary']
 
 tabs.forEach(tab => tab.addEventListener('click', handleTabClick));
-window.onload = collectionHandDisplay;
-console.log(cards);
+window.onload = collectionHandDisplay();
 
 export function collectionHandDisplay() {
     document.getElementById('handGrid').innerHTML = ("")
@@ -24,10 +22,9 @@ export function collectionHandDisplay() {
         cards = data.cars;
         document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
     playerHand.forEach((index) => {
-        console.log(index);
         let carIndex = index + 1;
+        
         let handPlus = cards.filter(cards => cards.carID === carIndex);
-        console.log(handPlus);
         var gridContainer = document.getElementById('handGrid');
         const handCard = document.createElement('div');
         var img = document.createElement('img');
@@ -39,24 +36,31 @@ export function collectionHandDisplay() {
             event.target.parentNode.remove(); // Use event.target to reference the clicked button
         };
         handCard.appendChild(img);
-        console.log(handPlus);
+
+        let handCar = handPlus[0];
         
-        if (handPlus[0].elite === "yes") {
-            let perk = handPlus[0].perk;
-            console.log(perk);
+        if (handCar.elite === "yes") {
+            let perk = handCar.perk;
             handCard.appendChild(eliteTag(img.id,perk));
+        } else if (equippedKits.find(e => e.carID === handCar.carID)) {
+            let perkIndex = equippedKits.find(e => e.carID === handCar.carID)
+            let perk = perkIndex.perk;
+            let rarity = handCar.rarity;
+            handCard.appendChild(KitTag(img.id,perk,rarity));
         }
+         else {
+            handCard.appendChild(craftTag(img.id,handCar.rarity));
+        };
         gridContainer.append(handCard);
         if (playerPrestigeGarage.includes(handPlus[0].carID)) {
-            console.log("gold!");
             document.getElementById(handPlus[0].carID).classList.add('border');
         };
-        })
+        });
         
-    })
+    });
     
     
-}
+};
 
 // console.log("peenor");
 
@@ -65,6 +69,9 @@ export function collectionHandUpdater(indexNo) {
     console.log(idtest);
     let addedCard = cards.filter(cards => cards.carID === idtest);
     console.log(addedCard);
+    if (equippedKits.includes(cards => cards.carID)) {
+        console.log("kit!");
+    };
     var gridContainer = document.getElementById('handGrid');
     const handCard = document.createElement('div');
     var img = document.createElement('img');
@@ -76,13 +83,21 @@ export function collectionHandUpdater(indexNo) {
         event.target.parentNode.remove(); // Use event.target to reference the clicked button
     };
     handCard.appendChild(img);
-    console.log(addedCard[0].elite);
+    let newCard = addedCard[0];
     
-    if (addedCard[0].elite === "yes") {
-        let perk = addedCard[0].perk;
-        console.log(perk);
+    if (newCard.elite === "yes") {
+        let perk = newCard.perk;
         handCard.appendChild(eliteTag(img.id,perk));
+    } else if (equippedKits.find(e => e.carID === newCard.carID)) {
+        let perkIndex = equippedKits.find(e => e.carID === newCard.carID)
+        let perk = perkIndex.perk;
+        let rarity = newCard.rarity;
+        handCard.appendChild(KitTag(img.id,perk,rarity));
     }
+    else {
+        handCard.appendChild(craftTag(img.id,handCard.rarity));
+    }
+    console.log("does this work");
     gridContainer.append(handCard);
     if (playerPrestigeGarage.includes(addedCard[0].carID)) {
         console.log("gold!");
@@ -97,6 +112,33 @@ function eliteTag(id, perk) {
     eliteMarker.innerHTML = "ELITE - " + perk;
     return eliteMarker;
 }
+
+function craftTag(id, rarity) {
+    let craftButton = document.createElement('button');
+    craftButton.id = id;
+    let cashPrice = rarity * 25000;
+    let toolPrice = rarity * 100;
+    craftButton.classList.add('craftbtn'); // Use classList to add a class
+    craftButton.innerHTML = "Craft Elite Kit - $" + cashPrice + ", " + toolPrice + " Elite Tools";
+    craftButton.addEventListener('click', () => {
+        craftKit(id, cashPrice, toolPrice);
+    });
+    return craftButton;
+};
+
+function KitTag(id, perk, rarity) {
+    let kitButton = document.createElement('button');
+    kitButton.id = id;
+    let cashPrice = rarity * 25000;
+    let toolPrice = rarity * 100;
+    kitButton.classList.add('kitbtn'); // Use classList to add a class
+    kitButton.innerHTML = "Elite Kit: " + perk + " - Click to Recraft";
+    kitButton.addEventListener('click', () => {
+        craftKit(id, cashPrice, toolPrice);
+    });
+    return kitButton;
+}
+    
 
 export function loadGarage(garage, prestige) {
     playerGarage = garage;
@@ -120,6 +162,7 @@ document.getElementById('filterButton').addEventListener('click', () => {
     .then((response) => response.json())
     .then((data) => {
         cards = data.cars;
+        console.log(cards);
     })
     cards = cards.sort(
         (p1, p2) => (p1.rq < p2.rq) ? 1 : (p1.rq > p2.rq) ? -1 : 0)
@@ -176,6 +219,9 @@ function handleTabClick(event) {
             let yearFilter = Math.floor(cards.year / 10)*10;
             decadeList.push(yearFilter);
             if (playerGarage.includes(cards.carID)) {
+                if (equippedKits.length > 0) {
+                    console.log(equippedKits);
+                };
                 var gridContainer = document.getElementById('garageGrid');
                 const garageCard = document.createElement('div');
                 var img = document.createElement('img');
@@ -350,5 +396,3 @@ function addToHand(newHandCard) {
         document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
     }
 };
-
-console.log("pnesiei");

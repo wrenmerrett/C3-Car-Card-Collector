@@ -29,6 +29,7 @@ body {
 
 #Stats {
     background-color: darkolivegreen;
+    background-image: url("./eliteBG.jpg");
 }
 
 #newestCard {
@@ -120,6 +121,12 @@ h4 {
 
 #cashDisplay {
     color: greenyellow;
+    margin-bottom: 5px;
+}
+
+#eliteDisplay {
+    color: magenta;
+    margin-top: 5px;
 }
 
 #collectButton {
@@ -271,6 +278,32 @@ img {
 .btn {
     position: relative;
     background-color: orangered;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.craftbtn {
+    position: relative;
+    background-color: goldenrod;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.kitbtn {
+    position: relative;
+    background-color: blueviolet;
     color: white;
     font-size: 16px;
     padding: 5px 10px;
@@ -570,3 +603,189 @@ h2 {
   .border {
     border: 6px ridge gold;
   }
+
+  #perkList {
+    width: 70%;
+    margin: 10px;
+  }
+
+  .levelButton {
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin-top:10px;
+  }
+
+  .kitButton {
+    background: goldenrod;
+    border-radius: 999px;
+    box-shadow: goldenrod 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin-top:10px;
+  }
+
+  .kitButton:disabled {
+    color: grey;
+    box-shadow:none;
+  }
+
+  .cancelButton {
+    background: red;
+    border-radius: 999px;
+    box-shadow: red 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin-top:10px;
+  }
+
+  .perkLevel { 
+    background: slateblue;
+    border-radius: 20px;
+    display: inline;
+    width: 6%;
+    box-shadow: slateblue 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .perkBonus {
+    background: green;
+    border-radius: 20px;
+    display: block;
+    width: 15%;
+    box-shadow: green 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+#toolsDisplay { 
+    background: black;
+    border-radius: 10px;
+    display: inline;
+    width: 6%;
+    box-shadow: magenta 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: magenta;
+    font-size: 30px;
+    margin-top: 200px;
+    padding: 10px;
+  }
+
+  .craftingMenu {
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: none;
+
+    cursor: context-menu;
+  }
+
+  .craftingMenu .interface {
+    display: block;
+
+    visibility: hidden;
+
+    background-color: #282b2b;
+
+    color: white;
+
+    width: 600px;
+
+    height: 250px;
+
+    text-align: center;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    position:relative;
+
+    border-radius: 10px;
+
+    padding: 10px 0;
+
+    font-size: 20px;
+  }
+
+  h5 {
+    color: teal;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 5px;
+  }
+
+  #perkSelect {
+    display: none;
+    margin-bottom: 20px;
+    width: 40%;
+    font-size: 20px;
+  }
+
+#NotEnoughTools {
+    display: none;
+    color: red;
+    font-weight: bolder;
+}
+
+#dealerCashDisplay {
+    font-size: 25px;
+    background-color: black;
+}
+
+#partsCounter {
+    color: magenta;
+    font-weight: bold;
+}

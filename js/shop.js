@@ -2,17 +2,20 @@
 
 import { playerGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 import { money, restockCost, moneyChanger, restockUp, restockDown } from "./app.js";
+import { toolAdder } from "./elite.js";
 
 export let shopContainer;
 
 let restockButton = document.getElementById('restocker');
 document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
+document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
 
 restockButton.addEventListener('click', () => {
     if (money >= restockCost) {restockUp();
         document.getElementById("brokeMessage").innerText = "";
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         document.getElementById('shopGrid').innerText = "";
+        document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
         populateShop();}
     else {
         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
@@ -65,8 +68,19 @@ function buyCar(id,pricetag) {
     let purchaseCost = pricetag;
     let newCar = id * 1;
     if (purchaseCost <= money) {
+        fetch('./js/data.json')
+        .then((response) => response.json())
+        .then((data) => {
+            let boughtCar = data.cars
+            const isElite = boughtCar.filter(c => c.elite == "yes");
+            if (isElite.find(e => e.carID === newCar)) {
+                let tokenDrop = Math.ceil(purchaseCost / 20000);
+                toolAdder(tokenDrop);
+            }
+        });
         document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
         moneyChanger(purchaseCost);
+        document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
         let reimburse = Math.round((purchaseCost * 0.03));
         restockDown(reimburse);
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
@@ -83,6 +97,16 @@ function prestigeCar(id,pricetag) {
     let purchaseCost = pricetag;
     let prestigedCar = id * 1;
     if (purchaseCost <= money) {
+        fetch('./js/data.json')
+        .then((response) => response.json())
+        .then((data) => {
+            let boughtCar = data.cars
+            const isElite = boughtCar.filter(c => c.elite == "yes");
+            if (isElite.find(e => e.carID === prestigedCar)) {
+                let tokenDrop = Math.ceil(purchaseCost / 20000);
+                console.log(tokenDrop);
+            }
+        });
         document.getElementById("brokeMessage").innerText = "Thanks for your purchase!";
         moneyChanger(purchaseCost);
         let reimburse = Math.round((purchaseCost * 0.03));

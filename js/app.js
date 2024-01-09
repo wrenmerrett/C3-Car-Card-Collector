@@ -1,6 +1,7 @@
 export const button = document.querySelector('[data-collect-card]');
 import { playerGarage, loadGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
+import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
 export let money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
@@ -13,6 +14,9 @@ export let shopStorage;
 let storedGarage;
 let storedPrestige;
 let storedHand;
+let storedTools;
+let eliteStorage;
+let kitStorage;
 let rqLimit = 500;
 let heatLevel = 0;
 let synergies;
@@ -26,6 +30,7 @@ export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+document.getElementById('eliteDisplay').innerText = "Elite Tools: " + eliteTools;
 document.getElementById('saveButton').addEventListener('click', () => {
     let shop = document.getElementById('shopGrid');
     shopStorage = shop.innerHTML;
@@ -39,6 +44,9 @@ document.getElementById('saveButton').addEventListener('click', () => {
     localStorage.setItem('cashBalance', JSON.stringify(money));
     localStorage.setItem('restockTracker', JSON.stringify(restockCost));
     localStorage.setItem('shopCars', JSON.stringify(shopStorage));
+    localStorage.setItem('etools', JSON.stringify(eliteTools));
+    localStorage.setItem('elevels', JSON.stringify(eliteLevels));
+    localStorage.setItem('kits', JSON.stringify(equippedKits));
     document.getElementById('saveWarning').innerText = "Game saved."
 })
 
@@ -55,8 +63,54 @@ document.getElementById('loadButton').addEventListener('click', () => {
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
     shopStorage = JSON.parse(localStorage.getItem('shopCars'));
     restoreShop(shopStorage);
+    storedTools = JSON.parse(localStorage.getItem('etools'));
+    console.log(storedTools);
+    eliteStorage = JSON.parse(localStorage.getItem('elevels'));
+    kitStorage = JSON.parse(localStorage.getItem('kits'));
+    restoreElite(storedTools, eliteStorage, kitStorage);
+    console.log(eliteStorage);
+    populateText();
     document.getElementById('saveWarning').innerText = "Game loaded."
 })
+
+let luckyData = eliteLevels[0]
+let luckyValue = luckyData.baseVal + (luckyData.increment * (luckyData.level-1));
+
+let quickChargeData = eliteLevels[1]
+let quickChargeValue = quickChargeData.baseVal + (quickChargeData.increment * (quickChargeData.level-1));
+
+let highRollerData = eliteLevels[2]
+let highRollerValue = highRollerData.baseVal + (highRollerData.increment * (highRollerData.level-1));
+
+let gamblerData = eliteLevels[3]
+let gamblerValue = gamblerData.baseVal + (gamblerData.increment * (gamblerData.level-1));
+
+let doubleTapData = eliteLevels[4]
+let doubleTapValue = doubleTapData.baseVal + (doubleTapData.increment * (doubleTapData.level-1));
+
+let refresherData = eliteLevels[5]
+let refresherValue = refresherData.baseVal + (refresherData.increment * (refresherData.level-1));
+
+let slipstreamData = eliteLevels[6]
+let slipstreamValue = slipstreamData.baseVal + (slipstreamData.increment * (slipstreamData.level-1));
+
+let standardBearerData = eliteLevels[7]
+let standardBearerValue = standardBearerData.baseVal + (standardBearerData.increment * (standardBearerData.level-1));
+
+let allStarData = eliteLevels[8]
+let allStarValue = allStarData.baseVal + (allStarData.increment * (allStarData.level-1));
+
+let offTheChainData = eliteLevels[9]
+let offTheChainValue = offTheChainData.baseVal + (offTheChainData.increment * (offTheChainData.level-1));
+
+let actionTractionData = eliteLevels[10]
+let actionTractionValue = actionTractionData.baseVal + (actionTractionData.increment * (actionTractionData.level-1));
+
+let frontLineData = eliteLevels[11]
+let frontLineValue = frontLineData.baseVal + (frontLineData.increment * (frontLineData.level-1));
+
+let mechanicData = eliteLevels[12]
+let mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.level-1));
 
 button.addEventListener('click', () => {
     document.getElementById('RQLimiter').innerText = "";
@@ -92,37 +146,43 @@ button.addEventListener('click', () => {
                 let car = (data[id]);
                 buttonVar += (car.zeroToSixty);
                 if (car.perk == "Quick Charge") {
-                    buttonVar -= ((car.zeroToSixty) * 0.45);
+                    buttonVar -= ((car.zeroToSixty) * quickChargeValue);
                 }
                 if (car.perk == "Slipstream") {
-                    slipstreamBonus -= (105/car.zeroToSixty);
+                    slipstreamBonus -= (slipstreamValue/car.zeroToSixty);
                 }
                 if (car.perk == "Double Tap") {
                     let refreshChance = Math.random();
                     refreshChance = refreshChance * 1+(car.topSpeed/1000)
-                    if (refreshChance > 0.93) {
+                    if (refreshChance > (100-doubleTapValue)) {
                         buttonZero += 1;
                     }
                 }
                 moneyVar += (car.handling);
                 if (car.perk == "High Roller") {
-                    moneyVar += ((car.handling) * 0.40);
+                    moneyVar += ((car.handling) * highRollerValue);
                 }
                 if (car.perk == "Refresher") {
-                    restockCost -= 10;
+                    restockCost -= refresherValue;
+                    if (restockCost <= 0) {
+                        restockCost = 0;
+                    }
                     document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
                 }
                 if (car.perk == "Standard Bearer") {
-                    standardBonus += 1;
+                    standardBonus += standardBearerValue;
                 }
                 if (car.perk == "All-Star") {
-                    allsurfBonus += 1;
+                    allsurfBonus += allStarValue;
                 }
                 if (car.perk == "Off The Chain") {
-                    offroadBonus += 1;
+                    offroadBonus += offTheChainValue;
                 }
                 if (car.perk == "Action Traction") {
-                    awdBonus += 1;
+                    awdBonus += actionTractionValue;
+                }
+                if (car.perk == "Front Line") {
+                    fwdBonus += frontLineValue;
                 }
                 makeTracker.push(car.make);
                 let yearFilter = Math.floor(car.year / 10);
@@ -132,10 +192,10 @@ button.addEventListener('click', () => {
                 tyreTracker.push(car.tyres);
                 gachaLuck += (car.topSpeed);
                 if (car.perk == "Lucky") {
-                    gachaLuck += ((car.topSpeed)*0.25);
+                    gachaLuck += ((car.topSpeed)*luckyValue);
                 }
                 if (car.perk == "Gambler") {
-                    gambleValue += 1;
+                    gambleValue += gamblerValue;
                 }
             }
 
@@ -157,9 +217,9 @@ button.addEventListener('click', () => {
             synergies.forEach(synergyPerks);
             function synergyPerks(synergy) {
                 if (synergy == 'Standard' && standardBonus > 0) {
-                    moneyVar = moneyVar * 1.05^(standardBonus);
-                    buttonVar = buttonVar * 0.85^(standardBonus);
-                    gachaLuck = gachaLuck * 1.05^(standardBonus);
+                    moneyVar = moneyVar * 1.04^(standardBonus);
+                    buttonVar = buttonVar * 0.88^(standardBonus);
+                    gachaLuck = gachaLuck * 1.04^(standardBonus);
                 }
                 if (synergy == 'All-Surface' && allsurfBonus > 0) {
                     moneyVar = moneyVar * 1.07^(allsurfBonus);
@@ -167,14 +227,19 @@ button.addEventListener('click', () => {
                     gachaLuck = gachaLuck * 1.07^(allsurfBonus);
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
-                    moneyVar = moneyVar * 1.09^(offroadBonus);
-                    buttonVar = buttonVar * 0.65^(offroadBonus);
-                    gachaLuck = gachaLuck * 1.09^(offroadBonus);
+                    moneyVar = moneyVar * 1.08^(offroadBonus);
+                    buttonVar = buttonVar * 0.7^(offroadBonus);
+                    gachaLuck = gachaLuck * 1.08^(offroadBonus);
                 }
                 if (synergy == '4WD' && awdBonus > 0) {
                     moneyVar = moneyVar * 1.04^(awdBonus);
                     buttonVar = buttonVar * 0.9^(awdBonus);
                     gachaLuck = gachaLuck * 1.04^(awdBonus);
+                }
+                if (synergy == 'FWD' && fwdBonus > 0) {
+                    moneyVar = moneyVar * 1.03^(awdBonus);
+                    buttonVar = buttonVar * 0.95^(awdBonus);
+                    gachaLuck = gachaLuck * 1.03^(awdBonus);
                 }
             }
 
@@ -199,6 +264,7 @@ button.addEventListener('click', () => {
 export function moneyChanger(transaction) {
     money -= transaction;
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+    document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
 }
 
 export function restockUp() {
@@ -269,6 +335,15 @@ function prestigeCar(id,pricetag) {
 
 }
 
+function restoreElite(tools,levels, kits) {
+    console.log(tools);
+    console.log(levels);
+    console.log(kits);
+    toolUpdater(tools);
+    eliteLevels.splice.apply(eliteLevels, [0, levels.length].concat(levels));
+    equippedKits.splice.apply(equippedKits, [0, kits.length].concat(kits));
+}
+
 document.getElementById('synergySwitch').addEventListener('click', () => {
     const synergyOn = document.getElementById('synergySwitch').checked;
     if (synergyOn === true) {
@@ -333,6 +408,16 @@ function carPicker() {
             let prestigeDupe = false;
             let dupePrestigeChance = 0.1;
 
+            let eliteList = data.filter(data => data.elite === "yes")
+            let eliteCount = 0;
+            console.log(eliteList);
+            for (const key in eliteList) {
+                if(playerGarage.includes(eliteList[key].carID)) {
+                    eliteCount += 1;
+                    console.log(eliteCount);
+                }
+            };
+
             data = data.filter(c => c.elite !== "yes");
 
             document.getElementById('luckFactor').innerHTML = "Luck Factor: " + gachaStable;
@@ -385,6 +470,17 @@ function carPicker() {
             var garageAdd = chosenCar.carID;
             money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
             money += Math.floor(Math.random() * 500 * (gachaStable) * (gambleValue));
+            console.log(playerGarage);
+            
+            for (let r = 0; r < eliteCount; r++) {
+                let toolGachaBase = Math.random();
+                let toolGachaMod = toolGachaBase * mechanicValue;
+                console.log(toolGachaMod);
+                if (toolGachaMod > 0.925) {
+                    toolAdder(1);
+                    document.getElementById('eliteDisplay').innerText = "Elite Tools: " + eliteTools;
+                } 
+            }
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             if (playerGarage.includes(garageAdd)) {
                 money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
@@ -401,6 +497,7 @@ function carPicker() {
 
             } else { playerGarage.unshift(garageAdd);
             document.getElementById('newCardPopup').innerText = "NEW!";}
+            document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
         })
         .catch(error => {
             console.log('Error fetching data:', error);
