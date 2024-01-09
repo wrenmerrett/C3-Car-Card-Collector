@@ -1,6 +1,6 @@
 'use strict';
 
-export let eliteTools = 0;
+export let eliteTools = 10000000000000;
 let maxPerkLevel = 5;
 import { money, moneyChanger } from './app.js';
 
@@ -65,35 +65,35 @@ export const eliteLevels = [
         "name": "Standard Bearer",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.05
+        "increment": 0.15
     },
     {
         "perkID": 9,
         "name": "All-Star",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.05
+        "increment": 0.15
     },
     {
         "perkID": 10,
         "name": "Off The Chain",
         "level": 1,
-        "baseVal": 0.1,
-        "increment": 0.05
+        "baseVal": 1.1,
+        "increment": 0.15
     },
     {
         "perkID": 11,
         "name": "Action Traction",
         "level": 1,
-        "baseVal": 0.1,
-        "increment": 0.05
+        "baseVal": 1.1,
+        "increment": 0.15
     },
     {
         "perkID": 12,
         "name": "Front Line",
         "level": 1,
-        "baseVal": 0.1,
-        "increment": 0.05
+        "baseVal": 1.1,
+        "increment": 0.15
     },
     {
         "perkID": 13,
@@ -149,6 +149,7 @@ function handleLevelUp(event) {
     document.getElementById('NotEnoughTools').style.display = "none";
     let base = perkUp.baseVal;
     let inc = perkUp.increment;
+    console.log(inc);
     if (perkLev == maxPerkLevel) {
         let maxButton = perkdiv.querySelector('.levelButton')
         maxButton.disabled = true;

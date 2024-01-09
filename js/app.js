@@ -2,7 +2,7 @@ export const button = document.querySelector('[data-collect-card]');
 import { playerGarage, loadGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
-export let money = 100;
+export let money = 10000000000;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 let gachaLuck = 0;
@@ -82,44 +82,7 @@ button.addEventListener('click', () => {
         return;
     }
 
-let luckyData = eliteLevels[0]
-let luckyValue = luckyData.baseVal + (luckyData.increment * ((luckyData.level)-1));
 
-let quickChargeData = eliteLevels[1]
-let quickChargeValue = quickChargeData.baseVal + (quickChargeData.increment * (quickChargeData.level-1));
-
-let highRollerData = eliteLevels[2]
-let highRollerValue = highRollerData.baseVal + (highRollerData.increment * (highRollerData.level-1));
-
-let gamblerData = eliteLevels[3]
-let gamblerValue = gamblerData.baseVal + (gamblerData.increment * (gamblerData.level-1));
-
-let doubleTapData = eliteLevels[4]
-let doubleTapValue = doubleTapData.baseVal + (doubleTapData.increment * (doubleTapData.level-1));
-
-let refresherData = eliteLevels[5]
-let refresherValue = refresherData.baseVal + (refresherData.increment * (refresherData.level-1));
-
-let slipstreamData = eliteLevels[6]
-let slipstreamValue = slipstreamData.baseVal + (slipstreamData.increment * (slipstreamData.level-1));
-
-let standardBearerData = eliteLevels[7]
-let standardBearerValue = standardBearerData.baseVal + (standardBearerData.increment * (standardBearerData.level-1));
-
-let allStarData = eliteLevels[8]
-let allStarValue = allStarData.baseVal + (allStarData.increment * (allStarData.level-1));
-
-let offTheChainData = eliteLevels[9]
-let offTheChainValue = offTheChainData.baseVal + (offTheChainData.increment * (offTheChainData.level-1));
-
-let actionTractionData = eliteLevels[10]
-let actionTractionValue = actionTractionData.baseVal + (actionTractionData.increment * (actionTractionData.level-1));
-
-let frontLineData = eliteLevels[11]
-let frontLineValue = frontLineData.baseVal + (frontLineData.increment * (frontLineData.level-1));
-
-let mechanicData = eliteLevels[12]
-mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.level-1));
 
     button.disabled = true;
     document.getElementById('saveWarning').innerText = ""
@@ -146,6 +109,46 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
             let driveTracker = [];
             let tyreTracker = [];
             console.log(buttonVar);
+            let luckyData = eliteLevels[0]
+            let luckyValue = luckyData.baseVal + (luckyData.increment * ((luckyData.level)-1));
+
+            let quickChargeData = eliteLevels[1]
+            let quickChargeValue = quickChargeData.baseVal + (quickChargeData.increment * (quickChargeData.level-1));
+
+            let highRollerData = eliteLevels[2]
+            let highRollerValue = highRollerData.baseVal + (highRollerData.increment * (highRollerData.level-1));
+
+            let gamblerData = eliteLevels[3]
+            let gamblerValue = gamblerData.baseVal + (gamblerData.increment * (gamblerData.level-1));
+
+            let doubleTapData = eliteLevels[4]
+            let doubleTapValue = doubleTapData.baseVal + (doubleTapData.increment * (doubleTapData.level-1));
+
+            let refresherData = eliteLevels[5]
+            let refresherValue = refresherData.baseVal + (refresherData.increment * (refresherData.level-1));
+
+            let slipstreamData = eliteLevels[6]
+            let slipstreamValue = slipstreamData.baseVal + (slipstreamData.increment * (slipstreamData.level-1));
+
+            let standardBearerData = eliteLevels[7]
+            let standardBearerValue = standardBearerData.baseVal + (standardBearerData.increment * ((standardBearerData.level)-1));
+            console.log(standardBearerValue);
+            console.log(standardBearerData);
+
+            let allStarData = eliteLevels[8]
+            let allStarValue = allStarData.baseVal + (allStarData.increment * (allStarData.level-1));
+
+            let offTheChainData = eliteLevels[9]
+            let offTheChainValue = offTheChainData.baseVal + (offTheChainData.increment * (offTheChainData.level-1));
+
+            let actionTractionData = eliteLevels[10]
+            let actionTractionValue = actionTractionData.baseVal + (actionTractionData.increment * (actionTractionData.level-1));
+
+            let frontLineData = eliteLevels[11]
+            let frontLineValue = frontLineData.baseVal + (frontLineData.increment * (frontLineData.level-1));
+
+            let mechanicData = eliteLevels[12]
+            mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.level-1));
             playerHand.forEach(bonusCalcs);
             function bonusCalcs(id) {
                 let car = (data[id]);
@@ -162,7 +165,6 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
                 if (car.perk == "Slipstream") {
                     slipstreamBonus -= (slipstreamValue/car.zeroToSixty);
                 }
-                console.log(doubleTapValue);
                 if (car.perk == "Double Tap") {
                     let refreshChance = Math.random();
                     refreshChance = refreshChance * 1+(car.topSpeed/1000)
@@ -235,29 +237,30 @@ mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.l
             synergies.forEach(synergyPerks);
             function synergyPerks(synergy) {
                 if (synergy == 'Standard' && standardBonus > 0) {
-                    moneyVar = moneyVar * 1.04^(standardBonus);
-                    buttonBoost = buttonBoost + 1.08*(standardBonus);
-                    gachaLuck = gachaLuck * 1.04^(standardBonus);
+                    console.log(standardBearerData);
+                    moneyVar = moneyVar + 1.04^(standardBonus);
+                    buttonBoost = buttonBoost + 1.04*(standardBonus);
+                    gachaLuck = gachaLuck + 1.04^(standardBonus);
                 }
                 if (synergy == 'All-Surface' && allsurfBonus > 0) {
-                    moneyVar = moneyVar * 1.07^(allsurfBonus);
-                    buttonBoost = buttonBoost + 1.14*(allsurfBonus);
+                    moneyVar = moneyVar + 1.07^(allsurfBonus);
+                    buttonBoost = buttonBoost + 1.07*(allsurfBonus);
                     gachaLuck = gachaLuck * 1.07^(allsurfBonus);
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
-                    moneyVar = moneyVar * 1.08^(offroadBonus);
-                    buttonBoost = buttonBoost + 1.16*(offroadBonus);
-                    gachaLuck = gachaLuck * 1.08^(offroadBonus);
+                    moneyVar = moneyVar + 1.10^(offroadBonus);
+                    buttonBoost = buttonBoost + 1.06*(offroadBonus);
+                    gachaLuck = gachaLuck + 1.08^(offroadBonus);
                 }
                 if (synergy == '4WD' && awdBonus > 0) {
-                    moneyVar = moneyVar * 1.04^(awdBonus);
-                    buttonBoost = buttonBoost + 1.08*(awdBonus);
-                    gachaLuck = gachaLuck * 1.04^(awdBonus);
+                    moneyVar = moneyVar + 1.04^(awdBonus);
+                    buttonBoost = buttonBoost + 1.03*(awdBonus);
+                    gachaLuck = gachaLuck + 1.05^(awdBonus);
                 }
                 if (synergy == 'FWD' && fwdBonus > 0) {
-                    moneyVar = moneyVar * 1.03^(fwdBonus);
-                    buttonBoost = buttonBoost + 1.06*(fwdBonus);
-                    gachaLuck = gachaLuck * 1.03^(fwdBonus);
+                    moneyVar = moneyVar + 1.03^(fwdBonus);
+                    buttonBoost = buttonBoost + 1.03*(fwdBonus);
+                    gachaLuck = gachaLuck + 1.03^(fwdBonus);
                 }
             }
 
@@ -358,6 +361,12 @@ function restoreElite(tools,levels, kits) {
     console.log(levels);
     console.log(kits);
     toolUpdater(tools);
+    if (levels.length > 0) {for (let i = 0; i < levels.length; i++) {
+        levels[i].increment = eliteLevels[i].increment;
+        levels[i].baseVal = eliteLevels[i].baseVal;
+        console.log(levels);
+    }};
+    
     eliteLevels.splice.apply(eliteLevels, [0, levels.length].concat(levels));
     equippedKits.splice.apply(equippedKits, [0, kits.length].concat(kits));
 }
