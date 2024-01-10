@@ -242,29 +242,27 @@ button.addEventListener('click', () => {
                 if (synergy == 'Standard' && standardBonus > 0) {
                     console.log(standardBearerData);
                     moneyVar = moneyVar + 3.54^(standardBonus);
-                    buttonBoost = buttonBoost + 1.02*(standardBonus);
+                    buttonBoost = buttonBoost + 0.92*(standardBonus);
                     gachaLuck = gachaLuck + 3.54^(standardBonus);
                 }
                 if (synergy == 'All-Surface' && allsurfBonus > 0) {
                     moneyVar = moneyVar + 3.77^(allsurfBonus);
-                    buttonBoost = buttonBoost + 1.06*(allsurfBonus);
+                    buttonBoost = buttonBoost + 0.98*(allsurfBonus);
                     gachaLuck = gachaLuck * 3.97^(allsurfBonus);
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
                     moneyVar = moneyVar + 3.80^(offroadBonus);
-                    buttonBoost = buttonBoost + 1.09*(offroadBonus);
+                    buttonBoost = buttonBoost + 1.01*(offroadBonus);
                     gachaLuck = gachaLuck + 4.00^(offroadBonus);
                 }
-                console.log(moneyVar);
-                console.log(gachaLuck);
                 if (synergy == '4WD' && awdBonus > 0) {
                     moneyVar = moneyVar + 3.54*(awdBonus);
-                    buttonBoost = buttonBoost + 1.01*(awdBonus);
+                    buttonBoost = buttonBoost + 0.9*(awdBonus);
                     gachaLuck = gachaLuck + 3.74*(awdBonus);
                 }
                 if (synergy == 'FWD' && fwdBonus > 0) {
                     moneyVar = moneyVar + 3.53^(fwdBonus);
-                    buttonBoost = buttonBoost + 1.02*(fwdBonus);
+                    buttonBoost = buttonBoost + 0.92*(fwdBonus);
                     gachaLuck = gachaLuck + 3.73^(fwdBonus);
                 }
             }
