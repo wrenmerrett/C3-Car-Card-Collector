@@ -129,7 +129,7 @@ function KitTag(id, perk, rarity) {
     let kitButton = document.createElement('button');
     kitButton.id = id;
     let cashPrice = rarity * 25000;
-    let toolPrice = rarity * 100;
+    let toolPrice = rarity * 250;
     kitButton.classList.add('kitbtn'); // Use classList to add a class
     kitButton.innerHTML = "Elite Kit: " + perk + " - Click to Recraft";
     kitButton.addEventListener('click', () => {
