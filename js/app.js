@@ -17,7 +17,7 @@ let storedHand;
 let storedTools;
 let eliteStorage;
 let kitStorage;
-let rqLimit = 500;
+let rqLimit = 600;
 let heatLevel = 0;
 let synergies;
 var heatData;
@@ -256,9 +256,9 @@ button.addEventListener('click', () => {
                     gachaLuck = gachaLuck + 4.00^(offroadBonus);
                 }
                 if (synergy == '4WD' && awdBonus > 0) {
-                    moneyVar = moneyVar + 3.54*(awdBonus);
+                    moneyVar = moneyVar + 3.54^(awdBonus);
                     buttonBoost = buttonBoost + 0.9*(awdBonus);
-                    gachaLuck = gachaLuck + 3.74*(awdBonus);
+                    gachaLuck = gachaLuck + 3.746^(awdBonus);
                 }
                 if (synergy == 'FWD' && fwdBonus > 0) {
                     moneyVar = moneyVar + 3.53^(fwdBonus);
@@ -278,7 +278,7 @@ button.addEventListener('click', () => {
                 buttonCooldown = 1000;
                 money += buttonOverflow;
             };
-            gachaMod = Math.round(((1 + (gachaLuck - 410)) / 300)*100)/100;
+            gachaMod = Math.round(((1 + (gachaLuck - 400)) / 300)*100)/100;
             gachaStable = gachaMod;
             carPicker();
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds";
