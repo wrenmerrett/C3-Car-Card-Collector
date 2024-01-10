@@ -26,8 +26,8 @@ let synswitch = false;
 let standardBonus = 1;
 let allsurfBonus = 1;
 let offroadBonus = 1;
-let awdBonus = 1;
-let fwdBonus = 1;
+let awdBonus = 0;
+let fwdBonus = 0;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -97,6 +97,7 @@ button.addEventListener('click', () => {
             allsurfBonus = 0;
             offroadBonus = 0;
             awdBonus = 0;
+            fwdBonus = 0;
             let gachaMod = 0;
             let gachaLuck = 0 + (heatLevel*62);
             let buttonVar = 0 - (heatLevel * 2.1); 
