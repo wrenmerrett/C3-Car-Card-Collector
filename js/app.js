@@ -428,12 +428,12 @@ document.getElementById('heatSwitch').addEventListener('click', () => {
                     let requirement = (nx*(nx+1)/2) - eliteNumber;
                     if (maxHeat < 10) {
                         document.getElementById('nextText').innerText = "Next Heat Level unlocks with " + requirement + " more Elites";
-                    } else {
+                    } else if maxHeat == 10 {
                         document.getElementById('nextText').innerText = "Maximum Heat Level unlocked!";
+                    }  else {
+                        document.getElementById('nextText').innerText = "Buy an Elite car to unlock Heat.";
                     }
                     
-                } else {
-                    document.getElementById('nextText').innerText = "Buy an Elite car to unlock Heat.";
                 }
             }
             document.getElementById('heatSelector').addEventListener('click', () => {
