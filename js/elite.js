@@ -22,8 +22,8 @@ export const eliteLevels = [
         "perkID": 2,
         "name": "Quick Charge",
         "level": 1,
-        "baseVal": 0.35,
-        "increment": 0.06
+        "baseVal": 0.11,
+        "increment": 0.03
     },
     {
         "perkID": 3,
@@ -37,13 +37,13 @@ export const eliteLevels = [
         "name": "Gambler",
         "level": 1,
         "baseVal": 1,
-        "increment": 0.1
+        "increment": 0.12
     },
     {
         "perkID": 5,
         "name": "Double Tap",
         "level": 1,
-        "baseVal": 0.05,
+        "baseVal": 0.07,
         "increment": 0.02
     },
     {
@@ -120,6 +120,7 @@ export function populateText() {
         if (perkLev == maxPerkLevel) {
             perkdiv.querySelector(".levelButton").disabled = true;
             perkdiv.querySelector(".perkLevel").innerHTML = "Level MAX";
+            perkdiv.querySelector(".perkBonus").innerHTML = "Bonus: " + Math.round((base + (inc *( perkLev -1)))*100)/100
         } else {
             perkdiv.querySelector(".perkLevel").innerHTML = "Level " + perkLev + " > " + (perkLev+1) + " - " + (((perkLev)*750)) + " Elite Tools required";
         perkdiv.querySelector(".perkBonus").innerHTML = "Bonus: " + Math.round((base + (inc *( perkLev -1)))*100)/100 + " > " + Math.round((base + (inc * perkLev))*100)/100;

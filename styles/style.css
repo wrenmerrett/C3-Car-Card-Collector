@@ -593,6 +593,11 @@ h2 {
     min-height: 30px;
   }
 
+  #nextText {
+    margin: 20px;
+    min-height: 30px;
+  }
+
   #handRQ {
     padding-left: 30px;
     padding-top: 15px;

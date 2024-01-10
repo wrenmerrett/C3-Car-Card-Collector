@@ -80,7 +80,10 @@ button.addEventListener('click', () => {
     if (rqLimit < totalRQ) {
         document.getElementById('RQLimiter').innerText = "Hand too strong. Reduce RQ by " + (totalRQ - rqLimit);
         return;
-    }
+    } else if (playerHand.length < 5) {
+        document.getElementById('RQLimiter').innerText = "Incomplete hand. Check your Collection."
+        return;
+    } 
 
 
 
@@ -96,7 +99,7 @@ button.addEventListener('click', () => {
             awdBonus = 0;
             let gachaMod = 0;
             let gachaLuck = 0 + (heatLevel*62);
-            let buttonVar = 0 - (heatLevel * 2.5); 
+            let buttonVar = 0 - (heatLevel * 2.1); 
             console.log(buttonVar);
             let slipstreamBonus = 400;
             let moneyVar = 0 + (heatLevel *22);
@@ -238,29 +241,31 @@ button.addEventListener('click', () => {
             function synergyPerks(synergy) {
                 if (synergy == 'Standard' && standardBonus > 0) {
                     console.log(standardBearerData);
-                    moneyVar = moneyVar + 1.04^(standardBonus);
-                    buttonBoost = buttonBoost + 1.04*(standardBonus);
-                    gachaLuck = gachaLuck + 1.04^(standardBonus);
+                    moneyVar = moneyVar + 3.54^(standardBonus);
+                    buttonBoost = buttonBoost + 1.02*(standardBonus);
+                    gachaLuck = gachaLuck + 3.54^(standardBonus);
                 }
                 if (synergy == 'All-Surface' && allsurfBonus > 0) {
-                    moneyVar = moneyVar + 1.07^(allsurfBonus);
-                    buttonBoost = buttonBoost + 1.07*(allsurfBonus);
-                    gachaLuck = gachaLuck * 1.07^(allsurfBonus);
+                    moneyVar = moneyVar + 3.77^(allsurfBonus);
+                    buttonBoost = buttonBoost + 1.06*(allsurfBonus);
+                    gachaLuck = gachaLuck * 3.97^(allsurfBonus);
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
-                    moneyVar = moneyVar + 1.10^(offroadBonus);
-                    buttonBoost = buttonBoost + 1.10*(offroadBonus);
-                    gachaLuck = gachaLuck + 1.10^(offroadBonus);
+                    moneyVar = moneyVar + 3.80^(offroadBonus);
+                    buttonBoost = buttonBoost + 1.09*(offroadBonus);
+                    gachaLuck = gachaLuck + 4.00^(offroadBonus);
                 }
+                console.log(moneyVar);
+                console.log(gachaLuck);
                 if (synergy == '4WD' && awdBonus > 0) {
-                    moneyVar = moneyVar + 1.04^(awdBonus);
-                    buttonBoost = buttonBoost + 1.03*(awdBonus);
-                    gachaLuck = gachaLuck + 1.05^(awdBonus);
+                    moneyVar = moneyVar + 3.54*(awdBonus);
+                    buttonBoost = buttonBoost + 1.01*(awdBonus);
+                    gachaLuck = gachaLuck + 3.74*(awdBonus);
                 }
                 if (synergy == 'FWD' && fwdBonus > 0) {
-                    moneyVar = moneyVar + 1.03^(fwdBonus);
-                    buttonBoost = buttonBoost + 1.03*(fwdBonus);
-                    gachaLuck = gachaLuck + 1.03^(fwdBonus);
+                    moneyVar = moneyVar + 3.53^(fwdBonus);
+                    buttonBoost = buttonBoost + 1.02*(fwdBonus);
+                    gachaLuck = gachaLuck + 3.73^(fwdBonus);
                 }
             }
 
@@ -268,9 +273,9 @@ button.addEventListener('click', () => {
 
             moneyBonus = Math.round((((moneyVar - 265)/100) + 1)*100)/100;
             buttonCooldown = Math.round((buttonVar * slipstreamBonus))*100/100;
-            if (buttonZero > 0) {
+            if (buttonZero > 0 || buttonCooldown < 0) {
                 buttonCooldown = 1;
-            }
+            };
             gachaMod = Math.round(((1 + (gachaLuck - 410)) / 300)*100)/100;
             gachaStable = gachaMod;
             carPicker();
@@ -369,6 +374,7 @@ function restoreElite(tools,levels, kits) {
     
     eliteLevels.splice.apply(eliteLevels, [0, levels.length].concat(levels));
     equippedKits.splice.apply(equippedKits, [0, kits.length].concat(kits));
+    populateText();
 }
 
 document.getElementById('synergySwitch').addEventListener('click', () => {
@@ -392,27 +398,53 @@ document.getElementById('heatSwitch').addEventListener('click', () => {
             heatData = data.cars;
             let elites = heatData.filter(heatData => heatData.elite === "yes")
             let maxHeat = 0;
+            let eliteNumber = 0;
             var select = document.getElementById("heatSelector");
             document.getElementById('heatSelector').innerText = '';
             for (const key in elites) {
                 if(playerGarage.includes(elites[key].carID)) {
                     if (maxHeat < 10)  {
-                        maxHeat += 1;
-                        var opt = maxHeat;
-                        var el = document.createElement("option");
-                        el.textContent = opt;
-                        el.value = opt;
-                        select.appendChild(el);
+                        let sum = 0;
+                        eliteNumber += 1;
+                        console.log(eliteNumber);
+                        let num = eliteNumber;
+                        for (let n=1; sum<=num; n++)
+                            {
+                                sum = sum + n;
+                                if (sum==num) {
+                                    maxHeat += 1;
+                                    var opt = maxHeat;
+                                    var el = document.createElement("option");
+                                    el.textContent = opt;
+                                    el.value = opt;
+                                    select.appendChild(el);
+                                }
+                                
+                            }
+                        
+                        
                     }
+                    let nx = maxHeat + 1;
+                    let requirement = (nx*(nx+1)/2) - eliteNumber;
+                    if (maxHeat < 10) {
+                        document.getElementById('nextText').innerText = "Next Heat Level unlocks with " + requirement + " more Elites";
+                    } else {
+                        document.getElementById('nextText').innerText = "Maximum Heat Level unlocked!";
+                    }
+                    
+                } else {
+                    document.getElementById('nextText').innerText = "Buy an Elite car to unlock Heat.";
                 }
             }
             document.getElementById('heatSelector').addEventListener('click', () => {
                 let selectList1 = document.getElementById('heatSelector');
+                
                 heatLevel = selectList1.value;
                 heatApply(heatLevel);
                 function heatApply(heat) {
                     rqLimit = 500 - (heat*40);
                     document.getElementById('heatText').innerText = "RQ Limit: " + rqLimit;
+                    
                 }
             });
         })
@@ -498,7 +530,7 @@ function carPicker() {
             for (let r = 0; r < eliteCount; r++) {
                 let toolGachaBase = Math.random();
                 let toolGachaMod = toolGachaBase * mechanicValue;
-                if (toolGachaMod > 0.95) {
+                if (toolGachaMod > 0.96) {
                     toolAdder(1);
                     document.getElementById('eliteDisplay').innerText = "Elite Tools: " + eliteTools;
                 } 
