@@ -274,7 +274,7 @@ button.addEventListener('click', () => {
             if (buttonZero > 0) {
                 buttonCooldown = 1;
             } else if (buttonCooldown < 1000) {
-                buttonOverflow = buttonCooldown - 999;
+                let buttonOverflow = buttonCooldown - 999;
                 buttonCooldown = 1000;
                 money += buttonOverflow;
                 const capText = " (CAPPED)";
