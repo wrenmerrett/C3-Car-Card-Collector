@@ -536,7 +536,7 @@ function carPicker() {
             for (let r = 0; r < partsDrop; r++) {
                 let toolGachaBase = Math.random();
                 let toolGachaMod = toolGachaBase * mechanicBoost;
-                if (toolGachaMod > 0.96) {
+                if (toolGachaMod > 0.9) {
                     toolAdder(1);
                     document.getElementById('eliteDisplay').innerText = "Elite Tools: " + eliteTools;
                 } 

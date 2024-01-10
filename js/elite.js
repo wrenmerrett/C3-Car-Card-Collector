@@ -99,8 +99,8 @@ export const eliteLevels = [
         "perkID": 13,
         "name": "Mechanic",
         "level": 1,
-        "baseVal": 0.2,
-        "increment": 0.2
+        "baseVal": 0.15,
+        "increment": 0.15
     }
 ];
 
