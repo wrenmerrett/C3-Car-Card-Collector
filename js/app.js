@@ -271,13 +271,18 @@ button.addEventListener('click', () => {
 
             moneyBonus = Math.round((((moneyVar - 265)/100) + 1)*100)/100;
             buttonCooldown = Math.round((buttonVar * slipstreamBonus))*100/100;
-            if (buttonZero > 0 || buttonCooldown < 0) {
+            if (buttonZero > 0) {
                 buttonCooldown = 1;
+            } else if (buttonCooldown < 1000) {
+                buttonOverflow = buttonCooldown - 999;
+                buttonCooldown = 1000;
+                money += buttonOverflow;
+                const capText = " (CAPPED)";
             };
             gachaMod = Math.round(((1 + (gachaLuck - 410)) / 300)*100)/100;
             gachaStable = gachaMod;
             carPicker();
-            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds"
+            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds" +  capText;
             document.getElementById('earningsBonus').innerHTML = "Earnings Bonus: x" + moneyBonus;
             setTimeout(function () {
                 button.disabled = false;
@@ -360,14 +365,11 @@ function prestigeCar(id,pricetag) {
 }
 
 function restoreElite(tools,levels, kits) {
-    console.log(tools);
-    console.log(levels);
-    console.log(kits);
+
     toolUpdater(tools);
     if (levels.length > 0) {for (let i = 0; i < levels.length; i++) {
         levels[i].increment = eliteLevels[i].increment;
         levels[i].baseVal = eliteLevels[i].baseVal;
-        console.log(levels);
     }};
     
     eliteLevels.splice.apply(eliteLevels, [0, levels.length].concat(levels));

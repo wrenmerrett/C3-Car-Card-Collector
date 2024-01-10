@@ -69,18 +69,17 @@ export function collectionHandUpdater(indexNo) {
     console.log(idtest);
     let addedCard = cards.filter(cards => cards.carID === idtest);
     console.log(addedCard);
-    if (equippedKits.includes(cards => cards.carID)) {
-        console.log("kit!");
-    };
     var gridContainer = document.getElementById('handGrid');
     const handCard = document.createElement('div');
     var img = document.createElement('img');
     img.src = "./assets/cards/" + addedCard[0].imageID;
     img.id = parseInt(addedCard[0].carID);
-    let updater = img.id;
+    console.log(img.id);
+    let updater = img.id - 1;
     img.onclick = (event) => {
         handUpdater(updater); // Call handUpdater function if needed
         event.target.parentNode.remove(); // Use event.target to reference the clicked button
+        console.log(playerHand);
     };
     handCard.appendChild(img);
     let newCard = addedCard[0];
@@ -234,6 +233,11 @@ function handleTabClick(event) {
                 if (cards.elite === "yes") {
                     let perk = cards.perk;
                     garageCard.appendChild(eliteTag(img.id,perk));
+                } else if (equippedKits.find(e => e.carID === cards.carID)) {
+                    let perkIndex = equippedKits.find(e => e.carID === cards.carID)
+                    let perk = perkIndex.perk;
+                    let rarity = cards.rarity;
+                    garageCard.appendChild(KitTag(img.id,perk,rarity));
                 }
                 gridContainer.append(garageCard);
                 if (playerPrestigeGarage.includes(cards.carID)) {
@@ -377,7 +381,6 @@ function handleTabClick(event) {
             const clickedCard = parseInt(selection.id);
             const handCheck = clickedCard - 1;
             if (playerHand.includes(handCheck)) {
-                document.getElementById('fullhandbox').innerText = "Car already in hand!";
                 return;
             }
             console.log(clickedCard);

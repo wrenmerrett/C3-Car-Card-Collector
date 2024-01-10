@@ -43,7 +43,7 @@ export const eliteLevels = [
         "perkID": 5,
         "name": "Double Tap",
         "level": 1,
-        "baseVal": 0.07,
+        "baseVal": 0.05,
         "increment": 0.02
     },
     {
@@ -57,8 +57,8 @@ export const eliteLevels = [
         "perkID": 7,
         "name": "Slipstream",
         "level": 1,
-        "baseVal": 100,
-        "increment": 10
+        "baseVal": 105,
+        "increment": 15
     },
     {
         "perkID": 8,
