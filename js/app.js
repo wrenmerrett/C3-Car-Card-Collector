@@ -28,6 +28,7 @@ let allsurfBonus = 1;
 let offroadBonus = 1;
 let awdBonus = 0;
 let fwdBonus = 0;
+let mechanicBoost = 0;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -98,6 +99,7 @@ button.addEventListener('click', () => {
             offroadBonus = 0;
             awdBonus = 0;
             fwdBonus = 0;
+            mechanicBoost = 1;
             let gachaMod = 0;
             let gachaLuck = 0 + (heatLevel*62);
             let buttonVar = 0 - (heatLevel * 2.1); 
@@ -203,6 +205,9 @@ button.addEventListener('click', () => {
                 }
                 if (car.perk == "Front Line") {
                     fwdBonus += frontLineValue;
+                }
+                if (car.perk == "Mechanic") {
+                    mechanicBoost += mechanicValue;
                 }
                 makeTracker.push(car.make);
                 let yearFilter = Math.floor(car.year / 10);
@@ -527,9 +532,10 @@ function carPicker() {
             var garageAdd = chosenCar.carID;
             money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
             money += Math.floor(Math.random() * 500 * (gachaStable) * (gambleValue));
-            for (let r = 0; r < eliteCount; r++) {
+            let partsDrop = Math.ceil(eliteCount * 0.7);
+            for (let r = 0; r < partsDrop; r++) {
                 let toolGachaBase = Math.random();
-                let toolGachaMod = toolGachaBase * mechanicValue;
+                let toolGachaMod = toolGachaBase * mechanicBoost;
                 if (toolGachaMod > 0.96) {
                     toolAdder(1);
                     document.getElementById('eliteDisplay').innerText = "Elite Tools: " + eliteTools;
