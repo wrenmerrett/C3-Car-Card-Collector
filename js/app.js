@@ -277,12 +277,11 @@ button.addEventListener('click', () => {
                 let buttonOverflow = buttonCooldown - 999;
                 buttonCooldown = 1000;
                 money += buttonOverflow;
-                const capText = " (CAPPED)";
             };
             gachaMod = Math.round(((1 + (gachaLuck - 410)) / 300)*100)/100;
             gachaStable = gachaMod;
             carPicker();
-            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds" +  capText;
+            document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds";
             document.getElementById('earningsBonus').innerHTML = "Earnings Bonus: x" + moneyBonus;
             setTimeout(function () {
                 button.disabled = false;
