@@ -280,7 +280,7 @@ function populateShop() {
                     if (dupeProtected.length > 0) {
                         HESelected = dupeProtected;
                     }
-                }
+                };
                 console.log(HECar);
                 shopContainer = document.getElementById('shopGrid');
                 var shopCard = document.createElement('div');
@@ -357,7 +357,7 @@ function populateShop() {
                 if (dupeProtected.length > 0) {
                     eliteSelect = dupeProtected;
                 }
-            }
+            };
             let eliteShopCar = eliteSelect[Math.floor(Math.random() * eliteSelect.length)];
             shopContainer = document.getElementById('shopGrid');
             var eliteShopCard = document.createElement('div');
@@ -421,7 +421,7 @@ function populateShop() {
                     if (dupeProtected.length > 0) {
                         eliteSelect = dupeProtected;
                     }
-                }
+                };
                 let eliteShopCar = eliteSelect[Math.floor(Math.random() * eliteSelect.length)];
                 shopContainer = document.getElementById('shopGrid');
                 var eliteShopCard = document.createElement('div');
