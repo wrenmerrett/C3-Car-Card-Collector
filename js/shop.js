@@ -271,16 +271,16 @@ function populateShop() {
                 console.log(rarity);
                 let HESelected = cars.filter(c => c.rarity === rarity);
                 HESelected = HESelected.filter(c => c.elite !== 'yes')
-                console.log(HESelected);
-                let HECar = HESelected[Math.floor(Math.random() * HESelected.length)];
+
                 let protectionRNG = Math.random();
-                console.log(protectionRNG);
                 if (protectionRNG > 0.8) {
                     let dupeProtected = HESelected.filter(HESelected => !playerGarage.includes(HESelected.carID))
                     if (dupeProtected.length > 0) {
                         HESelected = dupeProtected;
                     }
                 };
+                let HECar = HESelected[Math.floor(Math.random() * HESelected.length)];
+                
                 console.log(HECar);
                 shopContainer = document.getElementById('shopGrid');
                 var shopCard = document.createElement('div');
