@@ -316,7 +316,8 @@ function populateShop() {
                 upgImage.onclick = (event) => {
                     price = shopUpgrades[1].upgradeCostCash;
                     let toolPrice = shopUpgrades[1].upgradeCostTools;
-                    if (money < price || eliteTools < toolPrice) {
+                    let toolCheck = toolPrice * -1;
+                    if (money < price || eliteTools < toolCheck) {
                         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
                     } else {
                         moneyChanger(price);
@@ -393,7 +394,8 @@ function populateShop() {
                 upgImage.onclick = (event) => {
                     price = shopUpgrades[2].upgradeCostCash;
                     let toolPrice = shopUpgrades[2].upgradeCostTools;
-                    if (money < price || eliteTools < toolPrice) {
+                    let toolCheck = toolPrkce * -1;
+                    if (money < price || eliteTools < toolCheck) {
                         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
                     } else {
                         moneyChanger(price);

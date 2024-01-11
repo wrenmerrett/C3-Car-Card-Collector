@@ -333,7 +333,9 @@ function restoreShop(shopData, upgrades) {
         let upg2 = document.getElementById(shopUpgrades[1].upgradeID);
     upg2.onclick = (event) => {
         let price = shopUpgrades[1].upgradeCostCash;
-        if (money < price) {
+        let toolprice = shopUpgrades[1].upgradeCostTools;
+        let toolCheck = toolprice * -1;
+        if (money < price || eliteTools < toolCheck) {
             document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
         } else {
             moneyChanger(price);
@@ -347,7 +349,9 @@ function restoreShop(shopData, upgrades) {
         let upg3 = document.getElementById(shopUpgrades[2].upgradeID);
         upg3.onclick = (event) => {
             let price = shopUpgrades[2].upgradeCostCash;
-            if (money < price) {
+            let toolprice = shopUpgrades[2].upgradeCostTools;
+            let toolCheck = toolprice * -1;
+            if (money < price || eliteTools < toolCheck) {
                 document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
             } else {
                 moneyChanger(price);
