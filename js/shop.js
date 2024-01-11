@@ -235,6 +235,7 @@ function populateShop() {
 
 
     export function shopgrades() {
+        document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost + " (Applies shop upgrades)";
         fetch('./js/data.json')
         .then((response) => response.json())
         .then((data) => {
@@ -273,6 +274,7 @@ function populateShop() {
                 console.log(HESelected);
                 let HECar = HESelected[Math.floor(Math.random() * HESelected.length)];
                 let protectionRNG = Math.random();
+                console.log(protectionRNG);
                 if (protectionRNG > 0.8) {
                     let dupeProtected = HESelected.filter(HESelected => !playerGarage.includes(HESelected.carID))
                     if (dupeProtected.length > 0) {
