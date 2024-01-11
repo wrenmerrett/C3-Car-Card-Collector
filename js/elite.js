@@ -270,5 +270,5 @@ export function toolAdder(toolPlus) {
     eliteTools += toolPlus;
     document.getElementById('toolsDisplay').innerHTML = "Elite Tools: " + eliteTools;
     document.getElementById('eliteDisplay').innerHTML = "Elite Tools: " + eliteTools;
-    console.log(document.getElementById('eliteDisplay').innerHTML);
 };
+

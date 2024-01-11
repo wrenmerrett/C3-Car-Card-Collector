@@ -2,14 +2,15 @@ export const button = document.querySelector('[data-collect-card]');
 import { playerGarage, loadGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
-export let money = 100;
+import { shopUpgrades, shopgrades } from "./shop.js";
+export var money = 100;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 let gachaLuck = 0;
 let gachaMod = 0;
 let gambleValue = 0;
 let gachaStable;
-export let restockCost = 0;
+export var restockCost = 0;
 export let shopStorage;
 let storedGarage;
 let storedPrestige;
@@ -17,6 +18,7 @@ let storedHand;
 let storedTools;
 let eliteStorage;
 let kitStorage;
+let shopUpgradeStorage;
 let rqLimit = 600;
 let heatLevel = 0;
 let synergies;
@@ -50,6 +52,7 @@ document.getElementById('saveButton').addEventListener('click', () => {
     localStorage.setItem('etools', JSON.stringify(eliteTools));
     localStorage.setItem('elevels', JSON.stringify(eliteLevels));
     localStorage.setItem('kits', JSON.stringify(equippedKits));
+    localStorage.setItem('shopUpgrades', JSON.stringify(shopUpgrades));
     document.getElementById('saveWarning').innerText = "Game saved."
 })
 
@@ -65,13 +68,12 @@ document.getElementById('loadButton').addEventListener('click', () => {
     restockCost = JSON.parse(localStorage.getItem('restockTracker'));
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
     shopStorage = JSON.parse(localStorage.getItem('shopCars'));
-    restoreShop(shopStorage);
+    shopUpgradeStorage = JSON.parse(localStorage.getItem('shopUpgrades'));
+    restoreShop(shopStorage, shopUpgradeStorage);
     storedTools = JSON.parse(localStorage.getItem('etools'));
-    console.log(storedTools);
     eliteStorage = JSON.parse(localStorage.getItem('elevels'));
     kitStorage = JSON.parse(localStorage.getItem('kits'));
     restoreElite(storedTools, eliteStorage, kitStorage);
-    console.log(eliteStorage);
     populateText();
     document.getElementById('saveWarning').innerText = "Game loaded."
 })
@@ -103,7 +105,6 @@ button.addEventListener('click', () => {
             let gachaMod = 0;
             let gachaLuck = 0 + (heatLevel*62);
             let buttonVar = 0 - (heatLevel * 2.1); 
-            console.log(buttonVar);
             let slipstreamBonus = 400;
             let moneyVar = 0 + (heatLevel *22);
             let buttonZero = 0;
@@ -114,7 +115,6 @@ button.addEventListener('click', () => {
             let countryTracker = [];
             let driveTracker = [];
             let tyreTracker = [];
-            console.log(buttonVar);
             let luckyData = eliteLevels[0]
             let luckyValue = luckyData.baseVal + (luckyData.increment * ((luckyData.level)-1));
 
@@ -138,8 +138,6 @@ button.addEventListener('click', () => {
 
             let standardBearerData = eliteLevels[7]
             let standardBearerValue = standardBearerData.baseVal + (standardBearerData.increment * ((standardBearerData.level)-1));
-            console.log(standardBearerValue);
-            console.log(standardBearerData);
 
             let allStarData = eliteLevels[8]
             let allStarValue = allStarData.baseVal + (allStarData.increment * (allStarData.level-1));
@@ -162,7 +160,6 @@ button.addEventListener('click', () => {
                     let perkIndex = equippedKits.find(e => e.carID === car.carID)
                     car.perk = perkIndex.perk;
                 }
-                console.log(car.perk);
                 buttonVar += (car.zeroToSixty);
 
                 if (car.perk == "Quick Charge") {
@@ -174,7 +171,6 @@ button.addEventListener('click', () => {
                 if (car.perk == "Double Tap") {
                     let refreshChance = Math.random();
                     refreshChance = refreshChance * 1+(car.topSpeed/1000)
-                    console.log(doubleTapValue);
                     if (refreshChance > (1-doubleTapValue)) {
                         buttonZero += 1;
                     }
@@ -182,7 +178,6 @@ button.addEventListener('click', () => {
                 moneyVar += (car.handling);
                 if (car.perk == "High Roller") {
                     moneyVar += ((car.handling) * highRollerValue);
-                    console.log(moneyVar);
                 }
                 if (car.perk == "Refresher") {
                     restockCost -= refresherValue;
@@ -223,8 +218,6 @@ button.addEventListener('click', () => {
                     gambleValue += gamblerValue;
                 }
             }
-            console.log(standardBonus);
-            console.log(buttonVar);
 
             synergies = [];
             let makeSorted = makeTracker.sort();
@@ -246,7 +239,6 @@ button.addEventListener('click', () => {
             synergies.forEach(synergyPerks);
             function synergyPerks(synergy) {
                 if (synergy == 'Standard' && standardBonus > 0) {
-                    console.log(standardBearerData);
                     moneyVar = moneyVar + 3.54^(standardBonus);
                     buttonBoost = buttonBoost + 0.92*(standardBonus);
                     gachaLuck = gachaLuck + 3.54^(standardBonus);
@@ -313,8 +305,59 @@ export function restockDown(cashback) {
     };
 }
 
-function restoreShop(shopData) {
+function restoreShop(shopData, upgrades) {
+    document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
     document.getElementById('shopGrid').innerHTML = shopData;
+    if (upgrades !== null) {
+        shopUpgrades.splice.apply(shopUpgrades, [0, upgrades.length].concat(upgrades));
+    } else {
+        shopgrades();
+    }
+
+    if (document.getElementById(shopUpgrades[0].upgradeID) !== null) {
+        let upg1 = document.getElementById(shopUpgrades[0].upgradeID);
+    upg1.onclick = (event) => {
+        let price = shopUpgrades[0].upgradeCostCash;
+        if (money < price) {
+            document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
+        } else {
+            moneyChanger(price);
+            shopUpgrades[0].upgradeActive = true;
+            event.target.parentNode.remove(); // Use event.target to reference the clicked button
+        };
+        
+    };
+    };
+    
+    if (document.getElementById(shopUpgrades[1].upgradeID) !== null) {
+        let upg2 = document.getElementById(shopUpgrades[1].upgradeID);
+    upg2.onclick = (event) => {
+        let price = shopUpgrades[1].upgradeCostCash;
+        if (money < price) {
+            document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
+        } else {
+            moneyChanger(price);
+            shopUpgrades[1].upgradeActive = true;
+            event.target.parentNode.remove(); // Use event.target to reference the clicked button
+        };
+        
+    };
+    }
+    if (document.getElementById(shopUpgrades[2].upgradeID) !== null) {
+        let upg3 = document.getElementById(shopUpgrades[2].upgradeID);
+        upg3.onclick = (event) => {
+            let price = shopUpgrades[2].upgradeCostCash;
+            if (money < price) {
+                document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
+            } else {
+                moneyChanger(price);
+                shopUpgrades[2].upgradeActive = true;
+                event.target.parentNode.remove(); // Use event.target to reference the clicked button
+            };
+            
+        };
+    }
+    
     let buttons = document.querySelectorAll('.buybtn, .elitebtn');
     let prestiges = document.querySelectorAll('.prestigebtn');
     buttons.forEach(restorePurchase);
@@ -370,12 +413,18 @@ function prestigeCar(id,pricetag) {
 }
 
 function restoreElite(tools,levels, kits) {
-
+    console.log(tools);
+    if (tools === null) {
+        tools = 0;
+    };
     toolUpdater(tools);
-    if (levels.length > 0) {for (let i = 0; i < levels.length; i++) {
-        levels[i].increment = eliteLevels[i].increment;
-        levels[i].baseVal = eliteLevels[i].baseVal;
-    }};
+    if (levels !== null) {
+        if (levels.length > 0) {for (let i = 0; i < levels.length; i++) {
+            levels[i].increment = eliteLevels[i].increment;
+            levels[i].baseVal = eliteLevels[i].baseVal;
+        }};
+    };
+    
     
     eliteLevels.splice.apply(eliteLevels, [0, levels.length].concat(levels));
     equippedKits.splice.apply(equippedKits, [0, kits.length].concat(kits));
@@ -411,7 +460,6 @@ document.getElementById('heatSwitch').addEventListener('click', () => {
                     if (maxHeat < 10)  {
                         let sum = 0;
                         eliteNumber += 1;
-                        console.log(eliteNumber);
                         let num = eliteNumber;
                         for (let n=1; sum<=num; n++)
                             {
