@@ -393,13 +393,13 @@ function populateShop() {
                 shopContainer.append(SlotUpgrade);
                 upgImage.onclick = (event) => {
                     price = shopUpgrades[2].upgradeCostCash;
-                    let toolPrice = shopUpgrades[2].upgradeCostTools;
-                    let toolCheck = toolPrkce * -1;
+                    let toolCost = shopUpgrades[2].upgradeCostTools;
+                    let toolCheck = toolCost * -1;
                     if (money < price || eliteTools < toolCheck) {
                         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
                     } else {
                         moneyChanger(price);
-                        toolAdder(toolPrice);
+                        toolAdder(toolCost);
                         shopUpgrades[2].upgradeActive = true;
                         event.target.parentNode.remove(); // Use event.target to reference the clicked button
                     };
