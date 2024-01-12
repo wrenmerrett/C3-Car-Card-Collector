@@ -218,9 +218,6 @@ function handleTabClick(event) {
             let yearFilter = Math.floor(cards.year / 10)*10;
             decadeList.push(yearFilter);
             if (playerGarage.includes(cards.carID)) {
-                if (equippedKits.length > 0) {
-                    console.log(equippedKits);
-                };
                 var gridContainer = document.getElementById('garageGrid');
                 const garageCard = document.createElement('div');
                 var img = document.createElement('img');
@@ -396,6 +393,7 @@ function addToHand(newHandCard) {
         let inHand = newHandCard - 1;
         handAdder(inHand);
         getHandCards(...playerHand);
+        console.log(totalRQ);
         document.getElementById('handRQ').innerHTML = "Hand RQ: " + totalRQ;
     }
 };

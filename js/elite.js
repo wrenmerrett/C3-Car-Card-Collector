@@ -101,6 +101,20 @@ export const eliteLevels = [
         "level": 1,
         "baseVal": 0.15,
         "increment": 0.15
+    },
+    {
+        "perkID": 14,
+        "name": "Overheat",
+        "level": 1,
+        "baseVal": 3,
+        "increment": 3
+    },
+    {
+        "perkID": 15,
+        "name": "Heat Sink",
+        "level": 1,
+        "baseVal": 0.2,
+        "increment": 0.1,
     }
 ];
 

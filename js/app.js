@@ -31,6 +31,7 @@ let offroadBonus = 1;
 let awdBonus = 0;
 let fwdBonus = 0;
 let mechanicBoost = 0;
+let heatSinkBonus = 0;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -80,14 +81,8 @@ document.getElementById('loadButton').addEventListener('click', () => {
 
 button.addEventListener('click', () => {
     document.getElementById('RQLimiter').innerText = "";
-    if (rqLimit < totalRQ) {
-        document.getElementById('RQLimiter').innerText = "Hand too strong. Reduce RQ by " + (totalRQ - rqLimit);
-        return;
-    } else if (playerHand.length < 5) {
-        document.getElementById('RQLimiter').innerText = "Incomplete hand. Check your Collection."
-        return;
-    } 
-
+    
+    heatApply(heatLevel);
 
 
     button.disabled = true;
@@ -102,6 +97,7 @@ button.addEventListener('click', () => {
             awdBonus = 0;
             fwdBonus = 0;
             mechanicBoost = 1;
+            heatSinkBonus = 0;
             let gachaMod = 0;
             let gachaLuck = 0 + (heatLevel*62);
             let buttonVar = 0 - (heatLevel * 2.1); 
@@ -153,12 +149,19 @@ button.addEventListener('click', () => {
 
             let mechanicData = eliteLevels[12]
             mechanicValue = mechanicData.baseVal + (mechanicData.increment * (mechanicData.level-1));
+
+            let overheatData = eliteLevels[13]
+            let overheatValue = overheatData.baseVal + (overheatData.increment * (overheatData.level-1));
+
+            let heatSinkData = eliteLevels[14]
+            let heatSinkValue = heatSinkData.baseVal + (heatSinkData.increment * (heatSinkData.level-1));
             playerHand.forEach(bonusCalcs);
             function bonusCalcs(id) {
                 let car = (data[id]);
                 if (equippedKits.find(e => e.carID === car.carID)) {
                     let perkIndex = equippedKits.find(e => e.carID === car.carID)
                     car.perk = perkIndex.perk;
+                    console.log(car.perk);
                 }
                 buttonVar += (car.zeroToSixty);
 
@@ -204,6 +207,12 @@ button.addEventListener('click', () => {
                 if (car.perk == "Mechanic") {
                     mechanicBoost += mechanicValue;
                 }
+                if (car.perk == "Overheat") {
+                    rqLimit += overheatValue;
+                }
+                if (car.perk == "Heat Sink") {
+                    heatSinkBonus += heatSinkValue;
+                }
                 makeTracker.push(car.make);
                 let yearFilter = Math.floor(car.year / 10);
                 yearTracker.push(yearFilter);
@@ -218,6 +227,16 @@ button.addEventListener('click', () => {
                     gambleValue += gamblerValue;
                 }
             }
+
+            if (rqLimit < totalRQ) {
+                document.getElementById('RQLimiter').innerText = "Hand too strong. Reduce RQ by " + (totalRQ - rqLimit);
+                button.disabled = false;
+                return;
+            } else if (playerHand.length < 5) {
+                document.getElementById('RQLimiter').innerText = "Incomplete hand. Check your Collection."
+                button.disabled = false;
+                return;
+            } 
 
             synergies = [];
             let makeSorted = makeTracker.sort();
@@ -235,6 +254,14 @@ button.addEventListener('click', () => {
             };
 
             let buttonBoost = 0;
+
+            let rqDiff = (rqLimit - totalRQ)/1.5;
+
+            if (heatSinkBonus > 0)  {
+                moneyVar = moneyVar + 0.7*(heatSinkBonus * rqDiff);
+                buttonBoost = buttonBoost + 0.05*(heatLevel * rqDiff);
+                gachaLuck = gachaLuck + 1.1*(heatSinkBonus * rqDiff);
+            };
 
             synergies.forEach(synergyPerks);
             function synergyPerks(synergy) {
@@ -498,11 +525,7 @@ document.getElementById('heatSwitch').addEventListener('click', () => {
                 
                 heatLevel = selectList1.value;
                 heatApply(heatLevel);
-                function heatApply(heat) {
-                    rqLimit = 500 - (heat*40);
-                    document.getElementById('heatText').innerText = "RQ Limit: " + rqLimit;
-                    
-                }
+                
             });
         })
     } else {
@@ -511,6 +534,12 @@ document.getElementById('heatSwitch').addEventListener('click', () => {
         rqLimit = 500;
     };
 })
+
+function heatApply(heat) {
+    rqLimit = 500 - (heat*40);
+    document.getElementById('heatText').innerText = "RQ Limit: " + rqLimit;
+    
+};
 
 // Read file asynchronously
 function carPicker() {
