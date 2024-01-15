@@ -76,7 +76,7 @@ export function handAdder(indexNo) {
 };
 
 export function handLoader(hand) {
-    if (hand.length === 5) {
+    if (hand != null && hand.length === 5) {
         playerHand = hand;
     } else {
         playerHand = [3, 75, 41, 46, 17];
