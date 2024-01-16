@@ -15,7 +15,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 2,
@@ -32,7 +33,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 3,
@@ -49,7 +51,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 4,
@@ -66,7 +69,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 5,
@@ -83,7 +87,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 6,
@@ -100,7 +105,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 7,
@@ -117,7 +123,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 8,
@@ -134,7 +141,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 9,
@@ -151,7 +159,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 10,
@@ -168,7 +177,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 11,
@@ -185,7 +195,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 12,
@@ -202,7 +213,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 13,
@@ -219,7 +231,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 14,
@@ -236,7 +249,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 15,
@@ -253,7 +267,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 16,
@@ -270,7 +285,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 17,
@@ -287,7 +303,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 18,
@@ -304,7 +321,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 19,
@@ -321,7 +339,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 20,
@@ -338,7 +357,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 21,
@@ -355,7 +375,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 22,
@@ -372,7 +393,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 23,
@@ -389,7 +411,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 24,
@@ -406,7 +429,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 25,
@@ -423,7 +447,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 26,
@@ -440,7 +465,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 27,
@@ -457,7 +483,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 28,
@@ -474,7 +501,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 29,
@@ -491,7 +519,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 30,
@@ -508,7 +537,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 31,
@@ -525,7 +555,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 32,
@@ -542,7 +573,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 33,
@@ -559,7 +591,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 34,
@@ -576,7 +609,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 35,
@@ -593,7 +627,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 36,
@@ -610,7 +645,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 37,
@@ -627,7 +663,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 38,
@@ -644,7 +681,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 39,
@@ -661,7 +699,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 40,
@@ -678,7 +717,8 @@
    "drive": "FWD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 41,
@@ -695,7 +735,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 42,
@@ -712,7 +753,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 43,
@@ -729,7 +771,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 44,
@@ -746,7 +789,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 45,
@@ -763,7 +807,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 46,
@@ -780,7 +825,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 47,
@@ -797,7 +843,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 48,
@@ -814,7 +861,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 49,
@@ -831,7 +879,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 50,
@@ -848,7 +897,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 51,
@@ -865,7 +915,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 52,
@@ -882,7 +933,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 53,
@@ -899,7 +951,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 54,
@@ -916,7 +969,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 55,
@@ -933,7 +987,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 56,
@@ -950,7 +1005,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 57,
@@ -967,7 +1023,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 58,
@@ -984,7 +1041,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 59,
@@ -1001,7 +1059,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 60,
@@ -1018,7 +1077,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 61,
@@ -1035,7 +1095,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 62,
@@ -1052,7 +1113,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 63,
@@ -1069,7 +1131,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 64,
@@ -1086,7 +1149,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 65,
@@ -1103,7 +1167,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 66,
@@ -1120,7 +1185,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 67,
@@ -1137,7 +1203,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 68,
@@ -1154,7 +1221,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 69,
@@ -1171,7 +1239,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 70,
@@ -1188,7 +1257,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 71,
@@ -1205,7 +1275,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 72,
@@ -1222,7 +1293,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 73,
@@ -1239,7 +1311,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 74,
@@ -1256,7 +1329,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 75,
@@ -1273,7 +1347,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 76,
@@ -1290,7 +1365,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 77,
@@ -1307,7 +1383,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 78,
@@ -1324,7 +1401,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 79,
@@ -1341,7 +1419,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 80,
@@ -1358,7 +1437,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 81,
@@ -1375,7 +1455,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 82,
@@ -1392,7 +1473,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 83,
@@ -1409,7 +1491,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 84,
@@ -1426,7 +1509,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 85,
@@ -1443,7 +1527,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 86,
@@ -1460,7 +1545,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 87,
@@ -1477,7 +1563,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 88,
@@ -1494,7 +1581,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 89,
@@ -1511,7 +1599,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 90,
@@ -1528,7 +1617,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 91,
@@ -1545,7 +1635,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 92,
@@ -1562,7 +1653,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 93,
@@ -1579,7 +1671,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 94,
@@ -1596,7 +1689,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 95,
@@ -1613,7 +1707,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 96,
@@ -1630,7 +1725,8 @@
    "drive": "FWD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 97,
@@ -1647,7 +1743,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 98,
@@ -1664,7 +1761,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 99,
@@ -1681,7 +1779,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 100,
@@ -1698,7 +1797,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 101,
@@ -1715,7 +1815,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 102,
@@ -1732,7 +1833,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 103,
@@ -1749,7 +1851,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 104,
@@ -1766,7 +1869,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 105,
@@ -1783,7 +1887,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 106,
@@ -1800,7 +1905,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 107,
@@ -1817,7 +1923,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 108,
@@ -1834,7 +1941,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 109,
@@ -1851,7 +1959,8 @@
    "drive": "FWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 110,
@@ -1868,7 +1977,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 111,
@@ -1885,7 +1995,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 112,
@@ -1902,7 +2013,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 113,
@@ -1919,7 +2031,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 114,
@@ -1936,7 +2049,8 @@
    "drive": "FWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 115,
@@ -1953,7 +2067,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 116,
@@ -1970,7 +2085,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 117,
@@ -1987,7 +2103,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 118,
@@ -2004,7 +2121,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 119,
@@ -2021,7 +2139,8 @@
    "drive": "4WD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 120,
@@ -2038,7 +2157,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 121,
@@ -2055,7 +2175,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 122,
@@ -2072,7 +2193,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 123,
@@ -2089,7 +2211,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 124,
@@ -2106,7 +2229,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 125,
@@ -2123,7 +2247,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 126,
@@ -2140,7 +2265,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 127,
@@ -2157,7 +2283,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 128,
@@ -2174,7 +2301,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 129,
@@ -2191,7 +2319,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 130,
@@ -2208,7 +2337,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 131,
@@ -2225,7 +2355,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 132,
@@ -2242,7 +2373,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 133,
@@ -2259,7 +2391,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 134,
@@ -2276,7 +2409,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 135,
@@ -2293,7 +2427,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 136,
@@ -2310,7 +2445,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 137,
@@ -2327,7 +2463,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 138,
@@ -2344,7 +2481,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 139,
@@ -2361,7 +2499,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 140,
@@ -2378,7 +2517,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 141,
@@ -2395,7 +2535,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 142,
@@ -2412,7 +2553,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 143,
@@ -2429,7 +2571,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 144,
@@ -2446,7 +2589,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 145,
@@ -2463,7 +2607,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 146,
@@ -2480,7 +2625,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 147,
@@ -2497,7 +2643,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 148,
@@ -2514,7 +2661,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 149,
@@ -2531,7 +2679,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 150,
@@ -2548,7 +2697,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 151,
@@ -2565,7 +2715,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 152,
@@ -2582,7 +2733,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 153,
@@ -2599,7 +2751,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 154,
@@ -2616,7 +2769,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 155,
@@ -2633,7 +2787,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 156,
@@ -2650,7 +2805,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 157,
@@ -2667,7 +2823,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 158,
@@ -2684,7 +2841,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 159,
@@ -2701,7 +2859,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 160,
@@ -2718,7 +2877,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 161,
@@ -2735,7 +2895,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 162,
@@ -2752,7 +2913,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 163,
@@ -2769,7 +2931,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 164,
@@ -2786,7 +2949,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 165,
@@ -2803,7 +2967,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 166,
@@ -2820,7 +2985,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 167,
@@ -2837,7 +3003,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 168,
@@ -2854,7 +3021,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 169,
@@ -2871,7 +3039,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 170,
@@ -2888,7 +3057,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 171,
@@ -2905,7 +3075,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 172,
@@ -2922,7 +3093,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 173,
@@ -2939,7 +3111,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 174,
@@ -2956,7 +3129,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 175,
@@ -2973,7 +3147,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 176,
@@ -2990,7 +3165,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 177,
@@ -3007,7 +3183,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 178,
@@ -3024,7 +3201,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 179,
@@ -3041,7 +3219,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 180,
@@ -3058,7 +3237,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 181,
@@ -3075,7 +3255,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 182,
@@ -3092,7 +3273,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 183,
@@ -3109,7 +3291,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 184,
@@ -3126,7 +3309,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 185,
@@ -3143,7 +3327,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 186,
@@ -3160,7 +3345,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 187,
@@ -3177,7 +3363,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 188,
@@ -3194,7 +3381,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 189,
@@ -3211,7 +3399,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 190,
@@ -3228,7 +3417,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 191,
@@ -3245,7 +3435,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 192,
@@ -3262,7 +3453,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 193,
@@ -3279,7 +3471,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 194,
@@ -3296,7 +3489,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 195,
@@ -3313,7 +3507,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 196,
@@ -3330,7 +3525,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 197,
@@ -3347,7 +3543,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 198,
@@ -3364,7 +3561,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 199,
@@ -3381,7 +3579,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 200,
@@ -3398,7 +3597,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 201,
@@ -3415,7 +3615,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 202,
@@ -3432,7 +3633,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 203,
@@ -3449,7 +3651,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 204,
@@ -3466,7 +3669,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 205,
@@ -3483,7 +3687,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 206,
@@ -3500,7 +3705,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 207,
@@ -3517,7 +3723,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 208,
@@ -3534,7 +3741,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 209,
@@ -3551,7 +3759,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 210,
@@ -3568,7 +3777,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 211,
@@ -3585,7 +3795,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 212,
@@ -3602,7 +3813,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 213,
@@ -3619,7 +3831,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 214,
@@ -3636,7 +3849,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 215,
@@ -3653,7 +3867,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 216,
@@ -3670,7 +3885,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 217,
@@ -3687,7 +3903,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 218,
@@ -3704,7 +3921,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 219,
@@ -3721,7 +3939,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 220,
@@ -3738,7 +3957,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 221,
@@ -3755,7 +3975,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 222,
@@ -3772,7 +3993,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 223,
@@ -3789,7 +4011,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 224,
@@ -3806,7 +4029,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 225,
@@ -3823,7 +4047,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 226,
@@ -3840,7 +4065,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 227,
@@ -3857,7 +4083,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 228,
@@ -3874,7 +4101,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 229,
@@ -3891,7 +4119,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 230,
@@ -3908,7 +4137,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 231,
@@ -3925,7 +4155,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 232,
@@ -3942,7 +4173,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 233,
@@ -3959,7 +4191,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 234,
@@ -3976,7 +4209,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 235,
@@ -3993,7 +4227,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 236,
@@ -4010,7 +4245,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 237,
@@ -4027,7 +4263,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 238,
@@ -4044,7 +4281,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 239,
@@ -4061,7 +4299,8 @@
    "drive": "FWD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 240,
@@ -4078,7 +4317,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 241,
@@ -4095,7 +4335,8 @@
    "drive": "FWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 242,
@@ -4112,7 +4353,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 243,
@@ -4129,7 +4371,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 244,
@@ -4146,7 +4389,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 245,
@@ -4163,7 +4407,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 246,
@@ -4180,7 +4425,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 247,
@@ -4197,7 +4443,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 248,
@@ -4214,7 +4461,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 249,
@@ -4231,7 +4479,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 250,
@@ -4248,7 +4497,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 251,
@@ -4265,7 +4515,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 252,
@@ -4282,7 +4533,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 253,
@@ -4299,7 +4551,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 254,
@@ -4316,7 +4569,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 255,
@@ -4333,7 +4587,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 256,
@@ -4350,7 +4605,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 257,
@@ -4367,7 +4623,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 258,
@@ -4384,7 +4641,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 259,
@@ -4401,7 +4659,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 260,
@@ -4418,7 +4677,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 261,
@@ -4435,7 +4695,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 262,
@@ -4452,7 +4713,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 263,
@@ -4469,7 +4731,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 264,
@@ -4486,7 +4749,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 265,
@@ -4503,7 +4767,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 266,
@@ -4520,7 +4785,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 267,
@@ -4537,7 +4803,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 268,
@@ -4554,7 +4821,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 269,
@@ -4571,7 +4839,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 270,
@@ -4588,7 +4857,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 271,
@@ -4605,7 +4875,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 272,
@@ -4622,7 +4893,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 273,
@@ -4639,7 +4911,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 274,
@@ -4656,7 +4929,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 275,
@@ -4673,7 +4947,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 276,
@@ -4690,7 +4965,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 277,
@@ -4707,7 +4983,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 278,
@@ -4724,7 +5001,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 279,
@@ -4741,7 +5019,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 280,
@@ -4758,7 +5037,8 @@
    "drive": "FWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 281,
@@ -4775,7 +5055,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 282,
@@ -4792,7 +5073,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 283,
@@ -4809,7 +5091,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 284,
@@ -4826,7 +5109,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 285,
@@ -4843,7 +5127,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 286,
@@ -4860,7 +5145,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 287,
@@ -4877,7 +5163,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 288,
@@ -4894,7 +5181,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 289,
@@ -4911,7 +5199,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 290,
@@ -4928,7 +5217,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 291,
@@ -4945,7 +5235,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 292,
@@ -4962,7 +5253,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 293,
@@ -4979,7 +5271,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 294,
@@ -4996,7 +5289,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 295,
@@ -5013,7 +5307,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 296,
@@ -5030,7 +5325,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 297,
@@ -5047,7 +5343,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 298,
@@ -5064,7 +5361,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 299,
@@ -5081,7 +5379,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 300,
@@ -5098,7 +5397,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 301,
@@ -5115,7 +5415,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 302,
@@ -5132,7 +5433,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 303,
@@ -5149,7 +5451,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 304,
@@ -5166,7 +5469,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 305,
@@ -5183,7 +5487,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 306,
@@ -5200,7 +5505,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 307,
@@ -5217,7 +5523,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 308,
@@ -5234,7 +5541,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 309,
@@ -5251,7 +5559,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 310,
@@ -5268,7 +5577,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 311,
@@ -5285,7 +5595,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 312,
@@ -5302,7 +5613,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 313,
@@ -5319,7 +5631,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 314,
@@ -5336,7 +5649,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 315,
@@ -5353,7 +5667,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 316,
@@ -5370,7 +5685,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 317,
@@ -5387,7 +5703,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 318,
@@ -5404,7 +5721,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 319,
@@ -5421,7 +5739,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 320,
@@ -5438,7 +5757,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 321,
@@ -5455,7 +5775,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 322,
@@ -5472,7 +5793,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 323,
@@ -5489,7 +5811,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 324,
@@ -5506,7 +5829,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 325,
@@ -5523,7 +5847,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 326,
@@ -5540,7 +5865,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 327,
@@ -5557,7 +5883,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 328,
@@ -5574,7 +5901,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 329,
@@ -5591,7 +5919,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 330,
@@ -5608,7 +5937,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 331,
@@ -5625,7 +5955,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 332,
@@ -5642,7 +5973,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 333,
@@ -5659,7 +5991,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 334,
@@ -5676,7 +6009,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 335,
@@ -5693,7 +6027,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 336,
@@ -5710,7 +6045,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 337,
@@ -5727,7 +6063,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 338,
@@ -5744,7 +6081,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 339,
@@ -5761,7 +6099,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 340,
@@ -5778,7 +6117,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 341,
@@ -5795,7 +6135,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 342,
@@ -5812,7 +6153,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 343,
@@ -5829,7 +6171,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 344,
@@ -5846,7 +6189,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 345,
@@ -5863,7 +6207,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 346,
@@ -5880,7 +6225,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 347,
@@ -5897,7 +6243,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 348,
@@ -5914,7 +6261,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 349,
@@ -5931,7 +6279,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 350,
@@ -5948,7 +6297,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 351,
@@ -5965,7 +6315,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 352,
@@ -5982,7 +6333,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 353,
@@ -5999,7 +6351,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 354,
@@ -6016,7 +6369,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 355,
@@ -6033,7 +6387,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 356,
@@ -6050,7 +6405,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 357,
@@ -6067,7 +6423,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 358,
@@ -6084,7 +6441,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 359,
@@ -6101,7 +6459,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 360,
@@ -6118,7 +6477,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 361,
@@ -6135,7 +6495,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 362,
@@ -6152,7 +6513,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 363,
@@ -6169,7 +6531,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 364,
@@ -6186,7 +6549,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 365,
@@ -6203,7 +6567,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 366,
@@ -6220,7 +6585,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 367,
@@ -6237,7 +6603,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 368,
@@ -6254,7 +6621,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 369,
@@ -6271,7 +6639,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 370,
@@ -6288,7 +6657,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 371,
@@ -6305,7 +6675,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 372,
@@ -6322,7 +6693,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 373,
@@ -6339,7 +6711,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 374,
@@ -6356,7 +6729,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 375,
@@ -6373,7 +6747,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 376,
@@ -6390,7 +6765,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 377,
@@ -6407,7 +6783,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 378,
@@ -6424,7 +6801,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 379,
@@ -6441,7 +6819,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 380,
@@ -6458,7 +6837,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 381,
@@ -6475,7 +6855,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 382,
@@ -6492,7 +6873,8 @@
    "drive": "FWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 383,
@@ -6509,7 +6891,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 384,
@@ -6526,7 +6909,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 385,
@@ -6543,7 +6927,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 386,
@@ -6560,7 +6945,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 387,
@@ -6577,7 +6963,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 388,
@@ -6594,7 +6981,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 389,
@@ -6611,7 +6999,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 390,
@@ -6628,7 +7017,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 391,
@@ -6645,7 +7035,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 392,
@@ -6662,7 +7053,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 393,
@@ -6679,7 +7071,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 394,
@@ -6696,7 +7089,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 395,
@@ -6713,7 +7107,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 396,
@@ -6730,7 +7125,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 397,
@@ -6747,7 +7143,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 398,
@@ -6764,7 +7161,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 399,
@@ -6781,7 +7179,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 400,
@@ -6798,7 +7197,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 401,
@@ -6815,7 +7215,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 402,
@@ -6832,7 +7233,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 403,
@@ -6849,7 +7251,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 404,
@@ -6866,7 +7269,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 405,
@@ -6883,7 +7287,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 406,
@@ -6900,7 +7305,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 407,
@@ -6917,7 +7323,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 408,
@@ -6934,7 +7341,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 409,
@@ -6951,7 +7359,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 410,
@@ -6968,7 +7377,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 411,
@@ -6985,7 +7395,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 412,
@@ -7002,7 +7413,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 413,
@@ -7019,7 +7431,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 414,
@@ -7036,7 +7449,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 415,
@@ -7053,7 +7467,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 416,
@@ -7070,7 +7485,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 417,
@@ -7087,7 +7503,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 418,
@@ -7104,7 +7521,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 419,
@@ -7121,7 +7539,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 420,
@@ -7138,7 +7557,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 421,
@@ -7155,7 +7575,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 422,
@@ -7172,7 +7593,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 423,
@@ -7189,7 +7611,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 424,
@@ -7206,7 +7629,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 425,
@@ -7223,7 +7647,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 426,
@@ -7240,7 +7665,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 427,
@@ -7257,7 +7683,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 428,
@@ -7274,7 +7701,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 429,
@@ -7291,7 +7719,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Standard Bearer"
+   "perk": "Standard Bearer",
+   "source": "dealer"
  },
  {
    "carID": 430,
@@ -7308,7 +7737,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 431,
@@ -7325,7 +7755,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 432,
@@ -7342,7 +7773,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 433,
@@ -7359,7 +7791,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 434,
@@ -7376,7 +7809,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 435,
@@ -7393,7 +7827,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 436,
@@ -7410,7 +7845,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 437,
@@ -7427,7 +7863,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 438,
@@ -7444,7 +7881,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 439,
@@ -7461,7 +7899,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 440,
@@ -7478,7 +7917,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 441,
@@ -7495,7 +7935,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 442,
@@ -7512,7 +7953,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 443,
@@ -7529,7 +7971,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 444,
@@ -7546,7 +7989,8 @@
    "drive": "FWD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 445,
@@ -7563,7 +8007,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 446,
@@ -7580,7 +8025,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "Off The Chain"
+   "perk": "Off The Chain",
+   "source": "dealer"
  },
  {
    "carID": 447,
@@ -7597,7 +8043,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 448,
@@ -7614,7 +8061,8 @@
    "drive": "FWD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 449,
@@ -7631,7 +8079,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 450,
@@ -7648,7 +8097,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 451,
@@ -7665,7 +8115,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 452,
@@ -7682,7 +8133,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 453,
@@ -7699,7 +8151,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 454,
@@ -7716,7 +8169,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 455,
@@ -7733,7 +8187,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 456,
@@ -7750,7 +8205,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 457,
@@ -7767,7 +8223,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 458,
@@ -7784,7 +8241,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 459,
@@ -7801,7 +8259,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 460,
@@ -7818,7 +8277,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 461,
@@ -7835,7 +8295,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 462,
@@ -7852,7 +8313,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 463,
@@ -7869,7 +8331,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 464,
@@ -7886,7 +8349,8 @@
    "drive": "FWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 465,
@@ -7903,7 +8367,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 466,
@@ -7920,7 +8385,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 467,
@@ -7937,7 +8403,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 468,
@@ -7954,7 +8421,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 469,
@@ -7971,7 +8439,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 470,
@@ -7988,7 +8457,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 471,
@@ -8005,7 +8475,8 @@
    "drive": "RWD",
    "tyres": "All-Surface",
    "elite": "yes",
-   "perk": "All-Star"
+   "perk": "All-Star",
+   "source": "dealer"
  },
  {
    "carID": 472,
@@ -8022,7 +8493,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 473,
@@ -8039,7 +8511,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 474,
@@ -8056,7 +8529,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "Off The Chain"
+   "perk": "Off The Chain",
+   "source": "dealer"
  },
  {
    "carID": 475,
@@ -8073,7 +8547,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 476,
@@ -8090,7 +8565,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 477,
@@ -8107,7 +8583,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 478,
@@ -8124,7 +8601,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 479,
@@ -8141,7 +8619,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 480,
@@ -8158,7 +8637,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 481,
@@ -8175,7 +8655,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 482,
@@ -8192,7 +8673,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 483,
@@ -8209,7 +8691,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 484,
@@ -8226,7 +8709,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 485,
@@ -8243,7 +8727,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 486,
@@ -8260,7 +8745,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 487,
@@ -8277,7 +8763,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 488,
@@ -8294,7 +8781,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 489,
@@ -8311,7 +8799,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 490,
@@ -8328,7 +8817,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 491,
@@ -8345,7 +8835,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 492,
@@ -8362,7 +8853,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 493,
@@ -8379,7 +8871,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "yes",
-   "perk": "All-Star"
+   "perk": "All-Star",
+   "source": "dealer"
  },
  {
    "carID": 494,
@@ -8396,7 +8889,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Standard Bearer"
+   "perk": "Standard Bearer",
+   "source": "dealer"
  },
  {
    "carID": 495,
@@ -8413,7 +8907,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Standard Bearer"
+   "perk": "Standard Bearer",
+   "source": "dealer"
  },
  {
    "carID": 496,
@@ -8430,7 +8925,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "Off The Chain"
+   "perk": "Off The Chain",
+   "source": "dealer"
  },
  {
    "carID": 497,
@@ -8447,7 +8943,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 498,
@@ -8464,7 +8961,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Standard Bearer"
+   "perk": "Standard Bearer",
+   "source": "dealer"
  },
  {
    "carID": 499,
@@ -8481,7 +8979,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "yes",
-   "perk": "All-Star"
+   "perk": "All-Star",
+   "source": "dealer"
  },
  {
    "carID": 500,
@@ -8498,7 +8997,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 501,
@@ -8515,7 +9015,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 502,
@@ -8532,7 +9033,8 @@
    "drive": "FWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 503,
@@ -8549,7 +9051,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 504,
@@ -8566,7 +9069,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 505,
@@ -8583,7 +9087,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 506,
@@ -8600,7 +9105,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 507,
@@ -8617,7 +9123,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 508,
@@ -8634,7 +9141,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 509,
@@ -8651,7 +9159,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 510,
@@ -8668,7 +9177,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 511,
@@ -8685,7 +9195,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 512,
@@ -8702,7 +9213,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 513,
@@ -8719,7 +9231,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 514,
@@ -8736,7 +9249,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 515,
@@ -8753,7 +9267,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 516,
@@ -8770,7 +9285,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 517,
@@ -8787,7 +9303,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 518,
@@ -8804,7 +9321,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 519,
@@ -8821,7 +9339,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 520,
@@ -8838,7 +9357,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 521,
@@ -8855,7 +9375,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 522,
@@ -8872,7 +9393,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 523,
@@ -8889,7 +9411,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 524,
@@ -8906,7 +9429,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 525,
@@ -8923,7 +9447,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 526,
@@ -8940,7 +9465,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 527,
@@ -8957,7 +9483,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 528,
@@ -8974,7 +9501,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 529,
@@ -8991,7 +9519,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 530,
@@ -9008,7 +9537,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 531,
@@ -9025,7 +9555,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 532,
@@ -9042,7 +9573,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 533,
@@ -9059,7 +9591,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 534,
@@ -9076,7 +9609,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 535,
@@ -9093,7 +9627,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 536,
@@ -9110,7 +9645,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 537,
@@ -9127,7 +9663,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 538,
@@ -9144,7 +9681,8 @@
    "drive": "RWD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 539,
@@ -9161,7 +9699,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 540,
@@ -9178,7 +9717,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 541,
@@ -9195,7 +9735,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 542,
@@ -9212,7 +9753,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 543,
@@ -9229,7 +9771,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 544,
@@ -9246,7 +9789,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 545,
@@ -9263,7 +9807,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 546,
@@ -9280,7 +9825,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 547,
@@ -9297,7 +9843,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 548,
@@ -9314,7 +9861,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 549,
@@ -9331,7 +9879,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 550,
@@ -9348,7 +9897,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 551,
@@ -9365,7 +9915,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 552,
@@ -9382,7 +9933,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 553,
@@ -9399,7 +9951,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 554,
@@ -9416,7 +9969,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 555,
@@ -9433,7 +9987,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 556,
@@ -9450,7 +10005,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 557,
@@ -9467,7 +10023,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 558,
@@ -9484,7 +10041,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 559,
@@ -9501,7 +10059,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 560,
@@ -9518,7 +10077,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 561,
@@ -9535,7 +10095,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 562,
@@ -9552,7 +10113,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 563,
@@ -9569,7 +10131,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 564,
@@ -9586,7 +10149,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 565,
@@ -9603,7 +10167,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 566,
@@ -9620,7 +10185,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 567,
@@ -9637,7 +10203,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 568,
@@ -9654,7 +10221,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 569,
@@ -9671,7 +10239,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 570,
@@ -9688,7 +10257,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 571,
@@ -9705,7 +10275,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 572,
@@ -9722,7 +10293,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "yes",
-   "perk": "All-Star"
+   "perk": "All-Star",
+   "source": "dealer"
  },
  {
    "carID": 573,
@@ -9739,7 +10311,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 574,
@@ -9756,7 +10329,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Action Traction"
+   "perk": "Action Traction",
+   "source": "dealer"
  },
  {
    "carID": 575,
@@ -9773,7 +10347,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 576,
@@ -9790,7 +10365,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 577,
@@ -9807,7 +10383,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 578,
@@ -9824,7 +10401,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 579,
@@ -9841,7 +10419,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 580,
@@ -9858,7 +10437,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 581,
@@ -9875,7 +10455,8 @@
    "drive": "4WD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 582,
@@ -9892,7 +10473,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 583,
@@ -9909,7 +10491,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 584,
@@ -9926,7 +10509,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 585,
@@ -9943,7 +10527,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 586,
@@ -9960,7 +10545,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 587,
@@ -9977,7 +10563,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Action Traction"
+   "perk": "Action Traction",
+   "source": "dealer"
  },
  {
    "carID": 588,
@@ -9994,7 +10581,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 589,
@@ -10011,7 +10599,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 590,
@@ -10028,7 +10617,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 591,
@@ -10045,7 +10635,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 592,
@@ -10062,7 +10653,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 593,
@@ -10079,7 +10671,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 594,
@@ -10096,7 +10689,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 595,
@@ -10113,7 +10707,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 596,
@@ -10130,7 +10725,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 597,
@@ -10147,7 +10743,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 598,
@@ -10164,7 +10761,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 599,
@@ -10181,7 +10779,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 600,
@@ -10198,7 +10797,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 601,
@@ -10215,7 +10815,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 602,
@@ -10232,7 +10833,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 603,
@@ -10249,7 +10851,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 604,
@@ -10266,7 +10869,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 605,
@@ -10283,7 +10887,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 606,
@@ -10300,7 +10905,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 607,
@@ -10317,7 +10923,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 608,
@@ -10334,7 +10941,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 609,
@@ -10351,7 +10959,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 610,
@@ -10368,7 +10977,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 611,
@@ -10385,7 +10995,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 612,
@@ -10402,7 +11013,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 613,
@@ -10419,7 +11031,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 614,
@@ -10436,7 +11049,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 615,
@@ -10453,7 +11067,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 616,
@@ -10470,7 +11085,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 617,
@@ -10487,7 +11103,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 618,
@@ -10504,7 +11121,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 619,
@@ -10521,7 +11139,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 620,
@@ -10538,7 +11157,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 621,
@@ -10555,7 +11175,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 622,
@@ -10572,7 +11193,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 623,
@@ -10589,7 +11211,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 624,
@@ -10606,7 +11229,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 625,
@@ -10623,7 +11247,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 626,
@@ -10640,7 +11265,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 627,
@@ -10657,7 +11283,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 628,
@@ -10674,7 +11301,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 629,
@@ -10691,7 +11319,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 630,
@@ -10708,7 +11337,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 631,
@@ -10725,7 +11355,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 632,
@@ -10742,7 +11373,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 633,
@@ -10759,7 +11391,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 634,
@@ -10776,7 +11409,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Action Traction"
+   "perk": "Action Traction",
+   "source": "dealer"
  },
  {
    "carID": 635,
@@ -10793,7 +11427,8 @@
    "drive": "RWD",
    "tyres": "performance",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 636,
@@ -10810,7 +11445,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 637,
@@ -10827,7 +11463,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 638,
@@ -10844,7 +11481,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 639,
@@ -10861,7 +11499,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 640,
@@ -10878,7 +11517,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 641,
@@ -10895,7 +11535,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 642,
@@ -10912,7 +11553,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 643,
@@ -10929,7 +11571,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 644,
@@ -10946,7 +11589,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 645,
@@ -10963,7 +11607,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 646,
@@ -10980,7 +11625,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 647,
@@ -10997,7 +11643,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 648,
@@ -11014,7 +11661,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 649,
@@ -11031,7 +11679,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 650,
@@ -11048,7 +11697,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 651,
@@ -11065,7 +11715,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 652,
@@ -11082,7 +11733,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 653,
@@ -11099,7 +11751,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 654,
@@ -11116,7 +11769,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 655,
@@ -11133,7 +11787,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 656,
@@ -11150,7 +11805,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 657,
@@ -11167,7 +11823,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 658,
@@ -11184,7 +11841,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 659,
@@ -11201,7 +11859,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 660,
@@ -11218,7 +11877,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 661,
@@ -11235,7 +11895,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 662,
@@ -11252,7 +11913,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 663,
@@ -11269,7 +11931,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 664,
@@ -11286,7 +11949,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Mechanic"
+   "perk": "Mechanic",
+   "source": "dealer"
  },
  {
    "carID": 665,
@@ -11303,7 +11967,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Mechanic"
+   "perk": "Mechanic",
+   "source": "dealer"
  },
  {
    "carID": 666,
@@ -11320,7 +11985,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 667,
@@ -11337,7 +12003,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Front Line"
+   "perk": "Front Line",
+   "source": "dealer"
  },
  {
    "carID": 668,
@@ -11354,7 +12021,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Front Line"
+   "perk": "Front Line",
+   "source": "dealer"
  },
  {
    "carID": 669,
@@ -11371,7 +12039,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 670,
@@ -11388,7 +12057,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 671,
@@ -11405,7 +12075,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Mechanic"
+   "perk": "Mechanic",
+   "source": "dealer"
  },
  {
    "carID": 672,
@@ -11422,7 +12093,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 673,
@@ -11439,7 +12111,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 674,
@@ -11456,7 +12129,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 675,
@@ -11473,7 +12147,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 676,
@@ -11490,7 +12165,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 677,
@@ -11507,7 +12183,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 678,
@@ -11524,7 +12201,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 679,
@@ -11541,7 +12219,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 680,
@@ -11558,7 +12237,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 681,
@@ -11575,7 +12255,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 682,
@@ -11592,7 +12273,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 683,
@@ -11609,7 +12291,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 684,
@@ -11626,7 +12309,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 685,
@@ -11643,7 +12327,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 686,
@@ -11660,7 +12345,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 687,
@@ -11677,7 +12363,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 688,
@@ -11694,7 +12381,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 689,
@@ -11711,7 +12399,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 690,
@@ -11728,7 +12417,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 691,
@@ -11745,7 +12435,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 692,
@@ -11762,7 +12453,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 693,
@@ -11779,7 +12471,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 694,
@@ -11796,7 +12489,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 695,
@@ -11813,7 +12507,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 696,
@@ -11830,7 +12525,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 697,
@@ -11847,7 +12543,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 698,
@@ -11864,7 +12561,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 699,
@@ -11881,7 +12579,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 700,
@@ -11898,7 +12597,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 701,
@@ -11915,7 +12615,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 702,
@@ -11932,7 +12633,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 703,
@@ -11949,7 +12651,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Refresher"
+   "perk": "Refresher",
+   "source": "dealer"
  },
  {
    "carID": 704,
@@ -11966,7 +12669,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 705,
@@ -11983,7 +12687,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 706,
@@ -12000,7 +12705,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 707,
@@ -12017,7 +12723,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 708,
@@ -12034,7 +12741,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 709,
@@ -12051,7 +12759,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 710,
@@ -12068,7 +12777,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 711,
@@ -12085,7 +12795,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 712,
@@ -12102,7 +12813,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 713,
@@ -12119,7 +12831,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 714,
@@ -12136,7 +12849,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 715,
@@ -12153,7 +12867,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 716,
@@ -12170,7 +12885,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 717,
@@ -12187,7 +12903,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 718,
@@ -12204,7 +12921,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 719,
@@ -12221,7 +12939,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 720,
@@ -12238,7 +12957,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 721,
@@ -12255,7 +12975,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 722,
@@ -12272,7 +12993,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 723,
@@ -12289,7 +13011,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 724,
@@ -12306,7 +13029,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 725,
@@ -12323,7 +13047,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "Off The Chain"
+   "perk": "Off The Chain",
+   "source": "dealer"
  },
  {
    "carID": 726,
@@ -12340,7 +13065,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 727,
@@ -12357,7 +13083,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 728,
@@ -12374,7 +13101,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 729,
@@ -12391,7 +13119,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 730,
@@ -12408,7 +13137,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 731,
@@ -12425,7 +13155,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 732,
@@ -12442,7 +13173,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 733,
@@ -12459,7 +13191,8 @@
    "drive": "FWD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 734,
@@ -12476,7 +13209,8 @@
    "drive": "RWD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 735,
@@ -12493,7 +13227,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 736,
@@ -12510,7 +13245,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 737,
@@ -12527,7 +13263,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Mechanic"
+   "perk": "Mechanic",
+   "source": "dealer"
  },
  {
    "carID": 738,
@@ -12544,7 +13281,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 739,
@@ -12561,7 +13299,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 740,
@@ -12578,7 +13317,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 741,
@@ -12595,7 +13335,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 742,
@@ -12612,7 +13353,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 743,
@@ -12629,7 +13371,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 744,
@@ -12646,7 +13389,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 745,
@@ -12663,7 +13407,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 746,
@@ -12680,7 +13425,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 747,
@@ -12697,7 +13443,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 748,
@@ -12714,7 +13461,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 749,
@@ -12731,7 +13479,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 750,
@@ -12748,7 +13497,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 751,
@@ -12765,7 +13515,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 752,
@@ -12782,7 +13533,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 753,
@@ -12799,7 +13551,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 754,
@@ -12816,7 +13569,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 755,
@@ -12833,7 +13587,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 756,
@@ -12850,7 +13605,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Overheat"
+   "perk": "Overheat",
+   "source": "dealer"
  },
  {
    "carID": 757,
@@ -12867,7 +13623,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "Heat Sink"
+   "perk": "Heat Sink",
+   "source": "dealer"
  },
  {
    "carID": 758,
@@ -12884,7 +13641,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 759,
@@ -12901,7 +13659,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 760,
@@ -12918,7 +13677,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Overheat"
+   "perk": "Overheat",
+   "source": "dealer"
  },
  {
    "carID": 761,
@@ -12935,7 +13695,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Heat Sink"
+   "perk": "Heat Sink",
+   "source": "dealer"
  },
  {
    "carID": 762,
@@ -12952,7 +13713,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 763,
@@ -12969,7 +13731,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 764,
@@ -12986,7 +13749,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 765,
@@ -13003,7 +13767,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 766,
@@ -13020,7 +13785,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 767,
@@ -13037,7 +13803,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 768,
@@ -13054,7 +13821,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 769,
@@ -13071,7 +13839,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 770,
@@ -13088,7 +13857,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 771,
@@ -13105,7 +13875,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Overheat"
+   "perk": "Overheat",
+   "source": "dealer"
  },
  {
    "carID": 772,
@@ -13122,7 +13893,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 773,
@@ -13139,7 +13911,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 774,
@@ -13156,7 +13929,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 775,
@@ -13173,7 +13947,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 776,
@@ -13190,7 +13965,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 777,
@@ -13207,7 +13983,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 778,
@@ -13224,7 +14001,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 779,
@@ -13241,7 +14019,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 780,
@@ -13258,7 +14037,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 781,
@@ -13275,7 +14055,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 782,
@@ -13292,7 +14073,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 783,
@@ -13309,7 +14091,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 784,
@@ -13326,7 +14109,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Mechanic"
+   "perk": "Mechanic",
+   "source": "dealer"
  },
  {
    "carID": 785,
@@ -13343,7 +14127,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Overheat"
+   "perk": "Overheat",
+   "source": "dealer"
  },
  {
    "carID": 786,
@@ -13360,7 +14145,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 787,
@@ -13377,7 +14163,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 788,
@@ -13394,7 +14181,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 789,
@@ -13411,7 +14199,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 790,
@@ -13428,7 +14217,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 791,
@@ -13445,7 +14235,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 792,
@@ -13462,7 +14253,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 793,
@@ -13479,7 +14271,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 794,
@@ -13496,7 +14289,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 795,
@@ -13513,7 +14307,8 @@
    "drive": "RWD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 796,
@@ -13530,7 +14325,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Heat Sink"
+   "perk": "Heat Sink",
+   "source": "dealer"
  },
  {
    "carID": 797,
@@ -13547,7 +14343,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 798,
@@ -13564,7 +14361,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 799,
@@ -13581,7 +14379,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 800,
@@ -13598,7 +14397,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 801,
@@ -13615,7 +14415,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 802,
@@ -13632,7 +14433,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 803,
@@ -13649,7 +14451,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 804,
@@ -13666,7 +14469,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 805,
@@ -13683,7 +14487,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 806,
@@ -13700,7 +14505,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 807,
@@ -13717,7 +14523,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 808,
@@ -13734,7 +14541,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 809,
@@ -13751,7 +14559,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 810,
@@ -13768,7 +14577,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 811,
@@ -13785,7 +14595,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 812,
@@ -13802,7 +14613,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Mechanic"
+   "perk": "Mechanic",
+   "source": "dealer"
  },
  {
    "carID": 813,
@@ -13819,7 +14631,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 814,
@@ -13836,7 +14649,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 815,
@@ -13853,7 +14667,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 816,
@@ -13870,7 +14685,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 817,
@@ -13887,7 +14703,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Mechanic"
+   "perk": "Mechanic",
+   "source": "dealer"
  },
  {
    "carID": 818,
@@ -13904,7 +14721,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 819,
@@ -13921,7 +14739,8 @@
    "drive": "RWD",
    "tyres": "Slick",
    "elite": "yes",
-   "perk": "Overheat"
+   "perk": "Overheat",
+   "source": "dealer"
  },
  {
    "carID": 820,
@@ -13938,7 +14757,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 821,
@@ -13955,7 +14775,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 822,
@@ -13972,7 +14793,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 823,
@@ -13989,7 +14811,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 824,
@@ -14006,7 +14829,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 825,
@@ -14023,7 +14847,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 826,
@@ -14040,7 +14865,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 827,
@@ -14057,7 +14883,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 828,
@@ -14074,7 +14901,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 829,
@@ -14091,7 +14919,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 830,
@@ -14108,7 +14937,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 831,
@@ -14125,7 +14955,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 832,
@@ -14142,7 +14973,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 833,
@@ -14159,7 +14991,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 834,
@@ -14176,7 +15009,8 @@
    "drive": "FWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 835,
@@ -14193,7 +15027,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 836,
@@ -14210,7 +15045,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 837,
@@ -14227,7 +15063,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 838,
@@ -14244,7 +15081,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 839,
@@ -14261,7 +15099,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 840,
@@ -14278,7 +15117,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 841,
@@ -14295,7 +15135,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 842,
@@ -14312,7 +15153,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 843,
@@ -14329,7 +15171,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 844,
@@ -14346,7 +15189,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 845,
@@ -14363,7 +15207,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "yes",
-   "perk": "Heat Sink"
+   "perk": "Heat Sink",
+   "source": "dealer"
  },
  {
    "carID": 846,
@@ -14380,7 +15225,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 847,
@@ -14397,7 +15243,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "yes",
-   "perk": "High Roller"
+   "perk": "High Roller",
+   "source": "dealer"
  },
  {
    "carID": 848,
@@ -14414,7 +15261,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 849,
@@ -14431,7 +15279,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 850,
@@ -14448,7 +15297,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 851,
@@ -14465,7 +15315,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 852,
@@ -14482,7 +15333,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 853,
@@ -14499,7 +15351,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Slipstream"
+   "perk": "Slipstream",
+   "source": "dealer"
  },
  {
    "carID": 854,
@@ -14516,7 +15369,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 855,
@@ -14533,7 +15387,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 856,
@@ -14550,7 +15405,8 @@
    "drive": "4WD",
    "tyres": "Off-Road",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 857,
@@ -14567,7 +15423,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 858,
@@ -14584,7 +15441,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Action Traction"
+   "perk": "Action Traction",
+   "source": "dealer"
  },
  {
    "carID": 859,
@@ -14601,7 +15459,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 860,
@@ -14618,7 +15477,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 861,
@@ -14635,7 +15495,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 862,
@@ -14652,7 +15513,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 863,
@@ -14669,7 +15531,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 864,
@@ -14686,7 +15549,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 865,
@@ -14703,7 +15567,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 866,
@@ -14720,7 +15585,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 867,
@@ -14737,7 +15603,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 868,
@@ -14754,7 +15621,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 869,
@@ -14771,7 +15639,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 870,
@@ -14788,7 +15657,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 871,
@@ -14805,7 +15675,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 872,
@@ -14822,7 +15693,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 873,
@@ -14839,7 +15711,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Double Tap"
+   "perk": "Double Tap",
+   "source": "dealer"
  },
  {
    "carID": 874,
@@ -14856,7 +15729,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Lucky"
+   "perk": "Lucky",
+   "source": "dealer"
  },
  {
    "carID": 875,
@@ -14873,7 +15747,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 876,
@@ -14890,7 +15765,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 877,
@@ -14907,7 +15783,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "yes",
-   "perk": "Action Traction"
+   "perk": "Action Traction",
+   "source": "dealer"
  },
  {
    "carID": 878,
@@ -14924,7 +15801,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 879,
@@ -14941,7 +15819,8 @@
    "drive": "4WD",
    "tyres": "All-Surface",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 880,
@@ -14958,7 +15837,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 881,
@@ -14975,7 +15855,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 882,
@@ -14992,7 +15873,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 883,
@@ -15009,7 +15891,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Overheat"
+   "perk": "Overheat",
+   "source": "dealer"
  },
  {
    "carID": 884,
@@ -15026,7 +15909,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Quick Charge"
+   "perk": "Quick Charge",
+   "source": "dealer"
  },
  {
    "carID": 885,
@@ -15043,7 +15927,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 886,
@@ -15060,7 +15945,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 887,
@@ -15077,7 +15963,8 @@
    "drive": "FWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 888,
@@ -15094,7 +15981,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 889,
@@ -15111,7 +15999,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 890,
@@ -15128,7 +16017,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 891,
@@ -15145,7 +16035,8 @@
    "drive": "4WD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 892,
@@ -15162,7 +16053,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 893,
@@ -15179,7 +16071,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Gambler"
+   "perk": "Gambler",
+   "source": "dealer"
  },
  {
    "carID": 894,
@@ -15196,7 +16089,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 895,
@@ -15213,7 +16107,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 896,
@@ -15230,7 +16125,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 897,
@@ -15247,7 +16143,8 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 898,
@@ -15264,7 +16161,8 @@
    "drive": "RWD",
    "tyres": "Performance",
    "elite": "yes",
-   "perk": "Mechanic"
+   "perk": "Mechanic",
+   "source": "dealer"
  },
  {
    "carID": 899,
@@ -15281,7 +16179,8 @@
    "drive": "4WD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
  },
  {
    "carID": 900,
@@ -15298,7 +16197,278 @@
    "drive": "RWD",
    "tyres": "Standard",
    "elite": "",
-   "perk": ""
+   "perk": "",
+   "source": ""
+ },
+ {
+   "carID": 901,
+   "imageID": "901.png",
+   "make": "BMW",
+   "model": "M5 Touring Elekta (E34)",
+   "year": 1995,
+   "country": "IT",
+   "rarity": 5,
+   "rq": 51,
+   "topSpeed": 155,
+   "zeroToSixty": 5.9,
+   "handling": 77,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Mechanic",
+   "source": "contracts"
+ },
+ {
+   "carID": 902,
+   "imageID": "902.png",
+   "make": "Bugatti",
+   "model": "Chiron Super Sport",
+   "year": 2021,
+   "country": "FR",
+   "rarity": 7,
+   "rq": 99,
+   "topSpeed": 273,
+   "zeroToSixty": 2.3,
+   "handling": 89,
+   "drive": "4WD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Lucky",
+   "source": "milestone"
+ },
+ {
+   "carID": 903,
+   "imageID": "903.png",
+   "make": "Hennessey",
+   "model": "Venom GT Spyder",
+   "year": 2016,
+   "country": "US",
+   "rarity": 7,
+   "rq": 98,
+   "topSpeed": 266,
+   "zeroToSixty": 2.4,
+   "handling": 90,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Gambler",
+   "source": "contracts"
+ },
+ {
+   "carID": 904,
+   "imageID": "904.png",
+   "make": "Ford",
+   "model": "Focus RS Mountune FPM 375",
+   "year": 2017,
+   "country": "GB",
+   "rarity": 6,
+   "rq": 75,
+   "topSpeed": 166,
+   "zeroToSixty": 4.5,
+   "handling": 88,
+   "drive": "4WD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "All In",
+   "source": "contracts"
+ },
+ {
+   "carID": 905,
+   "imageID": "905.png",
+   "make": "Polestar",
+   "model": "1 Hero Edition",
+   "year": 2020,
+   "country": "SE",
+   "rarity": 7,
+   "rq": 98,
+   "topSpeed": 223,
+   "zeroToSixty": 2.7,
+   "handling": 93,
+   "drive": "4WD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Gambler",
+   "source": "milestone"
+ },
+ {
+   "carID": 906,
+   "imageID": "906.png",
+   "make": "Ferrari",
+   "model": "LaFerrari",
+   "year": 2013,
+   "country": "IT",
+   "rarity": 7,
+   "rq": 92,
+   "topSpeed": 231,
+   "zeroToSixty": 2.5,
+   "handling": 92,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Slipstream",
+   "source": "milestone"
+ },
+ {
+   "carID": 907,
+   "imageID": "907.png",
+   "make": "Ferrari",
+   "model": "LaFerrari Aperta",
+   "year": 2016,
+   "country": "IT",
+   "rarity": 7,
+   "rq": 92,
+   "topSpeed": 222,
+   "zeroToSixty": 2.7,
+   "handling": 92,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "High Roller",
+   "source": "contracts"
+ },
+ {
+   "carID": 908,
+   "imageID": "908.png",
+   "make": "JIA",
+   "model": "Interceptor R",
+   "year": 2014,
+   "country": "GB",
+   "rarity": 6,
+   "rq": 68,
+   "topSpeed": 174,
+   "zeroToSixty": 3.8,
+   "handling": 79,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Refresher",
+   "source": "contracts"
+ },
+ {
+   "carID": 909,
+   "imageID": "909.png",
+   "make": "Porsche",
+   "model": "953 Paris-Dakar",
+   "year": 1984,
+   "country": "DE",
+   "rarity": 6,
+   "rq": 77,
+   "topSpeed": 130,
+   "zeroToSixty": 4.4,
+   "handling": 78,
+   "drive": "4WD",
+   "tyres": "Off-Road",
+   "elite": "yes",
+   "perk": "Time Warp",
+   "source": "contracts"
+ },
+ {
+   "carID": 910,
+   "imageID": "910.png",
+   "make": "Geo",
+   "model": "Storm GSi",
+   "year": 1993,
+   "country": "US",
+   "rarity": 2,
+   "rq": 25,
+   "topSpeed": 125,
+   "zeroToSixty": 8.6,
+   "handling": 74,
+   "drive": "FWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Mechanic",
+   "source": "milestone"
+ },
+ {
+   "carID": 911,
+   "imageID": "911.png",
+   "make": "Volkswagen",
+   "model": "Saveiro Rocket",
+   "year": 2010,
+   "country": "BR",
+   "rarity": 3,
+   "rq": 30,
+   "topSpeed": 139,
+   "zeroToSixty": 7.9,
+   "handling": 75,
+   "drive": "FWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Double Tap",
+   "source": "contracts"
+ },
+ {
+   "carID": 912,
+   "imageID": "912.png",
+   "make": "AC Schnitzer",
+   "model": "M2 (G87)",
+   "year": 2023,
+   "country": "DE",
+   "rarity": 6,
+   "rq": 72,
+   "topSpeed": 177,
+   "zeroToSixty": 4.2,
+   "handling": 90,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Overheat",
+   "source": "contracts"
+ },
+ {
+   "carID": 913,
+   "imageID": "913.png",
+   "make": "Volkswagen",
+   "model": "Touareg V10 TDI Pikes Peak",
+   "year": 2006,
+   "country": "DE",
+   "rarity": 5,
+   "rq": 64,
+   "topSpeed": 144,
+   "zeroToSixty": 6.8,
+   "handling": 71,
+   "drive": "4WD",
+   "tyres": "Off-Road",
+   "elite": "yes",
+   "perk": "Off The Chain",
+   "source": "contracts"
+ },
+ {
+   "carID": 914,
+   "imageID": "914.png",
+   "make": "BMW",
+   "model": "M1 Procar",
+   "year": 1979,
+   "country": "DE",
+   "rarity": 6,
+   "rq": 79,
+   "topSpeed": 193,
+   "zeroToSixty": 3.8,
+   "handling": 90,
+   "drive": "RWD",
+   "tyres": "Slick",
+   "elite": "yes",
+   "perk": "Slipstream",
+   "source": "contracts"
+ },
+ {
+   "carID": 915,
+   "imageID": "915.png",
+   "make": "BMW",
+   "model": "750iL V16 Goldfisch (E32)",
+   "year": 1988,
+   "country": "DE",
+   "rarity": 4,
+   "rq": 44,
+   "topSpeed": 172,
+   "zeroToSixty": 5.9,
+   "handling": 74,
+   "drive": "RWD",
+   "tyres": "Performance",
+   "elite": "yes",
+   "perk": "Gambler",
+   "source": "contracts"
  }
 ]
 }

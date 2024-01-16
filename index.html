@@ -7,6 +7,7 @@
     <script type="module" src="./js/playerHand.js"></script>
     <script type="module" src="./js/playerGarage.js"></script>
     <script type="module" src="./js/shop.js"></script>
+    <script type="module" src="./js/missions.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
             <body>
@@ -15,6 +16,7 @@
                 <button class="tablink" onclick="openPage('Collection', this, 'dodgerblue')">Collection</button>
                 <button class="tablink" onclick="openPage('Shop', this, 'goldenrod')">Dealership</button>
                 <button class="tablink" onclick="openPage('Stats', this, 'purple')">Elite</button>
+                <button class="tablink" onclick="openPage('Missions', this, 'deeppink')">Missions</button>
 
                 <div id="Home" class="tabcontent">
                     <img id="logo" src="./styles/C3LOGO.png">
@@ -271,6 +273,28 @@
             </div>
         </div>
         
+    </div>
+
+    <div id="Missions" class="tabcontent">
+        <h3>Missions</h3>
+        <h3>Contracts</h3>
+        <h4 id="ContractMenu">Available Contracts</h4>
+        <div class="gridContainer" id="contractGrid"></div>
+        <h4 id="ActiveContracts">Active Contracts</h4>
+        <div class="gridContainer" id="activeGrid">
+            <div id="active1" class="activeBox">Active Slot 1</div>
+            <div id="at1" class="trackerBox"></div>
+            <div id="active2" class="activeBox">Unlock Active Slot 2 - $25,000</div>
+            <div id="at2" class="trackerBox"></div>
+            <div id="active3" class="activeBox">Unlock Active Slot 3 - $125,000, 100 Elite Tools</div>
+            <div id="at3" class="trackerBox"></div>
+            <div id="active4" class="activeBox">Unlock Active Slot 4 - $1,000,000, 1,000 Elite Tools</div>
+            <div id="at4" class="trackerBox"></div>
+        </div>
+        <h4>Star Shop</h4>
+        <div id="starsDisplay"></div>
+        <div class="gridContainer" id="starShopGrid"></div>
+        <h3>Milestones</h3>
     </div>
 
     <script>

@@ -32,6 +32,11 @@ body {
     background-image: url("./eliteBG.jpg");
 }
 
+#Missions {
+    background-color: black;
+    background-image: url("./missionsBG.jpg");
+}
+
 #newestCard {
     margin-left: auto;
     margin-right: auto;
@@ -55,7 +60,7 @@ body, html {
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 25%;
+    width: 20%;
 }
 
 .garageFilter {
@@ -257,6 +262,115 @@ img {
     row-gap: 8px;
 }
 
+#starShopGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(90%/3, max(90%/3))));
+    position: relative;
+    height: 50%;
+    margin-top: 15px;
+    row-gap: 8px;
+}
+
+#contractGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(90%/2, max(90%/2))));
+    position: relative;
+    height: 50%;
+    width: 60%;
+    margin-top: 15px;
+    row-gap: 8px;
+}
+
+#activeGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(90%/2, max(90%/2))));
+    position: relative;
+    height: 50%;
+    width: 60%;
+    margin-top: 15px;
+    row-gap: 8px;
+}
+
+.contractBox {
+    backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 20px;  
+  margin: 5px;
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.activeBox {
+    backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 20px;  
+  margin: 5px;
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.trackerBox {
+    backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 20px;  
+  margin: 5px;
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20%;
+}
+
+.completedButton {
+    backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(19, 231, 0, 0.904);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 20px;  
+  margin: 5px;
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bolder;
+  width: 20%;
+}
+
+progress {
+    border-radius: 10px;
+    height: 10%;
+}
+
 #shopGrid img {
     width: 85%;
 }
@@ -330,6 +444,19 @@ img {
 .buybtn {
     position: relative;
     background-color: greenyellow;
+    color: black;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.starbtn {
+    position: relative;
+    background-color: turquoise;
     color: black;
     font-size: 16px;
     padding: 5px 10px;
@@ -721,6 +848,19 @@ h2 {
     box-shadow: magenta 0 10px 20px -10px;
     box-sizing: border-box;
     color: magenta;
+    font-size: 30px;
+    margin-top: 200px;
+    padding: 10px;
+  }
+
+  #starsDisplay { 
+    background: black;
+    border-radius: 10px;
+    display: inline;
+    width: 6%;
+    box-shadow: gold 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: gold;
     font-size: 30px;
     margin-top: 200px;
     padding: 10px;

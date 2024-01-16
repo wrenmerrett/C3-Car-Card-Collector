@@ -3,7 +3,8 @@ import { playerGarage, loadGarage, playerPrestigeGarage, collectionHandDisplay }
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
 import { shopUpgrades, shopgrades } from "./shop.js";
-export var money = 100;
+import { contractTrackers, completeContract } from "./missions.js";
+export var money = 100000000000000000;
 let buttonCooldown = 0;
 let moneyBonus = 0;
 let gachaLuck = 0;
@@ -32,6 +33,9 @@ let awdBonus = 0;
 let fwdBonus = 0;
 let mechanicBoost = 0;
 let heatSinkBonus = 0;
+let eliteTracker = false;
+let moneyCheck = 0;
+let moneyDiff = 0;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -91,6 +95,7 @@ button.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
             data = data.cars;
+            eliteTracker = false;
             standardBonus = 0;
             allsurfBonus = 0;
             offroadBonus = 0;
@@ -158,6 +163,9 @@ button.addEventListener('click', () => {
             playerHand.forEach(bonusCalcs);
             function bonusCalcs(id) {
                 let car = (data[id]);
+                if (car.elite == 'yes') {
+                    eliteTracker = true;
+                }
                 if (equippedKits.find(e => e.carID === car.carID)) {
                     let perkIndex = equippedKits.find(e => e.carID === car.carID)
                     car.perk = perkIndex.perk;
@@ -266,33 +274,36 @@ button.addEventListener('click', () => {
             synergies.forEach(synergyPerks);
             function synergyPerks(synergy) {
                 if (synergy == 'Standard' && standardBonus > 0) {
-                    moneyVar = moneyVar + 3.54^(standardBonus);
+                    moneyVar = moneyVar + 2*(standardBonus);
                     buttonBoost = buttonBoost + 0.92*(standardBonus);
-                    gachaLuck = gachaLuck + 3.54^(standardBonus);
+                    gachaLuck = gachaLuck + 2*(standardBonus);
                 }
                 if (synergy == 'All-Surface' && allsurfBonus > 0) {
-                    moneyVar = moneyVar + 3.77^(allsurfBonus);
+                    moneyVar = moneyVar + 2.1*(allsurfBonus);
                     buttonBoost = buttonBoost + 0.98*(allsurfBonus);
-                    gachaLuck = gachaLuck * 3.97^(allsurfBonus);
+                    gachaLuck = gachaLuck * 2.2*(allsurfBonus);
                 }
                 if (synergy == 'Off-Road' && offroadBonus > 0) {
-                    moneyVar = moneyVar + 3.80^(offroadBonus);
+                    moneyVar = moneyVar + 2.2*(offroadBonus);
                     buttonBoost = buttonBoost + 1.01*(offroadBonus);
-                    gachaLuck = gachaLuck + 4.00^(offroadBonus);
+                    gachaLuck = gachaLuck + 2.3*(offroadBonus);
                 }
                 if (synergy == '4WD' && awdBonus > 0) {
-                    moneyVar = moneyVar + 3.54^(awdBonus);
+                    moneyVar = moneyVar + 2*(awdBonus);
                     buttonBoost = buttonBoost + 0.9*(awdBonus);
-                    gachaLuck = gachaLuck + 3.746^(awdBonus);
+                    gachaLuck = gachaLuck + 2*(awdBonus);
                 }
                 if (synergy == 'FWD' && fwdBonus > 0) {
-                    moneyVar = moneyVar + 3.53^(fwdBonus);
+                    moneyVar = moneyVar + 2*(fwdBonus);
                     buttonBoost = buttonBoost + 0.92*(fwdBonus);
-                    gachaLuck = gachaLuck + 3.73^(fwdBonus);
+                    gachaLuck = gachaLuck + 2*(fwdBonus);
                 }
             }
 
             buttonVar -= buttonBoost;
+
+            let moneyCheck = money;
+            console.log(moneyCheck);
 
             moneyBonus = Math.round((((moneyVar - 265)/100) + 1)*100)/100;
             buttonCooldown = Math.round((buttonVar * slipstreamBonus))*100/100;
@@ -306,6 +317,52 @@ button.addEventListener('click', () => {
             gachaMod = Math.round(((1 + (gachaLuck - 400)) / 300)*100)/100;
             gachaStable = gachaMod;
             carPicker();
+            console.log(money);
+            console.log(moneyDiff);
+            collectContracts();
+            function collectContracts() {
+                contractTrackers.forEach(element => {
+                    if (element.active === true) {
+                        if (element.trackedContract === 'Rookie Collector') {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Lucky Collector' && gachaStable > 1.25) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Rich Collector' && moneyBonus > 2) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Front Facing' && synergies.includes('FWD')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Four Up' && synergies.includes('4WD')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Standardised' && synergies.includes('Standard')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Quick Collector' && buttonCooldown < 12000) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Elite Collector' && eliteTracker === true) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Czech Me Out' && synergies.includes('CZ')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Aussie Aussie Aussie' && synergies.includes('AU')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Need for Swede' && synergies.includes('SE')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Seoul Mates' && synergies.includes('KR')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Rapid Fire' && buttonZero > 0) {
+                            element.currentVal += 1;
+                        } 
+                        let counterUpdate = document.getElementById(element.counterSlot);
+                        let nameTracker = element.trackedContract;
+                        if (element.currentVal >= element.finishVal) {
+                            element.currentVal = element.finalVal;
+                            counterUpdate.innerHTML = "";
+                            completeContract(nameTracker);
+                        } else {
+                            counterUpdate.innerHTML = "Progress: " + element.currentVal + " / " + element.finishVal;
+                        }
+                    }
+                    
+                    
+                })};
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds";
             document.getElementById('earningsBonus').innerHTML = "Earnings Bonus: x" + moneyBonus;
             setTimeout(function () {
@@ -316,6 +373,7 @@ button.addEventListener('click', () => {
 
 export function moneyChanger(transaction) {
     money -= transaction;
+    console.log(money);
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
     document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
 }
@@ -543,6 +601,7 @@ function heatApply(heat) {
 
 // Read file asynchronously
 function carPicker() {
+    moneyCheck = money;
     // Assuming data.json contains your JSON data
     fetch('./js/data.json')
         .then(response => response.json())
@@ -611,8 +670,15 @@ function carPicker() {
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
-            money += Math.round(moneyBonus * (30 + playerPrestigeGarage.length));
+            let moneyBoost = Math.ceil(Math.round(moneyBonus * (30 + (playerPrestigeGarage.length + 1))));
+            console.log(moneyBoost);
+            money += moneyBoost;
+            console.log(money);
             money += Math.floor(Math.random() * 500 * (gachaStable) * (gambleValue));
+            console.log(moneyCheck);
+            moneyDiff = money - moneyCheck;
+            
+            
             let partsDrop = Math.ceil(eliteCount * 0.7);
             for (let r = 0; r < partsDrop; r++) {
                 let toolGachaBase = Math.random();
@@ -637,6 +703,31 @@ function carPicker() {
                 } 
 
             } else { playerGarage.unshift(garageAdd);
+            
+            moneyContracts();
+            function moneyContracts() {
+                contractTrackers.forEach(element => {
+                    if (element.active === true) {
+                        if (element.trackedContract === 'Rookie Earner' || element.trackedContract === 'Amateur Earner' || element.trackedContract === 'Big Earner' || element.trackedContract === "Moneybags") {
+                            console.log(moneyDiff);
+                            element.currentVal += moneyDiff;
+                        }
+                        let counterUpdate = document.getElementById(element.counterSlot);
+                        let nameTracker = element.trackedContract;
+                        if (element.currentVal >= element.finishVal) {
+                            element.currentVal = element.finalVal;
+                            counterUpdate.innerHTML = "";
+                            completeContract(nameTracker);
+                        } else {
+                            counterUpdate.innerHTML = "Progress: " + element.currentVal + " / " + element.finishVal;
+                        }
+                    }
+                    
+                    
+                }
+                )
+            }
+
             document.getElementById('newCardPopup').innerText = "NEW!";}
             document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
         })

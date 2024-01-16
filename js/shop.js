@@ -3,9 +3,11 @@
 import { playerGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 import { money, restockCost, moneyChanger, restockUp, restockDown } from "./app.js";
 import { toolAdder, eliteTools } from "./elite.js";
+import { contractTrackers, completeContract } from "./missions.js";
 
 export let shopContainer;
 let price;
+let shopStock = 9;
 
 let restockButton = document.getElementById('restocker');
 
@@ -45,13 +47,37 @@ restockButton.addEventListener('click', () => {
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         document.getElementById('shopGrid').innerText = "";
         document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
+        contractTrackers.forEach(element => {
+            if (element.active === true) {
+                if (element.trackedContract === 'Refreshing!') {
+                    element.currentVal += 1;
+                } if (element.trackedContract === 'Indecisive') {
+                    element.currentVal += (restockCost - 150);
+                } if (element.trackedContract === 'Just Browsing' && shopStock === 9) {
+                    element.currentVal += 1;
+                } if (element.trackedContract === 'Cashback Champ' && restockCost - 150 <= 0) {
+                    element.currentVal += 1;
+                } 
+                let counterUpdate = document.getElementById(element.counterSlot);
+                        let nameTracker = element.trackedContract;
+                        if (element.currentVal >= element.finishVal) {
+                            element.currentVal = element.finalVal;
+                            counterUpdate.innerHTML = "";
+                            completeContract(nameTracker);
+                        } else {
+                            counterUpdate.innerHTML = "Progress: " + element.currentVal + " / " + element.finishVal;
+                        }
+            }
+            
+        });
+        shopStock = 9;
         populateShop();}
     else {
         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
     }
 });
 
-function ownedButton(id) {
+export function ownedButton(id) {
     let ownedbtn = document.createElement('button');
     ownedbtn.id = id;
     ownedbtn.classList.add('shopbtn'); // Use classList to add a class
@@ -96,6 +122,7 @@ function buyCar(id,pricetag) {
     let buttonID = document.getElementById(id);
     let purchaseCost = pricetag;
     let newCar = id * 1;
+    shopStock -= 1;
     if (purchaseCost <= money) {
         fetch('./js/data.json')
         .then((response) => response.json())
@@ -124,6 +151,7 @@ function prestigeCar(id,pricetag) {
     let buttonID = document.getElementById(id);
     let purchaseCost = pricetag;
     let prestigedCar = id * 1;
+    shopStock -= 1;
     if (purchaseCost <= money) {
         fetch('./js/data.json')
         .then((response) => response.json())
@@ -183,7 +211,8 @@ function populateShop() {
                     shopContainer.append(shopCard);
             }
             let elites = data.cars;
-            const eliteCars = elites.filter(c => c.elite == "yes");
+            const preElites = elites.filter(c => c.elite == "yes");
+            const eliteCars = preElites.filter(c => c.source == "dealer");
             let shopgacha = Math.floor(Math.random() * 100) + 1;
             if (shopgacha < 12) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 1);
@@ -329,7 +358,8 @@ function populateShop() {
                 };
             } else {
             let elites = data.cars;
-            const eliteCars = elites.filter(c => c.elite == "yes");
+            const preElites = elites.filter(c => c.elite == "yes");
+            const eliteCars = preElites.filter(c => c.source == "dealer");
             let shopgacha = Math.floor(Math.random() * 100) + 1;
             if (shopgacha < 12) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 1);
@@ -407,7 +437,8 @@ function populateShop() {
                 };
             } else {
                 let elites = data.cars;
-                const eliteCars = elites.filter(c => c.elite == "yes");
+                const preElites = elites.filter(c => c.elite == "yes");
+                const eliteCars = preElites.filter(c => c.source == "dealer");
                 let shopgacha = Math.random();
                 
                 if (shopgacha > 0.75) {
