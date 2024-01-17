@@ -75,7 +75,7 @@ export const contracts = [
     {
         "missionID": 'c3',
         "missionName": "Lucky Collector",
-        "missionDesc": "Collect 40 times with a Luck Factor over 1.25",
+        "missionDesc": "Collect 40 times with a Luck Factor over 1.2",
         "targetValue": 40,
         "difficulty": 1
     },
@@ -110,7 +110,7 @@ export const contracts = [
     {
         "missionID": 'c8',
         "missionName": "Quick Collector",
-        "missionDesc": "Collect 40 times with a Collect Cooldown under 12 seconds",
+        "missionDesc": "Collect 40 times with a Collect Cooldown under 12.5 seconds",
         "targetValue": 40,
         "difficulty": 1
     },
@@ -257,7 +257,7 @@ export const contracts = [
     {
         "missionID": 'c29',
         "missionName": "I Solve Practical Problems",
-        "missionDesc": "Craft 3 Elite Kits",
+        "missionDesc": "Install 3 Elite Kits",
         "targetValue": 3,
         "difficulty": 3
     },
@@ -274,6 +274,34 @@ export const contracts = [
         "missionDesc": "Install 3 Quick Charge Elite Kits on All-Surface-tyre cars",
         "targetValue": 3,
         "difficulty": 4
+    },
+    {
+        "missionID": 'c32',
+        "missionName": "Golden Era",
+        "missionDesc": "Collect 150 times with 3+ 1990s cars in your hand",
+        "targetValue": 150,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c33',
+        "missionName": "Early Adopter",
+        "missionDesc": "Collect 125 times with 3+ 2020s cars in your hand",
+        "targetValue": 125,
+        "difficulty": 2
+    },
+    {
+        "missionID": 'c34',
+        "missionName": "Back to the Past",
+        "missionDesc": "Collect 175 times with 3+ 1980s cars in your hand",
+        "targetValue": 175,
+        "difficulty": 4
+    },
+    {
+        "missionID": 'c35',
+        "missionName": "Button Blitz",
+        "missionDesc": "Collect 225 times with a Collect Cooldown under 2 seconds",
+        "targetValue": 225,
+        "difficulty": 4
     }
 ];
 
@@ -281,8 +309,8 @@ export const milestones = [
     {
         "milestoneID": 'm1',
         "milestoneName": 'Button Masher',
-        "milestoneDesc": 'Click the Collect button 1,000 times',
-        "targetValue": 1000,
+        "milestoneDesc": 'Click the Collect button 500 times',
+        "targetValue": 500,
         "rewardCar": 910,
         "icon": '',
         "complete": false
@@ -290,8 +318,8 @@ export const milestones = [
     {
         "milestoneID": 'm2',
         "milestoneName": 'Mansion Apartment Shack House',
-        "milestoneDesc": 'Click the Collect button 100,000 times',
-        "targetValue": 100000,
+        "milestoneDesc": 'Click the Collect button 10,000 times',
+        "targetValue": 10000,
         "rewardCar": 924,
         "icon": '',
         "complete": false
@@ -299,8 +327,8 @@ export const milestones = [
     {
         "milestoneID": 'm3',
         "milestoneName": 'Monster Mash',
-        "milestoneDesc": 'Click the Collect button 1,000,000 times',
-        "targetValue": 1000000,
+        "milestoneDesc": 'Click the Collect button 666,666 times',
+        "targetValue": 666666,
         "rewardCar": 926,
         "icon": '',
         "complete": false
@@ -316,9 +344,9 @@ export const milestones = [
     },
     {
         "milestoneID": 'm5',
-        "milestoneName": 'Multimillionaire',
-        "milestoneDesc": 'Have $10,000,000 in your account',
-        "targetValue": 10000000,
+        "milestoneName": 'Filthy Rich',
+        "milestoneDesc": 'Have $50,000,000 in your account',
+        "targetValue": 50000000,
         "rewardCar": 906,
         "icon": '',
         "complete": false
@@ -344,17 +372,17 @@ export const milestones = [
     {
         "milestoneID": 'm8',
         "milestoneName": 'Slot Machine',
-        "milestoneDesc": 'Own 400 cars',
-        "targetValue": 400,
+        "milestoneDesc": 'Own 500 cars',
+        "targetValue": 500,
         "rewardCar": 917,
         "icon": '',
         "complete": false
     },
     {
         "milestoneID": 'm9',
-        "milestoneName": 'Lucky Sevens',
-        "milestoneDesc": '0wn 777 cars',
-        "targetValue": 777,
+        "milestoneName": 'Fully Upgraded Garage',
+        "milestoneDesc": '0wn 969 cars',
+        "targetValue": 969,
         "rewardCar": 902,
         "icon": '',
         "complete": false
@@ -415,13 +443,15 @@ export const milestones = [
     }
 ]
 
-const contractBGColours = ["rgba(60, 179, 113, 0.45)","rgba(0, 0, 255, 0.45)","rgba(255, 165, 0, 0.45)","rgba(238, 130, 238, 0.45)"];
-const controller = new AbortController;
+export const contractBGColours = ["rgba(60, 179, 113, 0.45)","rgba(0, 0, 255, 0.45)","rgba(255, 165, 0, 0.45)","rgba(238, 130, 238, 0.45)"];
+
+
 
 window.onload = populateContracts(), populateStarShop(), populateMilestones;
 
-export function saveParser(st,ms,sc) {
+export function saveParser(st,ms,sc,at) {
     stars = st;
+    contractTrackers = at;
     for (let t = 0; t < milestones.length; t++) {
         if (ms[t].complete === true && milestones[t].complete !== true) {
             milestones[t].complete === true
@@ -449,7 +479,7 @@ export function populateContracts() {
         var contractTab = document.createElement('div');
         let contractReward = document.createElement('span');
         if (contNo === 4) {
-            contractReward.innerHTML = "750 Elite Tools, " + contNo + " Stars";
+            contractReward.innerHTML = "1500 Elite Tools, " + contNo + " Stars";
         } else {
             contractReward.innerHTML = 250 * Math.pow(10, contNo) + " Cash, " + contNo + " Stars";
         };
@@ -463,10 +493,12 @@ export function populateContracts() {
         let contractColour = contractTab.style.backgroundColor;
         let contractContent = contractTab.innerHTML;
         let contractID = contractTab.id;
-        const { signal } = controller;
+        let controller = new AbortController;
+        let { signal } = controller;
         contractTab.addEventListener('click', () => {
-            contractActivator(contractID,newContract,contractContent,contractColour,contractTarget);
-        },{ signal });
+            
+            contractActivator(contractID,newContract,contractContent,contractColour,contractTarget, controller);
+        }, { signal });
         contractContainer.appendChild(contractTab);
     }
 };
@@ -502,9 +534,9 @@ function activateSlot(event) {
     }
 }
 
-export function contractActivator(ID,contract,tab, colour, target) {
+export function contractActivator(ID,contract,tab, colour, target, control) {
     
-    controller.abort();
+    
     let contractid = document.getElementById(ID)
     let openSlots = slotQuantity - activeContracts
     if (openSlots > 0) {
@@ -514,7 +546,7 @@ export function contractActivator(ID,contract,tab, colour, target) {
             if (possibleSlots[s].innerHTML.startsWith('Active')) {
                 let contractSlot = possibleSlots[s]; 
                 contractAdder(contractSlot);
-                contractid.removeEventListener('click', contractActivator);
+                control.abort();
                 break;
             }
         }
@@ -525,8 +557,8 @@ export function contractActivator(ID,contract,tab, colour, target) {
             slot.innerHTML = tab;
             slot.style.backgroundColor = colour;
             let trackerTile = document.getElementById(slotID).nextElementSibling;
-            console.log(trackerTile);
-            trackerTile.innerHTML = "Progress: 0 / " + target;
+            console.log(contractTrackers[trackingSlot].currentVal);
+            trackerTile.innerHTML = "Progress: " + contractTrackers[trackingSlot].currentVal + " / " + target;
             contractTrackers[trackingSlot].finishVal = target;
             contractTrackers[trackingSlot].active = true;
             contractTrackers[trackingSlot].trackedContract = contract.missionName;
@@ -540,7 +572,7 @@ export function completeContract(name) {
     let activeBoxUpater = (contractTrackers.findIndex(c => c.trackedContract === name))  + 1
     console.log(cc);
     if (contracts[cc].difficulty === 4) {
-        let payout = 750;
+        let payout = 1500;
         toolAdder(payout);
     } else {
         let payout = 250 * Math.pow(10, contracts[cc].difficulty);
@@ -557,7 +589,7 @@ export function completeContract(name) {
         var contractTab = document.createElement('div');
         let contractReward = document.createElement('span');
         if (diff === 4) {
-            contractReward.innerHTML = "750 Elite Tools, " + diff + " Stars";
+            contractReward.innerHTML = "1500 Elite Tools, " + diff + " Stars";
         } else {
             contractReward.innerHTML = 250 * Math.pow(10, diff) + " Cash, " + diff + " Stars";
         };
@@ -624,7 +656,7 @@ function starShopPop(car) {
     const shopImg = document.createElement('img');
     shopImg.src = "./assets/cards/" + car.imageID;
     shopCard.appendChild(shopImg);
-    let price = car.rarity * 5;
+    let price = car.rarity * 7;
     if (playerPrestigeGarage.includes(car.carID)) {
         let buttonID = car.carID;
         let ownedTag = ownedButton(buttonID);
@@ -635,7 +667,7 @@ function starShopPop(car) {
         let prestigeTag = starPrestigeButton(buttonID,price);
         shopCard.appendChild(prestigeTag);
     } else {
-        let pricetag = starBuyButton(car.carID, price)
+        let pricetag = starBuyButton(car.carID, price, car.perk)
         shopCard.appendChild(pricetag);
     }
     starContainer.append(shopCard);
@@ -644,11 +676,11 @@ function starShopPop(car) {
 
    
 
-function starBuyButton(id, price) {
+function starBuyButton(id, price, perk) {
     let buybtn = document.createElement('button');
     buybtn.id = id;
     buybtn.classList.add('starbtn'); // Use classList to add a class
-    buybtn.innerHTML = "BUY: " + price + " Stars"
+    buybtn.innerHTML = "BUY: " + price + " Stars - " + perk; 
     buybtn.addEventListener('click', () => {
         buyStarCar(buybtn.id, price);
     });

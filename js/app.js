@@ -3,8 +3,8 @@ import { playerGarage, loadGarage, playerPrestigeGarage, collectionHandDisplay }
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
 import { shopUpgrades, shopgrades } from "./shop.js";
-import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractActivator, populateStarShop } from "./missions.js";
-export var money = 100000000000000000;
+import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractActivator, contractBGColours } from "./missions.js";
+export var money = 100;
 export var buttonClicks = 0;
 let buttonCooldown = 0;
 let moneyBonus = 0;
@@ -105,6 +105,7 @@ document.getElementById('loadButton').addEventListener('click', () => {
     populateText();
     contractStorage = JSON.parse(localStorage.getItem('contracts'));
     activeStorage = JSON.parse(localStorage.getItem('activecont'));
+    console.log(activeStorage);
     starShopStorage = JSON.parse(localStorage.getItem('starcars'));
     milestoneParser = JSON.parse(localStorage.getItem('milestones'));
     starParser = JSON.parse(localStorage.getItem('stars'));
@@ -401,7 +402,7 @@ button.addEventListener('click', () => {
                     if (element.active === true) {
                         if (element.trackedContract === 'Rookie Collector') {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Lucky Collector' && gachaStable > 1.25) {
+                        } if (element.trackedContract === 'Lucky Collector' && gachaStable > 1.2) {
                             element.currentVal += 1;
                         } if (element.trackedContract === 'Rich Collector' && moneyBonus > 2) {
                             element.currentVal += 1;
@@ -411,7 +412,9 @@ button.addEventListener('click', () => {
                             element.currentVal += 1;
                         } if (element.trackedContract === 'Standardised' && synergies.includes('Standard')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Quick Collector' && buttonCooldown < 12000) {
+                        } if (element.trackedContract === 'Quick Collector' && buttonCooldown < 12500) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === 'Button Blitz' && buttonCooldown < 2000) {
                             element.currentVal += 1;
                         } if (element.trackedContract === 'Elite Collector' && eliteTracker === true) {
                             element.currentVal += 1;
@@ -433,7 +436,18 @@ button.addEventListener('click', () => {
                             element.currentVal += 1;
                         } if (element.trackedContract === "P Rank" && synergies.includes('IT')) {
                             element.currentVal += 1;
+                        } if (element.trackedContract === "Golden Era" && synergies.includes('199')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === "Early Adopter" && synergies.includes('202')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === "Back to the Past" && synergies.includes('198')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === "American Rush" && synergies.includes('US')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === "Ruhr of Engines" && synergies.includes('DE')) {
+                            element.currentVal += 1;
                         }
+                        console.log(element.currentVal);
                         let counterUpdate = document.getElementById(element.counterSlot);
                         let nameTracker = element.trackedContract;
                         if (element.currentVal >= element.finishVal) {
@@ -635,20 +649,26 @@ function restoreElite(tools,levels, kits) {
     populateText();
 }
 
-function restoreMissions(contracts,actives,starcars,miles,stars,slots)  {
+function restoreMissions(conts,actives,starcars,miles,stars,slots)  {
     if (stars !== null && (miles !== null || miles > 0)) {
-        saveParser(stars, miles, slots);
+        saveParser(stars, miles, slots, actives);
+        document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
     } if (contracts === null && actives === null && starcars === null) {
         console.log("remix!");
     } else {
-        document.getElementById('contractGrid').innerHTML = contracts;
+        document.getElementById('contractGrid').innerHTML = conts;
         document.getElementById('starShopGrid').innerHTMl = starcars;
 
         let contractClicks = document.getElementsByClassName('contractBox');
-        console.log(contractClicks);
         for (let item of contractClicks) {
             restoreContracts(item);
-        }
+        };
+        for (let item of actives) {
+            if (item.active === true) {
+            console.log(item.currentVal)
+            restoreActives(item);
+            }
+        };
     };
     
 };
@@ -660,10 +680,31 @@ function restoreContracts(ct) {
     let contractColour = ct.style.backgroundColor;
     let contractContent = ct.innerHTML;
     let contractTarget = newContract.targetValue;
-    console.log(newContract);
+    let controller = new AbortController;
+    let { signal } = controller;
     ct.addEventListener('click', () => {
-        contractActivator(contractID,newContract,contractContent,contractColour,contractTarget);
-    },);
+        contractActivator(contractID,newContract,contractContent,contractColour,contractTarget,controller);
+    },{ signal });
+};
+
+function restoreActives(at) {
+    console.log(at);
+    console.log(contracts);
+    let newContract = contracts.find(item => item.missionName === at.trackedContract);
+    let diff = newContract.difficulty;
+    let contractColour = contractBGColours[diff-1];
+    let contractReward = document.createElement('span');
+        if (diff === 4) {
+            contractReward.innerHTML = "750 Elite Tools, " + diff + " Stars";
+        } else {
+            contractReward.innerHTML = 250 * Math.pow(10, diff) + " Cash, " + diff + " Stars";
+        };
+    let contractContent = "<span>" + newContract.missionName + "</span>" + newContract.missionDesc + " - " + contractReward.innerHTML;
+    let contractTarget = newContract.targetValue;
+    let contractID = newContract.missionID;
+    let controller = new AbortController;
+    console.log(newContract);
+    contractActivator(contractID,newContract,contractContent,contractColour,contractTarget,controller);
 };
 
 document.getElementById('synergySwitch').addEventListener('click', () => {
@@ -750,21 +791,45 @@ let shitfuck = document.getElementById('statRefresher');
 shitfuck.addEventListener('click', populateStats);
 
 export function populateStats() {
+    
+    fetch('./js/data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Work with your JSON data here
+            data = data.cars;
+            let eliteStat = 0;
+            let eliteList = data.filter(data => data.elite === "yes")
+            for (const key in eliteList) {
+                if(playerGarage.includes(eliteList[key].carID)) {
+                    eliteStat += 1;
+                }
+    let garageStat = playerGarage.length;
     let statContainer = document.getElementById('statsGrid');
     statContainer.innerHTML = "";
     let moneyTile = document.createElement('div');
     moneyTile.classList.add('statBox');
     moneyTile.id = 'money';
-    console.log(money);
     moneyTile.innerHTML = "Money: $" + money;
-    console.log(moneyTile);
     statContainer.appendChild(moneyTile);
     let clicksTile = document.createElement('div');
     clicksTile.classList.add('statBox');
     clicksTile.id = 'clicks';
     clicksTile.innerHTML = "Button Clicks: " + buttonClicks;
     statContainer.appendChild(clicksTile);
+    let garageTile = document.createElement('div');
+    garageTile.classList.add('statBox');
+    garageTile.id = 'garage';
+    garageTile.innerHTML = "Cars Owned: " + garageStat;
+    statContainer.appendChild(garageTile);
+    let eliteTile = document.createElement('div');
+    eliteTile.classList.add('statBox');
+    eliteTile.id = 'garage';
+    eliteTile.innerHTML = "Elites Owned: " + eliteStat;
+    statContainer.appendChild(eliteTile);
     populateMilestones();
+            };
+        })
+    
 };
 
 // Read file asynchronously

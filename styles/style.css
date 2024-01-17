@@ -120,13 +120,6 @@ h4 {
     text-align: center;
 }
 
-.statBox {
-    position:relative;
-    background-color: black;
-    border-radius: 15px;
-    text-align: center;
-}
-
 .central-elements {
     text-align: center;
     position:center;
@@ -341,7 +334,7 @@ img {
       background-color: rgba(17, 25, 40, 0.23);
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.125);  
-      padding: 20px;  
+      padding: 10px;  
       margin: 5px;
       filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
       display: flex;
@@ -349,7 +342,8 @@ img {
       align-items: center;
       justify-content:center;
       text-align: center;
-      font-size: 18px;
+      font-size: 25px;
+      font-weight: bold;
       cursor: pointer;
 }
 

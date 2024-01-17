@@ -1,6 +1,6 @@
 'use strict';
 
-export let eliteTools = 1000000000000;
+export let eliteTools = 0;
 let maxPerkLevel = 5;
 import { money, moneyChanger } from './app.js';
 import { contractTrackers, completeContract } from "./missions.js";
@@ -59,7 +59,7 @@ export const eliteLevels = [
         "perkID": 7,
         "name": "Slipstream",
         "level": 1,
-        "baseVal": 105,
+        "baseVal": 115,
         "increment": 15
     },
     {
@@ -129,7 +129,7 @@ export const eliteLevels = [
         "perkID": 17,
         "name": "All In",
         "level": 1,
-        "baseVal": 0.3,
+        "baseVal": 0.4,
         "increment": 0.05,
     }
 ];
