@@ -3,7 +3,7 @@ import { playerGarage, loadGarage, playerPrestigeGarage, collectionHandDisplay }
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
 import { shopUpgrades, shopgrades } from "./shop.js";
-import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractActivator, contractBGColours } from "./missions.js";
+import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractActivator, contractBGColours, populateContracts } from "./missions.js";
 export var money = 100;
 export var buttonClicks = 0;
 let buttonCooldown = 0;
@@ -387,7 +387,8 @@ button.addEventListener('click', () => {
                 buttonCooldown = 1000;
                 money += buttonOverflow;
                 if (milestones[12] !== true) {
-                    milestones[12] = true;
+                    console.log("ayo wtf");
+                    milestones[12].complete = true;
                     playerGarage.push(milestones[12].rewardCar);
                 }
             };
@@ -653,8 +654,8 @@ function restoreMissions(conts,actives,starcars,miles,stars,slots)  {
     if (stars !== null && (miles !== null || miles > 0)) {
         saveParser(stars, miles, slots, actives);
         document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
-    } if (contracts === null && actives === null && starcars === null) {
-        console.log("remix!");
+    } if (conts === null && actives === null) {
+        populateContracts();
     } else {
         document.getElementById('contractGrid').innerHTML = conts;
         document.getElementById('starShopGrid').innerHTMl = starcars;
@@ -664,7 +665,7 @@ function restoreMissions(conts,actives,starcars,miles,stars,slots)  {
             restoreContracts(item);
         };
         for (let item of actives) {
-            if (item.active === true) {
+            if (item.active !== null && item.active === true) {
             console.log(item.currentVal)
             restoreActives(item);
             }
@@ -828,7 +829,7 @@ export function populateStats() {
     statContainer.appendChild(eliteTile);
     populateMilestones();
             };
-        })
+        });
     
 };
 
@@ -926,6 +927,31 @@ function carPicker() {
                 } 
             }
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;
+            if (playerGarage.length >= 100 && milestones[6].complete !== true) {
+                milestones[6].complete = true;
+                playerGarage.push(milestones[6].rewardCar);
+            };
+            if (playerGarage.length >= 400 && milestones[7].complete !== true) {
+                milestones[7].complete = true;
+                playerGarage.push(milestones[7].rewardCar);
+            };
+            if (playerGarage.length >= 777 && milestones[8].complete !== true) {
+                milestones[8].complete = true;
+                playerGarage.push(milestones[8].rewardCar);
+            };
+
+            if (eliteCount >= 55 && milestones[9].complete !== true) {
+                milestones[9].complete = true;
+                playerGarage.push(milestones[9].rewardCar);
+            }
+            if (eliteCount >= 137 && milestones[10].complete !== true) {
+                milestones[10].complete = true;
+                playerGarage.push(milestones[10].rewardCar);
+            }
+            if (eliteCount >= 200 && milestones[11].complete !== true) {
+                milestones[11].complete = true;
+                playerGarage.push(milestones[11].rewardCar);
+            }
             if (playerGarage.includes(garageAdd)) {
                 money += Math.round((chosenCar.rarity * chosenCar.rq) * moneyBonus);
                 document.getElementById('cashDisplay').innerText = "Cash: $" + money;
@@ -941,31 +967,7 @@ function carPicker() {
 
             } else { playerGarage.unshift(garageAdd);
 
-                if (playerGarage.length >= 100 && milestones[6].complete !== true) {
-                    milestones[6].complete = true;
-                    playerGarage.push(milestones[6].rewardCar);
-                };
-                if (playerGarage.length >= 400 && milestones[7].complete !== true) {
-                    milestones[7].complete = true;
-                    playerGarage.push(milestones[7].rewardCar);
-                };
-                if (playerGarage.length >= 777 && milestones[8].complete !== true) {
-                    milestones[8].complete = true;
-                    playerGarage.push(milestones[8].rewardCar);
-                };
-
-                if (eliteCount >= 55 && milestones[9].complete !== true) {
-                    milestones[9].complete = true;
-                    playerGarage.push(milestones[9].rewardCar);
-                }
-                if (eliteCount >= 137 && milestones[10].complete !== true) {
-                    milestones[10].complete = true;
-                    playerGarage.push(milestones[10].rewardCar);
-                }
-                if (eliteCount >= 200 && milestones[11].complete !== true) {
-                    milestones[11].complete = true;
-                    playerGarage.push(milestones[11].rewardCar);
-                }
+                
             
             moneyContracts();
             function moneyContracts() {

@@ -470,6 +470,7 @@ export function saveParser(st,ms,sc,at) {
 };
 
 export function populateContracts() {
+    document.getElementById('contractGrid').innerHTML = "";
     document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
     for (let contNo = 1; contNo < 5; contNo++) {
         const contractSelect = contracts.filter(c => c.difficulty === contNo);
@@ -759,9 +760,9 @@ export function populateMilestones() {
                 mileMarker.innerHTML = element.milestoneName + " - " + element.milestoneDesc;
                 
                 milestoneDiv.appendChild(mileMarker);
-            }
-        }
+            };
+        };
         tabPopulator.appendChild(milestoneDiv);
         
     });
-}
+};
