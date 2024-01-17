@@ -123,22 +123,22 @@ button.addEventListener('click', () => {
 
     button.disabled = true;
     buttonClicks += 1;
-    if (buttonClicks >= 1000 && milestones[0].complete !== true)
+    if (buttonClicks >= 500 && milestones[0].complete !== true)
     {
         milestones[0].complete = true;
-        playerGarage.push(milestone[0].rewardCar);
+        playerGarage.push(milestones[0].rewardCar);
         populateMilestones;
     }
-    if (buttonClicks >= 100000 && milestones[1].complete !== true)
+    if (buttonClicks >= 10000 && milestones[1].complete !== true)
     {
         milestones[1].complete = true;
-        playerGarage.push(milestone[1].rewardCar);
+        playerGarage.push(milestones[1].rewardCar);
         populateMilestones;
     }
-    if (buttonClicks >= 1000000 && milestones[2].complete !== true)
+    if (buttonClicks >= 666666 && milestones[2].complete !== true)
     {
         milestones[2].complete = true;
-        playerGarage.push(milestone[2].rewardCar);
+        playerGarage.push(milestones[2].rewardCar);
         populateMilestones;
     }
     document.getElementById('saveWarning').innerText = ""
@@ -397,57 +397,59 @@ button.addEventListener('click', () => {
             carPicker();
             console.log(money);
             console.log(moneyDiff);
+            console.log(synergies);
             collectContracts();
             function collectContracts() {
                 contractTrackers.forEach(element => {
                     if (element.active === true) {
                         if (element.trackedContract === 'Rookie Collector') {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Lucky Collector' && gachaStable > 1.2) {
+                        } else if (element.trackedContract === 'Lucky Collector' && gachaStable > 1.2) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Rich Collector' && moneyBonus > 2) {
+                        } else if (element.trackedContract === 'Rich Collector' && moneyBonus > 2) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Front Facing' && synergies.includes('FWD')) {
+                        } else if (element.trackedContract === 'Front Facing' && synergies.includes('FWD')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Four Up' && synergies.includes('4WD')) {
+                        } else if (element.trackedContract === 'Four Up' && synergies.includes('4WD')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Standardised' && synergies.includes('Standard')) {
+                        } else if (element.trackedContract === 'Standardised' && synergies.includes('Standard')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Quick Collector' && buttonCooldown < 12500) {
+                        } else if (element.trackedContract === 'Quick Collector' && buttonCooldown < 12500) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Button Blitz' && buttonCooldown < 2000) {
+                        } else if (element.trackedContract === 'Button Blitz' && buttonCooldown < 2000) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Elite Collector' && eliteTracker === true) {
+                        } else if (element.trackedContract === 'Elite Collector' && eliteTracker === true) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Czech Me Out' && synergies.includes('CZ')) {
+                        } else if (element.trackedContract === 'Czech Me Out' && synergies.includes('CZ')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Aussie Aussie Aussie' && synergies.includes('AU')) {
+                        } else if (element.trackedContract === 'Aussie Aussie Aussie' && synergies.includes('AU')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Need for Swede' && synergies.includes('SE')) {
+                        } else if (element.trackedContract === 'Need for Swede' && synergies.includes('SE')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Seoul Mates' && synergies.includes('KR')) {
+                        } else if (element.trackedContract === 'Seoul Mates' && synergies.includes('KR')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === 'Rapid Fire' && buttonZero > 0) {
+                        } else if (element.trackedContract === 'Rapid Fire' && buttonZero > 0) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Impossible Isn't French" && synergies.includes('FR')) {
+                        } else if (element.trackedContract === "Impossible Isn't French" && synergies.includes('FR')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Crouching Tiger, Hidden Dragon" && synergies.includes('CN')) {
+                        } else if (element.trackedContract === "Crouching Tiger, Hidden Dragon" && synergies.includes('CN')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "British Racing Green" && synergies.includes('GB')) {
+                        } else if (element.trackedContract === "British Racing Green" && synergies.includes('GB')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "P Rank" && synergies.includes('IT')) {
+                        } else if (element.trackedContract === "P Rank" && synergies.includes('IT')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Golden Era" && synergies.includes('1990s')) {
+                        } else if (element.trackedContract === "Golden Era" && synergies.includes(199)) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Early Adopter" && synergies.includes('2020s')) {
+                        } else if (element.trackedContract === "Early Adopter" && synergies.includes(202)) {
+                            console.log("yee");
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Back to the Past" && synergies.includes('1980s')) {
+                        } else if (element.trackedContract === "Back to the Past" && synergies.includes(198)) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "American Rush" && synergies.includes('US')) {
+                        } else if (element.trackedContract === "American Rush" && synergies.includes('US')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Ruhr of Engines" && synergies.includes('DE')) {
+                        } else if (element.trackedContract === "Ruhr of Engines" && synergies.includes('DE')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "My Other Job is Delivering Tofu" && synergies.includes('JP')) {
+                        } else if (element.trackedContract === "My Other Job is Delivering Tofu" && synergies.includes('JP')) {
                             element.currentVal += 1;
                         }
                         console.log(element.currentVal);
@@ -468,7 +470,7 @@ button.addEventListener('click', () => {
                     milestones[5].complete = true;
                     playerGarage.push(milestones[5].rewardCar);
                 };
-                if (money >= 10000000 && milestones[4].complete !== true) {
+                if (money >= 50000000 && milestones[4].complete !== true) {
                     milestones[4].complete = true;
                     playerGarage.push(milestones[4].rewardCar);
                 };
@@ -658,8 +660,9 @@ function restoreMissions(conts,actives,starcars,miles,stars,slots)  {
     } if (conts === null && actives === null) {
         populateContracts();
     } else {
+        document.getElementById('starShopGrid').innerHTMl = "";
         document.getElementById('contractGrid').innerHTML = conts;
-        document.getElementById('starShopGrid').innerHTMl = starcars;
+        document.getElementById('starShopGrid').innerHTML = starcars;
 
         let contractClicks = document.getElementsByClassName('contractBox');
         for (let item of contractClicks) {
@@ -683,9 +686,10 @@ function restoreContracts(ct) {
     let contractContent = ct.innerHTML;
     let contractTarget = newContract.targetValue;
     let controller = new AbortController;
+    let tracker = null;
     let { signal } = controller;
     ct.addEventListener('click', () => {
-        contractActivator(contractID,newContract,contractContent,contractColour,contractTarget,controller);
+        contractActivator(contractID,newContract,contractContent,contractColour,contractTarget,controller, tracker);
     },{ signal });
 };
 
@@ -718,18 +722,17 @@ function restoreActives(at) {
                     };
                 let contractContent = "<span>" + newContract.missionName + "</span>" + newContract.missionDesc + " - " + contractReward.innerHTML;
                 let contractTarget = newContract.targetValue;
-                console.log(contractTarget);
+                let tracker = at.trackerSlot;
                 let fuckyou = newContract.missionID;
-                console.log(fuckyou);
                 let controller = new AbortController;
-                contractActivator(fuckyou,newContract,contractContent,contractColour,contractTarget,controller);
+                contractActivator(fuckyou,newContract,contractContent,contractColour,contractTarget,controller,tracker);
     }
     
         
     
 };
 
-function contractActivator(ID,contract,tab, colour, target, control) {
+function contractActivator(ID,contract,tab, colour, target, control, track) {
     
     console.log(ID);
     let contractid = document.getElementById(ID)
@@ -739,7 +742,13 @@ function contractActivator(ID,contract,tab, colour, target, control) {
         contractid.innerHTML = "Complete previous contract to refresh.";
         let possibleSlots = document.querySelectorAll('.activeBox');
         for (let s = 0; s < possibleSlots.length; s++) {
-            if (possibleSlots[s].innerHTML.startsWith('Active')) {
+            if (track !== null) {
+                let contractSlot = document.getElementById(track);
+                contractAdder(contractSlot);
+                control.abort();
+                break;
+            }
+            else if (possibleSlots[s].innerHTML.startsWith('Active')) {
                 let contractSlot = possibleSlots[s]; 
                 contractAdder(contractSlot);
                 control.abort();
@@ -1021,17 +1030,30 @@ function carPicker() {
                 } 
 
             } else { playerGarage.unshift(garageAdd);
-
-                
-            
+            }
+            console.log(moneyDiff);
             moneyContracts();
             function moneyContracts() {
+                console.log("pipis");
                 contractTrackers.forEach(element => {
                     if (element.active === true) {
-                        if (element.trackedContract === 'Rookie Earner' || element.trackedContract === 'Amateur Earner' || element.trackedContract === 'Big Earner' || element.trackedContract === "Moneybags") {
+                        console.log(element);
+                        if (element.trackedContract === 'Rookie Earner') {
                             console.log(moneyDiff);
                             element.currentVal += moneyDiff;
-                        }
+                        };
+                        if (element.trackedContract === 'Amateur Earner') {
+                            console.log(moneyDiff);
+                            element.currentVal += moneyDiff;
+                        };
+                        if (element.trackedContract === 'Big Earner') {
+                            console.log(moneyDiff);
+                            element.currentVal += moneyDiff;
+                        };
+                        if (element.trackedContract === 'Moneybags') {
+                            console.log(moneyDiff);
+                            element.currentVal += moneyDiff;
+                        };
                         let counterUpdate = document.getElementById(element.counterSlot);
                         let nameTracker = element.trackedContract;
                         if (element.currentVal >= element.finishVal) {
@@ -1046,10 +1068,11 @@ function carPicker() {
                 }
                 )
             }
+            
 
             
 
-            document.getElementById('newCardPopup').innerText = "NEW!";}
+            document.getElementById('newCardPopup').innerText = "NEW!";
             document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
         })
         .catch(error => {
