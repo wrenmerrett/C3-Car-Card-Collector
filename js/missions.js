@@ -12,7 +12,7 @@ activeSlots.forEach(tab => tab.addEventListener('click', activateSlot));
 console.log(trackerSlots);
 
 export let slotQuantity = 1;
-let activeContracts = 0;
+export let activeContracts = 0;
 export let stars = 0;
 let starRestocker = document.getElementById('starRestock');
 
@@ -536,7 +536,7 @@ function activateSlot(event) {
     }
 }
 
-export function contractActivator(ID,contract,tab, colour, target, control) {
+function contractActivator(ID,contract,tab, colour, target, control) {
     
     
     let contractid = document.getElementById(ID)
@@ -553,7 +553,7 @@ export function contractActivator(ID,contract,tab, colour, target, control) {
             }
         }
         function contractAdder(slot) {
-            activeContracts += 1;
+            activeContractTracker();
             let slotID = slot.id
             let trackingSlot = contractTrackers.findIndex(t => t.trackerSlot === slotID);
             slot.innerHTML = tab;
@@ -564,14 +564,19 @@ export function contractActivator(ID,contract,tab, colour, target, control) {
             contractTrackers[trackingSlot].finishVal = target;
             contractTrackers[trackingSlot].active = true;
             contractTrackers[trackingSlot].trackedContract = contract.missionName;
-        }
-    }
+        };
+    };
     
-}
+};
+
+export function activeContractTracker() {
+    activeContracts += 1;
+};
 
 export function completeContract(name) {
     let cc = contracts.findIndex(c => c.missionName === name);
-    let activeBoxUpater = (contractTrackers.findIndex(c => c.trackedContract === name))  + 1
+    let contractIndex = (contractTrackers.findIndex(c => c.trackedContract === name)) ;
+    let activeBoxUpater = contractIndex + 1;
     console.log(cc);
     if (contracts[cc].difficulty === 4) {
         let payout = 1500;
@@ -583,6 +588,10 @@ export function completeContract(name) {
     }
     stars += contracts[cc].difficulty;
     document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
+    contractTrackers[contractIndex].trackedContract = "";
+    contractTrackers[contractIndex].active = false;
+    contractTrackers[contractIndex].currentVal = 0;
+    contractTrackers[contractIndex].finishVal = 0;
     const contractSelect = contracts.filter(c => c.difficulty === contracts[cc].difficulty);
         let newContract = contractSelect[Math.floor(Math.random() * contractSelect.length)];
         let diff = contracts[cc].difficulty;

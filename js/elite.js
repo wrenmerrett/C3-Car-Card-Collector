@@ -290,7 +290,6 @@ export function craftKit(id,cash,tools) {
                                 let counterUpdate = document.getElementById(element.counterSlot);
                                         let nameTracker = element.trackedContract;
                                         if (element.currentVal >= element.finishVal) {
-                                            element.currentVal = element.finalVal;
                                             counterUpdate.innerHTML = "";
                                             completeContract(nameTracker);
                                         } else {

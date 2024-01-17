@@ -3,7 +3,7 @@ import { playerGarage, loadGarage, playerPrestigeGarage, collectionHandDisplay }
 import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
 import { shopUpgrades, shopgrades } from "./shop.js";
-import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractActivator, contractBGColours, populateContracts } from "./missions.js";
+import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractBGColours, populateContracts, activeContracts, slotQuantity, activeContractTracker } from "./missions.js";
 export var money = 100;
 export var buttonClicks = 0;
 let buttonCooldown = 0;
@@ -437,22 +437,23 @@ button.addEventListener('click', () => {
                             element.currentVal += 1;
                         } if (element.trackedContract === "P Rank" && synergies.includes('IT')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Golden Era" && synergies.includes('199')) {
+                        } if (element.trackedContract === "Golden Era" && synergies.includes('1990s')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Early Adopter" && synergies.includes('202')) {
+                        } if (element.trackedContract === "Early Adopter" && synergies.includes('2020s')) {
                             element.currentVal += 1;
-                        } if (element.trackedContract === "Back to the Past" && synergies.includes('198')) {
+                        } if (element.trackedContract === "Back to the Past" && synergies.includes('1980s')) {
                             element.currentVal += 1;
                         } if (element.trackedContract === "American Rush" && synergies.includes('US')) {
                             element.currentVal += 1;
                         } if (element.trackedContract === "Ruhr of Engines" && synergies.includes('DE')) {
+                            element.currentVal += 1;
+                        } if (element.trackedContract === "My Other Job is Delivering Tofu" && synergies.includes('JP')) {
                             element.currentVal += 1;
                         }
                         console.log(element.currentVal);
                         let counterUpdate = document.getElementById(element.counterSlot);
                         let nameTracker = element.trackedContract;
                         if (element.currentVal >= element.finishVal) {
-                            element.currentVal = element.finalVal;
                             counterUpdate.innerHTML = "";
                             completeContract(nameTracker);
                         } else {
@@ -690,22 +691,76 @@ function restoreContracts(ct) {
 
 function restoreActives(at) {
     console.log(at);
-    console.log(contracts);
-    let newContract = contracts.find(item => item.missionName === at.trackedContract);
-    let diff = newContract.difficulty;
-    let contractColour = contractBGColours[diff-1];
-    let contractReward = document.createElement('span');
-        if (diff === 4) {
-            contractReward.innerHTML = "750 Elite Tools, " + diff + " Stars";
-        } else {
-            contractReward.innerHTML = 250 * Math.pow(10, diff) + " Cash, " + diff + " Stars";
+    
+    if (!('currentVal' in at)) {
+        console.log(at);
+        at['currentVal'] = at.finishVal;
+        console.log('peeman');
+    };
+    if (at.currentVal >= at.finishVal) {
+    at.trackedContract = "";
+    at.active = false;
+    at.currentVal = 0;
+    at.finishVal = 0;
+    } else {
+        console.log(at.currentVal);
+        console.log(at.finishVal);
+                console.log(contracts);
+                let newContract = contracts.find(item => item.missionName === at.trackedContract);
+                console.log(newContract);
+                let diff = newContract.difficulty;
+                let contractColour = contractBGColours[diff-1];
+                let contractReward = document.createElement('span');
+                    if (diff === 4) {
+                        contractReward.innerHTML = "750 Elite Tools, " + diff + " Stars";
+                    } else {
+                        contractReward.innerHTML = 250 * Math.pow(10, diff) + " Cash, " + diff + " Stars";
+                    };
+                let contractContent = "<span>" + newContract.missionName + "</span>" + newContract.missionDesc + " - " + contractReward.innerHTML;
+                let contractTarget = newContract.targetValue;
+                console.log(contractTarget);
+                let fuckyou = newContract.missionID;
+                console.log(fuckyou);
+                let controller = new AbortController;
+                contractActivator(fuckyou,newContract,contractContent,contractColour,contractTarget,controller);
+    }
+    
+        
+    
+};
+
+function contractActivator(ID,contract,tab, colour, target, control) {
+    
+    console.log(ID);
+    let contractid = document.getElementById(ID)
+    console.log(contractid);
+    let openSlots = slotQuantity - activeContracts
+    if (openSlots > 0) {
+        contractid.innerHTML = "Complete previous contract to refresh.";
+        let possibleSlots = document.querySelectorAll('.activeBox');
+        for (let s = 0; s < possibleSlots.length; s++) {
+            if (possibleSlots[s].innerHTML.startsWith('Active')) {
+                let contractSlot = possibleSlots[s]; 
+                contractAdder(contractSlot);
+                control.abort();
+                break;
+            }
+        }
+        function contractAdder(slot) {
+            activeContractTracker();
+            let slotID = slot.id
+            let trackingSlot = contractTrackers.findIndex(t => t.trackerSlot === slotID);
+            slot.innerHTML = tab;
+            slot.style.backgroundColor = colour;
+            let trackerTile = document.getElementById(slotID).nextElementSibling;
+            console.log(contractTrackers[trackingSlot].currentVal);
+            trackerTile.innerHTML = "Progress: " + contractTrackers[trackingSlot].currentVal + " / " + target;
+            contractTrackers[trackingSlot].finishVal = target;
+            contractTrackers[trackingSlot].active = true;
+            contractTrackers[trackingSlot].trackedContract = contract.missionName;
         };
-    let contractContent = "<span>" + newContract.missionName + "</span>" + newContract.missionDesc + " - " + contractReward.innerHTML;
-    let contractTarget = newContract.targetValue;
-    let contractID = newContract.missionID;
-    let controller = new AbortController;
-    console.log(newContract);
-    contractActivator(contractID,newContract,contractContent,contractColour,contractTarget,controller);
+    };
+    
 };
 
 document.getElementById('synergySwitch').addEventListener('click', () => {
@@ -980,7 +1035,6 @@ function carPicker() {
                         let counterUpdate = document.getElementById(element.counterSlot);
                         let nameTracker = element.trackedContract;
                         if (element.currentVal >= element.finishVal) {
-                            element.currentVal = element.finalVal;
                             counterUpdate.innerHTML = "";
                             completeContract(nameTracker);
                         } else {

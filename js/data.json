@@ -4220,7 +4220,7 @@
    "year": 2022,
    "country": "DE",
    "rarity": 7,
-   "rq": 95,
+   "rq": 96,
    "topSpeed": 203,
    "zeroToSixty": 2.9,
    "handling": 89,
@@ -16864,7 +16864,7 @@
    "tyres": "Performance",
    "elite": "yes",
    "perk": "Gambler",
-   "source": "contracts"
+   "source": "milestone"
  },
  {
    "carID": 938,
