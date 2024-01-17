@@ -271,6 +271,20 @@
                 <div id="HeatSinkLevel" class="perkLevel"></div>
                 <div id="HeatSinkBonus" class="perkBonus"></div>
             </div>
+
+            <div id="Time Warp">
+                <h4>Time Warp - strong cooldown bonus for cars older than 1990</h4>
+                <button id="Time Warp" class="levelButton">LEVEL UP</button>
+                <div id="TimeWarpLevel" class="perkLevel"></div>
+                <div id="TimeWarpBonus" class="perkBonus"></div>
+            </div>
+
+            <div id="All In">
+                <h4>All In - adds a portion of Earnings to Luck</h4>
+                <button id="All In" class="levelButton">LEVEL UP</button>
+                <div id="AllInLevel" class="perkLevel"></div>
+                <div id="AllInBonus" class="perkBonus"></div>
+            </div>
         </div>
         
     </div>
@@ -278,7 +292,7 @@
     <div id="Missions" class="tabcontent">
         <h3>Missions</h3>
         <h3>Contracts</h3>
-        <h4 id="ContractMenu">Available Contracts</h4>
+        <h4 id="ContractMenu">Available Contracts - click to activate!</h4>
         <div class="gridContainer" id="contractGrid"></div>
         <h4 id="ActiveContracts">Active Contracts</h4>
         <div class="gridContainer" id="activeGrid">
@@ -293,8 +307,12 @@
         </div>
         <h4>Star Shop</h4>
         <div id="starsDisplay"></div>
+        <button id="starRestock" class="star-restocker">RESTOCK - 1 STAR</button>
         <div class="gridContainer" id="starShopGrid"></div>
         <h3>Milestones</h3>
+        <button id="statRefresher" class="completebtn">Refresh Stat Display</button>
+        <div class="gridContainer" id="statsGrid"></div>
+        <div class="gridContainer" id="milestonesGrid"></div>
     </div>
 
     <script>

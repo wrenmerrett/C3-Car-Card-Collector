@@ -3,6 +3,8 @@
 export let eliteTools = 1000000000000;
 let maxPerkLevel = 5;
 import { money, moneyChanger } from './app.js';
+import { contractTrackers, completeContract } from "./missions.js";
+console.log(money);
 
 const levelButtons = document.querySelectorAll('.levelButton');
 var chosenPerk;
@@ -115,6 +117,20 @@ export const eliteLevels = [
         "level": 1,
         "baseVal": 0.2,
         "increment": 0.1,
+    },
+    {
+        "perkID": 16,
+        "name": "Time Warp",
+        "level": 1,
+        "baseVal": 1,
+        "increment": 0.21,
+    },
+    {
+        "perkID": 17,
+        "name": "All In",
+        "level": 1,
+        "baseVal": 0.3,
+        "increment": 0.05,
     }
 ];
 
@@ -235,7 +251,7 @@ export function craftKit(id,cash,tools) {
                     data = data.cars;
                     let carIndex = id - 1;
                     upgradingCar = data[carIndex];
-                    console.log(upgradingCar);
+                    
                     chosenPerk   = perkChosen[perkChosen.selectedIndex].value;
                     document.getElementById('confirmText').innerHTML = "Confirm applying " + chosenPerk + " (Level " + perkLevel + ") to " + upgradingCar.year + " " + upgradingCar.make + " " + upgradingCar.model + "?";
                    
@@ -262,9 +278,30 @@ export function craftKit(id,cash,tools) {
                         };
     
                         equippedKits.unshift(kitEquip);
+                        contractTrackers.forEach(element => {
+                            if (element.active === true) {
+                                if (element.trackedContract === 'I Solve Practical Problems') {
+                                    element.currentVal += 1;
+                                } if (element.trackedContract === 'Insult to Injury' && chosenPerk === "Overheat" && (upgradingCar.make == "Mazda" || upgradingCar.make == "Zenvo")) {
+                                    element.currentVal += 1;
+                                } if (element.trackedContract === 'Average OEM Business Plan' && chosenPerk === "Quick Charge" && upgradingCar.tyres == "All-Surface") {
+                                    element.currentVal += 1;
+                                }
+                                let counterUpdate = document.getElementById(element.counterSlot);
+                                        let nameTracker = element.trackedContract;
+                                        if (element.currentVal >= element.finishVal) {
+                                            element.currentVal = element.finalVal;
+                                            counterUpdate.innerHTML = "";
+                                            completeContract(nameTracker);
+                                        } else {
+                                            counterUpdate.innerHTML = "Progress: " + element.currentVal + " / " + element.finishVal;
+                                        }
+                            }
+                        })
+                       
                     }
                     
-                    console.log(equippedKits);
+                    
                     menuDiv.style.display = 'none';
                     cancelButton.remove();
                     confirmButton.remove();

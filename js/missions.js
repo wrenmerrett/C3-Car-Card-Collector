@@ -1,9 +1,9 @@
 'use strict';
 
-import { money, moneyChanger } from "./app.js";
+import { buttonClicks, money, moneyChanger, populateStats } from "./app.js";
 import { toolAdder, eliteTools } from "./elite.js";
 import { ownedButton } from "./shop.js";
-import { playerGarage, playerPrestigeGarage } from "./playerGarage.js";
+import { playerGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 
 const activeSlots = document.querySelectorAll('.activeBox');
 const trackerSlots = document.querySelectorAll('.trackerBox');
@@ -11,9 +11,12 @@ activeSlots.forEach(tab => tab.addEventListener('click', activateSlot));
 
 console.log(trackerSlots);
 
-let slotQuantity = 1;
+export let slotQuantity = 1;
 let activeContracts = 0;
-let stars = 50;
+export let stars = 0;
+let starRestocker = document.getElementById('starRestock');
+
+export let slotsActivated = [false, false, false];
 
 export let contractTrackers = [
     {
@@ -65,8 +68,8 @@ export const contracts = [
     {
         "missionID": 'c2',
         "missionName": "Refreshing!",
-        "missionDesc": "Refresh the Dealership 5 times",
-        "targetValue": 5,
+        "missionDesc": "Refresh the Dealership 10 times",
+        "targetValue": 10,
         "difficulty": 1
     },
     {
@@ -93,15 +96,15 @@ export const contracts = [
     {
         "missionID": 'c6',
         "missionName": "Front Facing",
-        "missionDesc": "Collect 60 times with 3+ FWD cars in hand",
-        "targetValue": 60,
+        "missionDesc": "Collect 100 times with 3+ FWD cars in hand",
+        "targetValue": 100,
         "difficulty": 2
     },
     {
         "missionID": 'c7',
         "missionName": "Standardised",
-        "missionDesc": "Collect 60 times with 3+ Standard-tyre cars in hand",
-        "targetValue": 60,
+        "missionDesc": "Collect 100 times with 3+ Standard-tyre cars in hand",
+        "targetValue": 100,
         "difficulty": 2
     },
     {
@@ -114,64 +117,64 @@ export const contracts = [
     {
         "missionID": 'c9',
         "missionName": "Four Up",
-        "missionDesc": "Collect 60 times with 3+ 4WD cars in hand",
-        "targetValue": 60,
+        "missionDesc": "Collect 100 times with 3+ 4WD cars in hand",
+        "targetValue": 100,
         "difficulty": 2
     },
     {
         "missionID": 'c10',
         "missionName": "Elite Collector",
-        "missionDesc": "Collect 80 times with an Elite car in hand",
-        "targetValue": 80,
+        "missionDesc": "Collect 150 times with an Elite car in hand",
+        "targetValue": 150,
         "difficulty": 3
     },
     {
         "missionID": 'c11',
         "missionName": "Czech Me Out",
-        "missionDesc": "Collect 100 times with 3+ Czech cars in hand",
-        "targetValue": 100,
+        "missionDesc": "Collect 175 times with 3+ Czech cars in hand",
+        "targetValue": 175,
         "difficulty": 4
     },
     {
         "missionID": 'c12',
         "missionName": "Amateur Earner",
-        "missionDesc": "Earn $10,000 from collecting",
-        "targetValue": 10000,
+        "missionDesc": "Earn $15,000 from collecting",
+        "targetValue": 15000,
         "difficulty": 2
     },
     {
         "missionID": 'c13',
         "missionName": "Big Earner",
-        "missionDesc": "Earn $50,000 from collecting",
-        "targetValue": 50000,
+        "missionDesc": "Earn $100,000 from collecting",
+        "targetValue": 100000,
         "difficulty": 3
     },
     {
         "missionID": 'c14',
         "missionName": "Moneybags",
-        "missionDesc": "Earn $500,000 from collecting",
-        "targetValue": 500000,
+        "missionDesc": "Earn $750,000 from collecting",
+        "targetValue": 750000,
         "difficulty": 4
     },
     {
         "missionID": 'c15',
         "missionName": "Aussie Aussie Aussie",
-        "missionDesc": "Collect 100 times with 3+ Australian cars in hand",
-        "targetValue": 100,
+        "missionDesc": "Collect 175 times with 3+ Australian cars in hand",
+        "targetValue": 175,
         "difficulty": 4
     },
     {
         "missionID": 'c16',
         "missionName": "Need for Swede",
-        "missionDesc": "Collect 100 times with 3+ Swedish cars in hand",
-        "targetValue": 100,
+        "missionDesc": "Collect 175 times with 3+ Swedish cars in hand",
+        "targetValue": 175,
         "difficulty": 4
     },
     {
         "missionID": 'c17',
         "missionName": "Indecisive",
-        "missionDesc": "Spend $10,000 on Dealership  refreshes",
-        "targetValue": 10000,
+        "missionDesc": "Spend $15,000 on Dealership  refreshes",
+        "targetValue": 15000,
         "difficulty": 2
     },
     {
@@ -184,31 +187,259 @@ export const contracts = [
     {
         "missionID": 'c19',
         "missionName": "Cashback Champ",
-        "missionDesc": "Reduce the Dealership refresh cost to $0 10 times",
-        "targetValue": 10,
+        "missionDesc": "Reduce the Dealership refresh cost to $0 15 times",
+        "targetValue": 15,
         "difficulty": 3
     },
     {
         "missionID": 'c20',
         "missionName": "Seoul Mates",
-        "missionDesc": "Collect 100 times with 3+ South Korean cars in hand",
-        "targetValue": 100,
+        "missionDesc": "Collect 175 times with 3+ South Korean cars in hand",
+        "targetValue": 175,
         "difficulty": 4
     },
     {
         "missionID": 'c21',
         "missionName": "Rapid Fire",
-        "missionDesc": "Activate Double Tap 50 times",
-        "targetValue": 50,
+        "missionDesc": "Activate Double Tap 100 times",
+        "targetValue": 100,
         "difficulty": 3
+    },
+    {
+        "missionID": 'c22',
+        "missionName": "Impossible Isn't French",
+        "missionDesc": "Collect 150 times with 3+ French cars in hand",
+        "targetValue": 150,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c23',
+        "missionName": "Crouching Tiger, Hidden Dragon",
+        "missionDesc": "Collect 175 times with 3+ Chinese cars in hand",
+        "targetValue": 150,
+        "difficulty": 4
+    },
+    {
+        "missionID": 'c24',
+        "missionName": "My Other Job is Delivering Tofu",
+        "missionDesc": "Collect 125 times with 3+ Japanese cars in hand",
+        "targetValue": 125,
+        "difficulty": 2
+    },
+    {
+        "missionID": 'c25',
+        "missionName": "American Rush",
+        "missionDesc": "Collect 125 times with 3+ American cars in hand",
+        "targetValue": 125,
+        "difficulty": 2
+    },
+    {
+        "missionID": 'c26',
+        "missionName": "British Racing Green",
+        "missionDesc": "Collect 175 times with 3+ British cars in hand",
+        "targetValue": 175,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c27',
+        "missionName": "Ruhr of Engines",
+        "missionDesc": "Collect 150 times with 3+ German cars in hand",
+        "targetValue": 150,
+        "difficulty": 2
+    },
+    {
+        "missionID": 'c28',
+        "missionName": "P Rank",
+        "missionDesc": "Collect 175 times with 3+ Italian cars in hand",
+        "targetValue": 175,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c29',
+        "missionName": "I Solve Practical Problems",
+        "missionDesc": "Craft 3 Elite Kits",
+        "targetValue": 3,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c30',
+        "missionName": "Insult to Injury",
+        "missionDesc": "Install an Overheat Elite Kit on a Zenvo or Mazda",
+        "targetValue": 1,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c31',
+        "missionName": "Average OEM Business Plan",
+        "missionDesc": "Install 3 Quick Charge Elite Kits on All-Surface-tyre cars",
+        "targetValue": 3,
+        "difficulty": 4
     }
 ];
 
+export const milestones = [
+    {
+        "milestoneID": 'm1',
+        "milestoneName": 'Button Masher',
+        "milestoneDesc": 'Click the Collect button 1,000 times',
+        "targetValue": 1000,
+        "rewardCar": 910,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm2',
+        "milestoneName": 'Mansion Apartment Shack House',
+        "milestoneDesc": 'Click the Collect button 100,000 times',
+        "targetValue": 100000,
+        "rewardCar": 924,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm3',
+        "milestoneName": 'Monster Mash',
+        "milestoneDesc": 'Click the Collect button 1,000,000 times',
+        "targetValue": 1000000,
+        "rewardCar": 926,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm4',
+        "milestoneName": 'Millionaire',
+        "milestoneDesc": 'Have $1,000,000 in your account',
+        "targetValue": 1000000,
+        "rewardCar": 918,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm5',
+        "milestoneName": 'Multimillionaire',
+        "milestoneDesc": 'Have $10,000,000 in your account',
+        "targetValue": 10000000,
+        "rewardCar": 906,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm6',
+        "milestoneName": 'Ready the Guillotine',
+        "milestoneDesc": 'Have $1 billion in your account',
+        "targetValue": 100000000,
+        "rewardCar": 916,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm7',
+        "milestoneName": 'Gonna Need A Bigger Garage',
+        "milestoneDesc": 'Own 100 cars',
+        "targetValue": 100,
+        "rewardCar": 920,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm8',
+        "milestoneName": 'Slot Machine',
+        "milestoneDesc": 'Own 400 cars',
+        "targetValue": 400,
+        "rewardCar": 917,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm9',
+        "milestoneName": 'Lucky Sevens',
+        "milestoneDesc": '0wn 777 cars',
+        "targetValue": 777,
+        "rewardCar": 902,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm10',
+        "milestoneName": 'Elite Heat Agent',
+        "milestoneDesc": 'Own 55 Elite cars',
+        "targetValue": 55,
+        "rewardCar": 925,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm11',
+        "milestoneName": 'Not Quite 1337',
+        "milestoneDesc": 'Own 137 Elite cars',
+        "targetValue": 137,
+        "rewardCar": 905,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm12',
+        "milestoneName": 'Elite Dangerous',
+        "milestoneDesc": '0wn 200 Elite cars',
+        "targetValue": 200,
+        "rewardCar": 922,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm13',
+        "milestoneName": 'Almost Sub-Zero',
+        "milestoneDesc": 'Have a hand with a Collect Cooldown at the 1-second cap',
+        "targetValue": 1000,
+        "rewardCar": 919,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm14',
+        "milestoneName": 'Stack the Deck',
+        "milestoneDesc": 'Have a hand with a Luck Factor over 3.25',
+        "targetValue": 3.25,
+        "rewardCar": 937,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm15',
+        "milestoneName": 'An Honest Living',
+        "milestoneDesc": 'Have a hand with an Earnings Bonus over 4',
+        "targetValue": 4,
+        "rewardCar": 921,
+        "icon": '',
+        "complete": false
+    }
+]
+
 const contractBGColours = ["rgba(60, 179, 113, 0.45)","rgba(0, 0, 255, 0.45)","rgba(255, 165, 0, 0.45)","rgba(238, 130, 238, 0.45)"];
+const controller = new AbortController;
 
-window.onload = populateContracts(), populateStarShop();
+window.onload = populateContracts(), populateStarShop(), populateMilestones;
 
-function populateContracts() {
+export function saveParser(st,ms,sc) {
+    stars = st;
+    for (let t = 0; t < milestones.length; t++) {
+        if (ms[t].complete === true && milestones[t].complete !== true) {
+            milestones[t].complete === true
+        };
+    };
+    for (let s = 0; s < 4; s++) {
+        if (sc[s] === true && slotsActivated[s] !== true) {
+            slotsActivated[s] = true
+            let slotToActivate = "active" + (s + 2);
+            let chosenSlot = document.getElementById(slotToActivate);
+            chosenSlot.innerHTML = "Active Slot " + (s+2);
+            slotQuantity += 1;
+            chosenSlot.removeEventListener('click', activateSlot);
+        }
+    };
+};
+
+export function populateContracts() {
     document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
     for (let contNo = 1; contNo < 5; contNo++) {
         const contractSelect = contracts.filter(c => c.difficulty === contNo);
@@ -218,9 +449,9 @@ function populateContracts() {
         var contractTab = document.createElement('div');
         let contractReward = document.createElement('span');
         if (contNo === 4) {
-            contractReward.innerHTML = "750 Elite Tools"
+            contractReward.innerHTML = "750 Elite Tools, " + contNo + " Stars";
         } else {
-            contractReward.innerHTML = 250 * Math.pow(10, contNo) + " Cash"
+            contractReward.innerHTML = 250 * Math.pow(10, contNo) + " Cash, " + contNo + " Stars";
         };
         let contractTarget = newContract.targetValue;
         contractTab.id = newContract.missionID;
@@ -232,9 +463,10 @@ function populateContracts() {
         let contractColour = contractTab.style.backgroundColor;
         let contractContent = contractTab.innerHTML;
         let contractID = contractTab.id;
+        const { signal } = controller;
         contractTab.addEventListener('click', () => {
             contractActivator(contractID,newContract,contractContent,contractColour,contractTarget);
-        },);
+        },{ signal });
         contractContainer.appendChild(contractTab);
     }
 };
@@ -248,6 +480,7 @@ function activateSlot(event) {
         slotQuantity += 1;
         chosenSlot.removeEventListener('click', activateSlot);
         moneyChanger(2500);
+        slotsActivated[0] = true;
     }
     if (activatingSlot === 'active3' && money >= 125000 && eliteTools >= 100) {
         
@@ -256,6 +489,7 @@ function activateSlot(event) {
         chosenSlot.removeEventListener('click', activateSlot);
         moneyChanger(125000);
         toolAdder(-100);
+        slotsActivated[1] = true;
     }
     if (activatingSlot === 'active4' && money >= 1000000 && eliteTools >= 1000) {
         
@@ -264,15 +498,15 @@ function activateSlot(event) {
         chosenSlot.removeEventListener('click', activateSlot);
         moneyChanger(1000000);
         toolAdder(-1000);
+        slotsActivated[2] = true;
     }
 }
 
-function contractActivator(ID,contract,tab, colour, target) {
+export function contractActivator(ID,contract,tab, colour, target) {
     
-    
+    controller.abort();
     let contractid = document.getElementById(ID)
     let openSlots = slotQuantity - activeContracts
-    console.log(openSlots);
     if (openSlots > 0) {
         contractid.innerHTML = "Complete previous contract to refresh.";
         let possibleSlots = document.querySelectorAll('.activeBox');
@@ -287,7 +521,6 @@ function contractActivator(ID,contract,tab, colour, target) {
         function contractAdder(slot) {
             activeContracts += 1;
             let slotID = slot.id
-            console.log(contract);
             let trackingSlot = contractTrackers.findIndex(t => t.trackerSlot === slotID);
             slot.innerHTML = tab;
             slot.style.backgroundColor = colour;
@@ -324,9 +557,9 @@ export function completeContract(name) {
         var contractTab = document.createElement('div');
         let contractReward = document.createElement('span');
         if (diff === 4) {
-            contractReward.innerHTML = "750 Elite Tools"
+            contractReward.innerHTML = "750 Elite Tools, " + diff + " Stars";
         } else {
-            contractReward.innerHTML = 250 * Math.pow(10, diff) + " Cash"
+            contractReward.innerHTML = 250 * Math.pow(10, diff) + " Cash, " + diff + " Stars";
         };
         let contractTarget = newContract.targetValue;
         contractTab.id = newContract.missionID;
@@ -348,7 +581,18 @@ export function completeContract(name) {
         refreshedActive.innerHTML ="Active Slot " + activeBoxUpater;
 }
 
-function populateStarShop() {
+starRestocker.addEventListener('click', () => {
+    if (stars > 0) {
+        stars -= 1;
+        document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
+        document.getElementById('starShopGrid').innerText = "";
+        populateStarShop();
+    }
+
+}
+);
+
+export function populateStarShop() {
     fetch('./js/data.json')
         .then((response) => response.json())
         .then((data) => {
@@ -397,6 +641,9 @@ function starShopPop(car) {
     starContainer.append(shopCard);
 }
 
+
+   
+
 function starBuyButton(id, price) {
     let buybtn = document.createElement('button');
     buybtn.id = id;
@@ -407,6 +654,17 @@ function starBuyButton(id, price) {
     });
     return buybtn;
 };
+
+function starPrestigeButton(id, price) {
+    let pbtn = document.createElement('button');
+    pbtn.id = id;
+    pbtn.classList.add('prestigebtn'); // Use classList to add a class
+    pbtn.innerHTML = "PRESTIGE: " + price + " Stars";
+    pbtn.addEventListener('click', () => {
+        prestigeStarCar(pbtn.id, price);
+    });
+    return pbtn;
+}
 
 function buyStarCar(id,pricetag) {
     let buttonID = document.getElementById(id);
@@ -420,4 +678,58 @@ function buyStarCar(id,pricetag) {
     } else {
     }
 
+}
+
+function prestigeStarCar(id,pricetag) {
+    let buttonID = document.getElementById(id);
+    let purchaseCost = pricetag;
+    let prestigedCar = id * 1;
+    if (purchaseCost <= money) {
+        stars -= purchaseCost;
+        document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
+        playerPrestigeGarage.push(prestigedCar);
+        collectionHandDisplay();
+        buttonID.remove();
+    } else {
+        
+    }
+
+}
+
+export function populateMilestones() {
+    let tabPopulator = document.getElementById('milestonesGrid');
+    tabPopulator.innerHTML = "";
+    milestones.forEach(element => {
+        let id = element.milestoneID;
+        
+        
+        const milestoneDiv = document.createElement('div');
+        const milestoneImg = document.createElement('img');
+        milestoneImg.src = "./assets/cards/" + element.rewardCar + ".png";
+        
+        milestoneDiv.append(milestoneImg);
+        if (element.complete === true) {
+            CompletionTag();
+            function CompletionTag() {
+                let completeMarker = document.createElement('button');
+                completeMarker.id = id;
+                completeMarker.classList.add('completebtn'); // Use classList to add a class
+                completeMarker.innerHTML = "COMPLETE - CAR CLAIMED";
+                
+                milestoneDiv.appendChild(completeMarker);
+            }
+        } else {
+            milestoneTag();
+            function milestoneTag() {
+                let mileMarker = document.createElement('button');
+                mileMarker.id = id;
+                mileMarker.classList.add('milebtn'); // Use classList to add a class
+                mileMarker.innerHTML = element.milestoneName + " - " + element.milestoneDesc;
+                
+                milestoneDiv.appendChild(mileMarker);
+            }
+        }
+        tabPopulator.appendChild(milestoneDiv);
+        
+    });
 }

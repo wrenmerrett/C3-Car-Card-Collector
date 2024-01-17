@@ -5,6 +5,7 @@ export var playerPrestigeGarage = [];
 import { button } from "./app.js";
 import { playerHand, getHandCards, handUpdater, handAdder, totalRQ } from "./playerHand.js";
 import { craftKit, equippedKits } from "./elite.js";
+import { contractTrackers, completeContract } from "./missions.js";
 const tabs = document.querySelectorAll('.tab');
 let handSize = playerHand.length;
 var cards;
