@@ -457,6 +457,7 @@ export function saveParser(st,ms,sc,at) {
             milestones[t].complete === true
         };
     };
+    populateMilestones();
     for (let s = 0; s < 4; s++) {
         if (sc[s] === true && slotsActivated[s] !== true) {
             slotsActivated[s] = true
