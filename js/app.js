@@ -921,8 +921,9 @@ function carPicker() {
             data = data.filter(c => c.elite !== "yes");
 
             document.getElementById('luckFactor').innerHTML = "Luck Factor: " + gachaStable;
-            if (gachaStable > 3.25 && milestones[13 !== true]) {
-                milestones[13] = true;
+            console.log(gachaStable);
+            if (gachaStable > 3.25 && milestones[13] !== true) {
+                milestones[13].complete = true;
                 playerGarage.push(milestones[13].rewardCar);
             };
             let basegacha = Math.floor(Math.random() * 100) + 1;
@@ -1030,6 +1031,7 @@ function carPicker() {
                 } 
 
             } else { playerGarage.unshift(garageAdd);
+                document.getElementById('newCardPopup').innerText = "NEW!";
             }
             console.log(moneyDiff);
             moneyContracts();
@@ -1072,7 +1074,7 @@ function carPicker() {
 
             
 
-            document.getElementById('newCardPopup').innerText = "NEW!";
+            
             document.getElementById('dealerCashDisplay').innerText = "Cash: $" + money;
         })
         .catch(error => {
