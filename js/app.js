@@ -4,7 +4,7 @@ import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
 import { shopUpgrades, shopgrades } from "./shop.js";
 import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractBGColours, populateContracts, activeContracts, slotQuantity, activeContractTracker } from "./missions.js";
-export var money = 100;
+export var money = 1000000;
 export var buttonClicks = 0;
 let buttonCooldown = 0;
 let moneyBonus = 0;
@@ -378,7 +378,7 @@ button.addEventListener('click', () => {
             let moneyCheck = money;
             console.log(moneyCheck);
 
-            moneyBonus = Math.round((((moneyVar - 265)/100) + 1)*100)/100;
+            moneyBonus = Math.round((((moneyVar - 265)/90) + 1)*100)/100;
             buttonCooldown = Math.round((buttonVar * slipstreamBonus))*100/100;
             if (buttonZero > 0) {
                 buttonCooldown = 1;
@@ -441,7 +441,6 @@ button.addEventListener('click', () => {
                         } else if (element.trackedContract === "Golden Era" && synergies.includes(199)) {
                             element.currentVal += 1;
                         } else if (element.trackedContract === "Early Adopter" && synergies.includes(202)) {
-                            console.log("yee");
                             element.currentVal += 1;
                         } else if (element.trackedContract === "Back to the Past" && synergies.includes(198)) {
                             element.currentVal += 1;
@@ -451,8 +450,11 @@ button.addEventListener('click', () => {
                             element.currentVal += 1;
                         } else if (element.trackedContract === "My Other Job is Delivering Tofu" && synergies.includes('JP')) {
                             element.currentVal += 1;
-                        }
-                        console.log(element.currentVal);
+                        } else if (element.trackedContract === "Pushing Power" && synergies.includes('RWD')) {
+                            element.currentVal += 1;
+                        } else if (element.trackedContract === "Peak Performance" && synergies.includes('Performance')) {
+                            element.currentVal += 1;
+                        } 
                         let counterUpdate = document.getElementById(element.counterSlot);
                         let nameTracker = element.trackedContract;
                         if (element.currentVal >= element.finishVal) {
@@ -934,10 +936,10 @@ function carPicker() {
             if (gacha < 55) {
                 var carSelection = data.filter(data => data.rarity === 2);
             } else
-            if (gacha < 88) {
+            if (gacha < 85) {
                 var carSelection = data.filter(data => data.rarity === 3);
             } else
-            if (gacha < 115) {
+            if (gacha < 110) {
                 var carSelection = data.filter(data => data.rarity === 4);
             } else
             if (gacha < 155) {

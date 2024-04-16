@@ -5,7 +5,7 @@ import { toolAdder, eliteTools } from "./elite.js";
 import { ownedButton } from "./shop.js";
 import { playerGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
 
-const activeSlots = document.querySelectorAll('.activeBox');
+let activeSlots = document.querySelectorAll('.activeBox');
 const trackerSlots = document.querySelectorAll('.trackerBox');
 activeSlots.forEach(tab => tab.addEventListener('click', activateSlot));
 
@@ -222,15 +222,15 @@ export const contracts = [
     {
         "missionID": 'c24',
         "missionName": "My Other Job is Delivering Tofu",
-        "missionDesc": "Collect 125 times with 3+ Japanese cars in hand",
-        "targetValue": 125,
+        "missionDesc": "Collect 100 times with 3+ Japanese cars in hand",
+        "targetValue": 100,
         "difficulty": 2
     },
     {
         "missionID": 'c25',
         "missionName": "American Rush",
-        "missionDesc": "Collect 125 times with 3+ American cars in hand",
-        "targetValue": 125,
+        "missionDesc": "Collect 100 times with 3+ American cars in hand",
+        "targetValue": 100,
         "difficulty": 2
     },
     {
@@ -285,8 +285,8 @@ export const contracts = [
     {
         "missionID": 'c33',
         "missionName": "Early Adopter",
-        "missionDesc": "Collect 125 times with 3+ 2020s cars in your hand",
-        "targetValue": 125,
+        "missionDesc": "Collect 100 times with 3+ 2020s cars in your hand",
+        "targetValue": 100,
         "difficulty": 2
     },
     {
@@ -302,6 +302,20 @@ export const contracts = [
         "missionDesc": "Collect 225 times with a Collect Cooldown under 2 seconds",
         "targetValue": 225,
         "difficulty": 4
+    },
+    {
+        "missionID": 'c36',
+        "missionName": "Pushing Power",
+        "missionDesc": "Collect 100 times with 3+ RWD cars in hand",
+        "targetValue": 100,
+        "difficulty": 2
+    },
+    {
+        "missionID": 'c37',
+        "missionName": "Peak Performance",
+        "missionDesc": "Collect 100 times with 3+ Performance-tyre cars in hand",
+        "targetValue": 100,
+        "difficulty": 2
     }
 ];
 
@@ -481,9 +495,9 @@ export function populateContracts() {
         var contractTab = document.createElement('div');
         let contractReward = document.createElement('span');
         if (contNo === 4) {
-            contractReward.innerHTML = "1500 Elite Tools, " + contNo + " Stars";
+            contractReward.innerHTML = "1500 Elite Tools, " + (contNo * 2) + " Stars";
         } else {
-            contractReward.innerHTML = 250 * Math.pow(10, contNo) + " Cash, " + contNo + " Stars";
+            contractReward.innerHTML = 250 * Math.pow(10, contNo) + " Cash, " + (contNo * 2) + " Stars";
         };
         let contractTarget = newContract.targetValue;
         contractTab.id = newContract.missionID;
@@ -586,12 +600,13 @@ export function completeContract(name) {
         let moneyReward = payout * -1;
         moneyChanger(moneyReward);
     }
-    stars += contracts[cc].difficulty;
+    stars += (contracts[cc].difficulty * 2);
     document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
     contractTrackers[contractIndex].trackedContract = "";
     contractTrackers[contractIndex].active = false;
     contractTrackers[contractIndex].currentVal = 0;
     contractTrackers[contractIndex].finishVal = 0;
+    activeContracts -= 1;
     const contractSelect = contracts.filter(c => c.difficulty === contracts[cc].difficulty);
         let newContract = contractSelect[Math.floor(Math.random() * contractSelect.length)];
         let diff = contracts[cc].difficulty;
@@ -600,9 +615,9 @@ export function completeContract(name) {
         var contractTab = document.createElement('div');
         let contractReward = document.createElement('span');
         if (diff === 4) {
-            contractReward.innerHTML = "1500 Elite Tools, " + diff + " Stars";
+            contractReward.innerHTML = "1500 Elite Tools, " + (diff * 2) + " Stars";
         } else {
-            contractReward.innerHTML = 250 * Math.pow(10, diff) + " Cash, " + diff + " Stars";
+            contractReward.innerHTML = 250 * Math.pow(10, diff) + " Cash, " + (diff * 2) + " Stars";
         };
         let contractTarget = newContract.targetValue;
         contractTab.id = newContract.missionID;
@@ -614,9 +629,12 @@ export function completeContract(name) {
         let contractColour = contractTab.style.backgroundColor;
         let contractContent = contractTab.innerHTML;
         let contractID = contractTab.id;
+        let controller = new AbortController;
+        let { signal } = controller;
         contractTab.addEventListener('click', () => {
-            contractActivator(contractID,newContract,contractContent,contractColour,contractTarget);
-        }, {once: true});
+            
+            contractActivator(contractID,newContract,contractContent,contractColour,contractTarget, controller);
+        }, { signal });
         contractContainer.replaceWith(contractTab);
         let activeBoxID = "active" + activeBoxUpater
         let refreshedActive = document.getElementById(activeBoxID);
@@ -727,7 +745,7 @@ function prestigeStarCar(id,pricetag) {
     let buttonID = document.getElementById(id);
     let purchaseCost = pricetag;
     let prestigedCar = id * 1;
-    if (purchaseCost <= money) {
+    if (purchaseCost <= stars) {
         stars -= purchaseCost;
         document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
         playerPrestigeGarage.push(prestigedCar);
