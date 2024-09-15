@@ -62,7 +62,7 @@ export function collectionHandDisplay() {
     
 };
 
-// console.log("peenor");
+
 
 export function collectionHandUpdater(indexNo) {
     let idtest = parseInt(indexNo + 1);
@@ -226,7 +226,6 @@ function handleTabClick(event) {
                 let updater = parseInt(img.id);
                 garageCard.appendChild(img);
                 
-                var carIndex = cards.carID - 1;
                 if (cards.elite === "yes") {
                     let perk = cards.perk;
                     garageCard.appendChild(eliteTag(img.id,perk));

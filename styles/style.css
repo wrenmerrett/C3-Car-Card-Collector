@@ -37,6 +37,16 @@ body {
     background-image: url("./missionsBG.jpg");
 }
 
+#Milestones {
+    background-color: black;
+    background-image: url("./milestonesBG.jpg");
+}
+
+#Prestige {
+    background-color: black;
+    background-image: url("./prestigeBG.jpg");
+}
+
 #newestCard {
     margin-left: auto;
     margin-right: auto;
@@ -59,8 +69,8 @@ body, html {
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    font-size: 17px;
-    width: 20%;
+    font-size: 20px;
+    width: 10%;
 }
 
 .garageFilter {
@@ -110,6 +120,7 @@ h4 {
     margin-bottom:0px;
     background-color: #282b2b;
     border-radius: 12px;
+    padding: 5px;
 }
 
 #synergyZone {
@@ -119,6 +130,18 @@ h4 {
     border-radius: 15px;
     text-align: center;
 }
+
+#prestigeZone {
+    width: 15%;
+    background-color: slategray;
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 
 .central-elements {
     text-align: center;
@@ -238,6 +261,25 @@ img {
     list-style: none;
 }
 
+.ptab {
+    font-size: 22px;
+    text-align: center;
+    color: black;
+    font-weight:bold;
+    width: 12%;
+    margin: 2px;
+    margin-block: 5px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 8px;
+    border-width: 0;
+    line-height: 20px;
+    list-style: none;
+}
+
 #unownedGrid {
     filter: grayscale();
     display: grid;
@@ -250,6 +292,14 @@ img {
     filter: grayscale();
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, min(100%/5, max(100%/5))));
+    margin-top: 20px;
+    row-gap: 10px;
+}
+
+#prestigeGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(100%/5, max(100%/5))));
+    position: relative;
     margin-top: 20px;
     row-gap: 10px;
 }
@@ -455,6 +505,23 @@ progress {
     border-radius: 5px;
     cursor: pointer;
     border-radius: 5px;
+    display: flex;
+    visibility: visible;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.unlockedbtn {
+    position: relative;
+    background-color: goldenrod;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    visibility: visible;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -765,6 +832,18 @@ h2 {
     margin-bottom: 20px;
     width: 30%;
     font-size: 20px;
+}
+
+#prestigeButton {
+    font-size: 40px;
+    padding: 5px;
+    color: darkgoldenrod;
+    background-color: black;
+    border: none;
+    font-weight: bolder;
+    display: none;
+    position: relative;
+    align-self: center;
 }
 
 .switch {

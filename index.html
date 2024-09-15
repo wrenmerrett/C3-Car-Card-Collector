@@ -8,6 +8,7 @@
     <script type="module" src="./js/playerGarage.js"></script>
     <script type="module" src="./js/shop.js"></script>
     <script type="module" src="./js/missions.js"></script>
+    <script type="module" src="./js/prestige.js"></script>
 </head>
             <body>
 
@@ -15,7 +16,9 @@
                 <button class="tablink" onclick="openPage('Collection', this, 'dodgerblue')">Collection</button>
                 <button class="tablink" onclick="openPage('Shop', this, 'goldenrod')">Dealership</button>
                 <button class="tablink" onclick="openPage('Stats', this, 'purple')">Elite</button>
-                <button class="tablink" onclick="openPage('Missions', this, 'deeppink')">Missions</button>
+                <button class="tablink" onclick="openPage('Missions', this, 'deeppink')">Contracts</button>
+                <button class="tablink" onclick="openPage('Milestones', this, 'red')">Milestones</button>
+                <button class="tablink" onclick="openPage('Prestige', this, 'green')">Prestige</button>
 
                 <div id="Home" class="tabcontent">
                     <img id="logo" src="./styles/C3LOGO.png">
@@ -289,7 +292,6 @@
     </div>
 
     <div id="Missions" class="tabcontent">
-        <h3>Missions</h3>
         <h3>Contracts</h3>
         <h4 id="ContractMenu">Available Contracts - click to activate!</h4>
         <div class="gridContainer" id="contractGrid"></div>
@@ -308,10 +310,46 @@
         <div id="starsDisplay"></div>
         <button id="starRestock" class="star-restocker">RESTOCK - 1 STAR</button>
         <div class="gridContainer" id="starShopGrid"></div>
+        
+    </div>
+
+    <div id="Milestones" class="tabcontent">
         <h3>Milestones</h3>
         <button id="statRefresher" class="completebtn">Refresh Stat Display</button>
         <div class="gridContainer" id="statsGrid"></div>
         <div class="gridContainer" id="milestonesGrid"></div>
+    </div>
+
+    <div id="Prestige" class="tabcontent">
+        <h3 id="prestigeHeader"></h3>
+        <h4>Want to start over? Hit the Prestige button to reset your garage and cash. Upgrades, Elite Tools and milestone cars will persist, and you will bank Prestige Coins to permanently unlock Elite cars.</h4>
+        <div id="prestigeZone">
+            ENABLE PRESTIGE BUTTON
+            <label class="switch">
+                <input id="prestigeSwitch" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+              
+        </div>
+        <button id="prestigeButton"> 
+            PRESTIGE
+        </button>
+
+        <h3>Prestige Shop</h3>
+        <h4 id="pcoinDisplay"></h4>
+
+        <div>
+            <button id="common" class="ptab">Common</button>
+            <button id="uncommon" class="ptab">Uncommon</button>
+            <button id="rare" class="ptab">Rare</button>
+            <button id="superRare" class="ptab">Super Rare</button>
+            <button id="ultraRare" class="ptab">Ultra Rare</button>
+            <button id="epic" class="ptab">Epic</button>
+            <button id="legendary" class="ptab">Legendary</button>
+            <br>
+            </div>
+            <div class="gridContainer" id="prestigeGrid"></div>
+        
     </div>
 
     <script>

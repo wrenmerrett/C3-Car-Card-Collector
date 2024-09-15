@@ -1,9 +1,10 @@
 'use strict';
 
-import { buttonClicks, money, moneyChanger, populateStats } from "./app.js";
+import { buttonClicks, contractIncrement, money, moneyChanger, populateStats } from "./app.js";
 import { toolAdder, eliteTools } from "./elite.js";
 import { ownedButton } from "./shop.js";
 import { playerGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
+import { bankCoins } from "./prestige.js";
 
 let activeSlots = document.querySelectorAll('.activeBox');
 const trackerSlots = document.querySelectorAll('.trackerBox');
@@ -82,8 +83,8 @@ export const contracts = [
     {
         "missionID": 'c4',
         "missionName": "Rookie Earner",
-        "missionDesc": "Earn $5,000 from collecting",
-        "targetValue": 5000,
+        "missionDesc": "Earn $2,500 from collecting",
+        "targetValue": 2500,
         "difficulty": 1
     },
     {
@@ -316,6 +317,41 @@ export const contracts = [
         "missionDesc": "Collect 100 times with 3+ Performance-tyre cars in hand",
         "targetValue": 100,
         "difficulty": 2
+    },
+    {
+        "missionID": 'c38',
+        "missionName": "American Pie",
+        "missionDesc": "Collect 150 times with 3+ Chevrolet cars in hand",
+        "targetValue": 150,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c39',
+        "missionName": "Absolut Attack",
+        "missionDesc": "Collect 175 times with 3+ Koenigsegg cars in hand",
+        "targetValue": 175,
+        "difficulty": 4
+    },
+    {
+        "missionID": 'c40',
+        "missionName": "The Bond's Name",
+        "missionDesc": "Collect 150 times with 3+ Aston Martin cars in hand",
+        "targetValue": 150,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c41',
+        "missionName": "Vorsprung durch Technik",
+        "missionDesc": "Collect 150 times with 3+ Audi cars in hand",
+        "targetValue": 100,
+        "difficulty": 3
+    },
+    {
+        "missionID": 'c42',
+        "missionName": "The Ultimate Driving Machine",
+        "missionDesc": "Collect 150 times with 3+ BMW cars in hand",
+        "targetValue": 150,
+        "difficulty": 3
     }
 ];
 
@@ -395,7 +431,7 @@ export const milestones = [
     {
         "milestoneID": 'm9',
         "milestoneName": 'Fully Upgraded Garage',
-        "milestoneDesc": '0wn 969 cars',
+        "milestoneDesc": 'Own 969 cars',
         "targetValue": 969,
         "rewardCar": 902,
         "icon": '',
@@ -422,7 +458,7 @@ export const milestones = [
     {
         "milestoneID": 'm12',
         "milestoneName": 'Elite Dangerous',
-        "milestoneDesc": '0wn 200 Elite cars',
+        "milestoneDesc": 'Own 200 Elite cars',
         "targetValue": 200,
         "rewardCar": 922,
         "icon": '',
@@ -452,6 +488,87 @@ export const milestones = [
         "milestoneDesc": 'Have a hand with an Earnings Bonus over 4',
         "targetValue": 4,
         "rewardCar": 921,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm16',
+        "milestoneName": 'Permanent Marker',
+        "milestoneDesc": 'Permanently unlock 5 cars',
+        "targetValue": 5,
+        "rewardCar": 1290,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm17',
+        "milestoneName": 'Permanent Record',
+        "milestoneDesc": 'Permanently unlock 20 cars',
+        "targetValue": 20,
+        "rewardCar": 1276,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm18',
+        "milestoneName": 'Eternal',
+        "milestoneDesc": 'Permanently unlock 100 cars',
+        "targetValue": 100,
+        "rewardCar": 1287,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm19',
+        "milestoneName": 'Tinkerer',
+        "milestoneDesc": 'Upgrade Elite Perks 5 times',
+        "targetValue": 5,
+        "rewardCar": 1300,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm20',
+        "milestoneName": 'Perked Up',
+        "milestoneDesc": 'Upgrade Elite Perks 15 times',
+        "targetValue": 15,
+        "rewardCar": 1347,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm21',
+        "milestoneName": 'Perkaholic',
+        "milestoneDesc": 'Upgrade Elite Perks 50 times',
+        "targetValue": 50,
+        "rewardCar": 1329,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm22',
+        "milestoneName": 'Part-Timer',
+        "milestoneDesc": 'Complete 5 Contracts',
+        "targetValue": 5,
+        "rewardCar": 1307,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm23',
+        "milestoneName": 'Obligated',
+        "milestoneDesc": 'Complete 20 Contracts',
+        "targetValue": 20,
+        "rewardCar": 1310,
+        "icon": '',
+        "complete": false
+    },
+    {
+        "milestoneID": 'm24',
+        "milestoneName": 'Contract Killer',
+        "milestoneDesc": 'Complete 100 Contracts',
+        "targetValue": 100,
+        "rewardCar": 1238,
         "icon": '',
         "complete": false
     }
@@ -607,6 +724,7 @@ export function completeContract(name) {
     contractTrackers[contractIndex].currentVal = 0;
     contractTrackers[contractIndex].finishVal = 0;
     activeContracts -= 1;
+    contractIncrement();
     const contractSelect = contracts.filter(c => c.difficulty === contracts[cc].difficulty);
         let newContract = contractSelect[Math.floor(Math.random() * contractSelect.length)];
         let diff = contracts[cc].difficulty;
@@ -744,11 +862,13 @@ function buyStarCar(id,pricetag) {
 function prestigeStarCar(id,pricetag) {
     let buttonID = document.getElementById(id);
     let purchaseCost = pricetag;
+    let rarity = pricetag / 7;
     let prestigedCar = id * 1;
     if (purchaseCost <= stars) {
         stars -= purchaseCost;
         document.getElementById('starsDisplay').innerHTML = "Stars: " + stars;
         playerPrestigeGarage.push(prestigedCar);
+        bankCoins(rarity);
         collectionHandDisplay();
         buttonID.remove();
     } else {

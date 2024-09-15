@@ -4,7 +4,8 @@ import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
 import { shopUpgrades, shopgrades } from "./shop.js";
 import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractBGColours, populateContracts, activeContracts, slotQuantity, activeContractTracker } from "./missions.js";
-export var money = 1000000;
+import {playerPrestigeBank,playerPrestigeCoins,playerPrestigeLevel, playerPermGarage, restorePrestige} from "./prestige.js";
+export var money = 100;
 export var buttonClicks = 0;
 let buttonCooldown = 0;
 let moneyBonus = 0;
@@ -27,6 +28,12 @@ let starShopStorage;
 let milestoneParser;
 let starParser;
 let slotsParser;
+let completedContracts = 0;
+let eliteUpgraded = 0;
+let bankStorage;
+let coinsStorage;
+let levelStorage;
+let permStorage;
 let rqLimit = 600;
 let heatLevel = 0;
 let synergies;
@@ -73,6 +80,7 @@ document.getElementById('saveButton').addEventListener('click', () => {
     localStorage.setItem('etools', JSON.stringify(eliteTools));
     localStorage.setItem('elevels', JSON.stringify(eliteLevels));
     localStorage.setItem('kits', JSON.stringify(equippedKits));
+    localStorage.setItem('upgradesDone',JSON.stringify(eliteUpgraded));
     localStorage.setItem('shopUpgrades', JSON.stringify(shopUpgrades));
     localStorage.setItem('contracts', JSON.stringify(contractStorage));
     localStorage.setItem('activecont', JSON.stringify(contractTrackers));
@@ -80,7 +88,12 @@ document.getElementById('saveButton').addEventListener('click', () => {
     localStorage.setItem('milestones', JSON.stringify(milestones));
     localStorage.setItem('stars', JSON.stringify(stars));
     localStorage.setItem('clicks', JSON.stringify(buttonClicks));
+    localStorage.setItem('completedContracts',JSON.stringify(completedContracts));
     localStorage.setItem('contractSlots', JSON.stringify(slotsActivated));
+    localStorage.setItem('permGarage', JSON.stringify(playerPermGarage));
+    localStorage.setItem('prestigeBank', JSON.stringify(playerPrestigeBank));
+    localStorage.setItem('prestigeCoins',JSON.stringify(playerPrestigeCoins));
+    localStorage.setItem('prestigeLevel',JSON.stringify(playerPrestigeLevel));
     document.getElementById('saveWarning').innerText = "Game saved."
 })
 
@@ -101,17 +114,23 @@ document.getElementById('loadButton').addEventListener('click', () => {
     storedTools = JSON.parse(localStorage.getItem('etools'));
     eliteStorage = JSON.parse(localStorage.getItem('elevels'));
     kitStorage = JSON.parse(localStorage.getItem('kits'));
+    eliteUpgraded = JSON.parse(localStorage.getItem('upgradesDone'));
     restoreElite(storedTools, eliteStorage, kitStorage);
     populateText();
     contractStorage = JSON.parse(localStorage.getItem('contracts'));
     activeStorage = JSON.parse(localStorage.getItem('activecont'));
-    console.log(activeStorage);
+    completedContracts = JSON.parse(localStorage.getItem('completedContracts'));
     starShopStorage = JSON.parse(localStorage.getItem('starcars'));
     milestoneParser = JSON.parse(localStorage.getItem('milestones'));
     starParser = JSON.parse(localStorage.getItem('stars'));
     buttonClicks = JSON.parse(localStorage.getItem('clicks'));
     slotsParser = JSON.parse(localStorage.getItem('contractSlots'));
     restoreMissions(contractStorage, activeStorage, starShopStorage, milestoneParser, starParser,slotsParser);
+    permStorage = JSON.parse(localStorage.getItem('permGarages'));
+    bankStorage = JSON.parse(localStorage.getItem('prestigeBank'));
+    coinsStorage = JSON.parse(localStorage.getItem('prestigeCoins'));
+    levelStorage = JSON.parse(localStorage.getItem('prestigeLevel'));
+    restorePrestige( bankStorage,coinsStorage,levelStorage,permStorage);
     document.getElementById('saveWarning').innerText = "Game loaded."
 })
 
@@ -126,18 +145,21 @@ button.addEventListener('click', () => {
     if (buttonClicks >= 500 && milestones[0].complete !== true)
     {
         milestones[0].complete = true;
+        playerPermGarage.push(milestones[0].rewardCar);
         playerGarage.push(milestones[0].rewardCar);
         populateMilestones;
     }
     if (buttonClicks >= 10000 && milestones[1].complete !== true)
     {
         milestones[1].complete = true;
+        playerPermGarage.push(milestones[1].rewardCar);
         playerGarage.push(milestones[1].rewardCar);
         populateMilestones;
     }
     if (buttonClicks >= 666666 && milestones[2].complete !== true)
     {
         milestones[2].complete = true;
+        playerPermGarage.push(milestones[2].rewardCar);
         playerGarage.push(milestones[2].rewardCar);
         populateMilestones;
     }
@@ -387,8 +409,8 @@ button.addEventListener('click', () => {
                 buttonCooldown = 1000;
                 money += buttonOverflow;
                 if (milestones[12] !== true) {
-                    console.log("ayo wtf");
                     milestones[12].complete = true;
+                    playerPermGarage.push(milestones[12].rewardCar);
                     playerGarage.push(milestones[12].rewardCar);
                 }
             };
@@ -454,6 +476,16 @@ button.addEventListener('click', () => {
                             element.currentVal += 1;
                         } else if (element.trackedContract === "Peak Performance" && synergies.includes('Performance')) {
                             element.currentVal += 1;
+                        } else if (element.trackedContract === "American Pie" && synergies.includes('Chevrolet')) {
+                            element.currentVal += 1;
+                        } else if (element.trackedContract === "Absolut Attack" && synergies.includes('Koenigsegg')) {
+                            element.currentVal += 1;
+                        } else if (element.trackedContract === "The Bond's Name" && synergies.includes('Aston Martin')) {
+                            element.currentVal += 1;
+                        } else if (element.trackedContract === "Vorsprung durch Technik" && synergies.includes('Audi')) {
+                            element.currentVal += 1;
+                        } else if (element.trackedContract === "The Ultimate Driving Machine" && synergies.includes('BMW')) {
+                            element.currentVal += 1;
                         } 
                         let counterUpdate = document.getElementById(element.counterSlot);
                         let nameTracker = element.trackedContract;
@@ -470,14 +502,17 @@ button.addEventListener('click', () => {
 
                 if (money >= 1000000000 && milestones[5].complete !== true) {
                     milestones[5].complete = true;
+                    playerPermGarage.push(milestones[5].rewardCar);
                     playerGarage.push(milestones[5].rewardCar);
                 };
                 if (money >= 50000000 && milestones[4].complete !== true) {
                     milestones[4].complete = true;
+                    playerPermGarage.push(milestones[4].rewardCar);
                     playerGarage.push(milestones[4].rewardCar);
                 };
                 if (money >= 1000000 && milestones[3].complete !== true) {
                     milestones[3].complete = true;
+                    playerPermGarage.push(milestones[3].rewardCar);
                     playerGarage.push(milestones[3].rewardCar);
                 };
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds";
@@ -485,6 +520,7 @@ button.addEventListener('click', () => {
 
             if (moneyBonus >= 4 && milestones[14].complete !== true) {
                 milestones[14].complete = true;
+                playerPermGarage.push(milestones[14].rewardCar);
                 playerGarage.push(milestones[14].rewardCar);
             };
             setTimeout(function () {
@@ -498,14 +534,17 @@ export function moneyChanger(transaction) {
     console.log(money);
     if (money >= 1000000000 && milestones[5].complete !== true) {
         milestones[5].complete = true;
+        playerPermGarage.push(milestones[5].rewardCar);
         playerGarage.push(milestones[5].rewardCar);
     };
     if (money >= 10000000 && milestones[4].complete !== true) {
         milestones[4].complete = true;
+        playerPermGarage.push(milestones[4].rewardCar);
         playerGarage.push(milestones[4].rewardCar);
     };
     if (money >= 1000000 && milestones[3].complete !== true) {
         milestones[3].complete = true;
+        playerPermGarage.push(milestones[3].rewardCar);
         playerGarage.push(milestones[3].rewardCar);
     };
     
@@ -618,7 +657,7 @@ function buyCar(id,pricetag) {
 
 }
 
-function prestigeCar(id,pricetag) {
+function prestigeCar(id,pricetag,rarity) {
     let buttonID = document.getElementById(id);
     let purchaseCost = pricetag;
     let prestigedCar = id * 1;
@@ -629,6 +668,7 @@ function prestigeCar(id,pricetag) {
         restockDown(reimburse);
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerPrestigeGarage.push(prestigedCar);
+        bankCoins(rarity);
         buttonID.remove();
     } else {
         document.getElementById("brokeMessage").innerText = "Come back when you're a little... richer!";
@@ -854,8 +894,16 @@ function heatApply(heat) {
     
 };
 
-let shitfuck = document.getElementById('statRefresher');
-shitfuck.addEventListener('click', populateStats);
+export function contractIncrement(){
+    completedContracts += 1;
+};
+
+export function perkIncrement(){
+    eliteUpgraded += 1;
+}
+
+let statButton = document.getElementById('statRefresher');
+statButton.addEventListener('click', populateStats);
 
 export function populateStats() {
     
@@ -870,7 +918,61 @@ export function populateStats() {
                 if(playerGarage.includes(eliteList[key].carID)) {
                     eliteStat += 1;
                 }
+    let permStat;
     let garageStat = playerGarage.length;
+    if (playerPermGarage != null) {
+         permStat = playerPermGarage.length;
+    } else {
+        permStat = 0;
+    }
+    
+    if (permStat >= 100 && milestones[18].complete !== true) {
+        milestones[18].complete = true;
+        playerPermGarage.push(milestones[18].rewardCar);
+        playerGarage.push(milestones[18].rewardCar);
+    };
+    if (permStat >= 20 && milestones[17].complete !== true) {
+        milestones[17].complete = true;
+        playerPermGarage.push(milestones[17].rewardCar);
+        playerGarage.push(milestones[17].rewardCar);
+    };
+    if (permStat >= 5 && milestones[16].complete !== true) {
+        milestones[16].complete = true;
+        playerPermGarage.push(milestones[16].rewardCar);
+        playerGarage.push(milestones[16].rewardCar);
+    };
+    let contractStat = completedContracts;
+    if (contractStat >= 100 && milestones[24].complete !== true) {
+        milestones[24].complete = true;
+        playerPermGarage.push(milestones[24].rewardCar);
+        playerGarage.push(milestones[24].rewardCar);
+    };
+    if (contractStat >= 20 && milestones[20].complete !== true) {
+        milestones[20].complete = true;
+        playerPermGarage.push(milestones[20].rewardCar);
+        playerGarage.push(milestones[20].rewardCar);
+    };
+    if (contractStat >= 5 && milestones[19].complete !== true) {
+        milestones[19].complete = true;
+        playerPermGarage.push(milestones[19].rewardCar);
+        playerGarage.push(milestones[19].rewardCar);
+    };
+    let kitStat = eliteUpgraded;
+    if (kitStat >= 50 && milestones[21].complete !== true) {
+        milestones[21].complete = true;
+        playerPermGarage.push(milestones[21].rewardCar);
+        playerGarage.push(milestones[21].rewardCar);
+    };
+    if (kitStat >= 15 && milestones[20].complete !== true) {
+        milestones[20].complete = true;
+        playerPermGarage.push(milestones[20].rewardCar);
+        playerGarage.push(milestones[20].rewardCar);
+    };
+    if (kitStat >= 5 && milestones[19].complete !== true) {
+        milestones[19].complete = true;
+        playerPermGarage.push(milestones[19].rewardCar);
+        playerGarage.push(milestones[19].rewardCar);
+    };
     let statContainer = document.getElementById('statsGrid');
     statContainer.innerHTML = "";
     let moneyTile = document.createElement('div');
@@ -893,6 +995,21 @@ export function populateStats() {
     eliteTile.id = 'garage';
     eliteTile.innerHTML = "Elites Owned: " + eliteStat;
     statContainer.appendChild(eliteTile);
+    let permTile = document.createElement('div');
+    permTile.classList.add('statBox');
+    permTile.id = 'garage';
+    permTile.innerHTML = "Cars Permanently Unlocked: " + permStat;
+    statContainer.appendChild(permTile);
+    let kitTile = document.createElement('div');
+    kitTile.classList.add('statBox');
+    kitTile.id = 'garage';
+    kitTile.innerHTML = "Elite Perks Upgraded: " + kitStat;
+    statContainer.appendChild(kitTile);
+    let contractTile = document.createElement('div');
+    contractTile.classList.add('statBox');
+    contractTile.id = 'garage';
+    contractTile.innerHTML = "Contracts Completed: " + contractStat;
+    statContainer.appendChild(contractTile);
     populateMilestones();
             };
         });
@@ -926,6 +1043,7 @@ function carPicker() {
             console.log(gachaStable);
             if (gachaStable > 3.25 && milestones[13] !== true) {
                 milestones[13].complete = true;
+                playerPermGarage.push(milestones[13].rewardCar);
                 playerGarage.push(milestones[13].rewardCar);
             };
             let basegacha = Math.floor(Math.random() * 100) + 1;
@@ -996,27 +1114,33 @@ function carPicker() {
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             if (playerGarage.length >= 100 && milestones[6].complete !== true) {
                 milestones[6].complete = true;
+                playerPermGarage.push(milestones[6].rewardCar);
                 playerGarage.push(milestones[6].rewardCar);
             };
             if (playerGarage.length >= 400 && milestones[7].complete !== true) {
                 milestones[7].complete = true;
+                playerPermGarage.push(milestones[7].rewardCar);
                 playerGarage.push(milestones[7].rewardCar);
             };
             if (playerGarage.length >= 777 && milestones[8].complete !== true) {
                 milestones[8].complete = true;
+                playerPermGarage.push(milestones[8].rewardCar);
                 playerGarage.push(milestones[8].rewardCar);
             };
 
             if (eliteCount >= 55 && milestones[9].complete !== true) {
                 milestones[9].complete = true;
+                playerPermGarage.push(milestones[9].rewardCar);
                 playerGarage.push(milestones[9].rewardCar);
             }
             if (eliteCount >= 137 && milestones[10].complete !== true) {
                 milestones[10].complete = true;
+                playerPermGarage.push(milestones[10].rewardCar);
                 playerGarage.push(milestones[10].rewardCar);
             }
             if (eliteCount >= 200 && milestones[11].complete !== true) {
                 milestones[11].complete = true;
+                playerPermGarage.push(milestones[11].rewardCar);
                 playerGarage.push(milestones[11].rewardCar);
             }
             if (playerGarage.includes(garageAdd)) {
@@ -1029,7 +1153,9 @@ function carPicker() {
                 }
                 else if (prestigeRoll < dupePrestigeChance && prestigeDupe === true) {
                     playerPrestigeGarage.push(garageAdd);
+                    bankCoins(chosenCar.rarity);
                     document.getElementById('newCardPopup').innerText = "PRESTIGE DUPE!";
+
                 } 
 
             } else { playerGarage.unshift(garageAdd);
