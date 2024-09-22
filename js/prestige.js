@@ -4,8 +4,8 @@ import {money, moneyChanger} from "./app.js"
 import { playerGarage, loadGarage, collectionHandDisplay} from "./playerGarage.js";
 import { handLoader, getHandCards, playerHand } from "./playerHand.js";
 
-export var playerPermGarage = [];
-export var playerPrestigeCoins = 100;
+export var playerPermGarage = [4, 76, 42, 47, 18];
+export var playerPrestigeCoins = 0;
 export var playerPrestigeBank = 0;
 export var playerPrestigeLevel = 0;
 const prestigeShopTabs = document.querySelectorAll('.ptab');
@@ -32,7 +32,7 @@ function buttonOn(){
 function prestigePlayer(){
     let moneyReset = money - 100;
     moneyChanger(moneyReset);
-    let baseGarage = [4, 76, 42, 47, 18].concat(playerPermGarage);
+    let baseGarage = playerPermGarage;
     let basePrestigeGarage = [];
     loadGarage(baseGarage,basePrestigeGarage);
     let hand = [];
@@ -50,12 +50,22 @@ function prestigePlayer(){
 };
 
 export function restorePrestige(bank,coins,level,garage){
+    if (playerPermGarage == null) {
+        playerPermGarage = [4, 76, 42, 47, 18];
+    } else
     playerPermGarage = garage;
     playerPrestigeBank = bank;
     playerPrestigeCoins = coins;
     playerPrestigeLevel = level;
     coinCounter.innerHTML = "Prestige Bank: " + playerPrestigeBank + " - Prestige Coins: " + playerPrestigeCoins;
     headText.innerHTML = "Prestige Level " + playerPrestigeLevel;
+};
+
+export function unbreakPrestige(){
+    if (playerPermGarage == null) {
+        playerPermGarage = [4, 76, 42, 47, 18];
+    };
+    console.log(playerPermGarage.length);
 };
 
 let coinCounter = document.getElementById("pcoinDisplay");

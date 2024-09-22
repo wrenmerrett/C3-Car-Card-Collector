@@ -13,6 +13,7 @@
             <body>
 
                 <button class="tablink" onclick="openPage('Home', this, 'darkslategrey')" id="defaultOpen">Play</button>
+                <button class="tablink" onclick="openPage('Guide', this, 'blue')" id="defaultOpen">Guide</button>
                 <button class="tablink" onclick="openPage('Collection', this, 'dodgerblue')">Collection</button>
                 <button class="tablink" onclick="openPage('Shop', this, 'goldenrod')">Dealership</button>
                 <button class="tablink" onclick="openPage('Stats', this, 'purple')">Elite</button>
@@ -27,9 +28,22 @@
                     <button id="loadButton" class="uiButton">LOAD</button>
                     <div id="saveWarning"></div>
                 <b>
+                    
+
                         <div class="central-elements">
                             <h2 id="cashDisplay"></h2>
                             <h2 id="eliteDisplay"></h2>
+                            <div class="gridContainer" id="activeGrid">
+                                <div id="active1" class="activeBox">Active Slot 1</div>
+                                <div id="at1" class="trackerBox"></div>
+                                <div id="active2" class="activeBox">Unlock Active Slot 2 - $25,000</div>
+                                <div id="at2" class="trackerBox"></div>
+                                <div id="active3" class="activeBox">Unlock Active Slot 3 - $125,000, 100 Elite Tools</div>
+                                <div id="at3" class="trackerBox"></div>
+                                <div id="active4" class="activeBox">Unlock Active Slot 4 - $1,000,000, 1,000 Elite Tools</div>
+                                <div id="at4" class="trackerBox"></div>
+                            </div>
+                                
                             <div id="heatMeter">
                                 <h2 id="heatMeter">HEAT</h2>
                                 <div id="heatText"></div>
@@ -40,7 +54,10 @@
                                   </label>
                                 <select id="heatSelector">
                                 </select>
+                                
                             </div>
+                            
+                            
                             <h2>YOUR HAND</h2>
                             <table class="cardTable">
                                 <tr>
@@ -72,6 +89,86 @@
                         </div>
                 </b>
                 </div>
+
+                <div id="Guide" class="tabcontent">
+                    <h3>How to Play</h3>
+                    <body>Welcome to C3 - the Car Card Collector.</body>
+                    <br>
+                    <img id="example"src="./assets/cards/1000.png">
+                    <br>
+                    <body>This is a card. You start with the 5 basic ones you see in the Play tab,
+                        and can collect more by pressing the COLLECT button.
+                    </body>
+                    <br>
+                    <br>
+                    <body>These cars go to your Collection tab, where you can filter them by their rarity
+                        and many other attributes.
+                    </body>
+                    <br>
+                    <br>
+                    <body>Pressing on a card in your Current Hand will remove it, allowing you to add a new car
+                        from your Collection.
+                    </body>
+                    <br>
+                    <br>
+                    <body>Improving your hand is key to collecting more than just basic cars.</body>
+                    <br>
+                    <body>
+                        - TOP SPEED improves your LUCK, allowing you to collect higher rarity cars.
+                    </body>
+                    <br>
+                    <body>
+                        - 0-60 TIME improves your COOLDOWN, allowing you to collect cars more often. 
+                    </body>
+                    <br>
+                    <body>
+                        - HANDLING improves your EARNINGS, allowing you to earn more money from collecting.
+                    </body>
+                    <br>
+                    <body>
+                        - Multtiples of other car attributes allow you to trigger SYNERGIES with the ACTIVATE SYNERGIES button - these give you a higher chance of collecting cars with those attributes.
+                    </body>
+
+                    <h3>Further Progression</h3>
+                    <body>The Dealership tab allows you to purchase specific cars from a selection. You must also refresh the dealership once - first one's free - to activate the Save button.</body>
+                    <br>
+                    <br>
+                    <body>It also allows you to PRESTIGE cars you already own by buying duplicates, to bank Prestige Coins.</body>
+                    <br>
+                    <br>
+                    <body>The Dealership is also your first and easiest source of Elite cars, and can be upgraded to make more available.</body>
+                    <br>
+                    <br>
+                    <body>Elite cars come with special perks that improve your performance. Descriptions of these perks can be found in the Elite tab, where they can also be upgraded.</body>
+                    <br>
+                    <br>
+                    <body>Yoou will need Elite Tools for these upgrades, which are earned passively by collecting once you have some Elite cars.</body>
+                    <br>
+                    <br>
+                    <body>Acquiring Elite cars also unlocks Heat levels in the Play tab. These allow you to impose an RQ limit on your hand in return for boosts to the 3 main stats.</body>
+                
+                    <h3>Contracts, Milestones and Prestige</h3>
+                    <body>Contracts, Milestones and Prestige give you even more ways to earn Elite cars.</body>
+                    <br>
+                    <body>- CONTRACTS reward Stars, which can be used to purchase exclusive Elite cars from the Star Shop.</body>
+                    <br>
+                    <body>- MILESTONES are permanent progression unlocks that will reward persistent players with very strong Elites.</body>
+                    <br>
+                    <body>- PRESTIGE allows you to reset your garage and cash to bank eanred Prestige Coins, which can be used to permanently unlock any non-Milestone Elite car.</body>
+                    <br>
+                    <br>
+                    <body>Use these features to amp your late-game progression!</body>
+
+                    <h3>Credits</h3>
+                    <body>C3 is developed by Wrenaissance, and inspired by Top Drives. This is a non-profit fan project.</body>
+                    <br>
+                    <body>Additional card creation for the game done by Pfugs, C6, Firas, Mazzi, Jar, Hastur, 12C, Timi, Nuytter, Bnuuy</body>
+                    <br>
+                    <body>Tab backgrounds courtesy of Freepik.</body>
+                    <br>
+                    <body>Join the community Discord for help and support! - </body> <url>https://discord.gg/4U9NW8xYMx</url>
+                </div>
+                    
 
                 <div id="Collection" class="tabcontent">
                     <h3>Collection</h3>
@@ -295,17 +392,6 @@
         <h3>Contracts</h3>
         <h4 id="ContractMenu">Available Contracts - click to activate!</h4>
         <div class="gridContainer" id="contractGrid"></div>
-        <h4 id="ActiveContracts">Active Contracts</h4>
-        <div class="gridContainer" id="activeGrid">
-            <div id="active1" class="activeBox">Active Slot 1</div>
-            <div id="at1" class="trackerBox"></div>
-            <div id="active2" class="activeBox">Unlock Active Slot 2 - $25,000</div>
-            <div id="at2" class="trackerBox"></div>
-            <div id="active3" class="activeBox">Unlock Active Slot 3 - $125,000, 100 Elite Tools</div>
-            <div id="at3" class="trackerBox"></div>
-            <div id="active4" class="activeBox">Unlock Active Slot 4 - $1,000,000, 1,000 Elite Tools</div>
-            <div id="at4" class="trackerBox"></div>
-        </div>
         <h4>Star Shop</h4>
         <div id="starsDisplay"></div>
         <button id="starRestock" class="star-restocker">RESTOCK - 1 STAR</button>

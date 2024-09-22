@@ -4,7 +4,7 @@ import { buttonClicks, contractIncrement, money, moneyChanger, populateStats } f
 import { toolAdder, eliteTools } from "./elite.js";
 import { ownedButton } from "./shop.js";
 import { playerGarage, playerPrestigeGarage, collectionHandDisplay } from "./playerGarage.js";
-import { bankCoins } from "./prestige.js";
+import { bankCoins, playerPermGarage } from "./prestige.js";
 
 let activeSlots = document.querySelectorAll('.activeBox');
 const trackerSlots = document.querySelectorAll('.trackerBox');
@@ -139,22 +139,22 @@ export const contracts = [
     {
         "missionID": 'c12',
         "missionName": "Amateur Earner",
-        "missionDesc": "Earn $15,000 from collecting",
-        "targetValue": 15000,
+        "missionDesc": "Earn $10,000 from collecting",
+        "targetValue": 10000,
         "difficulty": 2
     },
     {
         "missionID": 'c13',
         "missionName": "Big Earner",
-        "missionDesc": "Earn $100,000 from collecting",
-        "targetValue": 100000,
+        "missionDesc": "Earn $30,000 from collecting",
+        "targetValue": 30000,
         "difficulty": 3
     },
     {
         "missionID": 'c14',
         "missionName": "Moneybags",
-        "missionDesc": "Earn $750,000 from collecting",
-        "targetValue": 750000,
+        "missionDesc": "Earn $150,000 from collecting",
+        "targetValue": 150000,
         "difficulty": 4
     },
     {
@@ -216,7 +216,7 @@ export const contracts = [
     {
         "missionID": 'c23',
         "missionName": "Crouching Tiger, Hidden Dragon",
-        "missionDesc": "Collect 175 times with 3+ Chinese cars in hand",
+        "missionDesc": "Collect 150 times with 3+ Chinese cars in hand",
         "targetValue": 150,
         "difficulty": 4
     },
@@ -244,8 +244,8 @@ export const contracts = [
     {
         "missionID": 'c27',
         "missionName": "Ruhr of Engines",
-        "missionDesc": "Collect 150 times with 3+ German cars in hand",
-        "targetValue": 150,
+        "missionDesc": "Collect 100 times with 3+ German cars in hand",
+        "targetValue": 100,
         "difficulty": 2
     },
     {
@@ -376,9 +376,9 @@ export const milestones = [
     },
     {
         "milestoneID": 'm3',
-        "milestoneName": 'Monster Mash',
-        "milestoneDesc": 'Click the Collect button 666,666 times',
-        "targetValue": 666666,
+        "milestoneName": 'All The Buttons',
+        "milestoneDesc": 'Click the Collect button 123,456 times',
+        "targetValue": 123456,
         "rewardCar": 926,
         "icon": '',
         "complete": false
@@ -403,9 +403,9 @@ export const milestones = [
     },
     {
         "milestoneID": 'm6',
-        "milestoneName": 'Ready the Guillotine',
-        "milestoneDesc": 'Have $1 billion in your account',
-        "targetValue": 100000000,
+        "milestoneName": '2 Much Money',
+        "milestoneDesc": 'Have $222,222,222 in your account',
+        "targetValue": 222222222,
         "rewardCar": 916,
         "icon": '',
         "complete": false
@@ -503,8 +503,8 @@ export const milestones = [
     {
         "milestoneID": 'm17',
         "milestoneName": 'Permanent Record',
-        "milestoneDesc": 'Permanently unlock 20 cars',
-        "targetValue": 20,
+        "milestoneDesc": 'Permanently unlock 10 cars',
+        "targetValue": 10,
         "rewardCar": 1276,
         "icon": '',
         "complete": false
@@ -512,8 +512,8 @@ export const milestones = [
     {
         "milestoneID": 'm18',
         "milestoneName": 'Eternal',
-        "milestoneDesc": 'Permanently unlock 100 cars',
-        "targetValue": 100,
+        "milestoneDesc": 'Permanently unlock 20 cars',
+        "targetValue": 20,
         "rewardCar": 1287,
         "icon": '',
         "complete": false
@@ -578,7 +578,7 @@ export const contractBGColours = ["rgba(60, 179, 113, 0.45)","rgba(0, 0, 255, 0.
 
 
 
-window.onload = populateContracts(), populateStarShop(), populateMilestones;
+window.onload = populateContracts(), populateStarShop(), populateMilestones();
 
 export function saveParser(st,ms,sc,at) {
     stars = st;
@@ -705,6 +705,7 @@ export function activeContractTracker() {
 };
 
 export function completeContract(name) {
+    contractIncrement();
     let cc = contracts.findIndex(c => c.missionName === name);
     let contractIndex = (contractTrackers.findIndex(c => c.trackedContract === name)) ;
     let activeBoxUpater = contractIndex + 1;
@@ -724,7 +725,6 @@ export function completeContract(name) {
     contractTrackers[contractIndex].currentVal = 0;
     contractTrackers[contractIndex].finishVal = 0;
     activeContracts -= 1;
-    contractIncrement();
     const contractSelect = contracts.filter(c => c.difficulty === contracts[cc].difficulty);
         let newContract = contractSelect[Math.floor(Math.random() * contractSelect.length)];
         let diff = contracts[cc].difficulty;
@@ -845,7 +845,7 @@ function starPrestigeButton(id, price) {
     return pbtn;
 }
 
-function buyStarCar(id,pricetag) {
+export function buyStarCar(id,pricetag) {
     let buttonID = document.getElementById(id);
     let purchaseCost = pricetag;
     let newCar = id * 1;
@@ -913,4 +913,11 @@ export function populateMilestones() {
         tabPopulator.appendChild(milestoneDiv);
         
     });
+};
+
+export function completeMilestone(msNum){
+    console.log(msNum);
+    milestones[msNum].complete = true;
+    playerPermGarage.push(milestones[msNum].rewardCar);
+    playerGarage.push(milestones[msNum].rewardCar);
 };

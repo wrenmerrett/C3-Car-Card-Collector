@@ -1,50 +1,68 @@
 text {
-    font-family:Roboto;
+    font-family: Roboto;
 }
 
 body {
     overflow-y: scroll;
+    font-size: 200%;
 }
 
 #logo {
     width:10%;
 }
 
+#example {
+    width:25%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
 #Home {
     background-color: darkslategrey;
-    background-image: url("./mainBG.jpg");
-    color: #2b2b30;
+    background-image: url("./guideBG.jpg");
+    background-repeat: no-repeat;
+    color: #ececff;
     font-size: 24px;
 }
 
 #Collection {
     background-color: dodgerblue;
-    background-image: url("./collectionBG.jpg");
+    background-image: url("./guideBG.jpg");
 }
 
 #Shop {
     background-color: goldenrod;
-    background-image: url("./shopBG.jpg");
+    background-image: url("./guideBG.jpg");
+    background-repeat: no-repeat;
 }
 
 #Stats {
     background-color: darkolivegreen;
-    background-image: url("./eliteBG.jpg");
+    background-image: url("./guideBG.jpg");
 }
 
 #Missions {
     background-color: black;
-    background-image: url("./missionsBG.jpg");
+    background-image: url("./guideBG.jpg");
+    background-repeat: no-repeat;
 }
 
 #Milestones {
     background-color: black;
-    background-image: url("./milestonesBG.jpg");
+    background-image: url("./guideBG.jpg");
+    background-repeat: no-repeat;
 }
 
 #Prestige {
     background-color: black;
-    background-image: url("./prestigeBG.jpg");
+    background-image: url("./guideBG.jpg");
+    background-repeat: no-repeat;
+}
+
+#Guide {
+    background-color: black;
+    background-image: url("./guideBG.jpg");
+    background-repeat: no-repeat;
 }
 
 #newestCard {
@@ -126,9 +144,12 @@ h4 {
 #synergyZone {
     position:absolute;
     width: 15%;
-    background-color: slategray;
+    background-color: rgb(15, 27, 39);
     border-radius: 15px;
     text-align: center;
+    margin-top: 2%;
+    padding: 1%;
+    font-size: 120%;
 }
 
 #prestigeZone {
@@ -361,10 +382,10 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, min(90%/2, max(90%/2))));
     position: relative;
-    height: 50%;
-    width: 60%;
-    margin-top: 15px;
+    height: 10%;
+    width: 45%;
     row-gap: 8px;
+    float: left;
 }
 
 #statsGrid {
@@ -736,7 +757,7 @@ progress {
 }
 
 .uiButton {
-    background-color: greenyellow;
+    background-color: rgb(21, 16, 165);
     color: black;
     font-size: 25px;
     padding: 10px 15px;
@@ -744,6 +765,7 @@ progress {
     border-radius: 5px;
     cursor: pointer;
     border-radius: 5px;
+    opacity: 90%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -811,19 +833,19 @@ progress {
 
 h2 {
     width: 300px;
-    background-color: grey;
+    background-color: rgb(33, 32, 32);
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
 }
 
 #heatMeter {
-    background-color: black;
+    background-color: rgb(19, 17, 17);
     margin-left: auto;
     margin-right: auto;
     color: orangered;
     text-align: center;
-    width: 290px;
+    width: 15%;
     border-radius: 10px;
     padding-top: 3px;
 }
@@ -938,7 +960,6 @@ h2 {
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -961,7 +982,6 @@ h2 {
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -989,7 +1009,6 @@ h2 {
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;

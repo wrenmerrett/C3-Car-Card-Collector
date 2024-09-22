@@ -2,7 +2,7 @@
 
 export let eliteTools = 0;
 let maxPerkLevel = 5;
-import { money, moneyChanger } from './app.js';
+import { money, moneyChanger, perkIncrement } from './app.js';
 import { contractTrackers, completeContract } from "./missions.js";
 console.log(money);
 
@@ -17,22 +17,22 @@ export const eliteLevels = [
         "perkID": 1,
         "name": "Lucky",
         "level": 1,
-        "baseVal": 0.2,
+        "baseVal": 0.3,
         "increment": 0.06
     },
     {
         "perkID": 2,
         "name": "Quick Charge",
         "level": 1,
-        "baseVal": 0.11,
-        "increment": 0.03
+        "baseVal": 0.2,
+        "increment": 0.05
     },
     {
         "perkID": 3,
         "name": "High Roller",
         "level": 1,
-        "baseVal": 0.3,
-        "increment": 0.06
+        "baseVal": 0.4,
+        "increment": 0.1
     },
     {
         "perkID": 4,
@@ -60,42 +60,42 @@ export const eliteLevels = [
         "name": "Slipstream",
         "level": 1,
         "baseVal": 115,
-        "increment": 15
+        "increment": 20
     },
     {
         "perkID": 8,
         "name": "Standard Bearer",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.15
+        "increment": 0.165
     },
     {
         "perkID": 9,
         "name": "All-Star",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.15
+        "increment": 0.165
     },
     {
         "perkID": 10,
         "name": "Off The Chain",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.15
+        "increment": 0.165
     },
     {
         "perkID": 11,
         "name": "Action Traction",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.15
+        "increment": 0.165
     },
     {
         "perkID": 12,
         "name": "Front Line",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.15
+        "increment": 0.165
     },
     {
         "perkID": 13,
@@ -108,8 +108,8 @@ export const eliteLevels = [
         "perkID": 14,
         "name": "Overheat",
         "level": 1,
-        "baseVal": 3,
-        "increment": 3
+        "baseVal": 4,
+        "increment": 4
     },
     {
         "perkID": 15,
@@ -130,7 +130,7 @@ export const eliteLevels = [
         "name": "All In",
         "level": 1,
         "baseVal": 0.4,
-        "increment": 0.05,
+        "increment": 0.1,
     }
 ];
 
@@ -175,6 +175,7 @@ function handleLevelUp(event) {
     eliteTools -= perkLev *750;
     eliteLevels[index].level += 1;
     perkLev = eliteLevels[index].level;
+    perkIncrement();
     console.log(eliteLevels[index])
     console.log(perkLev);
     document.getElementById('NotEnoughTools').style.display = "none";
