@@ -19,7 +19,6 @@
                 <button class="tablink" onclick="openPage('Stats', this, 'purple')">Elite</button>
                 <button class="tablink" onclick="openPage('Missions', this, 'deeppink')">Contracts</button>
                 <button class="tablink" onclick="openPage('Milestones', this, 'red')">Milestones</button>
-                <button class="tablink" onclick="openPage('Prestige', this, 'green')">Prestige</button>
 
                 <div id="Home" class="tabcontent">
                     <img id="logo" src="./styles/C3LOGO.png">
@@ -142,7 +141,7 @@
                     <body>Elite cars come with special perks that improve your performance. Descriptions of these perks can be found in the Elite tab, where they can also be upgraded.</body>
                     <br>
                     <br>
-                    <body>Yoou will need Elite Tools for these upgrades, which are earned passively by collecting once you have some Elite cars.</body>
+                    <body>You will need Elite Tools for these upgrades, which are earned passively by collecting once you have some Elite cars.</body>
                     <br>
                     <br>
                     <body>Acquiring Elite cars also unlocks Heat levels in the Play tab. These allow you to impose an RQ limit on your hand in return for boosts to the 3 main stats.</body>
@@ -162,7 +161,7 @@
                     <h3>Credits</h3>
                     <body>C3 is developed by Wrenaissance, and inspired by Top Drives. This is a non-profit fan project.</body>
                     <br>
-                    <body>Additional card creation for the game done by Pfugs, C6, Firas, Mazzi, Jar, Hastur, 12C, Timi, Nuytter, Bnuuy</body>
+                    <body>Additional card creation for the game done by Pfugs, c6, Firas, Mazzi, Dog, Jar, Hastur, 12C, Timi, Nuytter, Bnuuy, Artkatt, Scorpio, Lemonz</body>
                     <br>
                     <body>Tab backgrounds courtesy of Freepik.</body>
                     <br>
@@ -384,6 +383,13 @@
                 <div id="AllInLevel" class="perkLevel"></div>
                 <div id="AllInBonus" class="perkBonus"></div>
             </div>
+
+            <div id="Patriot">
+                <h4>Patriot - boost all stats with 3+ same country</h4>
+                <button id="Patriot" class="levelButton">LEVEL UP</button>
+                <div id="PatriotLevel" class="perkLevel"></div>
+                <div id="PatriotBonus" class="perkBonus"></div>
+            </div>
         </div>
         
     </div>
@@ -392,6 +398,7 @@
         <h3>Contracts</h3>
         <h4 id="ContractMenu">Available Contracts - click to activate!</h4>
         <div class="gridContainer" id="contractGrid"></div>
+        <button id="contractRefresh">REROLL CONTRACTS - $5000</button>
         <h4>Star Shop</h4>
         <div id="starsDisplay"></div>
         <button id="starRestock" class="star-restocker">RESTOCK - 1 STAR</button>
@@ -401,9 +408,14 @@
 
     <div id="Milestones" class="tabcontent">
         <h3>Milestones</h3>
+        <h4>Track your progress in the game and earn exclusive reward cars</h4>
         <button id="statRefresher" class="completebtn">Refresh Stat Display</button>
         <div class="gridContainer" id="statsGrid"></div>
         <div class="gridContainer" id="milestonesGrid"></div>
+        <h3>Collection Mastery</h3>
+        <h4>Fill out your collections for countries and brands to earn their ultimate cars</h4>
+        <div class="gridContainer" id="collectorGrid"></div>
+        <div class="gridContainer" id="masteryGrid"></div>
     </div>
 
     <div id="Prestige" class="tabcontent">
