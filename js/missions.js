@@ -1040,7 +1040,7 @@ export function populateMilestones() {
         
         const milestoneDiv = document.createElement('div');
         const milestoneImg = document.createElement('img');
-        milestoneImg.src = "./assets/cards/" + element.rewardCar + ".png";
+        milestoneImg.src = "./assets/cards/" + element.rewardCar + ".jpg";
         
         milestoneDiv.append(milestoneImg);
         if (element.complete === true) {
