@@ -368,6 +368,15 @@ img {
     row-gap: 8px;
 }
 
+#masteryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(90%/3, max(90%/3))));
+    position: relative;
+    height: 50%;
+    margin-top: 15px;
+    row-gap: 8px;
+}
+
 #contractGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, min(90%/2, max(90%/2))));
@@ -393,7 +402,18 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(0, min(90%/4, max(90%/4))));
     position: relative;
     height: 50%;
-    width: 60%;
+    width: 70%;
+    min-height: 150px;
+    margin-top: 15px;
+    row-gap: 8px;
+}
+
+#collectorGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, min(90%/6, max(90%/6))));
+    position: relative;
+    height: 50%;
+    width: 70%;
     min-height: 150px;
     margin-top: 15px;
     row-gap: 8px;
@@ -402,7 +422,7 @@ img {
 .statBox {
         backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgba(17, 25, 40, 0.23);
+      background-color: rgba(4, 13, 29, 0.545);
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.125);  
       padding: 10px;  
@@ -415,7 +435,6 @@ img {
       text-align: center;
       font-size: 25px;
       font-weight: bold;
-      cursor: pointer;
 }
 
 .contractBox {
@@ -564,7 +583,7 @@ progress {
 
 .milebtn {
     position: flex;
-    background-color: thistle;
+    background-color: rgb(53, 26, 53);
     color: white;
     font-size: 22px;
     font-weight: bold;
@@ -954,6 +973,28 @@ h2 {
   }
 
   .levelButton {
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin-top:10px;
+  }
+
+  #contractRefresh {
     background: #5E5DF0;
     border-radius: 999px;
     box-shadow: #5E5DF0 0 10px 20px -10px;

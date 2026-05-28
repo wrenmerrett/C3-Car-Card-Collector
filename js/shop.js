@@ -231,7 +231,7 @@ function populateShop() {
             if (shopgacha < 85) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 5);
             } else
-            if (shopgacha < 4) {
+            if (shopgacha < 95) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 6);
             } else {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 7);
@@ -378,7 +378,7 @@ function populateShop() {
             if (shopgacha < 85) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 5);
             } else
-            if (shopgacha < 4) {
+            if (shopgacha < 95) {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 6);
             } else {
                 var eliteSelect = eliteCars.filter(eliteCars => eliteCars.rarity === 7);

@@ -4,7 +4,7 @@ import { playerHand, handLoader, getHandCards, totalRQ } from "./playerHand.js";
 import { eliteTools, eliteLevels, toolUpdater, populateText, toolAdder, equippedKits } from "./elite.js";
 import { shopUpgrades, shopgrades } from "./shop.js";
 import { contracts, contractTrackers, completeContract, milestones, populateMilestones, stars, slotsActivated, saveParser, contractBGColours, populateContracts, activeContracts, slotQuantity, activeContractTracker, completeMilestone, buyStarCar } from "./missions.js";
-import {playerPrestigeBank,playerPrestigeCoins,playerPrestigeLevel, playerPermGarage, restorePrestige, unbreakPrestige} from "./prestige.js";
+import {playerPrestigeBank,playerPrestigeCoins,playerPrestigeLevel, playerPermGarage, restorePrestige, unbreakPrestige, bankCoins} from "./prestige.js";
 export var money = 100;
 export var buttonClicks = 0;
 let buttonCooldown = 0;
@@ -48,9 +48,11 @@ let fwdBonus = 0;
 let mechanicBoost = 0;
 let heatSinkBonus = 0;
 let timeWarpFactor = 0;
+let patriotBonus = 0;
 let eliteTracker = false;
 let moneyCheck = 0;
 let moneyDiff = 0;
+let rarityCheck;
 export var rarities = ["F", "E", "D", "C", "B", "A", "S"];
 'use strict';
 
@@ -124,7 +126,7 @@ document.getElementById('loadButton').addEventListener('click', () => {
     buttonClicks = JSON.parse(localStorage.getItem('clicks'));
     slotsParser = JSON.parse(localStorage.getItem('contractSlots'));
     restoreMissions(contractStorage, activeStorage, starShopStorage, milestoneParser, starParser,slotsParser);
-    permStorage = JSON.parse(localStorage.getItem('permGarages'));
+    permStorage = JSON.parse(localStorage.getItem('permGarage'));
     bankStorage = JSON.parse(localStorage.getItem('prestigeBank'));
     coinsStorage = JSON.parse(localStorage.getItem('prestigeCoins'));
     levelStorage = JSON.parse(localStorage.getItem('prestigeLevel'));
@@ -166,10 +168,11 @@ button.addEventListener('click', () => {
             mechanicBoost = 1;
             heatSinkBonus = 0;
             timeWarpFactor = 0;
+            patriotBonus = 0;
             let gachaMod = 0;
-            let gachaLuck = 0 + (heatLevel*62);
-            let buttonVar = 0 - (heatLevel * 2.1); 
-            let slipstreamBonus = 400;
+            let gachaLuck = 0 + (heatLevel*55);
+            let buttonVar = 0 - (heatLevel * 1.9); 
+            let slipstreamBonus = 380;
             let moneyVar = 0 + (heatLevel *22);
             let buttonZero = 0;
             let timeWarpYear = 0;
@@ -180,6 +183,7 @@ button.addEventListener('click', () => {
             let countryTracker = [];
             let driveTracker = [];
             let tyreTracker = [];
+            let patriotCountry;
             let luckyData = eliteLevels[0]
             let luckyValue = luckyData.baseVal + (luckyData.increment * ((luckyData.level)-1));
 
@@ -230,6 +234,9 @@ button.addEventListener('click', () => {
 
             let allInData = eliteLevels[16]
             let allInValue = allInData.baseVal + (allInData.increment * (allInData.level-1));
+
+            let patriotData = eliteLevels[17]
+            let patriotValue = patriotData.baseVal + (patriotData.increment * (patriotData.level-1));
             playerHand.forEach(bonusCalcs);
             function bonusCalcs(id) {
                 let car = (data[id]);
@@ -293,9 +300,12 @@ button.addEventListener('click', () => {
                 if (car.perk == "Heat Sink") {
                     heatSinkBonus += heatSinkValue;
                 }
-
                 if (car.perk == "Time Warp") {
                     timeWarpFactor += timeWarpValue;
+                }
+                if (car.perk == "Patriot") {
+                    patriotBonus += patriotValue;
+                    patriotCountry = car.country;
                 }
                 makeTracker.push(car.make);
                 let yearFilter = Math.floor(car.year / 10);
@@ -382,14 +392,17 @@ button.addEventListener('click', () => {
                     buttonBoost = buttonBoost + 0.92*(fwdBonus);
                     gachaLuck = gachaLuck + 1.7*(fwdBonus);
                 }
+                if (synergy == patriotCountry && patriotBonus > 0) {
+                    moneyVar = moneyVar + 2*(patriotBonus);
+                    buttonBoost = buttonBoost + 0.95*(patriotBonus);
+                    gachaLuck = gachaLuck + 1.8*(patriotBonus);
+                    console.log(patriotBonus);
+                }
             }
 
             buttonVar -= buttonBoost;
 
-            let moneyCheck = money;
-            console.log(moneyCheck);
-
-            moneyBonus = Math.round((((moneyVar - 265)/85) + 1)*100)/100;
+            moneyBonus = Math.round((((moneyVar - 225)/85) + 1)*100)/100;
             buttonCooldown = Math.round((buttonVar * slipstreamBonus))*100/100;
             if (buttonZero > 0) {
                 buttonCooldown = 1;
@@ -412,7 +425,7 @@ button.addEventListener('click', () => {
                             element.currentVal += 1;
                         } else if (element.trackedContract === 'Lucky Collector' && gachaStable > 1.2) {
                             element.currentVal += 1;
-                        } else if (element.trackedContract === 'Rich Collector' && moneyBonus > 2) {
+                        } else if (element.trackedContract === 'Rich Collector' && moneyBonus > 2.75) {
                             element.currentVal += 1;
                         } else if (element.trackedContract === 'Front Facing' && synergies.includes('FWD')) {
                             element.currentVal += 1;
@@ -487,7 +500,7 @@ button.addEventListener('click', () => {
             document.getElementById('handAttributes').innerHTML = "Collect Cooldown: " + buttonCooldown / 1000 + " seconds";
             document.getElementById('earningsBonus').innerHTML = "Earnings Bonus: x" + moneyBonus;
 
-            if (moneyBonus >= 4 && milestones[14].complete !== true) {
+            if (moneyBonus >= 4.25 && milestones[14].complete !== true) {
                 completeMilestone(14);
             };
             setTimeout(function () {
@@ -506,9 +519,7 @@ export function moneyChanger(transaction) {
         completeMilestone(4);
     }
     else if (money >= 1000000 && milestones[3].complete !== true) {
-        console.log("start");
         completeMilestone(3);
-        console.log("end");
     };
     
     document.getElementById('cashDisplay').innerText = "Cash: $" + money;
@@ -595,12 +606,27 @@ function restoreShop(shopData, upgrades) {
         });
     };
 
+    
     prestiges.forEach(restorePrestige);
     function restorePrestige(btn) {
         let str = btn.innerText;
         let price = str.replace(/\D/g, "");
+        let rarity;
+        
+        fetch('./js/data.json')
+        .then(response => response.json())
+        .then(data => {
+            data = data.cars;
+            console.log(data);
+            console.log(btn.id);
+            let carCheck = Number(btn.id);
+            rarityCheck = data.find(data => data.carID === carCheck)
+            rarity = rarityCheck.rarity;
+            console.log(rarity);
+        })
+        
         btn.addEventListener('click', () => {
-            prestigeCar(btn.id, price);
+            prestigeCar(btn.id, price, rarity);
         });
     };
 }
@@ -631,6 +657,7 @@ function prestigeCar(id,pricetag,rarity) {
         restockDown(reimburse);
         document.getElementById("restockPrice").innerHTML = "Restock Price: $" + restockCost;
         playerPrestigeGarage.push(prestigedCar);
+        console.log(rarity);
         bankCoins(rarity);
         buttonID.remove();
     } else {
@@ -883,11 +910,133 @@ statButton.addEventListener('click', populateStats);
 
 export function populateStats() {
     
+    let garageCars = playerGarage.filter(onlyUnique);
+
     fetch('./js/data.json')
         .then(response => response.json())
         .then(data => {
             // Work with your JSON data here
             data = data.cars;
+            let USList = data.filter(data => data.country === "US");
+            let USStat = 0;
+            for (const key in USList) {
+                if(garageCars.includes(USList[key].carID)) {
+                    USStat += 1;
+                }
+            }
+            if (USStat >= 175 && milestones[24].complete !== true) {
+                completeMilestone(24);
+            };
+            let DEList = data.filter(data => data.country === "DE");
+            let DEStat = 0;
+            for (const key in DEList) {
+                if(garageCars.includes(DEList[key].carID)) {
+                    DEStat += 1;
+                }
+            }
+            if (DEStat >= 300 && milestones[25].complete !== true) {
+                completeMilestone(25);
+            };
+            let ITList = data.filter(data => data.country === "IT");
+            let ITStat = 0;
+            for (const key in ITList) {
+                if(garageCars.includes(ITList[key].carID)) {
+                    ITStat += 1;
+                }
+            }
+            if (ITStat >= 75 && milestones[26].complete !== true) {
+                completeMilestone(26);
+            };
+            let FRList = data.filter(data => data.country === "FR");
+            let FRStat = 0;
+            for (const key in FRList) {
+                if(garageCars.includes(FRList[key].carID)) {
+                    FRStat += 1;
+                }
+            }
+            if (FRStat >= 100 && milestones[27].complete !== true) {
+                completeMilestone(27);
+            };
+            let GBList = data.filter(data => data.country === "GB");
+            let GBStat = 0;
+            for (const key in GBList) {
+                if(garageCars.includes(GBList[key].carID)) {
+                    GBStat += 1;
+                }
+            }
+            if (GBStat >= 175 && milestones[28].complete !== true) {
+                completeMilestone(28);
+            };
+            let JPList = data.filter(data => data.country === "JP");
+            let JPStat = 0;
+            for (const key in JPList) {
+                if(garageCars.includes(JPList[key].carID)) {
+                    JPStat += 1;
+                }
+            }
+            if (JPStat >= 200 && milestones[29].complete !== true) {
+                completeMilestone(29);
+            };
+            let audiList = data.filter(data => data.make === "Audi");
+            let audiStat = 0;
+            for (const key in audiList) {
+                if(garageCars.includes(audiList[key].carID)) {
+                    audiStat += 1;
+                }
+            }
+            if (audiStat >= 50 && milestones[30].complete !== true) {
+                completeMilestone(30);
+            };
+            let porscheList = data.filter(data => data.make === "Porsche");
+            let porscheStat = 0;
+            for (const key in porscheList) {
+                if(garageCars.includes(porscheList[key].carID)) {
+                    porscheStat += 1;
+                }
+            }
+            if (porscheStat >= 60 && milestones[31].complete !== true) {
+                completeMilestone(31);
+            };
+            let astonList = data.filter(data => data.make === "Aston Martin");
+            let astonStat = 0;
+            for (const key in astonList) {
+                if(garageCars.includes(astonList[key].carID)) {
+                    astonStat += 1;
+                }
+            }
+            if (astonStat >= 45 && milestones[32].complete !== true) {
+                completeMilestone(32);
+            };
+            let eggList = data.filter(data => data.make === "Koenigsegg");
+            let eggStat = 0;
+            for (const key in eggList) {
+                if(garageCars.includes(eggList[key].carID)) {
+                    eggStat += 1;
+                }
+            }
+            if (eggStat >= 18 && milestones[33].complete !== true) {
+                completeMilestone(33);
+            };
+            let lotusList = data.filter(data => data.make === "Lotus");
+            let lotusStat = 0;
+            for (const key in lotusList) {
+                if(garageCars.includes(lotusList[key].carID)) {
+                    lotusStat += 1;
+                }
+            }
+            if (lotusStat >= 31 && milestones[34].complete !== true) {
+                completeMilestone(34);
+            };
+            let mercList = data.filter(data => data.make === "Mercedes-Benz");
+            let mercStat = 0;
+            for (const key in mercList) {
+                if(garageCars.includes(mercList[key].carID)) {
+                    mercStat += 1;
+                }
+            }
+            if (mercStat >= 84 && milestones[35].complete !== true) {
+                completeMilestone(35);
+            };
             let eliteStat = 0;
             let eliteList = data.filter(data => data.elite === "yes")
             for (const key in eliteList) {
@@ -897,13 +1046,13 @@ export function populateStats() {
         
         if(playerPermGarage == null) {
             unbreakPrestige();
-        }
+        };
 
-        let garageStat = playerGarage.filter(onlyUnique).length;
-        console.log(playerPermGarage.length);
-        let permStat = (playerPermGarage.length);
+        
+        let garageStat = garageCars.length;
+        
+        let permStat = playerPermGarage.filter(onlyUnique).length;
         permStat = permStat - 5;
-        console.log(permStat.length);
 
     
     if (permStat >= 20 && milestones[17].complete !== true) {
@@ -931,7 +1080,7 @@ export function populateStats() {
         completeMilestone(20);
     };
     if (kitStat >= 15 && milestones[19].complete !== true) {
-        completeMilestone(15);
+        completeMilestone(19);
     };
     if (kitStat >= 5 && milestones[18].complete !== true) {
         completeMilestone(18);
@@ -939,6 +1088,8 @@ export function populateStats() {
     console.log(playerPermGarage);
     let statContainer = document.getElementById('statsGrid');
     statContainer.innerHTML = "";
+    let masteryContainer = document.getElementById('collectorGrid');
+    masteryContainer.innerHTML = "";
     let moneyTile = document.createElement('div');
     moneyTile.classList.add('statBox');
     moneyTile.id = 'money';
@@ -974,10 +1125,69 @@ export function populateStats() {
     contractTile.id = 'garage';
     contractTile.innerHTML = "Contracts Completed: " + contractStat;
     statContainer.appendChild(contractTile);
-    populateMilestones();
+    let usTile = document.createElement('div');
+    usTile.classList.add('statBox');
+    usTile.id = 'garage';
+    usTile.innerHTML = "American Cars Owned: " + USStat;
+    masteryContainer.appendChild(usTile);
+    let deTile = document.createElement('div');
+    deTile.classList.add('statBox');
+    deTile.id = 'garage';
+    deTile.innerHTML = "German Cars Owned: " + DEStat;
+    masteryContainer.appendChild(deTile);
+    let itTile = document.createElement('div');
+    itTile.classList.add('statBox');
+    itTile.id = 'garage';
+    itTile.innerHTML = "Italian Cars Owned: " + ITStat;
+    masteryContainer.appendChild(itTile);
+    let frTile = document.createElement('div');
+    frTile.classList.add('statBox');
+    frTile.id = 'garage';
+    frTile.innerHTML = "French Cars Owned: " + FRStat;
+    masteryContainer.appendChild(frTile);
+    let gbTile = document.createElement('div');
+    gbTile.classList.add('statBox');
+    gbTile.id = 'garage';
+    gbTile.innerHTML = "British Cars Owned: " + GBStat;
+    masteryContainer.appendChild(gbTile);
+    let jpTile = document.createElement('div');
+    jpTile.classList.add('statBox');
+    jpTile.id = 'garage';
+    jpTile.innerHTML = "Japanese Cars Owned: " + JPStat;
+    masteryContainer.appendChild(jpTile);
+    let audiTile = document.createElement('div');
+    audiTile.classList.add('statBox');
+    audiTile.id = 'garage';
+    audiTile.innerHTML = "Audis Owned: " + audiStat;
+    masteryContainer.appendChild(audiTile);
+    let porscheTile = document.createElement('div');
+    porscheTile.classList.add('statBox');
+    porscheTile.id = 'garage';
+    porscheTile.innerHTML = "Porsches Owned: " + porscheStat;
+    masteryContainer.appendChild(porscheTile);
+    let astonTile = document.createElement('div');
+    astonTile.classList.add('statBox');
+    astonTile.id = 'garage';
+    astonTile.innerHTML = "Aston Martins Owned: " + astonStat;
+    masteryContainer.appendChild(astonTile);
+    let eggTile = document.createElement('div');
+    eggTile.classList.add('statBox');
+    eggTile.id = 'garage';
+    eggTile.innerHTML = "Koenigseggs Owned: " + eggStat;
+    masteryContainer.appendChild(eggTile);
+    let lotusTile = document.createElement('div');
+    lotusTile.classList.add('statBox');
+    lotusTile.id = 'garage';
+    lotusTile.innerHTML = "Lotuses Owned: " + lotusStat;
+    masteryContainer.appendChild(lotusTile);
+    let mercTile = document.createElement('div');
+    mercTile.classList.add('statBox');
+    mercTile.id = 'garage';
+    mercTile.innerHTML = "Mercedes-Benzes Owned: " + mercStat;
+    masteryContainer.appendChild(mercTile);
             };
         });
-
+        populateMilestones();
 };
 
 function onlyUnique(value, index, array) {
@@ -1059,13 +1269,13 @@ function carPicker() {
             var carImage = chosenCar.imageID
             document.getElementById('newestCard').innerHTML = `<img src="assets/cards/${carImage}" id="imageBox"//>`
             var garageAdd = chosenCar.carID;
-            let moneyBoost = Math.ceil(Math.round(moneyBonus * (30 + (playerPrestigeGarage.length + 1))));
+            let moneyBoost = Math.ceil(Math.round(moneyBonus * (30 + 2*(playerPrestigeGarage.length + 1))));
             console.log(moneyBoost);
             money += moneyBoost;
             if (money >= 1000000000 && milestones[5].complete !== true) {
                 completeMilestone(5);
             }
-            else if (money >= 10000000 && milestones[4].complete !== true) {
+            else if (money >= 50000000 && milestones[4].complete !== true) {
                 completeMilestone(4);
             }
             else if (money >= 1000000 && milestones[3].complete !== true) {
@@ -1091,13 +1301,14 @@ function carPicker() {
             document.getElementById('cashDisplay').innerText = "Cash: $" + money;
             
               let uniqueCars = playerGarage.filter(onlyUnique);
+              
             if (uniqueCars.length >= 100 && milestones[6].complete !== true) {
                 completeMilestone(6);
             };
-            if (uniqueCars.length >= 400 && milestones[7].complete !== true) {
+            if (uniqueCars.length >= 500 && milestones[7].complete !== true) {
                 completeMilestone(7);
             };
-            if (uniqueCars.length >= 777 && milestones[8].complete !== true) {
+            if (uniqueCars.length >= 969 && milestones[8].complete !== true) {
                 completeMilestone(8);
             };
 

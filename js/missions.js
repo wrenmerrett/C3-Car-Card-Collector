@@ -90,7 +90,7 @@ export const contracts = [
     {
         "missionID": 'c5',
         "missionName": "Rich Collector",
-        "missionDesc": "Collect 40 times with an Earnings Bonus over 2",
+        "missionDesc": "Collect 40 times with an Earnings Bonus over 2.75",
         "targetValue": 40,
         "difficulty": 1
     },
@@ -174,7 +174,7 @@ export const contracts = [
     {
         "missionID": 'c17',
         "missionName": "Indecisive",
-        "missionDesc": "Spend $15,000 on Dealership  refreshes",
+        "missionDesc": "Spend $15,000 on Dealership refreshes",
         "targetValue": 15000,
         "difficulty": 2
     },
@@ -321,36 +321,36 @@ export const contracts = [
     {
         "missionID": 'c38',
         "missionName": "American Pie",
-        "missionDesc": "Collect 150 times with 3+ Chevrolet cars in hand",
-        "targetValue": 150,
+        "missionDesc": "Collect 125 times with 3+ Chevrolet cars in hand",
+        "targetValue": 125,
         "difficulty": 3
     },
     {
         "missionID": 'c39',
         "missionName": "Absolut Attack",
-        "missionDesc": "Collect 175 times with 3+ Koenigsegg cars in hand",
-        "targetValue": 175,
+        "missionDesc": "Collect 150 times with 3+ Koenigsegg cars in hand",
+        "targetValue": 150,
         "difficulty": 4
     },
     {
         "missionID": 'c40',
         "missionName": "The Bond's Name",
-        "missionDesc": "Collect 150 times with 3+ Aston Martin cars in hand",
-        "targetValue": 150,
+        "missionDesc": "Collect 125 times with 3+ Aston Martin cars in hand",
+        "targetValue": 125,
         "difficulty": 3
     },
     {
         "missionID": 'c41',
         "missionName": "Vorsprung durch Technik",
-        "missionDesc": "Collect 150 times with 3+ Audi cars in hand",
-        "targetValue": 100,
+        "missionDesc": "Collect 125 times with 3+ Audi cars in hand",
+        "targetValue": 125,
         "difficulty": 3
     },
     {
         "missionID": 'c42',
         "missionName": "The Ultimate Driving Machine",
-        "missionDesc": "Collect 150 times with 3+ BMW cars in hand",
-        "targetValue": 150,
+        "missionDesc": "Collect 125 times with 3+ BMW cars in hand",
+        "targetValue": 125,
         "difficulty": 3
     }
 ];
@@ -363,6 +363,7 @@ export const milestones = [
         "targetValue": 500,
         "rewardCar": 910,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -372,6 +373,7 @@ export const milestones = [
         "targetValue": 10000,
         "rewardCar": 924,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -381,6 +383,7 @@ export const milestones = [
         "targetValue": 123456,
         "rewardCar": 926,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -390,6 +393,7 @@ export const milestones = [
         "targetValue": 1000000,
         "rewardCar": 918,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -399,6 +403,7 @@ export const milestones = [
         "targetValue": 50000000,
         "rewardCar": 906,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -408,6 +413,7 @@ export const milestones = [
         "targetValue": 222222222,
         "rewardCar": 916,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -417,6 +423,7 @@ export const milestones = [
         "targetValue": 100,
         "rewardCar": 920,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -426,6 +433,7 @@ export const milestones = [
         "targetValue": 500,
         "rewardCar": 917,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -435,6 +443,7 @@ export const milestones = [
         "targetValue": 969,
         "rewardCar": 902,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -444,6 +453,7 @@ export const milestones = [
         "targetValue": 55,
         "rewardCar": 925,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -453,6 +463,7 @@ export const milestones = [
         "targetValue": 137,
         "rewardCar": 905,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -462,6 +473,7 @@ export const milestones = [
         "targetValue": 200,
         "rewardCar": 922,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -471,6 +483,7 @@ export const milestones = [
         "targetValue": 1000,
         "rewardCar": 919,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -480,42 +493,47 @@ export const milestones = [
         "targetValue": 3.25,
         "rewardCar": 937,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
         "milestoneID": 'm15',
         "milestoneName": 'An Honest Living',
-        "milestoneDesc": 'Have a hand with an Earnings Bonus over 4',
-        "targetValue": 4,
+        "milestoneDesc": 'Have a hand with an Earnings Bonus over 4.25',
+        "targetValue": 4.25,
         "rewardCar": 921,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
         "milestoneID": 'm16',
-        "milestoneName": 'Permanent Marker',
-        "milestoneDesc": 'Permanently unlock 5 cars',
+        "milestoneName": 'Miles and Miles',
+        "milestoneDesc": 'Unlock 5 Milestone cars',
         "targetValue": 5,
         "rewardCar": 1290,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
         "milestoneID": 'm17',
-        "milestoneName": 'Permanent Record',
-        "milestoneDesc": 'Permanently unlock 10 cars',
+        "milestoneName": 'No Stone Unturned',
+        "milestoneDesc": 'Unlock 10 Milestone cars',
         "targetValue": 10,
         "rewardCar": 1276,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
         "milestoneID": 'm18',
         "milestoneName": 'Eternal',
-        "milestoneDesc": 'Permanently unlock 20 cars',
-        "targetValue": 20,
+        "milestoneDesc": 'Unlock 15 Milestone cars',
+        "targetValue": 15,
         "rewardCar": 1287,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -525,6 +543,7 @@ export const milestones = [
         "targetValue": 5,
         "rewardCar": 1300,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -534,6 +553,7 @@ export const milestones = [
         "targetValue": 15,
         "rewardCar": 1347,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -543,6 +563,7 @@ export const milestones = [
         "targetValue": 50,
         "rewardCar": 1329,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -552,6 +573,7 @@ export const milestones = [
         "targetValue": 5,
         "rewardCar": 1307,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -561,6 +583,7 @@ export const milestones = [
         "targetValue": 20,
         "rewardCar": 1310,
         "icon": '',
+        "collectorCar": false,
         "complete": false
     },
     {
@@ -570,9 +593,130 @@ export const milestones = [
         "targetValue": 100,
         "rewardCar": 1238,
         "icon": '',
+        "collectorCar": false,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm25',
+        "milestoneName": 'Star-Spangled',
+        "milestoneDesc": 'Collect 175 American cars',
+        "targetValue": 175,
+        "rewardCar": 1511,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm26',
+        "milestoneName": 'Der Sammler',
+        "milestoneDesc": 'Collect 300 German cars',
+        "targetValue": 300,
+        "rewardCar": 1512,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm27',
+        "milestoneName": 'Bella Machina',
+        "milestoneDesc": 'Collect 75 Italian cars',
+        "targetValue": 75,
+        "rewardCar": 1513,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm28',
+        "milestoneName": 'Liberté, Egalité, Rapidité',
+        "milestoneDesc": 'Collect 100 French cars',
+        "targetValue": 100,
+        "rewardCar": 1514,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm29',
+        "milestoneName": 'Tally Ho, Lads!',
+        "milestoneDesc": 'Collect 175 British cars',
+        "targetValue": 175,
+        "rewardCar": 1515,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm30',
+        "milestoneName": 'Bushido',
+        "milestoneDesc": 'Collect 200 Japanese cars',
+        "targetValue": 200,
+        "rewardCar": 1516,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm31',
+        "milestoneName": 'Ringmaster',
+        "milestoneDesc": 'Collect 50 Audis',
+        "targetValue": 50,
+        "rewardCar": 1538,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm32',
+        "milestoneName": 'Porsche Unleashed',
+        "milestoneDesc": 'Collect 60 Porsches',
+        "targetValue": 60,
+        "rewardCar": 1541,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm33',
+        "milestoneName": 'Shaken, Not Stirred',
+        "milestoneDesc": 'Collect 45 Aston Martins',
+        "targetValue": 45,
+        "rewardCar": 1544,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm34',
+        "milestoneName": 'Egghead',
+        "milestoneDesc": 'Collect 18 Koenigseggs',
+        "targetValue": 18,
+        "rewardCar": 1617,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm35',
+        "milestoneName": 'Simplify, Add Lightness',
+        "milestoneDesc": 'Collect 31 Lotuses',
+        "targetValue": 31,
+        "rewardCar": 1680,
+        "icon": '',
+        "collectorCar": true,
+        "complete": false
+    },
+    {
+        "milestoneID": 'm36',
+        "milestoneName": 'Silver Star',
+        "milestoneDesc": 'Collect 84 Mercedes-Benzes',
+        "targetValue": 84,
+        "rewardCar": 1684,
+        "icon": '',
+        "collectorCar": true,
         "complete": false
     }
-]
+];
 
 export const contractBGColours = ["rgba(60, 179, 113, 0.45)","rgba(0, 0, 255, 0.45)","rgba(255, 165, 0, 0.45)","rgba(238, 130, 238, 0.45)"];
 
@@ -599,6 +743,14 @@ export function saveParser(st,ms,sc,at) {
             chosenSlot.removeEventListener('click', activateSlot);
         }
     };
+};
+
+let rerollButton = document.getElementById("contractRefresh");
+rerollButton.addEventListener('click', rerollContracts);
+
+function rerollContracts() {
+    populateContracts();
+    moneyChanger(5000);
 };
 
 export function populateContracts() {
@@ -644,7 +796,7 @@ function activateSlot(event) {
         chosenSlot.innerHTML = "Active Slot 2";
         slotQuantity += 1;
         chosenSlot.removeEventListener('click', activateSlot);
-        moneyChanger(2500);
+        moneyChanger(25000);
         slotsActivated[0] = true;
     }
     if (activatingSlot === 'active3' && money >= 125000 && eliteTools >= 100) {
@@ -879,7 +1031,9 @@ function prestigeStarCar(id,pricetag) {
 
 export function populateMilestones() {
     let tabPopulator = document.getElementById('milestonesGrid');
+    let masteryPopulator = document.getElementById('masteryGrid');
     tabPopulator.innerHTML = "";
+    masteryPopulator.innerHTML = "";
     milestones.forEach(element => {
         let id = element.milestoneID;
         
@@ -910,7 +1064,12 @@ export function populateMilestones() {
                 milestoneDiv.appendChild(mileMarker);
             };
         };
-        tabPopulator.appendChild(milestoneDiv);
+        if (element.collectorCar === true) {
+            masteryPopulator.appendChild(milestoneDiv);
+        } else {
+            tabPopulator.appendChild(milestoneDiv);
+        }
+        
         
     });
 };

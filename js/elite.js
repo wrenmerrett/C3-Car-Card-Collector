@@ -1,7 +1,7 @@
 'use strict';
 
 export let eliteTools = 0;
-let maxPerkLevel = 5;
+let maxPerkLevel = 6;
 import { money, moneyChanger, perkIncrement } from './app.js';
 import { contractTrackers, completeContract } from "./missions.js";
 console.log(money);
@@ -17,29 +17,29 @@ export const eliteLevels = [
         "perkID": 1,
         "name": "Lucky",
         "level": 1,
-        "baseVal": 0.3,
-        "increment": 0.06
+        "baseVal": 0.4,
+        "increment": 0.2
     },
     {
         "perkID": 2,
         "name": "Quick Charge",
         "level": 1,
-        "baseVal": 0.2,
-        "increment": 0.05
+        "baseVal": 0.3,
+        "increment": 0.2
     },
     {
         "perkID": 3,
         "name": "High Roller",
         "level": 1,
-        "baseVal": 0.4,
-        "increment": 0.1
+        "baseVal": 0.5,
+        "increment": 0.25
     },
     {
         "perkID": 4,
         "name": "Gambler",
         "level": 1,
         "baseVal": 1,
-        "increment": 0.12
+        "increment": 0.15
     },
     {
         "perkID": 5,
@@ -52,70 +52,70 @@ export const eliteLevels = [
         "perkID": 6,
         "name": "Refresher",
         "level": 1,
-        "baseVal": 10,
+        "baseVal": 15,
         "increment": 10
     },
     {
         "perkID": 7,
         "name": "Slipstream",
         "level": 1,
-        "baseVal": 115,
-        "increment": 20
+        "baseVal": 175,
+        "increment": 50
     },
     {
         "perkID": 8,
         "name": "Standard Bearer",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.165
+        "increment": 0.25
     },
     {
         "perkID": 9,
         "name": "All-Star",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.165
+        "increment": 0.25
     },
     {
         "perkID": 10,
         "name": "Off The Chain",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.165
+        "increment": 0.25
     },
     {
         "perkID": 11,
         "name": "Action Traction",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.165
+        "increment": 0.25
     },
     {
         "perkID": 12,
         "name": "Front Line",
         "level": 1,
         "baseVal": 1.1,
-        "increment": 0.165
+        "increment": 0.25
     },
     {
         "perkID": 13,
         "name": "Mechanic",
         "level": 1,
-        "baseVal": 0.15,
+        "baseVal": 0.2,
         "increment": 0.15
     },
     {
         "perkID": 14,
         "name": "Overheat",
         "level": 1,
-        "baseVal": 4,
-        "increment": 4
+        "baseVal": 5,
+        "increment": 5
     },
     {
         "perkID": 15,
         "name": "Heat Sink",
         "level": 1,
-        "baseVal": 0.2,
+        "baseVal": 0.18,
         "increment": 0.1,
     },
     {
@@ -123,14 +123,21 @@ export const eliteLevels = [
         "name": "Time Warp",
         "level": 1,
         "baseVal": 1,
-        "increment": 0.21,
+        "increment": 0.25,
     },
     {
         "perkID": 17,
         "name": "All In",
         "level": 1,
-        "baseVal": 0.4,
-        "increment": 0.1,
+        "baseVal": 0.6,
+        "increment": 0.3,
+    },
+    {
+        "perkID": 18,
+        "name": "Patriot",
+        "level": 1,
+        "baseVal": 1,
+        "increment": 0.25,
     }
 ];
 

@@ -50,9 +50,9 @@ function prestigePlayer(){
 };
 
 export function restorePrestige(bank,coins,level,garage){
-    if (playerPermGarage == null) {
-        playerPermGarage = [4, 76, 42, 47, 18];
-    } else
+    if(playerPermGarage == null) {
+        unbreakPrestige();
+    };
     playerPermGarage = garage;
     playerPrestigeBank = bank;
     playerPrestigeCoins = coins;
