@@ -692,7 +692,7 @@ function restoreMissions(conts,actives,starcars,miles,stars,slots)  {
     } if (conts === null && actives === null) {
         populateContracts();
     } else {
-        document.getElementById('starShopGrid').innerHTMl = "";
+        document.getElementById('starShopGrid').innerHTML = "";
         document.getElementById('contractGrid').innerHTML = conts;
         document.getElementById('starShopGrid').innerHTML = starcars;
 
@@ -885,7 +885,7 @@ document.getElementById('heatSwitch').addEventListener('click', () => {
             });
         })
     } else {
-        document.getElementById('heatText').innerHTMl = "";
+        document.getElementById('heatText').innerHTML = "";
         heatLevel = 0;
         rqLimit = 500;
     };
